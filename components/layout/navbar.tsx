@@ -8,8 +8,8 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import ModeMenu from "@/components/ui/mode";
 
 const navigation = [
-  { name: "About", href: "/about" },
-  { name: "Projects", href: "/projects" },
+  { name: "About", href: "/about", prefetch: false },
+  { name: "Projects", href: "/projects", prefetch: true },
 ];
 
 export default function Navbar() {
@@ -46,6 +46,7 @@ export default function Navbar() {
             <Link
               key={item.name}
               href={item.href}
+              prefetch={item.prefetch}
               className="text-sm font-semibold leading-6 text-slate-800 hover:text-slate-600 dark:text-slate-100 dark:hover:text-slate-300"
             >
               {item.name}
@@ -66,7 +67,11 @@ export default function Navbar() {
         <div className="fixed inset-0 z-50" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-slate-50 px-6 py-6 dark:bg-slate-800 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <Link href="/" className="-m-1.5 p-1.5">
+            <Link
+              href="/"
+              onClick={() => setMobileMenuOpen(false)}
+              className="-m-1.5 p-1.5"
+            >
               <span className="sr-only">Kevin Nielsen</span>
               <img
                 className="h-8 w-auto"
@@ -90,6 +95,8 @@ export default function Navbar() {
                   <Link
                     key={item.name}
                     href={item.href}
+                    prefetch={item.prefetch}
+                    onClick={() => setMobileMenuOpen(false)}
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-800 hover:bg-slate-50 dark:text-slate-100 dark:hover:bg-slate-700"
                   >
                     {item.name}

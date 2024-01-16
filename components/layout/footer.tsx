@@ -58,6 +58,7 @@ export default function Footer() {
             <a
               key={item.name}
               href={item.href}
+              target="_blank"
               className="text-slate-300 hover:text-slate-500 dark:text-slate-400"
             >
               <span className="sr-only">{item.name}</span>
