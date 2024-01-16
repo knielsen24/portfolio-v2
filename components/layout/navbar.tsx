@@ -97,12 +97,7 @@ export default function Navbar() {
                 ))}
               </div>
               <div className="py-6">
-                <Link
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-slate-800 hover:bg-gray-50 dark:text-slate-100 dark:hover:bg-slate-700 dark:hover:text-slate-300 lg:border"
-                >
-                  Resume
-                </Link>
+                <ModeMenu />
               </div>
             </div>
           </div>
