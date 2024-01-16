@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import ModeMenu from "@/components/ui/mode";
 
 const navigation = [
   { name: "About", href: "/about" },
@@ -51,13 +52,9 @@ export default function Navbar() {
             </Link>
           ))}
         </div>
+
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Link
-            href="#"
-            className="text-sm font-semibold leading-6 text-slate-800 dark:text-slate-100 dark:hover:text-slate-300"
-          >
-            Resume <span aria-hidden="true">&rarr;</span>
-          </Link>
+          <ModeMenu />
         </div>
       </nav>
       <Dialog
@@ -67,7 +64,7 @@ export default function Navbar() {
         onClose={setMobileMenuOpen}
       >
         <div className="fixed inset-0 z-50" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-slate-50 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 dark:bg-slate-800">
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-slate-50 px-6 py-6 dark:bg-slate-800 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <Link href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">Kevin Nielsen</span>
@@ -102,7 +99,7 @@ export default function Navbar() {
               <div className="py-6">
                 <Link
                   href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-slate-800 hover:bg-gray-50 lg:border dark:text-slate-100 dark:hover:bg-slate-700 dark:hover:text-slate-300"
+                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-slate-800 hover:bg-gray-50 dark:text-slate-100 dark:hover:bg-slate-700 dark:hover:text-slate-300 lg:border"
                 >
                   Resume
                 </Link>

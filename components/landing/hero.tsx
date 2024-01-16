@@ -20,7 +20,7 @@ export default function Hero() {
       <h2 className="first-letter: text-xl font-medium tracking-tight text-indigo-500 sm:text-2xl dark:text-indigo-400">
         {heroText.headline}
       </h2>
-      <p className="mt-6 text-lg leading-8 text-slate-200 sm:max-w-md lg:max-w-none dark:text-indigo-50">
+      <p className="mt-6 text-lg leading-8 text-slate-600 sm:max-w-md lg:max-w-none dark:text-indigo-50">
         {heroText.description}
       </p>
 

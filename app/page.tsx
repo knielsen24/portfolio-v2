@@ -1,6 +1,6 @@
-import "@/app/components/shared/navbar";
-import HeroSection from "@/app/components/landing/hero";
-import ImageSection from "@/app/components/landing/collage";
+import "@/components/layout/navbar";
+import HeroSection from "@/components/landing/hero";
+import ImageSection from "@/components/landing/collage";
 
 export default function Page() {
   return (
@@ -8,7 +8,7 @@ export default function Page() {
       <main>
         <div className="relative isolate">
           <svg
-            className="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-slate-100 dark:stroke-slate-700 [mask-image:radial-gradient(50rem_32rem_at_center,white,transparent)]"
+            className="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-slate-200 [mask-image:radial-gradient(40rem_40rem_at_center,white,transparent)] dark:stroke-slate-700 dark:[mask-image:radial-gradient(22rem_22rem_at_center,white,transparent)]"
             aria-hidden="true"
           >
             <defs>
@@ -23,7 +23,11 @@ export default function Page() {
                 <path d="M.5 200V.5H200" fill="none" />
               </pattern>
             </defs>
-            <svg x="50%" y={-1} className="overflow-visible fill-gray-50 dark:fill-slate-900">
+            <svg
+              x="50%"
+              y={-1}
+              className="overflow-visible fill-gray-50 dark:fill-slate-900"
+            >
               <path
                 d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z"
                 strokeWidth={0}
