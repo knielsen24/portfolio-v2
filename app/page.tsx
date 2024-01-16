@@ -1,6 +1,6 @@
-import "@/app/ui/shared/navbar";
-import HeroSection from "@/app/ui/landing/hero";
-import ImageSection from "@/app/ui/landing/collage";
+import "@/app/components/shared/navbar";
+import HeroSection from "@/app/components/landing/hero";
+import ImageSection from "@/app/components/landing/collage";
 
 export default function Page() {
   return (

@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { inter } from "@/app/ui/fonts";
+import { inter } from "@/app/components/fonts";
 import "@/app/ui/globals.css";
-import Navbar from "@/app/ui/shared/navbar";
-import Footer from "@/app/ui/shared/footer";
+import { ThemeProvider } from "@/app/components/shared/theme-provider";
+import Navbar from "@/app/components/shared/navbar";
+import Footer from "@/app/components/shared/footer";
 
 export const metadata: Metadata = {
   title: "Kevin Nielsen",
@@ -17,9 +18,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} antialiased`}>
-        <Navbar />
-        {children}
-        <Footer />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Navbar />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

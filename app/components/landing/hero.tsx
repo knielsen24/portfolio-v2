@@ -33,7 +33,7 @@ export default function Hero() {
         </a>
         <a
           href="#"
-          className="border-0 text-sm font-semibold leading-6 text-slate-800 dark:text-slate-100"
+          className="border-0 text-sm font-semibold leading-6 text-slate-800 dark:text-slate-100 dark:hover:text-slate-300"
         >
           Skills <span aria-hidden="true">→</span>
         </a>
