@@ -69,10 +69,10 @@ export default function Page() {
               {/* <p className="text-base font-semibold leading-7 text-indigo-600 dark:text-indigo-500">
                 This is my story in a nutshell
               </p> */}
-              <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 sm:text-4xl">
+              <h1 className="mt-2 text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-100 sm:text-4xl">
                 I'm a career changer.
               </h1>
-              <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 sm:text-4xl">
+              <h1 className="mt-2 text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-100 sm:text-4xl">
                 Profressional coach to coder.
               </h1>
               <div className="max-w-xl">
@@ -103,10 +103,10 @@ export default function Page() {
             <dl className="mt-10 grid grid-cols-2 gap-8 border-t border-slate-900/10 pt-10 sm:grid-cols-4">
               {stats.map((stat, statIdx) => (
                 <div key={statIdx}>
-                  <dt className="text-sm font-semibold leading-6 text-slate-600">
+                  <dt className="text-sm font-semibold leading-6 text-slate-600 dark:text-slate-400">
                     {stat.label}
                   </dt>
-                  <dd className="mt-2 text-3xl font-bold leading-10 tracking-tight text-slate-900">
+                  <dd className="mt-2 text-3xl font-bold leading-10 tracking-tight text-slate-900 dark:text-slate-200">
                     {stat.value}
                   </dd>
                 </div>
