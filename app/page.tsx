@@ -8,7 +8,7 @@ export default function Page() {
       <main>
         <div className="relative isolate">
           <svg
-            className="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-slate-200 [mask-image:radial-gradient(40rem_40rem_at_center,white,transparent)] dark:stroke-slate-700 dark:[mask-image:radial-gradient(22rem_22rem_at_center,white,transparent)]"
+            className="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-slate-200 [mask-image:radial-gradient(40rem_40rem_at_center,white,transparent)] dark:stroke-slate-700 dark:[mask-image:radial-gradient(28rem_28rem_at_center,white,transparent)]"
             aria-hidden="true"
           >
             <defs>

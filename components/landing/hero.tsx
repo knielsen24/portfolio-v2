@@ -13,7 +13,7 @@ const heroText: heroText = {
 
 export default function Hero() {
   return (
-    <div className="relative w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
+    <div className="relative w-full sm:pl-16 max-w-xl lg:shrink-0 xl:max-w-2xl ">
       <h1 className="mb-2 text-3xl font-bold tracking-tight text-slate-700 dark:text-slate-100 sm:text-5xl">
         {heroText.intro}
       </h1>

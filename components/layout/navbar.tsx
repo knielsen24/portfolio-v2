@@ -27,8 +27,8 @@ export default function Navbar() {
             href="/"
             // className="text-xl font-bold text-indigo-500 dark:text-indigo-400 sm:text-3xl"
           >
-            <h1 className="inline-block bg-gradient-to-r from-indigo-600 to-indigo-500 bg-clip-text text-2xl font-semibold text-transparent dark:from-indigo-500 dark:to-indigo-400 sm:text-3xl">
-              {"<kevin nielsen>"}
+            <h1 className="inline-block bg-gradient-to-r from-indigo-600 to-indigo-500 bg-clip-text text-xl font-semibold text-transparent dark:from-indigo-500 dark:to-indigo-400 sm:text-2xl">
+              {"[ kevin nielsen ]"}
             </h1>
             <span className="sr-only">Kevin Nielsen</span>
           </Link>
@@ -75,7 +75,7 @@ export default function Navbar() {
               className="-m-1.5 p-1.5 text-lg font-bold text-indigo-600 dark:text-indigo-400"
             >
               <h1 className="inline-block bg-gradient-to-r from-indigo-600 to-indigo-500 bg-clip-text text-2xl font-semibold text-transparent dark:from-indigo-500 dark:to-indigo-400 sm:text-3xl">
-                {"<kn>"}
+                {"[kn]"}
               </h1>
               <span className="sr-only">Kevin Nielsen</span>
 
