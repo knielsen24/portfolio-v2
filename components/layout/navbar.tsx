@@ -25,9 +25,13 @@ export default function Navbar() {
         <div className="flex lg:flex-1">
           <Link
             href="/"
-            className="text-2xl font-bold text-indigo-500 dark:text-indigo-400"
+            // className="text-xl font-bold text-indigo-500 dark:text-indigo-400 sm:text-3xl"
           >
-            KEVIN NIELSEN
+            <h1 className="inline-block bg-gradient-to-r from-indigo-600 to-indigo-500 bg-clip-text dark:from-indigo-500 dark:to-indigo-400 text-2xl font-semibold text-transparent sm:text-3xl">
+              {"<kevin nielsen>"}
+            </h1>
+
+            {/* {"< kevin nielsen >"} */}
             <span className="sr-only">Kevin Nielsen</span>
           </Link>
         </div>
@@ -70,14 +74,15 @@ export default function Navbar() {
             <Link
               href="/"
               onClick={() => setMobileMenuOpen(false)}
-              className="-m-1.5 p-1.5"
+              className="-m-1.5 p-1.5 text-lg font-bold text-indigo-600 dark:text-indigo-400"
             >
               <span className="sr-only">Kevin Nielsen</span>
-              <img
+              {/* <img
                 className="h-8 w-auto"
                 src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
                 alt=""
-              />
+              /> */}
+              {"<kn>"}
             </Link>
             <button
               type="button"
@@ -90,14 +95,14 @@ export default function Navbar() {
           </div>
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
-              <div className="space-y-2 py-6">
+              <div className="space-y-2 py-6 ">
                 {navigation.map((item) => (
                   <Link
                     key={item.name}
                     href={item.href}
                     prefetch={item.prefetch}
                     onClick={() => setMobileMenuOpen(false)}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-800 hover:bg-slate-50 dark:text-slate-100 dark:hover:bg-slate-700"
+                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-800 hover:bg-indigo-50 dark:text-slate-100 dark:hover:bg-slate-900"
                   >
                     {item.name}
                   </Link>
