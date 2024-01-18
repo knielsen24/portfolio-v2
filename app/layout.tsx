@@ -4,6 +4,7 @@ import "@/app/globals.css";
 import { ThemeProvider } from "@/components/layout/theme-provider";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
+import Background from "@/components/background/background";
 
 export const metadata: Metadata = {
   title: "Kevin Nielsen",
@@ -25,7 +26,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar />
-          {children}
+          <Background>{children}</Background>
           <Footer />
         </ThemeProvider>
       </body>

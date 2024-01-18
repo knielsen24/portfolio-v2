@@ -7,8 +7,7 @@ const stats = [
 
 export default function Page() {
   return (
-    <div className="bg-slate-50 py-24 dark:bg-slate-800 sm:py-40">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 items-start justify-items-center gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           <div className="order-1 sm:order-2">
             <div className="relative overflow-hidden rounded-3xl bg-slate-900 px-6 pb-9 pt-64 shadow-2xl sm:px-12 lg:max-w-lg lg:px-8 lg:pb-8 xl:px-10 xl:pb-10">
@@ -124,6 +123,5 @@ export default function Page() {
           </div>
         </div>
       </div>
-    </div>
   );
 }

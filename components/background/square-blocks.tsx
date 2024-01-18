@@ -1,6 +1,6 @@
 import ImageSection from "@/components/landing/collage";
 
-export default function SVGWrapper() {
+export default function SquareBlocks() {
   return (
     <svg
       className="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-slate-200 [mask-image:radial-gradient(40rem_40rem_at_center,white,transparent)] dark:stroke-slate-700 dark:[mask-image:radial-gradient(28rem_28rem_at_center,white,transparent)]"
