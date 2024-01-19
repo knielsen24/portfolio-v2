@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import SquareBlocks from "./square-blocks";
+import SquareBlocks from "./SquareBlocks";
 
 type Props = {
   children: ReactNode;

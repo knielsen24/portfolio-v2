@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { inter } from "@/components/fonts";
+import { inter } from "@/components/ui/fonts";
 import "@/app/globals.css";
-import { ThemeProvider } from "@/components/layout/theme-provider";
-import Navbar from "@/components/layout/navbar";
-import Footer from "@/components/layout/footer";
-import Background from "@/components/layout/background";
+import { ThemeProvider } from "@/app/theme-provider";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import Background from "@/components/layout/Background";
 
 export const metadata: Metadata = {
   title: "Kevin Nielsen",

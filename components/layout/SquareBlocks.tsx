@@ -1,4 +1,4 @@
-import ImageSection from "@/components/landing/collage";
+import ImageSection from "@/components/landing/Collage";
 
 export default function SquareBlocks() {
   return (
