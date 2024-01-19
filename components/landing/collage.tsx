@@ -43,7 +43,7 @@ export default function Collage() {
         </div>
         <div className="relative">
           <img
-            src="https://images.unsplash.com/photo-1670272505284-8faba1c31f7d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
+            src="https://res.cloudinary.com/dooa4lvvv/image/upload/v1705645312/Portfolio/Do_what_you_love_1_qcr2jf.png"
             alt=""
             className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
           />

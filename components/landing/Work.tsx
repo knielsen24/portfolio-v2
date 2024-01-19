@@ -122,7 +122,7 @@ export default function Work() {
   ];
 
   return (
-    <div className="rounded-2xl border border-slate-200 p-6 dark:border-zinc-700/40">
+    <div className="rounded-2xl border bg-indigo-100 border-slate-200 p-6 dark:border-slate-700/40">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <BriefcaseIcon className="h-6 w-6 flex-none" />
         <span className="ml-3">Work</span>
@@ -132,7 +132,7 @@ export default function Work() {
           <Role key={roleIndex} role={role} />
         ))}
       </ol>
-      <Button variant="default" size="default">
+      <Button variant="default" size="mode">
         Download CV
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>

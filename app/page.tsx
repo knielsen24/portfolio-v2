@@ -3,7 +3,8 @@ import Link from "next/link";
 import Collage from "@/components/landing/Collage";
 import Work from "@/components/landing/Work";
 import { Container } from "@/components/ui/Container";
-import WorkTimeline from "@/components/landing/WorkTimeline";
+import WorkTimeline from "@/components/landing/WorkSection";
+import WorkSection from "@/components/landing/WorkSection";
 
 interface heroText {
   intro: string;
@@ -50,18 +51,19 @@ export default function Page() {
         </div>
         <Collage />
       </div>
-      {/* <Container>
-        <div className="mx-auto mt-40 grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
+      <Container>
+      <WorkSection />
+        {/* <div className="mx-auto mt-40 grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
           <div className="space-y-10 lg:pl-16 xl:pl-24">
             <WorkTimeline />
           </div>
-        </div>
-        <div className="mx-auto mt-40 grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
+        </div> */}
+        {/* <div className="mx-auto mt-60 grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
           <div className="space-y-10 lg:pl-16 xl:pl-24">
             <Work />
           </div>
-        </div>
-      </Container> */}
+        </div> */}
+      </Container>
     </div>
   );
 }
