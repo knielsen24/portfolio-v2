@@ -26,7 +26,7 @@ function Collage() {
         </div>
         <div className="relative">
           <img
-            src="https://res.cloudinary.com/dooa4lvvv/image/upload/v1705640942/Portfolio/Untitled_design_n1wbld.png"
+            src="https://res.cloudinary.com/dooa4lvvv/image/upload/v1705641071/Portfolio/circles_xydznb.png"
             alt=""
             className="aspect-[2/3] w-full rounded-xl bg-slate-900/5 object-cover shadow-lg dark:bg-slate-50/10"
           />

@@ -1,9 +1,7 @@
-import type { Metadata } from "next";
 import "@/app/globals.css";
+import type { Metadata } from "next";
 import { inter } from "@/components/ui/fonts";
-import { ThemeProvider } from "@/app/theme-provider";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import { Providers } from "@/app/providers";
 import Layout from "@/components/Layout";
 
 export const metadata: Metadata = {
@@ -21,16 +19,11 @@ export default function RootLayout({
       <body
         className={`${inter.className} flex h-full bg-slate-100 antialiased dark:bg-slate-800`}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
+        <Providers>
           <div className="flex w-full">
             <Layout>{children}</Layout>
           </div>
-        </ThemeProvider>
+        </Providers>
       </body>
     </html>
   );
