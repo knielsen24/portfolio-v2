@@ -1,10 +1,8 @@
-import "@/components/layout/Navbar";
+import "@/components/Navbar";
 import Link from "next/link";
 import Collage from "@/components/landing/Collage";
-import Work from "@/components/landing/Work";
-import { Container } from "@/components/ui/Container";
-import WorkTimeline from "@/components/landing/WorkSection";
-import WorkSection from "@/components/landing/WorkSection";
+
+// As career changer, I am committed to making an positive impact in the tech indsutry.
 
 interface heroText {
   intro: string;
@@ -21,9 +19,9 @@ const heroText: heroText = {
 
 export default function Page() {
   return (
-    <div>
-      <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
-        <div className="relative w-full max-w-xl sm:pl-16 lg:shrink-0 xl:max-w-2xl ">
+    <>
+      <div className="mx-auto mb-20 max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
+        <div className="relative w-full max-w-xl sm:pl-8 lg:shrink-0 xl:max-w-2xl ">
           <h1 className="mb-2 text-3xl font-bold tracking-tight text-slate-700 dark:text-slate-100 sm:text-5xl">
             {heroText.intro}
           </h1>
@@ -51,19 +49,6 @@ export default function Page() {
         </div>
         <Collage />
       </div>
-      <Container>
-      <WorkSection />
-        {/* <div className="mx-auto mt-40 grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
-          <div className="space-y-10 lg:pl-16 xl:pl-24">
-            <WorkTimeline />
-          </div>
-        </div> */}
-        {/* <div className="mx-auto mt-60 grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
-          <div className="space-y-10 lg:pl-16 xl:pl-24">
-            <Work />
-          </div>
-        </div> */}
-      </Container>
-    </div>
+    </>
   );
 }

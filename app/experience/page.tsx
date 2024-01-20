@@ -3,7 +3,7 @@ import {
   LockClosedIcon,
   ServerIcon,
 } from "@heroicons/react/20/solid";
-import Work from "../experience/Work";
+import Work from "@/components/experience/Work";
 
 const features = [
   {
@@ -26,9 +26,9 @@ const features = [
   },
 ];
 
-export default function WorkSection() {
+export default function Page() {
   return (
-    <div className="overflow-hidden py-30 sm:py-32 ">
+    <div className="py-30 overflow-hidden sm:py-32 ">
       <div className="mx-auto max-w-7xl md:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:grid-cols-2 lg:items-start">
           <div className="px-6 lg:px-0 lg:pr-4 lg:pt-4">

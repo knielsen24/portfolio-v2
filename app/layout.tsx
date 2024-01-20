@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { inter } from "@/components/ui/fonts";
 import "@/app/globals.css";
+import { inter } from "@/components/ui/fonts";
 import { ThemeProvider } from "@/app/theme-provider";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
-import Background from "@/components/layout/Background";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import Layout from "@/components/Layout";
 
 export const metadata: Metadata = {
   title: "Kevin Nielsen",
@@ -25,9 +25,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Navbar />
-          <Background>{children}</Background>
-          <Footer />
+          
+          <Layout>{children}</Layout>
+          
         </ThemeProvider>
       </body>
     </html>

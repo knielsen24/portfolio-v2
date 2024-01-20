@@ -122,7 +122,7 @@ export default function Work() {
   ];
 
   return (
-    <div className="rounded-2xl border bg-indigo-100 border-slate-200 p-6 dark:border-slate-700/40">
+    <div className="rounded-tl-lg border bg-indigo-100 border-slate-200 p-6 dark:border-slate-700/40">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <BriefcaseIcon className="h-6 w-6 flex-none" />
         <span className="ml-3">Work</span>

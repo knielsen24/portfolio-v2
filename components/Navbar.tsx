@@ -9,6 +9,7 @@ import ModeMenu from "@/components/ui/Mode";
 
 const navigation = [
   { name: "About", href: "/about", prefetch: false },
+  { name: "Experience", href: "/experience", prefetch: false },
   { name: "Projects", href: "/projects", prefetch: true },
 ];
 
