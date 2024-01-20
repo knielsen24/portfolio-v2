@@ -3,9 +3,9 @@ import {
   LockClosedIcon,
   ServerIcon,
 } from "@heroicons/react/20/solid";
-import Work from "@/components/experience/Work";
-import { Container } from "@/components/Container";
+import WorkExperience from "@/components/experience/WorkExperience";
 import { SimpleLayout } from "@/components/SimpleLayout";
+
 
 const features = [
   {
@@ -66,7 +66,7 @@ export default function Page() {
               aria-hidden="true"
             />
             <div className="mx-auto max-w-2xl sm:mx-0 sm:max-w-none">
-              <Work />
+              <WorkExperience />
             </div>
             <div
               className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-black/10 sm:rounded-3xl"

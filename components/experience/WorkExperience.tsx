@@ -3,7 +3,7 @@ import logoAirbnb from "@/public/logos/airbnb.svg";
 import logoFacebook from "@/public/logos/facebook.svg";
 import logoPlanetaria from "@/public/logos/planetaria.svg";
 import logoStarbucks from "@/public/logos/starbucks.svg";
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/components/Button";
 
 function BriefcaseIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   return (
@@ -86,7 +86,7 @@ function Role({ role }: { role: Role }) {
   );
 }
 
-export default function Work() {
+export default function WorkExperience() {
   let resume: Array<Role> = [
     {
       company: "Xalt",
