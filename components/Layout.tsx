@@ -27,7 +27,7 @@ function SquareBlocks() {
       <svg
         x="50%"
         y={-1}
-        className="overflow-visible fill-slate-200/90 dark:fill-slate-900/70"
+        className="overflow-visible fill-slate-200/50 dark:fill-slate-900/70"
       >
         <path
           d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z"
@@ -47,11 +47,6 @@ function SquareBlocks() {
 const Layout: React.FC<Props> = ({ children }) => {
   return (
     <>
-      {/* <div className="fixed inset-0 flex justify-center sm:px-8">
-        <div className="flex w-full max-w-7xl lg:px-8">
-          <div className="w-full bg-white ring-1 ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20" />
-        </div>
-      </div> */}
       <div className="relative isolate flex w-full flex-col">
         <SquareBlocks />
         <div
@@ -66,7 +61,6 @@ const Layout: React.FC<Props> = ({ children }) => {
             }}
           />
         </div>
-
         <Navbar />
         <main className="flex-auto">{children}</main>
         <Footer />

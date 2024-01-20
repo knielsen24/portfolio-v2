@@ -23,7 +23,7 @@ export default function Page() {
     <Container>
       <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
         <div className="relative w-full max-w-xl sm:pl-8 lg:shrink-0 xl:max-w-2xl ">
-          <h1 className="mb-2 text-3xl font-bold tracking-tight text-slate-700 dark:text-slate-100 sm:text-5xl">
+          <h1 className="mb-2 text-3xl font-bold tracking-tight text-slate-800 dark:text-slate-100 sm:text-5xl">
             {heroText.intro}
           </h1>
           <h2 className="first-letter: text-lg font-medium tracking-tight text-indigo-600 dark:text-indigo-300 sm:text-xl">

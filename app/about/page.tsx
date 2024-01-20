@@ -1,4 +1,4 @@
-import { Container } from "@/components/Container";
+import Link from "next/link";
 import { SimpleLayout } from "@/components/SimpleLayout";
 
 const stats = [
@@ -11,8 +11,8 @@ const stats = [
 export default function Page() {
   return (
     <SimpleLayout
-      title="Things I’ve made trying to put my dent in the universe."
-      intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved."
+      title="I'm a career changer. Professional coach to coder."
+      intro="Before I made the committment to a career in software engineering I was a profressional swimming coach "
     >
       <div className="mx-auto grid max-w-2xl grid-cols-1 items-start justify-items-center gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2">
         <div className="order-1 sm:order-2">
@@ -22,13 +22,13 @@ export default function Page() {
               src="https://images.unsplash.com/photo-1630569267625-157f8f9d1a7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2669&q=80"
               alt=""
             />
-            <div className="absolute inset-0 bg-slate-900 mix-blend-multiply" />
+            <div className="absolute inset-0 bg-indigo-900 mix-blend-multiply" />
             <div
               className="absolute left-1/2 top-1/2 -ml-16 -translate-x-1/2 -translate-y-1/2 transform-gpu blur-3xl"
               aria-hidden="true"
             >
               <div
-                className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-40"
+                className="aspect-[1097/845] w-[78.5625rem] bg-gradient-to-tr from-[#14b8a6] to-[#0284c7] opacity-60"
                 style={{
                   clipPath:
                     "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
@@ -114,10 +114,10 @@ export default function Page() {
           </dl>
           <div className="mt-10 flex">
             <a
-              href="#"
+              href="/experience"
               className="text-base font-semibold leading-7 text-indigo-600 dark:text-indigo-500"
             >
-              Learn more about my experience{" "}
+              Check about my work experience{" "}
               <span aria-hidden="true">&rarr;</span>
             </a>
           </div>

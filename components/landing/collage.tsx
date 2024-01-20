@@ -9,9 +9,9 @@ export default function Collage() {
           <img
             src="https://res.cloudinary.com/dooa4lvvv/image/upload/v1705639839/Portfolio/headsot_kn1l5x.png"
             alt=""
-            className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
+            className="aspect-[2/3] w-full rounded-xl bg-slate-900/10 object-cover shadow-lg dark:bg-slate-50/10"
           />
-          <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
+          <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-slate-900/10 dark:ring-slate-50/10" />
         </div>
       </div>
       <div className="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-8">
@@ -19,17 +19,17 @@ export default function Collage() {
           <img
             src="https://res.cloudinary.com/dooa4lvvv/image/upload/v1705644283/Portfolio/Do_what_you_love_bcteat.png"
             alt=""
-            className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
+            className="aspect-[2/3] w-full rounded-xl bg-slate-900/5 object-cover shadow-lg dark:bg-slate-50/10"
           />
-          <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
+          <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-slate-900/10 dark:ring-slate-50/10" />
         </div>
         <div className="relative">
           <img
             src="https://res.cloudinary.com/dooa4lvvv/image/upload/v1705640942/Portfolio/Untitled_design_n1wbld.png"
             alt=""
-            className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
+            className="aspect-[2/3] w-full rounded-xl bg-slate-900/5 object-cover shadow-lg dark:bg-slate-50/10"
           />
-          <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
+          <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-slate-900/10 dark:ring-slate-50/10" />
         </div>
       </div>
     </div>
