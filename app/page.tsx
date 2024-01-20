@@ -1,7 +1,7 @@
 import "@/components/Navbar";
 import Link from "next/link";
-import Collage from "@/components/landing/Collage";
 import { Container } from "@/components/Container";
+import Collage from "@/components/landing/Collage";
 
 // As career changer, I am committed to making an positive impact in the tech indsutry.
 

@@ -1,9 +1,9 @@
 import Image, { type ImageProps } from "next/image";
-import { Button } from "@/components/ui/Button";
 import logoAirbnb from "@/public/logos/airbnb.svg";
 import logoFacebook from "@/public/logos/facebook.svg";
 import logoPlanetaria from "@/public/logos/planetaria.svg";
 import logoStarbucks from "@/public/logos/starbucks.svg";
+import { Button } from "../ui/Button";
 
 function BriefcaseIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   return (
