@@ -1,6 +1,7 @@
 import React, { ReactNode } from "react";
 import Navbar from "./Navbar";
 import Footer from "@/components/Footer";
+import { Header } from "./Header";
 
 type Props = {
   children: ReactNode;
@@ -46,31 +47,25 @@ function SquareBlocks() {
 
 const Layout: React.FC<Props> = ({ children }) => {
   return (
-    <>
-      {/* <div className="fixed inset-0 flex justify-center sm:px-8">
-        <div className="flex w-full max-w-7xl lg:px-8">
-          <div className="w-full bg-white ring-1 ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20" />
-        </div>
-      </div> */}
-      <div className="relative isolate mb-auto flex w-full flex-col overflow-hidden">
-        <SquareBlocks />
+    <div className="relative mb-auto flex w-full flex-col overflow-hidden">
+      <SquareBlocks />
+      <div
+        className="absolute left-1/3 right-0 top-0 -z-10 -ml-24 transform-gpu overflow-hidden blur-3xl lg:ml-24 xl:ml-48"
+        aria-hidden="true"
+      >
         <div
-          className="absolute left-1/3 right-0 top-0 -z-10 -ml-24 transform-gpu overflow-hidden blur-3xl lg:ml-24 xl:ml-48"
-          aria-hidden="true"
-        >
-          <div
-            className="aspect-[801/1036] w-[50.0625rem] bg-gradient-to-tr from-[#1d4ed8] to-[#9089fc] opacity-40"
-            style={{
-              clipPath:
-                "polygon(63.1% 29.5%, 100% 17.1%, 76.6% 3%, 48.4% 0%, 44.6% 4.7%, 54.5% 25.3%, 59.8% 49%, 55.2% 57.8%, 44.4% 57.2%, 27.8% 47.9%, 35.1% 81.5%, 0% 97.7%, 39.2% 100%, 35.2% 81.4%, 97.2% 52.8%, 63.1% 29.5%)",
-            }}
-          />
-        </div>
-        <Navbar />
-        <main className="flex-auto">{children}</main>
-        <Footer />
+          className="aspect-[801/1036] w-[50.0625rem] bg-gradient-to-tr from-[#1d4ed8] to-[#9089fc] opacity-40"
+          style={{
+            clipPath:
+              "polygon(63.1% 29.5%, 100% 17.1%, 76.6% 3%, 48.4% 0%, 44.6% 4.7%, 54.5% 25.3%, 59.8% 49%, 55.2% 57.8%, 44.4% 57.2%, 27.8% 47.9%, 35.1% 81.5%, 0% 97.7%, 39.2% 100%, 35.2% 81.4%, 97.2% 52.8%, 63.1% 29.5%)",
+          }}
+        />
       </div>
-    </>
+      {/* <Header /> */}
+      <Navbar />
+      <main className="flex-auto">{children}</main>
+      <Footer />
+    </div>
   );
 };
 

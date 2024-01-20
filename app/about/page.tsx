@@ -118,7 +118,7 @@ export default function Page() {
               href="/experience"
               className="text-base font-semibold leading-7 text-indigo-600 dark:text-indigo-500"
             >
-              Check about my work experience{" "}
+              Check out my work experience{" "}
               <span aria-hidden="true">&rarr;</span>
             </Link>
           </div>

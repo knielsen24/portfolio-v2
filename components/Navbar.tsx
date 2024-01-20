@@ -1,12 +1,13 @@
 "use client";
+import { useEffect } from "react";
+import { useTheme } from "next-themes";
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import Mode from "./Mode";
-
+import ThemeToggle from "./ThemeToggle";
 
 const navigation = [
   { name: "About", href: "/about", prefetch: false },
@@ -21,16 +22,16 @@ export default function Navbar() {
   return (
     <header className="absolute inset-x-0 top-0 z-50">
       <nav
-        className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+        className="mx-auto flex max-w-6xl items-center justify-between p-6 lg:px-8"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
           <Link
             href="/"
-            // className="text-xl font-bold text-indigo-500 dark:text-indigo-400 sm:text-3xl"
+            // className="bg-slate-300 rounded-full py-3"
           >
             <h1 className="inline-block bg-gradient-to-r from-indigo-600 to-indigo-500 bg-clip-text text-xl font-semibold text-transparent dark:from-indigo-500 dark:to-indigo-400 sm:text-2xl">
-              {"[ kevin nielsen ]"}
+              {"[ kn ]"}
             </h1>
             <span className="sr-only">Kevin Nielsen</span>
           </Link>
@@ -51,7 +52,7 @@ export default function Navbar() {
               key={item.name}
               href={item.href}
               prefetch={item.prefetch}
-              className="text-sm font-semibold leading-6 text-slate-800 hover:text-slate-600 dark:text-slate-100 dark:hover:text-slate-300"
+              className="text-sm font-semibold leading-6 text-slate-800 hover:text-indigo-500 dark:text-slate-100 dark:hover:text-indigo-400"
             >
               {item.name}
             </Link>
@@ -59,7 +60,7 @@ export default function Navbar() {
         </div>
 
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Mode />
+          <ThemeToggle />
         </div>
       </nav>
       <Dialog
@@ -74,10 +75,10 @@ export default function Navbar() {
             <Link
               href="/"
               onClick={() => setMobileMenuOpen(false)}
-              className="-m-1.5 p-1.5 text-lg font-bold text-indigo-600 dark:text-indigo-400"
+              className="-m-1.5 p-1.5"
             >
-              <h1 className="inline-block bg-gradient-to-r from-indigo-600 to-indigo-500 bg-clip-text text-2xl font-semibold text-transparent dark:from-indigo-500 dark:to-indigo-400 sm:text-3xl">
-                {"[kn]"}
+              <h1 className="inline-block bg-gradient-to-r from-indigo-600 to-indigo-500 bg-clip-text text-xl font-semibold text-transparent dark:from-indigo-500 dark:to-indigo-400 sm:text-2xl">
+                {"[ kevin nielsen ]"}
               </h1>
               <span className="sr-only">Kevin Nielsen</span>
 
@@ -112,7 +113,7 @@ export default function Navbar() {
                 ))}
               </div>
               <div className="py-6">
-                <Mode />
+                <ThemeToggle />
               </div>
             </div>
           </div>
