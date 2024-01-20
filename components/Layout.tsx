@@ -47,7 +47,12 @@ function SquareBlocks() {
 const Layout: React.FC<Props> = ({ children }) => {
   return (
     <>
-      <div className="relative isolate flex w-full flex-col">
+      {/* <div className="fixed inset-0 flex justify-center sm:px-8">
+        <div className="flex w-full max-w-7xl lg:px-8">
+          <div className="w-full bg-white ring-1 ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20" />
+        </div>
+      </div> */}
+      <div className="relative isolate mb-auto flex w-full flex-col overflow-hidden">
         <SquareBlocks />
         <div
           className="absolute left-1/3 right-0 top-0 -z-10 -ml-24 transform-gpu overflow-hidden blur-3xl lg:ml-24 xl:ml-48"

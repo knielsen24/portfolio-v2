@@ -22,9 +22,7 @@ export const ContainerInner = forwardRef<
       className={clsx("relative px-4 sm:px-8 lg:px-12", className)}
       {...props}
     >
-      <div className="mb-auto mx-auto max-w-5xl pb-24 pt-32 sm:pt-60 lg:pt-36 lg:mb-20">
-        {children}
-      </div>
+      <div className="mx-auto max-w-2xl lg:max-w-5xl ">{children}</div>
     </div>
   );
 });
