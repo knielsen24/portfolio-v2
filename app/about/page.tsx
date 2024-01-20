@@ -11,8 +11,8 @@ const stats = [
 export default function Page() {
   return (
     <SimpleLayout
-      title="I'm a career changer. Professional coach to coder."
-      intro="Before I made the committment to a career in software engineering I was a profressional swimming coach "
+      title="Professional coach to coder "
+      intro="I'm a career changer.  Before I made the committment to a career in software engineering I was a profressional swimming coach "
     >
       <div className="mx-auto grid max-w-2xl grid-cols-1 items-start justify-items-center gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2">
         <div className="order-1 sm:order-2">
@@ -71,22 +71,22 @@ export default function Page() {
         </div>
         <div className="order-2 lg:order-1">
           <div className="text-base leading-7 text-slate-700 dark:text-slate-400 lg:max-w-lg">
-            {/* <p className="text-base font-semibold leading-7 text-indigo-600 dark:text-indigo-500">
-                This is my story in a nutshell
-              </p> */}
-            <h1 className="mt-2 text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-100 sm:text-4xl">
+            <h1 className=" text-xl font-semibold leading-7 text-indigo-600 dark:text-indigo-400">
+              Why I love coding
+            </h1>
+            {/* <h1 className="mt-2 text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-100 sm:text-4xl">
               I'm a career changer.
             </h1>
             <h1 className="mt-2 text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-100 sm:text-4xl">
               Profressional coach to coder.
-            </h1>
+            </h1> */}
             <div className="max-w-xl">
               <p className="mt-6">
-                What I enjoy about software is the pure expression of
-                creatitivity in building something. That mindset has be
-                instilled in me from fond childhood memories working on puzzles
-                with my grandparents, and building fully customized prototype
-                concepts with Lego’s.
+                The pure expression of problem solving and building something
+                organic with technology is the beauty in software engineering.
+                That mindset has be instilled in me from fond childhood memories
+                working on puzzles with my grandparents, and building fully
+                customized prototype concepts with Lego’s.
               </p>
               <p className="mt-8">
                 Now that I have graduated from Lego’s, I am passionate about
@@ -98,6 +98,7 @@ export default function Page() {
                 There are so many ways to solve one problem, and it is always a
                 continuous learning process.
               </p>
+              <p className="mt-8">In my spare time I do enjoy playing golf</p>
             </div>
           </div>
           <dl className="mt-10 grid grid-cols-2 gap-8 border-slate-900/10 pt-10 sm:grid-cols-4">
