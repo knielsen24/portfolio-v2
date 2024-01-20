@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import Mode from "@/components/ui/Mode";
+import Mode from "./ui/Mode";
 
 
 const navigation = [
