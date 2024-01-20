@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import ModeMenu from "@/components/ui/Mode";
+import Mode from "@/components/ui/Mode";
 
 
 const navigation = [
@@ -59,7 +59,7 @@ export default function Navbar() {
         </div>
 
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <ModeMenu />
+          <Mode />
         </div>
       </nav>
       <Dialog
@@ -112,7 +112,7 @@ export default function Navbar() {
                 ))}
               </div>
               <div className="py-6">
-                <ModeMenu />
+                <Mode />
               </div>
             </div>
           </div>
