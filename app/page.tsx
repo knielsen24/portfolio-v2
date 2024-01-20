@@ -1,6 +1,7 @@
 import "@/components/Navbar";
 import Link from "next/link";
 import Collage from "@/components/landing/Collage";
+import { Container } from "@/components/Container";
 
 // As career changer, I am committed to making an positive impact in the tech indsutry.
 
@@ -19,8 +20,8 @@ const heroText: heroText = {
 
 export default function Page() {
   return (
-    <>
-      <div className="mx-auto mb-20 max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
+    <Container>
+      <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
         <div className="relative w-full max-w-xl sm:pl-8 lg:shrink-0 xl:max-w-2xl ">
           <h1 className="mb-2 text-3xl font-bold tracking-tight text-slate-700 dark:text-slate-100 sm:text-5xl">
             {heroText.intro}
@@ -49,6 +50,6 @@ export default function Page() {
         </div>
         <Collage />
       </div>
-    </>
+    </Container>
   );
 }

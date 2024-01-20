@@ -1,3 +1,6 @@
+import { Container } from "@/components/Container";
+import { SimpleLayout } from "@/components/SimpleLayout";
+
 const posts = [
   {
     id: 1,
@@ -23,7 +26,10 @@ const posts = [
 
 export default function Page() {
   return (
-    <div className="mx-auto max-w-7xl px-6 lg:px-8 mb-20">
+    <SimpleLayout
+      title="Things I’ve made trying to put my dent in the universe."
+      intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved."
+    >
       <div className="mx-auto max-w-2xl text-center">
         <h2 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-100 sm:text-4xl">
           Here is my portfolio
@@ -94,6 +100,6 @@ export default function Page() {
           </article>
         ))}
       </div>
-    </div>
+    </SimpleLayout>
   );
 }

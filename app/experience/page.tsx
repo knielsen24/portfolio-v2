@@ -4,6 +4,8 @@ import {
   ServerIcon,
 } from "@heroicons/react/20/solid";
 import Work from "@/components/experience/Work";
+import { Container } from "@/components/Container";
+import { SimpleLayout } from "@/components/SimpleLayout";
 
 const features = [
   {
@@ -28,50 +30,51 @@ const features = [
 
 export default function Page() {
   return (
-    <div className="py-30 overflow-hidden sm:py-32 ">
-      <div className="mx-auto max-w-7xl md:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:grid-cols-2 lg:items-start">
-          <div className="px-6 lg:px-0 lg:pr-4 lg:pt-4">
-            <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
-              <h2 className="text-base font-semibold leading-7 text-indigo-600">
-                Deploy faster
-              </h2>
-              <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                A better workflow
-              </p>
-              <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
-                {features.map((feature) => (
-                  <div key={feature.name} className="relative pl-9">
-                    <dt className="inline font-semibold text-gray-900">
-                      <feature.icon
-                        className="absolute left-1 top-1 h-5 w-5 text-indigo-600"
-                        aria-hidden="true"
-                      />
-                      {feature.name}
-                    </dt>{" "}
-                    <dd className="inline">{feature.description}</dd>
-                  </div>
-                ))}
-              </dl>
-            </div>
+    <SimpleLayout
+      title="I’ve spoken at events all around the world and been interviewed for many podcasts."
+      intro="One of my favorite ways to share my ideas is live on stage, where there’s so much more communication bandwidth than there is in writing, and I love podcast interviews because they give me the opportunity to answer questions instead of just present my opinions."
+    >
+      <div className="grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:grid-cols-2 lg:items-start">
+        <div className="px-6 lg:px-0 lg:pr-4 lg:pt-4">
+          <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
+            <h2 className="text-base font-semibold leading-7 text-indigo-600">
+              Deploy faster
+            </h2>
+            <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              A better workflow
+            </p>
+            <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
+              {features.map((feature) => (
+                <div key={feature.name} className="relative pl-9">
+                  <dt className="inline font-semibold text-gray-900">
+                    <feature.icon
+                      className="absolute left-1 top-1 h-5 w-5 text-indigo-600"
+                      aria-hidden="true"
+                    />
+                    {feature.name}
+                  </dt>{" "}
+                  <dd className="inline">{feature.description}</dd>
+                </div>
+              ))}
+            </dl>
           </div>
-          <div className="sm:px-6 lg:px-0">
-            <div className="relative isolate overflow-hidden bg-indigo-500 px-6 pt-8 sm:mx-auto sm:max-w-2xl sm:rounded-3xl sm:pl-16 sm:pr-0 sm:pt-16 lg:mx-0 lg:max-w-none">
-              <div
-                className="absolute -inset-y-px -left-3 -z-10 w-full origin-bottom-left skew-x-[-30deg] bg-indigo-100 opacity-20 ring-1 ring-inset ring-white"
-                aria-hidden="true"
-              />
-              <div className="mx-auto max-w-2xl sm:mx-0 sm:max-w-none">
-                <Work />
-              </div>
-              <div
-                className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-black/10 sm:rounded-3xl"
-                aria-hidden="true"
-              />
+        </div>
+        <div className="sm:px-6 lg:px-0">
+          <div className="relative isolate overflow-hidden bg-indigo-500 px-6 pt-8 sm:mx-auto sm:max-w-2xl sm:rounded-3xl sm:pl-16 sm:pr-0 sm:pt-16 lg:mx-0 lg:max-w-none">
+            <div
+              className="absolute -inset-y-px -left-3 -z-10 w-full origin-bottom-left skew-x-[-30deg] bg-indigo-100 opacity-20 ring-1 ring-inset ring-white"
+              aria-hidden="true"
+            />
+            <div className="mx-auto max-w-2xl sm:mx-0 sm:max-w-none">
+              <Work />
             </div>
+            <div
+              className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-black/10 sm:rounded-3xl"
+              aria-hidden="true"
+            />
           </div>
         </div>
       </div>
-    </div>
+    </SimpleLayout>
   );
 }

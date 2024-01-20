@@ -1,3 +1,6 @@
+import { Container } from "@/components/Container";
+import { SimpleLayout } from "@/components/SimpleLayout";
+
 const stats = [
   { label: "Coding Since", value: "2022" },
   { label: "Coaching Exp", value: "12" },
@@ -7,7 +10,10 @@ const stats = [
 
 export default function Page() {
   return (
-    <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <SimpleLayout
+      title="Things I’ve made trying to put my dent in the universe."
+      intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved."
+    >
       <div className="mx-auto grid max-w-2xl grid-cols-1 items-start justify-items-center gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2">
         <div className="order-1 sm:order-2">
           <div className="relative overflow-hidden rounded-3xl bg-slate-900 px-6 pb-9 pt-64 shadow-2xl sm:px-12 lg:max-w-lg lg:px-8 lg:pb-8 xl:px-10 xl:pb-10">
@@ -117,6 +123,6 @@ export default function Page() {
           </div>
         </div>
       </div>
-    </div>
+    </SimpleLayout>
   );
 }

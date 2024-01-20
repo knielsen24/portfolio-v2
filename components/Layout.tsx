@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 import Navbar from "./Navbar";
-import Footer from "@/components/Footer"
+import Footer from "@/components/Footer";
 
 type Props = {
   children: ReactNode;
@@ -27,7 +27,7 @@ function SquareBlocks() {
       <svg
         x="50%"
         y={-1}
-        className="overflow-visible fill-slate-100/90 dark:fill-slate-900/50"
+        className="overflow-visible fill-slate-200/90 dark:fill-slate-900/70"
       >
         <path
           d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z"
@@ -46,9 +46,13 @@ function SquareBlocks() {
 
 const Layout: React.FC<Props> = ({ children }) => {
   return (
-    <div className="bg-slate-50 dark:bg-slate-800">
-       <Navbar />
-      <div className="relative isolate">
+    <>
+      {/* <div className="fixed inset-0 flex justify-center sm:px-8">
+        <div className="flex w-full max-w-7xl lg:px-8">
+          <div className="w-full bg-white ring-1 ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20" />
+        </div>
+      </div> */}
+      <div className="relative isolate flex w-full flex-col">
         <SquareBlocks />
         <div
           className="absolute left-1/3 right-0 top-0 -z-10 -ml-24 transform-gpu overflow-hidden blur-3xl lg:ml-24 xl:ml-48"
@@ -62,15 +66,12 @@ const Layout: React.FC<Props> = ({ children }) => {
             }}
           />
         </div>
-         
-        <div className="overflow-hidden">
-          <div className="mx-auto mb-auto max-w-7xl px-4 pb-24 pt-40 sm:pt-60 lg:px-8 lg:pt-36">
-            <main>{children}</main>
-          </div>
-        </div>
+
+        <Navbar />
+        <main className="flex-auto">{children}</main>
+        <Footer />
       </div>
-          <Footer />
-    </div>
+    </>
   );
 };
 
