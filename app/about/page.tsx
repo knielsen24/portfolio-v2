@@ -114,13 +114,13 @@ export default function Page() {
             ))}
           </dl>
           <div className="mt-10 flex">
-            <a
+            <Link
               href="/experience"
               className="text-base font-semibold leading-7 text-indigo-600 dark:text-indigo-500"
             >
               Check about my work experience{" "}
               <span aria-hidden="true">&rarr;</span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
