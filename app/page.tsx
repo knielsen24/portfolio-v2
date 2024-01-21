@@ -1,14 +1,18 @@
 import Link from "next/link";
+import Image, { type ImageProps } from "next/image";
 import { Container } from "@/components/Container";
+import ideImage from "@/images/photos/asset-ide3.jpg";
+import logosImage from "@/images/photos/tech-logos2.jpg";
+import headShot from "@/images/avatar.jpg"
 
 function Collage() {
   return (
     <div className="mt-14 flex justify-end gap-8 sm:-mt-36 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
       <div className="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-first lg:pt-40 xl:order-none xl:pt-52">
         <div className="relative">
-          <img
-            src="https://res.cloudinary.com/dooa4lvvv/image/upload/v1705639839/Portfolio/headsot_kn1l5x.png"
-            alt=""
+          <Image
+            src={headShot}
+            alt="headshot"
             className="aspect-[2/3] w-full rounded-xl bg-slate-900/10 object-cover shadow-lg dark:bg-slate-50/10"
           />
           <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-slate-900/10 dark:ring-slate-50/10" />
@@ -16,17 +20,17 @@ function Collage() {
       </div>
       <div className="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-8">
         <div className="relative">
-          <img
-            src="https://res.cloudinary.com/dooa4lvvv/image/upload/v1705644283/Portfolio/Do_what_you_love_bcteat.png"
-            alt=""
+          <Image
+            src={ideImage}
+            alt="ide code"
             className="aspect-[2/3] w-full rounded-xl bg-slate-900/5 object-cover shadow-lg dark:bg-slate-50/10"
           />
           <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-slate-900/10 dark:ring-slate-50/10" />
         </div>
         <div className="relative">
-          <img
-            src="https://res.cloudinary.com/dooa4lvvv/image/upload/v1705641071/Portfolio/circles_xydznb.png"
-            alt=""
+          <Image
+            src={logosImage}
+            alt="technology logos"
             className="aspect-[2/3] w-full rounded-xl bg-slate-900/5 object-cover shadow-lg dark:bg-slate-50/10"
           />
           <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-slate-900/10 dark:ring-slate-50/10" />
@@ -51,7 +55,7 @@ const heroText: heroText = {
 
 export default function Page() {
   return (
-    <Container className="mb-24 mt-32">
+    <Container className="mb-24">
       <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
         <div className="relative w-full max-w-xl sm:pl-4 lg:shrink-0 xl:max-w-2xl ">
           <h1 className="mb-2 text-3xl font-bold tracking-tight text-slate-800 dark:text-slate-100 sm:text-5xl">

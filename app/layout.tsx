@@ -5,8 +5,16 @@ import { Providers } from "@/app/providers";
 import Layout from "@/components/Layout";
 
 export const metadata: Metadata = {
-  title: "Kevin Nielsen",
+  title: {
+    template: "%s - Kevin Nielsen",
+    default: "Kevin Nielsen - Developer and amateur golfer",
+  },
   description: "Software engineer with an eye for design",
+  // alternates: {
+  //   types: {
+  //     'application/rss+xml': `${process.env.NEXT_PUBLIC_SITE_URL}/feed.xml`,
+  //   },
+  // },
 };
 
 export default function RootLayout({

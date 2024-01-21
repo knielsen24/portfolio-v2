@@ -61,8 +61,8 @@ const Layout: React.FC<Props> = ({ children }) => {
           }}
         />
       </div>
-      {/* <Header /> */}
-      <Navbar />
+      <Header />
+      {/* <Navbar /> */}
       <main className="flex-auto">{children}</main>
       <Footer />
     </div>

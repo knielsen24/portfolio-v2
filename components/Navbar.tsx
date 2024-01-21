@@ -10,8 +10,8 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import ThemeToggle from "./ThemeToggle";
 
 const navigation = [
-  { name: "About", href: "/about", prefetch: false },
-  { name: "Experience", href: "/experience", prefetch: false },
+  { name: "About", href: "/about", prefetch: true },
+  { name: "Experience", href: "/experience", prefetch: true },
   { name: "Projects", href: "/projects", prefetch: true },
 ];
 

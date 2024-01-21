@@ -9,7 +9,7 @@ import { Popover, Transition } from "@headlessui/react";
 import clsx from "clsx";
 
 import { Container } from "@/components/Container";
-import avatarImage from "@/public/next.svg";
+import avatarImage from "@/images/avatar.jpg";
 // const avatarImage = "https://res.cloudinary.com/dooa4lvvv/image/upload/v1705639839/Portfolio/headsot_kn1l5x.png"
 
 function CloseIcon(props: React.ComponentPropsWithoutRef<"svg">) {
@@ -243,7 +243,7 @@ function Avatar({
       className={clsx(className, "pointer-events-auto")}
       {...props}
     >
-      <Image
+      {/* <Image
         src={avatarImage}
         alt=""
         sizes={large ? "4rem" : "2.25rem"}
@@ -252,7 +252,10 @@ function Avatar({
           large ? "h-16 w-16" : "h-9 w-9",
         )}
         priority
-      />
+      /> */}
+      <h1 className="inline-block bg-gradient-to-r from-indigo-600 to-indigo-500 bg-clip-text text-xl font-semibold text-transparent dark:from-indigo-500 dark:to-indigo-400 sm:text-2xl">
+        {"[ kn ]"}
+      </h1>
     </Link>
   );
 }
