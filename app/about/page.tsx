@@ -8,7 +8,7 @@ const stats = [
   { label: "Golf Handicap", value: "9.0" },
 ];
 
-export default function Page() {
+export default function About() {
   return (
     <SimpleLayout
       title="Professional coach to coder "

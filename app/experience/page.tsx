@@ -28,7 +28,7 @@ const features = [
   },
 ];
 
-export default function Page() {
+export default function Experience() {
   return (
     <SimpleLayout
       title="Tech experience at a startup"

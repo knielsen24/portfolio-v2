@@ -30,7 +30,7 @@ export default function Navbar() {
             href="/"
             // className="bg-slate-300 rounded-full py-3"
           >
-            <h1 className="inline-block bg-gradient-to-r from-indigo-600 to-indigo-500 bg-clip-text text-xl font-semibold text-transparent dark:from-indigo-500 dark:to-indigo-400 sm:text-2xl">
+            <h1 className="inline-block bg-gradient-to-r from-indigo-600 to-indigo-500 bg-clip-text text-xl font-semibold text-transparent dark:from-indigo-500 dark:to-indigo-400 sm:text-3xl">
               {"[ kn ]"}
             </h1>
             <span className="sr-only">Kevin Nielsen</span>

@@ -10,7 +10,7 @@ type Props = {
 function SquareBlocks() {
   return (
     <svg
-      className="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-slate-200 [mask-image:radial-gradient(40rem_40rem_at_center,white,transparent)] dark:stroke-slate-700 dark:[mask-image:radial-gradient(28rem_28rem_at_center,white,transparent)]"
+      className="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-slate-300/80 [mask-image:radial-gradient(24rem_24rem_at_center,white,transparent)] dark:stroke-slate-600/80 dark:[mask-image:radial-gradient(24rem_24rem_at_center,white,transparent)]"
       aria-hidden="true"
     >
       <defs>
@@ -61,8 +61,8 @@ const Layout: React.FC<Props> = ({ children }) => {
           }}
         />
       </div>
-      <Header />
-      {/* <Navbar /> */}
+      {/* <Header /> */}
+      <Navbar />
       <main className="flex-auto">{children}</main>
       <Footer />
     </div>

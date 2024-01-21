@@ -24,7 +24,7 @@ const posts = [
   // More posts...
 ];
 
-export default function Page() {
+export default function Projects() {
   return (
     <SimpleLayout
       title="Things I’ve made trying to put my dent in the universe."

@@ -3,7 +3,7 @@ import Image, { type ImageProps } from "next/image";
 import { Container } from "@/components/Container";
 import ideImage from "@/images/photos/asset-ide3.jpg";
 import logosImage from "@/images/photos/tech-logos2.jpg";
-import headShot from "@/images/avatar.jpg"
+import headShot from "@/images/avatar.jpg";
 
 function Collage() {
   return (
@@ -53,9 +53,9 @@ const heroText: heroText = {
     "I'm a web and mobile app developer with start up experience that is passionate about finding solutions while making them look pretty.",
 };
 
-export default function Page() {
+export default function Home() {
   return (
-    <Container className="mb-24">
+    <Container className="mt:32 mb:32 sm:mb-48 sm:mt-48">
       <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
         <div className="relative w-full max-w-xl sm:pl-4 lg:shrink-0 xl:max-w-2xl ">
           <h1 className="mb-2 text-3xl font-bold tracking-tight text-slate-800 dark:text-slate-100 sm:text-5xl">
