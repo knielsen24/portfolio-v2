@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image, { type ImageProps } from "next/image";
 import { Container } from "@/components/Container";
-import headShot from "@/images/avatar3.jpg";
+import headShot from "@/images/avatar.jpg";
 
 interface heroText {
   intro: string;
