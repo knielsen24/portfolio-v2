@@ -1,11 +1,9 @@
 "use client";
-import { useEffect } from "react";
-import { useTheme } from "next-themes";
-import { useState } from "react";
 import Link from "next/link";
+import { useState } from "react";
 import { usePathname } from "next/navigation";
-
 import { Dialog } from "@headlessui/react";
+import clsx from "clsx";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import ThemeToggle from "./ThemeToggle";
 
@@ -14,6 +12,48 @@ const navigation = [
   { name: "Experience", href: "/experience", prefetch: true },
   { name: "Projects", href: "/projects", prefetch: true },
 ];
+
+function NavItem({
+  href,
+  children,
+}: {
+  href: string;
+  children: React.ReactNode;
+}) {
+  let isActive = usePathname() === href;
+
+  return (
+    <li>
+      <Link
+        href={href}
+        prefetch={true}
+        className={clsx(
+          "relative block px-3 py-2 transition",
+          isActive
+            ? "text-indigo-500 dark:text-indigo-400"
+            : "hover:text-indigo-500 dark:hover:text-indigo-400",
+        )}
+      >
+        {children}
+        {isActive && (
+          <span className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-indigo-500/0 via-indigo-500/40 to-indigo-500/0 dark:from-indigo-400/0 dark:via-indigo-400/40 dark:to-indigo-400/0" />
+        )}
+      </Link>
+    </li>
+  );
+}
+
+function DesktopNavigation(props: React.ComponentPropsWithoutRef<"nav">) {
+  return (
+    <nav {...props}>
+      <ul className="flex rounded-full bg-slate-100/90 px-3 text-sm font-medium text-slate-800 shadow-lg shadow-slate-800/5 ring-1 ring-slate-900/5 backdrop-blur dark:bg-gray-800/70 dark:text-slate-200 dark:ring-white/10">
+        <NavItem href="/about">About</NavItem>
+        <NavItem href="/experience">Experience</NavItem>
+        <NavItem href="/projects">Projects</NavItem>
+      </ul>
+    </nav>
+  );
+}
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -26,11 +66,8 @@ export default function Navbar() {
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
-          <Link
-            href="/"
-            // className="bg-gray-300 rounded-full py-3"
-          >
-            <h1 className="inline-block bg-gradient-to-r from-indigo-600 to-indigo-500 bg-clip-text text-xl font-semibold text-transparent dark:from-indigo-500 dark:to-indigo-400 sm:text-3xl">
+          <Link href="/">
+            <h1 className="inline-block bg-gradient-to-r from-indigo-600 to-indigo-500 bg-clip-text text-xl font-semibold text-transparent dark:from-indigo-500 dark:to-indigo-400 sm:text-2xl">
               {"[ kn ]"}
             </h1>
             <span className="sr-only">Kevin Nielsen</span>
@@ -47,16 +84,7 @@ export default function Navbar() {
           </button>
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
-          {navigation.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              prefetch={item.prefetch}
-              className="text-sm font-semibold leading-6 text-gray-800 hover:text-indigo-500 dark:text-gray-100 dark:hover:text-indigo-400"
-            >
-              {item.name}
-            </Link>
-          ))}
+          <DesktopNavigation />
         </div>
 
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">

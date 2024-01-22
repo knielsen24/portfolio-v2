@@ -18,23 +18,22 @@ const heroText: heroText = {
 
 export default function Page() {
   return (
-    <Container className="pt-8 md:pt-24 lg:pt-64">
-      <div className="mx-auto grid grid-cols-1 gap-y-12 md:mx-16 md:gap-y-24 lg:grid-cols-2 lg:grid-rows-[auto_1fr]">
-        <div className="lg:pl-20">
-          <div className="mx-auto max-w-xs px-6 sm:px-0 lg:max-w-none lg:px-8">
-            <Image
-              src={headShot}
-              alt="Headshot of Kevin"
-              sizes="(min-width: 1024px) 32rem, 20rem"
-              className="aspect-square rounded-3xl shadow-sm shadow-gray-400 dark:shadow-gray-600"
-            />
-          </div>
+    <Container>
+      <div className="mx-auto grid max-w-4xl grid-cols-1 gap-y-12 py-10 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:py-52">
+        <div className="mx-auto max-w-xs px-6 pt-0 sm:px-0 sm:pt-6 lg:max-w-none lg:px-8 lg:pl-20">
+          <Image
+            src={headShot}
+            alt="Headshot of Kevin"
+            width={250}
+            // sizes="(min-width: 1024px) 32rem, 20rem"
+            className="aspect-square rounded-3xl shadow-sm shadow-slate-400 ring-1 ring-slate-300/50 dark:shadow-slate-600  dark:ring-slate-500/80"
+          />
         </div>
-        <div className="lg:order-first lg:row-span-2 lg:pl-8">
+        <div className="lg:order-first lg:row-span-2">
           <h1 className="mb-2 text-3xl font-bold tracking-tight text-gray-800 dark:text-gray-100 sm:text-5xl">
             {heroText.intro}
           </h1>
-          <h2 className="first-letter: text-lg font-medium tracking-tight text-indigo-600 dark:text-indigo-300 sm:text-xl">
+          <h2 className="text-lg font-medium tracking-tight text-indigo-600 dark:text-indigo-300 sm:text-xl">
             {heroText.headline}
           </h2>
           <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-50 sm:max-w-md lg:max-w-none">
