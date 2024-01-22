@@ -51,7 +51,7 @@ const navigation = [
 
 export default function Footer() {
   return (
-    <footer className="mt-20 bg-slate-200 dark:bg-slate-700 border-t border-slate-300 dark:border-slate-600/50">
+    <footer className="bg:bg-gray-200 mt-16 border-t border-gray-300 dark:border-gray-600/50 dark:bg-transparent">
       <div className="mx-auto max-w-6xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8">
         <div className="flex justify-center space-x-6 md:order-2">
           {navigation.map((item) => (
@@ -59,7 +59,7 @@ export default function Footer() {
               key={item.name}
               href={item.href}
               target="_blank"
-              className="text-slate-500/90 hover:text-indigo-400 dark:text-slate-300 dark:hover:text-indigo-400"
+              className="text-gray-500/90 hover:text-indigo-400 dark:text-gray-300 dark:hover:text-indigo-400"
             >
               <span className="sr-only">{item.name}</span>
               <item.icon className="h-6 w-6" aria-hidden="true" />
@@ -67,7 +67,7 @@ export default function Footer() {
           ))}
         </div>
         <div className="mt-8 md:order-1 md:mt-0">
-          <p className="text-center text-xs leading-5 text-slate-400 dark:text-slate-300">
+          <p className="text-center text-xs leading-5 text-gray-400 dark:text-gray-300">
             &copy; {new Date().getFullYear()} Kevin Nielsen. All rights
             reserved.
           </p>

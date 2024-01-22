@@ -20,15 +20,15 @@ export default function Navbar() {
   let pathname = usePathname() || "/";
 
   return (
-    <header className="relative inset-x-0 top-0 z-50 flex-none">
+    <header className="inset-x-0 top-0 z-50 flex-none">
       <nav
-        className="mx-auto flex max-w-5xl items-center justify-between p-6 lg:px-8"
+        className="mx-auto flex max-w-6xl items-center justify-between p-6 lg:px-8"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
           <Link
             href="/"
-            // className="bg-slate-300 rounded-full py-3"
+            // className="bg-gray-300 rounded-full py-3"
           >
             <h1 className="inline-block bg-gradient-to-r from-indigo-600 to-indigo-500 bg-clip-text text-xl font-semibold text-transparent dark:from-indigo-500 dark:to-indigo-400 sm:text-3xl">
               {"[ kn ]"}
@@ -39,7 +39,7 @@ export default function Navbar() {
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-slate-700 dark:text-slate-100"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 dark:text-gray-100"
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
@@ -52,7 +52,7 @@ export default function Navbar() {
               key={item.name}
               href={item.href}
               prefetch={item.prefetch}
-              className="text-sm font-semibold leading-6 text-slate-800 hover:text-indigo-500 dark:text-slate-100 dark:hover:text-indigo-400"
+              className="text-sm font-semibold leading-6 text-gray-800 hover:text-indigo-500 dark:text-gray-100 dark:hover:text-indigo-400"
             >
               {item.name}
             </Link>
@@ -70,7 +70,7 @@ export default function Navbar() {
         onClose={setMobileMenuOpen}
       >
         <div className="fixed inset-0 z-50" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-slate-50 px-6 py-6 dark:bg-slate-800 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-slate-100 px-6 py-6 dark:bg-gray-700 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <Link
               href="/"
@@ -78,7 +78,7 @@ export default function Navbar() {
               className="-m-1.5 p-1.5"
             >
               <h1 className="inline-block bg-gradient-to-r from-indigo-600 to-indigo-500 bg-clip-text text-xl font-semibold text-transparent dark:from-indigo-500 dark:to-indigo-400 sm:text-2xl">
-                {"[ kevin nielsen ]"}
+                {"[ kn ]"}
               </h1>
               <span className="sr-only">Kevin Nielsen</span>
 
@@ -90,7 +90,7 @@ export default function Navbar() {
             </Link>
             <button
               type="button"
-              className="-m-2.5 rounded-md p-2.5 text-slate-700 dark:text-slate-100"
+              className="-m-2.5 rounded-md p-2.5 text-gray-700 dark:text-gray-100"
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className="sr-only">Close menu</span>
@@ -106,7 +106,7 @@ export default function Navbar() {
                     href={item.href}
                     prefetch={item.prefetch}
                     onClick={() => setMobileMenuOpen(false)}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-800 hover:bg-indigo-50 dark:text-slate-100 dark:hover:bg-slate-900"
+                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-800 hover:bg-indigo-50 dark:text-gray-100 dark:hover:bg-gray-900"
                   >
                     {item.name}
                   </Link>

@@ -10,12 +10,12 @@ export function SimpleLayout({
   children?: React.ReactNode;
 }) {
   return (
-    <Container className="mt-28 sm:mt-48">
+    <Container className="mt-8 sm:mt-24">
       <header className="max-w-2xl">
-        <h1 className="text-3xl font-bold tracking-tight text-slate-800 dark:text-slate-100 sm:text-5xl">
+        <h1 className="text-3xl font-bold tracking-tight text-gray-800 dark:text-gray-100 sm:text-5xl">
           {title}
         </h1>
-        <p className="mt-6 text-base text-slate-600 dark:text-slate-400">
+        <p className="mt-6 text-base text-gray-600 dark:text-gray-400">
           {intro}
         </p>
       </header>
