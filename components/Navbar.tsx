@@ -20,9 +20,9 @@ export default function Navbar() {
   let pathname = usePathname() || "/";
 
   return (
-    <header className="absolute inset-x-0 top-0 z-50">
+    <header className="relative inset-x-0 top-0 z-50 flex-none">
       <nav
-        className="mx-auto flex max-w-6xl items-center justify-between p-6 lg:px-8"
+        className="mx-auto flex max-w-5xl items-center justify-between p-6 lg:px-8"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">

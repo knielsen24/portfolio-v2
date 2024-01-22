@@ -3,7 +3,7 @@ import Image, { type ImageProps } from "next/image";
 import { Container } from "@/components/Container";
 import ideImage from "@/images/photos/asset-ide3.jpg";
 import logosImage from "@/images/photos/tech-logos2.jpg";
-import headShot from "@/images/avatar.jpg"
+import headShot from "@/images/avatar3.jpg";
 
 function Collage() {
   return (
@@ -55,9 +55,19 @@ const heroText: heroText = {
 
 export default function Page() {
   return (
-    <Container className="sm:mt-48 mt-32 mb-32">
-      <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
-        <div className="relative w-full max-w-xl sm:pl-4 lg:shrink-0 xl:max-w-2xl ">
+    <Container className=" my-12 md:my-20 lg:my-64">
+      <div className="mx-auto md:mx-16 grid grid-cols-1 gap-y-12 lg:grid-cols-2 lg:grid-rows-[auto_1fr] md:gap-y-24">
+        <div className="lg:pl-20">
+          <div className="max-w-xs px-2 pr-32 lg:px-16 lg:max-w-none">
+            <Image
+              src={headShot}
+              alt=""
+              sizes="(min-width: 1024px) 32rem, 20rem"
+              className="aspect-square rounded-3xl shadow-sm shadow-slate-400 dark:shadow-slate-600"
+            />
+          </div>
+        </div>
+        <div className="lg:pl-8 lg:order-first lg:row-span-2">
           <h1 className="mb-2 text-3xl font-bold tracking-tight text-slate-800 dark:text-slate-100 sm:text-5xl">
             {heroText.intro}
           </h1>
@@ -83,7 +93,8 @@ export default function Page() {
             </a>
           </div>
         </div>
-        <Collage />
+
+        {/* <Collage /> */}
       </div>
     </Container>
   );
