@@ -1,3 +1,24 @@
+import Link from 'next/link'
+
+import { ContainerInner, ContainerOuter } from '@/components/Container'
+
+function NavLink({
+  href,
+  children,
+}: {
+  href: string
+  children: React.ReactNode
+}) {
+  return (
+    <Link
+      href={href}
+      className="transition hover:text-indigo-500 dark:hover:text-indigo-400"
+    >
+      {children}
+    </Link>
+  )
+}
+
 const navigation = [
   {
     name: "Linkedin",
@@ -51,28 +72,24 @@ const navigation = [
 
 export default function Footer() {
   return (
-    <footer className="bg:bg-gray-200 mt-16  dark:bg-transparent">
-      <div className="mx-auto max-w-6xl border-t border-gray-300 px-6 py-12 dark:border-gray-600/50 md:flex md:items-center md:justify-between lg:px-8">
-        <div className="flex justify-center space-x-6 md:order-2">
-          {navigation.map((item) => (
-            <a
-              key={item.name}
-              href={item.href}
-              target="_blank"
-              className="text-gray-500/90 hover:text-indigo-500 dark:text-gray-300 dark:hover:text-indigo-400"
-            >
-              <span className="sr-only">{item.name}</span>
-              <item.icon className="h-6 w-6" aria-hidden="true" />
-            </a>
-          ))}
+    <footer className="mt-20 flex-none">
+      <ContainerOuter>
+        <div className="border-t border-slate-200 pb-16 pt-10 dark:border-gray-700/40">
+          <ContainerInner>
+            <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
+              <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm font-medium text-slate-800 dark:text-gray-200">
+                <NavLink href="/about">About</NavLink>
+                <NavLink href="/experience">Experience</NavLink>
+                <NavLink href="/projects">Projects</NavLink>
+              </div>
+              <p className="text-sm text-slate-400 dark:text-gray-400">
+                &copy; {new Date().getFullYear()} Kevin Nielsen. All rights
+                reserved.
+              </p>
+            </div>
+          </ContainerInner>
         </div>
-        <div className="mt-8 md:order-1 md:mt-0">
-          <p className="text-center text-xs leading-5 text-gray-400 dark:text-gray-300">
-            &copy; {new Date().getFullYear()} Kevin Nielsen. All rights
-            reserved.
-          </p>
-        </div>
-      </div>
+      </ContainerOuter>
     </footer>
-  );
+  )
 }

@@ -65,7 +65,7 @@ function MobileNavigation(
 ) {
   return (
     <Popover {...props}>
-      <Popover.Button className="group flex items-center rounded-full bg-slate-50 px-4 py-2 text-sm font-medium text-slate-800 shadow-lg shadow-slate-800/5 ring-1 ring-slate-900/5 backdrop-blur dark:bg-gray-700 dark:text-slate-200 dark:ring-white/10 dark:hover:ring-white/20">
+      <Popover.Button className="group flex items-center rounded-full bg-slate-50 px-4 py-2 text-sm font-medium text-slate-800 shadow-lg shadow-slate-800/5 ring-1 ring-slate-900/5 backdrop-blur dark:bg-gray-700 dark:text-gray-200 dark:ring-white/10 dark:hover:ring-white/20">
         Menu
         <ChevronDownIcon className="ml-3 h-auto w-2 stroke-slate-500 group-hover:stroke-slate-700 dark:group-hover:stroke-slate-400" />
       </Popover.Button>
@@ -79,7 +79,7 @@ function MobileNavigation(
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <Popover.Overlay className="fixed inset-0 z-50 bg-slate-800/40 backdrop-blur-sm dark:bg-slate-800/80" />
+          <Popover.Overlay className="fixed inset-0 z-50 bg-slate-800/40 backdrop-blur-sm dark:bg-slate-800/60" />
         </Transition.Child>
         <Transition.Child
           as={Fragment}
@@ -92,14 +92,14 @@ function MobileNavigation(
         >
           <Popover.Panel
             focus
-            className="fixed inset-x-4 top-8 z-50 origin-top rounded-3xl bg-slate-50 p-8 ring-1 ring-slate-900/5 dark:bg-gray-800 dark:ring-gray-600"
+            className="fixed inset-x-4 top-8 z-50 origin-top rounded-3xl bg-slate-50 p-8 ring-1 ring-slate-900/5 dark:bg-gray-700 dark:ring-gray-600"
           >
             <div className="flex flex-row-reverse items-center justify-between">
               <Popover.Button aria-label="Close menu" className="-m-1 p-1">
                 <CloseIcon className="h-6 w-6 text-slate-500 dark:text-slate-400" />
               </Popover.Button>
               <h2 className="text-sm font-medium text-slate-600 dark:text-slate-400">
-                Kevin Nielsen
+                Navigation
               </h2>
             </div>
             <nav className="mt-6">
@@ -149,7 +149,7 @@ function NavItem({
 function DesktopNavigation(props: React.ComponentPropsWithoutRef<"nav">) {
   return (
     <nav {...props}>
-      <ul className="flex rounded-full bg-slate-100/90 px-3 text-sm font-medium text-slate-800 shadow-lg shadow-slate-800/5 ring-1 ring-slate-900/5 backdrop-blur dark:bg-gray-700 dark:text-slate-200 dark:ring-white/10">
+      <ul className="flex rounded-full bg-white px-3 text-sm font-medium text-slate-800 shadow-lg shadow-slate-800/5 ring-1 ring-slate-900/5 backdrop-blur dark:bg-gray-700 dark:text-slate-200 dark:ring-white/10 dark:hover:ring-white/20">
         <NavItem href="/about">About</NavItem>
         <NavItem href="/experience">Experience</NavItem>
         <NavItem href="/projects">Projects</NavItem>
@@ -170,7 +170,7 @@ export default function Navbar() {
   return (
     <header className="pointer-events-none inset-x-0 top-0 z-50 flex flex-none flex-col">
       <Container>
-        <nav className="pt-7 h-16" aria-label="Global">
+        <nav className="pt-6 sm:pt-7 h-16" aria-label="Global">
           <div className="relative flex items-center gap-4">
             <div className="pointer-events-auto flex flex-1">
               <Link href="/">

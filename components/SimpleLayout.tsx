@@ -10,7 +10,7 @@ export function SimpleLayout({
   children?: React.ReactNode;
 }) {
   return (
-    <Container className="mt-8 sm:mt-24">
+    <Container className="mt-16 sm:mt-24">
       <header className="max-w-2xl">
         <h1 className="text-3xl font-bold tracking-tight text-gray-800 dark:text-gray-100 sm:text-5xl">
           {title}
