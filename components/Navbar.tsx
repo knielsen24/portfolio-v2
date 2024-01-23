@@ -79,7 +79,7 @@ function MobileNavigation(
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <Popover.Overlay className="fixed inset-0 z-50 bg-slate-800/40 backdrop-blur-sm dark:bg-black/80" />
+          <Popover.Overlay className="fixed inset-0 z-50 bg-slate-800/40 backdrop-blur-sm dark:bg-slate-800/80" />
         </Transition.Child>
         <Transition.Child
           as={Fragment}
@@ -103,7 +103,7 @@ function MobileNavigation(
               </h2>
             </div>
             <nav className="mt-6">
-              <ul className="-my-2 divide-y divide-slate-100 text-base text-slate-800 dark:divide-gray-100/5 dark:text-gray-300">
+              <ul className="-my-2 divide-y divide-slate-200/70 text-base text-slate-800 dark:divide-gray-100/5 dark:text-gray-300">
                 <MobileNavItem href="/about">About</MobileNavItem>
                 <MobileNavItem href="/experience">Experience</MobileNavItem>
                 <MobileNavItem href="/projects">Projects</MobileNavItem>

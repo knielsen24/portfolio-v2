@@ -47,7 +47,7 @@ export default function ThemeToggle() {
     <button
       type="button"
       aria-label={mounted ? `Switch to ${otherTheme} theme` : "Toggle theme"}
-      className="group rounded-full bg-slate-50 px-3 py-2 shadow-lg shadow-slate-gray/5 ring-1 ring-gray-900/5 backdrop-blur transition dark:bg-gray-700 dark:ring-white/10 dark:hover:ring-white/20"
+      className="shadow-slate-gray/5 group rounded-full bg-slate-50 px-3 py-2 shadow-lg ring-1 ring-gray-900/5 backdrop-blur transition dark:bg-gray-700 dark:ring-white/10 dark:hover:ring-white/20"
       onClick={() => setTheme(otherTheme)}
     >
       <SunIcon className="h-6 w-6 fill-slate-100 stroke-slate-500 transition group-hover:fill-slate-200 group-hover:stroke-slate-700 dark:hidden [@media(prefers-color-scheme:dark)]:fill-indigo-50 [@media(prefers-color-scheme:dark)]:stroke-indigo-400 [@media(prefers-color-scheme:dark)]:group-hover:fill-indigo-50 [@media(prefers-color-scheme:dark)]:group-hover:stroke-indigo-500" />
