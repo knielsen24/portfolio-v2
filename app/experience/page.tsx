@@ -9,21 +9,21 @@ import { SimpleLayout } from "@/components/SimpleLayout";
 
 const features = [
   {
-    name: "Push to deploy.",
+    name: "Lead",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+      "leader... message, intentions, and actions are the same.",
     icon: CloudArrowUpIcon,
   },
   {
-    name: "SSL certificates.",
+    name: "Support",
     description:
-      "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.",
+      "Looking out for what is best for the individual, and giving them positive reinforcement or constructive criticism",
     icon: LockClosedIcon,
   },
   {
-    name: "Database backups.",
+    name: "Empower",
     description:
-      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
+      "The most important aspect is to teach transferrable skills. Having a great mindset, and appreciating the process will consistently produce high results.",
     icon: ServerIcon,
   },
 ];
@@ -31,19 +31,19 @@ const features = [
 export default function Experience() {
   return (
     <SimpleLayout
-      title="Tech experience at a startup"
-      intro="One of my favorite ways to share my ideas is live on stage, where there’s so much more communication bandwidth than there is in writing, and I love podcast interviews because they give me the opportunity to answer questions instead of just present my opinions."
+      title="Tech experience at multiple startup companies "
+      intro="Coincidently, I have worked at two startups in the fitness and wellness industry. Having coached athletes at the Olympic level, and qualified for the Olympic Trials myself, I bring a competitive mindset to work. I'm proud of my non-traditional background."
     >
       <div className="grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:grid-cols-2 lg:items-start">
         <div className="px-6 lg:px-0 lg:pr-4 lg:pt-4">
           <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
             <h2 className="text-base font-semibold leading-7 text-indigo-500 dark:text-indigo-400">
-              Deploy faster
+              Soft skills unlike your average coder 
             </h2>
             <p className="mt-2 text-xl font-bold tracking-tight text-slate-800 dark:text-slate-100 sm:text-2xl">
-              Non-traditional background
+              Coaching taught me how to...
             </p>
-            <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-slate-600 dark:text-slate-500 lg:max-w-none">
+            <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-slate-600 dark:text-slate-400 lg:max-w-none">
               {features.map((feature) => (
                 <div key={feature.name} className="relative pl-9">
                   <dt className="inline font-semibold text-slate-900 dark:text-slate-100">

@@ -62,10 +62,10 @@ function Skills() {
           <div className="grid grid-cols-1 items-center gap-x-8 gap-y-16 lg:grid-cols-2">
             <div className="mx-auto w-full max-w-xl lg:mx-0">
               <h2 className="text-2xl font-bold tracking-tight text-slate-900 dark:text-gray-100 sm:text-3xl">
-                My best skills
+                Technologies I love coding with
               </h2>
               <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
-                These are the languages and frameworkds I am most skilled at or have the most experience
+                These are the languages and frameworks that I really enjoy using.
               </p>
             </div>
             <div className="mx-auto grid w-full max-w-xl grid-cols-2 items-center gap-y-12 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:pl-8">

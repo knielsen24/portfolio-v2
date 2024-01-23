@@ -82,7 +82,7 @@ export default function Footer() {
                 <NavLink href="/experience">Experience</NavLink>
                 <NavLink href="/projects">Projects</NavLink>
               </div>
-              <p className="text-sm text-slate-400 dark:text-gray-400">
+              <p className="text-sm text-slate-500 dark:text-gray-400">
                 &copy; {new Date().getFullYear()} Kevin Nielsen. All rights
                 reserved.
               </p>

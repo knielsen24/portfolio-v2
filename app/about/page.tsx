@@ -11,8 +11,8 @@ const stats = [
 export default function About() {
   return (
     <SimpleLayout
-      title="Professional coach to coder "
-      intro="I'm a career changer. Before I made the committment to a career in software engineering I worked in non-profit youth sports organizations where I served as a professional swimming coach for highly competitive teams."
+      title="Professional coach to coder. I'm a career changer."
+      intro="Before I made the committment to a career in software engineering I worked in non-profit youth sports organizations where I served as a professional swimming coach for highly competitive teams, working with some of the fastest athletes in the US. "
     >
       <div className="mx-auto grid max-w-2xl grid-cols-1 items-start justify-items-center gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2">
         <div className="order-1 sm:order-2">

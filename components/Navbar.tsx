@@ -149,7 +149,7 @@ function NavItem({
 function DesktopNavigation(props: React.ComponentPropsWithoutRef<"nav">) {
   return (
     <nav {...props}>
-      <ul className="flex rounded-full bg-white px-3 text-sm font-medium text-slate-800 shadow-lg shadow-slate-800/5 ring-1 ring-slate-900/5 backdrop-blur dark:bg-gray-700 dark:text-slate-200 dark:ring-white/10 dark:hover:ring-white/20">
+      <ul className="flex rounded-full bg-white px-3 text-sm font-medium text-slate-800 shadow-lg shadow-slate-800/5 ring-1 ring-slate-900/5 backdrop-blur dark:bg-gray-700/60 dark:text-slate-200 dark:ring-white/10 dark:hover:ring-white/20">
         <NavItem href="/about">About</NavItem>
         <NavItem href="/experience">Experience</NavItem>
         <NavItem href="/projects">Projects</NavItem>
@@ -160,7 +160,7 @@ function DesktopNavigation(props: React.ComponentPropsWithoutRef<"nav">) {
 
 function Logo() {
   return (
-    <h1 className="inline-block bg-gradient-to-r from-slate-700/90 to-slate-700 bg-clip-text text-2xl font-semibold text-transparent dark:from-gray-500/90 dark:to-gray-500 sm:text-3xl">
+    <h1 className="inline-block bg-gradient-to-r from-slate-700/90 to-slate-700 bg-clip-text text-2xl font-semibold text-transparent dark:from-gray-400/90 dark:to-gray-400 sm:text-3xl">
       {"[ kn ]"}
     </h1>
   );
