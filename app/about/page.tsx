@@ -12,7 +12,7 @@ export default function About() {
   return (
     <SimpleLayout
       title="Professional coach to coder "
-      intro="I'm a career changer.  Before I made the committment to a career in software engineering I was a profressional swimming coach "
+      intro="I'm a career changer. Before I made the committment to a career in software engineering I worked in non-profit youth sports organizations where I served as a professional swimming coach for highly competitive teams."
     >
       <div className="mx-auto grid max-w-2xl grid-cols-1 items-start justify-items-center gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2">
         <div className="order-1 sm:order-2">
@@ -116,9 +116,9 @@ export default function About() {
           <div className="mt-10 flex">
             <Link
               href="/experience"
-              className="text-base font-semibold leading-7 text-indigo-600 dark:text-indigo-500"
+              className="text-base font-semibold leading-7 text-indigo-600 dark:text-indigo-400"
             >
-              Check out my work experience{" "}
+              Check out my experience{" "}
               <span aria-hidden="true">&rarr;</span>
             </Link>
           </div>

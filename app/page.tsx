@@ -19,7 +19,7 @@ const heroText: heroText = {
 export default function Page() {
   return (
     <Container>
-      <div className="mx-auto grid max-w-4xl grid-cols-1 gap-y-12 py-10 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:py-52">
+      <div className="mx-auto grid max-w-4xl grid-cols-1 gap-y-12 py-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:py-64">
         <div className="mx-auto max-w-xs px-6 pt-0 sm:px-0 sm:pt-6 lg:max-w-none lg:px-8 lg:pl-20">
           <Image
             src={headShot}
@@ -43,7 +43,7 @@ export default function Page() {
           <div className="mt-10 flex items-center gap-x-6">
             <Link
               href="/projects"
-              className="rounded-md bg-gradient-to-r from-indigo-600 to-sky-600 px-3.5 py-2.5 text-sm font-semibold text-gray-50 shadow hover:from-blue-500 hover:to-emerald-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 "
+              className="rounded-md bg-indigo-400/90 px-3.5 py-2.5 text-sm font-semibold text-slate-50 shadow hover:bg-indigo-500/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 "
             >
               View Projects
             </Link>
