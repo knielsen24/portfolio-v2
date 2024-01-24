@@ -23,16 +23,30 @@ function SunIcon(props: React.ComponentPropsWithoutRef<"svg">) {
 
 function MoonIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
+    <svg viewBox="0 0 22 22" aria-hidden="true" {...props}>
       <path
-        d="M17.25 16.22a6.937 6.937 0 0 1-9.47-9.47 7.451 7.451 0 1 0 9.47 9.47ZM12.75 7C17 7 17 2.75 17 2.75S17 7 21.25 7C17 7 17 11.25 17 11.25S17 7 12.75 7Z"
-        strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
+        d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
       />
     </svg>
   );
 }
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="none"
+  viewBox="0 0 24 24"
+  strokeWidth={1.5}
+  stroke="currentColor"
+  className="h-6 w-6"
+>
+  <path
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
+  />
+</svg>;
 
 export default function ThemeToggle() {
   let { resolvedTheme, setTheme } = useTheme();
@@ -47,11 +61,11 @@ export default function ThemeToggle() {
     <button
       type="button"
       aria-label={mounted ? `Switch to ${otherTheme} theme` : "Toggle theme"}
-      className="shadow-slate-gray/5 group rounded-full bg-white px-3 py-2 shadow-lg ring-1 ring-gray-900/5 backdrop-blur transition dark:bg-gray-700/60 dark:ring-white/10 dark:hover:ring-white/20"
+      className="shadow-slate-zinc/5 group rounded-full bg-white px-2.5 py-1.5 shadow-lg ring-1 ring-zinc-900/5 backdrop-blur transition dark:bg-zinc-800 dark:ring-white/10 dark:hover:ring-white/20"
       onClick={() => setTheme(otherTheme)}
     >
       <SunIcon className="h-6 w-6 fill-slate-100 stroke-slate-500 transition group-hover:fill-slate-200 group-hover:stroke-slate-700 dark:hidden [@media(prefers-color-scheme:dark)]:fill-indigo-50 [@media(prefers-color-scheme:dark)]:stroke-indigo-400 [@media(prefers-color-scheme:dark)]:group-hover:fill-indigo-50 [@media(prefers-color-scheme:dark)]:group-hover:stroke-indigo-500" />
-      <MoonIcon className="[@media_not_(prefers-color-scheme:dark hidden h-6 w-6 fill-gray-700 stroke-gray-500 transition group-hover:fill-indigo-400/10 dark:block [@media(prefers-color-scheme:dark)]:group-hover:stroke-slate-300/50 [@media_not_(prefers-color-scheme:dark)]:stroke-indigo-500" />
+      <MoonIcon className="[@media_not_(prefers-color-scheme:dark hidden h-6 w-6 fill-zinc-700/40 stroke-zinc-500 transition group-hover:fill-zinc-400/10 dark:block [@media(prefers-color-scheme:dark)]:group-hover:stroke-zinc-300/50 [@media_not_(prefers-color-scheme:dark)]:stroke-indigo-500" />
     </button>
   );
 }

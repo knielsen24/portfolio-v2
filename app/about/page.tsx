@@ -48,11 +48,6 @@ export default function About() {
                 />
                 <use href="#0ef284b8-28c2-426e-9442-8655d393522e" x={86} />
               </svg>
-              {/* <img
-                src="https://tailwindui.com/img/logos/workcation-logo-white.svg"
-                alt=""
-                className="h-12 w-auto"
-              /> */}
               <blockquote className="mt-6 text-xl font-semibold leading-8 text-slate-50">
                 <p>
                   “The way I look at software is that there is always a problem
@@ -74,12 +69,6 @@ export default function About() {
             <h1 className=" text-xl font-semibold leading-7 text-indigo-600 dark:text-indigo-400">
               Why I love coding
             </h1>
-            {/* <h1 className="mt-2 text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-100 sm:text-4xl">
-              I'm a career changer.
-            </h1>
-            <h1 className="mt-2 text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-100 sm:text-4xl">
-              Profressional coach to coder.
-            </h1> */}
             <div className="max-w-xl">
               <p className="mt-6">
                 The pure expression of problem solving and building something
@@ -118,8 +107,7 @@ export default function About() {
               href="/experience"
               className="text-base font-semibold leading-7 text-indigo-600 dark:text-indigo-400"
             >
-              Check out my experience{" "}
-              <span aria-hidden="true">&rarr;</span>
+              Check out my experience <span aria-hidden="true">&rarr;</span>
             </Link>
           </div>
         </div>

@@ -1,11 +1,12 @@
 import Link from "next/link";
 import Image, { type ImageProps } from "next/image";
 import { Container } from "@/components/Container";
-import headShot from "@/images/avatar.jpg";
+import headShot from "@/images/avatar.png";
 
 const iconsObj = [
   {
     name: "Linkedin",
+    tilt: "back",
     href: "https://www.linkedin.com/in/kevin-nielsen-se/",
     icon: (props: any) => (
       <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
@@ -15,6 +16,7 @@ const iconsObj = [
   },
   {
     name: "GitHub",
+    tilt: "forward",
     href: "https://github.com/knielsen24",
     icon: (props: any) => (
       <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
@@ -28,6 +30,7 @@ const iconsObj = [
   },
   {
     name: "YouTube",
+    tilt: "back",
     href: "https://www.youtube.com/channel/UCsk1b30JmVTt_lz18das3Jw",
     icon: (props: any) => (
       <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
@@ -41,6 +44,7 @@ const iconsObj = [
   },
   {
     name: "Instagram",
+    tilt: "forward",
     href: "https://www.instagram.com/ktrain21mn/",
     icon: (props: any) => (
       <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
@@ -65,7 +69,8 @@ function Skills() {
                 Technologies I love coding with
               </h2>
               <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
-                These are the languages and frameworks that I really enjoy using.
+                These are my bread and butter languages and frameworks. To see
+                all of my skills,
               </p>
             </div>
             <div className="mx-auto grid w-full max-w-xl grid-cols-2 items-center gap-y-12 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:pl-8">
@@ -120,7 +125,7 @@ function Skills() {
         aria-hidden="true"
       >
         <div
-          className="aspect-[1318/752] w-[82.375rem] flex-none bg-gradient-to-r from-[#80caff] to-[#4f46e5] opacity-30 dark:opacity-30"
+          className="aspect-[1318/752] w-[82.375rem] flex-none bg-gradient-to-r from-[#a5b4fc] to-[#818cf8] opacity-30 dark:opacity-30"
           style={{
             clipPath:
               "polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)",
@@ -138,32 +143,32 @@ interface heroText {
 }
 
 const heroText: heroText = {
-  intro: "Hi there, I'm Kevin",
+  intro: "Hi there, I'm Kevin.",
   headline: "A software engineer with an eye for design",
   description:
-    "I'm a web and mobile app developer with start up experience that is passionate about finding solutions while making them look pretty.",
+    "I'm a web and mobile app developer with start up experience who is passionate about implementing solutions with beautiful ui.",
 };
 
 export default function Home() {
   return (
     <Container>
-      <div className="mx-auto grid max-w-4xl grid-cols-1 gap-y-12 py-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:py-56">
-        <div className="mx-auto max-w-xs px-6 pt-0 sm:px-0 sm:pt-6 lg:max-w-none lg:px-8 lg:pl-20">
+      <div className="mx-auto grid max-w-5xl grid-cols-1 gap-y-12 py-16 md:grid-rows-[auto_1fr] lg:grid-cols-3 lg:py-56">
+        <div className="mx-auto max-w-xs px-6 sm:px-0 lg:max-w-none lg:px-8">
           <Image
             src={headShot}
             alt="Headshot of Kevin"
             width={250}
-            className="aspect-square rounded-2xl shadow-sm shadow-slate-400 ring-1 ring-slate-300/50 dark:shadow-slate-600  dark:ring-slate-500/80"
+            className=" rounded-full bg-gradient-to-r from-zinc-400/80 via-indigo-400 to-zinc-400 shadow-sm shadow-slate-500 ring-1 ring-slate-400 delay-75 duration-300 hover:shadow-md dark:bg-zinc-600 dark:bg-gradient-to-r dark:from-zinc-800/80 dark:via-indigo-400 dark:to-zinc-800  dark:shadow-zinc-700 dark:ring-zinc-700"
           />
         </div>
-        <div className="max-w-2xl lg:order-first lg:row-span-2">
+        <div className="sm:col-span-2 lg:order-first lg:row-span-2">
           <h1 className="mb-2 text-3xl font-bold tracking-tight text-gray-800 dark:text-gray-100 sm:text-5xl">
             {heroText.intro}
           </h1>
           <h2 className="text-lg font-medium tracking-tight text-indigo-600 dark:text-indigo-300 sm:text-xl">
             {heroText.headline}
           </h2>
-          <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-50 sm:max-w-md lg:max-w-none">
+          <p className="mt-6 text-lg  leading-8 text-gray-600 dark:text-gray-50 sm:max-w-md lg:max-w-none">
             {heroText.description}
           </p>
 
@@ -175,25 +180,18 @@ export default function Home() {
                   key={item.name}
                   href={item.href}
                   target="_blank"
-                  className="text-gray-500/90 hover:text-indigo-500 dark:text-gray-300 dark:hover:text-indigo-400"
+                  className={`dark:hover:text-indigo-400" + origin-bottom text-gray-500/90 delay-75 duration-500 hover:text-indigo-500 dark:text-gray-300
+                    ${
+                      item.tilt === "back"
+                        ? "hover:-rotate-6"
+                        : "hover:rotate-6"
+                    }`}
                 >
                   <span className="sr-only">{item.name}</span>
                   <item.icon className="h-6 w-6" aria-hidden="true" />
                 </a>
               ))}
             </div>
-            {/* <Link
-              href="/projects"
-              className="rounded-md bg-indigo-600/80 px-3.5 py-2.5 text-sm font-semibold text-slate-50 shadow hover:bg-indigo-500/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 "
-            >
-              View Projects
-            </Link>
-            <a
-              href="#"
-              className="border-0 text-sm font-semibold leading-6 text-gray-800 dark:text-gray-100 dark:hover:text-gray-300"
-            >
-              Skills <span aria-hidden="true">→</span>
-            </a> */}
           </div>
         </div>
       </div>
