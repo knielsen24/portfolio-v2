@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full antialiased">
       <body
-        className={`${inter.className} flex h-full bg-slate-100 antialiased dark:bg-zinc-800/60`}
+        className={`${inter.className} flex h-full bg-slate-50 antialiased dark:bg-zinc-800/60`}
       >
         <Providers>
           <div className="flex w-full">

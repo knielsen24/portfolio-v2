@@ -60,17 +60,17 @@ const iconsObj = [
 
 function Skills() {
   return (
-    <div className="relative isolate -z-10 mt-12 sm:mt-16">
-      <div className="rounded-xl bg-slate-900/5 py-16 ring-1 ring-white/10 dark:bg-gray-50/5 dark:ring-slate-900/10 sm:rounded-3xl sm:py-32">
+    <div className="relative isolate -z-10 mt-12 sm:mt-20">
+      <div className="bg-slate-900/5 py-16 ring-1 ring-white/10 dark:bg-gray-50/5 dark:ring-slate-900/10 sm:rounded-3xl sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid grid-cols-1 items-center gap-x-8 gap-y-16 lg:grid-cols-2">
             <div className="mx-auto w-full max-w-xl lg:mx-0">
-              <h2 className="text-2xl font-bold tracking-tight text-slate-900 dark:text-gray-100 sm:text-3xl">
+              <h2 className="text-2xl font-bold tracking-tight text-indigo-500 dark:text-indigo-400 sm:text-3xl">
                 Technologies I love coding with
               </h2>
               <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
-                These are my bread and butter languages and frameworks. To see
-                all of my skills,
+                These are my bread and butter languages, frameworks, and
+                libraries. To see all of my skills, go to my
               </p>
             </div>
             <div className="mx-auto grid w-full max-w-xl grid-cols-2 items-center gap-y-12 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:pl-8">
@@ -136,40 +136,50 @@ function Skills() {
   );
 }
 
-interface heroText {
-  intro: string;
-  headline: string;
-  description: string;
+function ChevronDoubleLeft() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      className="h-14 w-14"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="m18.75 4.5-7.5 7.5 7.5 7.5m-6-15L5.25 12l7.5 7.5"
+      />
+    </svg>
+  );
 }
-
-const heroText: heroText = {
-  intro: "Hi there, I'm Kevin.",
-  headline: "A software engineer with an eye for design",
-  description:
-    "I'm a web and mobile app developer with start up experience who is passionate about implementing solutions with beautiful ui.",
-};
 
 export default function Home() {
   return (
     <Container>
-      <div className="mx-auto grid max-w-5xl grid-cols-1 gap-y-12 py-16 md:grid-rows-[auto_1fr] lg:grid-cols-3 lg:py-56">
+      <div className="grid max-w-5xl grid-cols-1 gap-y-12 px-6 py-16 sm:px-0 md:grid-rows-[auto_1fr] md:py-24 lg:grid-cols-3 lg:py-72">
         <div className="mx-auto max-w-xs px-6 sm:px-0 lg:max-w-none lg:px-8">
           <Image
             src={headShot}
             alt="Headshot of Kevin"
             width={250}
-            className=" rounded-full bg-gradient-to-r from-zinc-400/80 via-indigo-400 to-zinc-400 shadow-sm shadow-slate-500 ring-1 ring-slate-400 delay-75 duration-300 hover:shadow-md dark:bg-zinc-600 dark:bg-gradient-to-r dark:from-zinc-800/80 dark:via-indigo-400 dark:to-zinc-800  dark:shadow-zinc-700 dark:ring-zinc-700"
+            className=" rounded-full bg-gradient-to-r from-slate-300 via-indigo-400 to-slate-400/70 shadow-sm shadow-slate-500 ring-1 ring-slate-300 delay-75 duration-300 hover:shadow-md dark:bg-gradient-to-r dark:from-zinc-600 dark:via-indigo-400 dark:to-zinc-700  dark:shadow-zinc-700 dark:ring-zinc-700"
           />
         </div>
         <div className="sm:col-span-2 lg:order-first lg:row-span-2">
-          <h1 className="mb-2 text-3xl font-bold tracking-tight text-gray-800 dark:text-gray-100 sm:text-5xl">
-            {heroText.intro}
-          </h1>
-          <h2 className="text-lg font-medium tracking-tight text-indigo-600 dark:text-indigo-300 sm:text-xl">
-            {heroText.headline}
-          </h2>
-          <p className="mt-6 text-lg  leading-8 text-gray-600 dark:text-gray-50 sm:max-w-md lg:max-w-none">
-            {heroText.description}
+          <div className="grid-row-1 flex grid-flow-row">
+            <h1 className="mb-2 text-3xl font-bold leading-relaxed tracking-tight text-gray-800 dark:text-gray-100 sm:pr-12 sm:text-5xl">
+              Software engineer and frontend enthusiast{" "}
+            </h1>
+            {/* <div className="transition-transform rotate-90">
+              <ChevronDoubleLeft />
+            </div> */}
+          </div>
+          <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-50 sm:max-w-xl">
+            I'm Kevin, a web and mobile app developer with start up experience
+            who is passionate about implementing practical solutions with
+            beautiful ui that delights the user experience.{" "}
           </p>
 
           <div className="mt-10 flex items-center gap-x-6">
@@ -180,7 +190,7 @@ export default function Home() {
                   key={item.name}
                   href={item.href}
                   target="_blank"
-                  className={`dark:hover:text-indigo-400" + origin-bottom text-gray-500/90 delay-75 duration-500 hover:text-indigo-500 dark:text-gray-300
+                  className={`origin-bottom text-gray-500/90 delay-75 duration-500 hover:text-indigo-500 dark:text-gray-300 dark:hover:text-indigo-400
                     ${
                       item.tilt === "back"
                         ? "hover:-rotate-6"

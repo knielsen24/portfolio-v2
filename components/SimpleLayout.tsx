@@ -11,7 +11,7 @@ export function SimpleLayout({
 }) {
   return (
     <Container className="mt-16 sm:mt-32">
-      <header className="max-w-2xl">
+      <header className="max-w-2xl mx-6 sm:mx-0">
         <h1 className="text-3xl font-bold tracking-tight text-gray-800 dark:text-gray-100 sm:text-5xl">
           {title}
         </h1>

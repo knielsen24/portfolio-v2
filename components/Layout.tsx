@@ -64,7 +64,7 @@ function SquareBlocks() {
 const Layout: React.FC<Props> = ({ children }) => {
   return (
     <>
-      <div className="absolute inset-0 flex justify-center overflow-hidden sm:px-8">
+      <div className="absolute inset-0 flex justify-center overflow-hidden">
         <div className="flex w-full max-w-6xl lg:px-8">
           <SquareBlocks />
         </div>

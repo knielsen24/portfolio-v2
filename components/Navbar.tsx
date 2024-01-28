@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 import { Popover, Transition } from "@headlessui/react";
 import { Container } from "./Container";
 import ThemeToggle from "./ThemeToggle";
-import avatarImage from "@/images/avatar_nobg.png";
+// import avatarImage from "@/images/avatar_nobg.png";
 
 const navigation = [
   { name: "About", href: "/about", prefetch: true },
@@ -178,52 +178,52 @@ function DesktopNavigation(props: React.ComponentPropsWithoutRef<"nav">) {
   );
 }
 
-function AvatarContainer({
-  className,
-  ...props
-}: React.ComponentPropsWithoutRef<"div">) {
-  return (
-    <div
-      className={clsx(
-        className,
-        "h-10 w-10 rounded-full bg-white/90 p-0.5 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10",
-      )}
-      {...props}
-    />
-  );
-}
+// function AvatarContainer({
+//   className,
+//   ...props
+// }: React.ComponentPropsWithoutRef<"div">) {
+//   return (
+//     <div
+//       className={clsx(
+//         className,
+//         "h-10 w-10 rounded-full bg-white/90 p-0.5 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10",
+//       )}
+//       {...props}
+//     />
+//   );
+// }
 
-function Avatar({
-  large = false,
-  className,
-  ...props
-}: Omit<React.ComponentPropsWithoutRef<typeof Link>, "href"> & {
-  large?: boolean;
-}) {
-  return (
-    <Link
-      href="/"
-      aria-label="Home"
-      className={clsx(className, "pointer-events-auto")}
-      {...props}
-    >
-      <Image
-        src={avatarImage}
-        alt=""
-        sizes={large ? "4rem" : "2.25rem"}
-        className={clsx(
-          "rounded-full bg-indigo-400 object-cover dark:bg-zinc-800",
-          large ? "h-16 w-16" : "h-9 w-9",
-        )}
-        priority
-      />
-    </Link>
-  );
-}
+// function Avatar({
+//   large = false,
+//   className,
+//   ...props
+// }: Omit<React.ComponentPropsWithoutRef<typeof Link>, "href"> & {
+//   large?: boolean;
+// }) {
+//   return (
+//     <Link
+//       href="/"
+//       aria-label="Home"
+//       className={clsx(className, "pointer-events-auto")}
+//       {...props}
+//     >
+//       <Image
+//         src={avatarImage}
+//         alt=""
+//         sizes={large ? "4rem" : "2.25rem"}
+//         className={clsx(
+//           "rounded-full bg-indigo-400 object-cover dark:bg-zinc-800",
+//           large ? "h-16 w-16" : "h-9 w-9",
+//         )}
+//         priority
+//       />
+//     </Link>
+//   );
+// }
 
 export default function Navbar() {
   return (
-    <header className="pointer-events-none relative z-50 flex flex-none flex-col">
+    <header className="pointer-events-none relative px-6 sm:px-0 z-50 flex flex-none flex-col">
       <Container className="top-0 z-10 h-16 w-full pt-6">
         <div className="flex gap-4">
           {/* <div className="flex flex-1">
