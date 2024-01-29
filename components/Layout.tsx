@@ -9,7 +9,7 @@ type Props = {
 function SquareBlocks() {
   return (
     <svg
-      className="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-slate-200/80 [mask-image:radial-gradient(28rem_28rem_at_center,white,transparent)] dark:stroke-zinc-800 dark:[mask-image:radial-gradient(24rem_24rem_at_center,white,transparent)]"
+      className="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-slate-200/90 [mask-image:radial-gradient(28rem_28rem_at_center,white,transparent)] dark:stroke-zinc-800"
       aria-hidden="true"
     >
       <defs>
@@ -27,7 +27,7 @@ function SquareBlocks() {
       <svg
         x="50%"
         y={-1}
-        className="overflow-visible fill-slate-200 dark:fill-zinc-800"
+        className="overflow-visible fill-slate-300/70 dark:fill-zinc-700/50"
       >
         <path
           d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z"

@@ -158,7 +158,7 @@ function ChevronDoubleLeft() {
 export default function Home() {
   return (
     <Container>
-      <div className="grid max-w-5xl grid-cols-1 gap-y-12 px-5 py-12 sm:px-0 md:grid-rows-[auto_1fr] md:py-24 lg:grid-cols-3 lg:py-72">
+      <div className="grid max-w-5xl grid-cols-1 gap-y-12 px-5 py-8 sm:px-0 md:grid-rows-[auto_1fr] md:py-24 lg:grid-cols-3 lg:py-72">
         <div className="mx-auto max-w-xs sm:px-0 lg:max-w-none lg:px-8">
           <Image
             src={headShot}

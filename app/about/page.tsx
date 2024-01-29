@@ -56,7 +56,7 @@ export default function About() {
     <SimpleLayout title={pageHeader.title} intro={pageHeader.intro}>
       <div className="grid max-w-2xl grid-cols-1 items-start justify-items-center gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2">
         <div className="order-1 sm:order-2 lg:pl-6">
-          <div className="relative overflow-hidden px-5 pb-8 pt-12 shadow-2xl  sm:rounded-3xl sm:px-8 sm:pt-32 lg:max-w-lg border border-slate-900/20 dark:border-zinc-100/20">
+          <div className="relative overflow-hidden border border-slate-900/20 px-5 pb-8 pt-20 shadow-2xl dark:border-zinc-100/20 sm:rounded-3xl sm:px-8 sm:pt-32 lg:max-w-lg">
             <Image
               src={baliBeach}
               alt="Kevin looking over bali coast"
@@ -92,9 +92,9 @@ export default function About() {
               </svg>
               <blockquote className="mt-6 text-xl font-semibold leading-8 text-slate-50 sm:mt-20">
                 <p>
-                  “The way I look at software is that there is always a problem
-                  to be solved, and the missing puzzle pieces are waiting to be
-                  discovered”
+                  "The way I look at software development is that there is always
+                  a problem to be solved, and the missing puzzle pieces are
+                  waiting to be discovered."
                 </p>
               </blockquote>
               <figcaption className="mt-6 text-sm leading-6 text-zinc-300">
@@ -144,7 +144,7 @@ export default function About() {
       </div>
       <div className="overflow w/screen relative mt-12 bg-indigo-100 px-5 py-10 dark:bg-zinc-800 sm:mt-20 sm:rounded-3xl sm:px-8">
         <h1 className="text-xl font-semibold leading-7 text-slate-600 dark:text-zinc-200">
-          How I transitioned into software
+          My transition into software
         </h1>
         <div className="mx-auto mt-8 grid max-w-2xl grid-cols-1 gap-8 overflow-hidden sm:mx-0 sm:max-w-none lg:grid-cols-4">
           {timeline.map((item) => (
