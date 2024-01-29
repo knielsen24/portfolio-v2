@@ -158,13 +158,13 @@ function ChevronDoubleLeft() {
 export default function Home() {
   return (
     <Container>
-      <div className="grid max-w-5xl grid-cols-1 gap-y-12 px-6 py-16 sm:px-0 md:grid-rows-[auto_1fr] md:py-24 lg:grid-cols-3 lg:py-72">
-        <div className="mx-auto max-w-xs px-6 sm:px-0 lg:max-w-none lg:px-8">
+      <div className="grid max-w-5xl grid-cols-1 gap-y-12 px-5 py-12 sm:px-0 md:grid-rows-[auto_1fr] md:py-24 lg:grid-cols-3 lg:py-72">
+        <div className="mx-auto max-w-xs sm:px-0 lg:max-w-none lg:px-8">
           <Image
             src={headShot}
             alt="Headshot of Kevin"
             width={250}
-            className=" rounded-full bg-gradient-to-r from-slate-300 via-indigo-400 to-slate-400/70 shadow-sm shadow-slate-500 ring-1 ring-slate-300 delay-75 duration-300 hover:shadow-md dark:bg-gradient-to-r dark:from-zinc-600 dark:via-indigo-400 dark:to-zinc-700  dark:shadow-zinc-700 dark:ring-zinc-700"
+            className="rounded-full bg-gradient-to-r from-slate-300 via-indigo-400 to-slate-400/70 shadow-sm shadow-slate-500 ring-1 ring-slate-300 delay-75 duration-300 hover:shadow-md dark:bg-gradient-to-r dark:from-zinc-600 dark:via-indigo-400 dark:to-zinc-700  dark:shadow-zinc-700 dark:ring-zinc-700"
           />
         </div>
         <div className="sm:col-span-2 lg:order-first lg:row-span-2">

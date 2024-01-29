@@ -2,36 +2,35 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { SimpleLayout } from "@/components/SimpleLayout";
-import ColorSplash from "@/components/ColorSplash";
 import baliCliff from "@/images/photos/bali.jpg";
-import baliBeach from "@/images/photos/bali-beach.jpg"
+import baliBeach from "@/images/photos/bali-beach.jpg";
 
 const timeline = [
   {
-    name: "Needed a career change",
+    name: "Career pivot",
     description:
-      "Having been involved with competitve swimming for 24 years, the last 12 as a coach, I felt I needed a change with my career.  ",
+      "Dedicating 24 years to competitive club swimming—12 as an athlete and the 12 as a coach—it was time to begin a new chapter with a new career.",
     date: "Jan 2022",
     dateTime: "2022-01",
   },
   {
     name: "Passion for technology",
     description:
-      "Learned how to build PC, took the CS50 intro to computers science course on Edx, and read a JavaScript book on the fundamentals",
+      "Searching for a new calling, I learned how to build a PC, took an intro to computer science course (CS50), and learned JavaScript through a hard copy.",
     date: "Feb 2022",
     dateTime: "2022-02",
   },
   {
     name: "Enrolled into Flatiron",
     description:
-      "Decided to invest my education in the online live software engineering program.",
+      "Striving to enhance my skills, I invested in my education at Flatiron School, a coding bootcamp, and enrolled in their software engineering program.",
     date: "Mar 2022",
     dateTime: "2022-03",
   },
   {
     name: "Bootcamp graduate",
     description:
-      "After 15 weeks with 60-70 hours of immersive learning, I earned my full-stack software engineering certificate",
+      "After 15 weeks of committing 60-70 hours per week to immersive learning, I proudly graduated with my full-stack software engineering certificate.",
     date: "Aug 2022",
     dateTime: "2022-08",
   },
@@ -40,31 +39,32 @@ const timeline = [
 const stats = [
   { label: "Coding Since", value: "2022" },
   { label: "Coaching Exp", value: "12" },
-  { label: "Lego's Built", value: "1k" },
+  { label: "Legos Built", value: "1k+" },
   { label: "Golf Handicap", value: "9.0" },
 ];
 
+const pageHeader = {
+  title: "Professional coach to coder",
+  intro:
+    "Before committing to a career in software engineering, I spent 12 years working full-time in youth sports non-profit organizations, coaching competitive club swimming.",
+};
+
+// From 2019 to 2022, I served as the Head Coach/CEO for one of the top competitive teams in California, where I managed all team programs, and mentored some of the fastest high school athletes in the United States and around the world.
+
 export default function About() {
   return (
-    <SimpleLayout
-      title="Professional coach to coder. I'm a career changer."
-      intro="Before I made the committment to a career in software engineering I worked in non-profit youth sports organizations where I served as a professional swimming coach for highly competitive teams, working with some of the fastest athletes in the US. "
-    >
+    <SimpleLayout title={pageHeader.title} intro={pageHeader.intro}>
       <div className="grid max-w-2xl grid-cols-1 items-start justify-items-center gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-        <div className="order-1 sm:order-2">
-          <div className="relative overflow-hidden bg-slate-900 px-6 pb-9 pt-64 shadow-2xl sm:rounded-3xl sm:px-12 lg:max-w-lg lg:px-8 lg:pb-8 xl:px-10 xl:pb-10">
+        <div className="order-1 sm:order-2 lg:pl-6">
+          <div className="relative overflow-hidden px-5 pb-8 pt-12 shadow-2xl  sm:rounded-3xl sm:px-8 sm:pt-32 lg:max-w-lg border border-slate-900/20 dark:border-zinc-100/20">
             <Image
-              className="saturate-75 absolute inset-0 h-full w-full object-cover brightness-125"
               src={baliBeach}
               alt="Kevin looking over bali coast"
               priority={true}
+              className="saturate-75 absolute inset-0 aspect-square h-full w-full object-cover brightness-125 "
             />
-            {/* <img
-                className="absolute inset-0 h-full w-full object-cover brightness-125 saturate-0"
-                src="https://images.unsplash.com/photo-1630569267625-157f8f9d1a7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2669&q=80"
-                alt=""
-              /> */}
-            <div className="absolute inset-0 bg-slate-400/80 mix-blend-multiply dark:bg-zinc-500/70" />
+
+            <div className="absolute inset-0 bg-slate-400/80 mix-blend-multiply dark:bg-zinc-500/70 " />
             <div
               className="absolute left-1/2 top-1/2 -ml-16 -translate-x-1/2 -translate-y-1/2 transform-gpu blur-3xl"
               aria-hidden="true"
@@ -90,7 +90,7 @@ export default function About() {
                 />
                 <use href="#0ef284b8-28c2-426e-9442-8655d393522e" x={86} />
               </svg>
-              <blockquote className="mt-6 text-xl font-semibold leading-8 text-slate-50">
+              <blockquote className="mt-6 text-xl font-semibold leading-8 text-slate-50 sm:mt-20">
                 <p>
                   “The way I look at software is that there is always a problem
                   to be solved, and the missing puzzle pieces are waiting to be
@@ -106,33 +106,29 @@ export default function About() {
             </figure>
           </div>
         </div>
-        <div className="order-2 px-6 sm:px-0 lg:order-1">
+        <div className="order-2 px-5 sm:px-0 lg:order-1">
           <div className="text-base leading-7 text-slate-700 dark:text-zinc-400 lg:max-w-lg">
             <h1 className=" text-xl font-semibold leading-7 text-indigo-600 dark:text-indigo-400">
               Why I love coding
             </h1>
-            <div className="max-w-xl">
-              <p className="mt-6">
-                The pure expression of problem solving and building something
-                organic with technology is the beauty in software engineering.
-                That mindset has be instilled in me from fond childhood memories
-                working on puzzles with my grandparents, and building fully
-                customized prototype concepts with Lego’s.
-              </p>
-              <p className="mt-8">
-                Now that I have graduated from Lego’s, I am passionate about
-                using technology to build software. The way I look at software
-                is that there is always a problem to be solved, and the missing
-                puzzle pieces are waiting to be discovered. With effort and
-                persistence, one can always find a way to put the pieces
-                together. This is what makes software engineering so great.
-                There are so many ways to solve one problem, and it is always a
-                continuous learning process.
-              </p>
-              <p className="mt-8">In my spare time I do enjoy playing golf</p>
-            </div>
+            <p className="mt-6">
+              The pure expression of problem-solving and building something
+              organic with technology is the beauty of software engineering.
+              That mindset has been instilled in me from fond childhood memories
+              of working on puzzles with my grandparents and building fully
+              customized prototype concepts with Legos.
+            </p>
+            <p className="mt-8">
+              Now that I have graduated from Legos, I am passionate about using
+              technology to build web and mobile applications. The way I look at
+              software development is that there is always a problem to be
+              solved, and the missing puzzle pieces are waiting to be
+              discovered. With effort and persistence, one can always find a way
+              to put the pieces together. It is a continuous learning process,
+              but this is what makes software engineering so great.
+            </p>
           </div>
-          <dl className="mt-10 grid grid-cols-2 gap-8 border-slate-900/10 pt-10 sm:grid-cols-4">
+          <dl className="mt-12 grid grid-cols-2 gap-6 border-slate-900/10 sm:mt-20 sm:grid-cols-4">
             {stats.map((stat, statIdx) => (
               <div key={statIdx}>
                 <dt className="text-sm font-semibold leading-6 text-slate-600 dark:text-zinc-500">
@@ -146,11 +142,11 @@ export default function About() {
           </dl>
         </div>
       </div>
-      <div className="overflow relative mt-32 bg-indigo-100 px-6 py-10 dark:bg-zinc-800 sm:rounded-3xl sm:px-8">
+      <div className="overflow w/screen relative mt-12 bg-indigo-100 px-5 py-10 dark:bg-zinc-800 sm:mt-20 sm:rounded-3xl sm:px-8">
         <h1 className="text-xl font-semibold leading-7 text-slate-600 dark:text-zinc-200">
-          Transition into software
+          How I transitioned into software
         </h1>
-        <div className="mx-auto mt-8 grid max-w-2xl grid-cols-1 gap-8 overflow-hidden sm:mx-0  sm:max-w-none sm:grid-cols-4">
+        <div className="mx-auto mt-8 grid max-w-2xl grid-cols-1 gap-8 overflow-hidden sm:mx-0 sm:max-w-none lg:grid-cols-4">
           {timeline.map((item) => (
             <div key={item.name}>
               <time
@@ -180,7 +176,7 @@ export default function About() {
           ))}
         </div>
       </div>
-      <div className="mt-32 flex px-6 sm:px-0">
+      <div className="mt-12 flex px-5 sm:mt-20 sm:px-0">
         <Link
           href="/experience"
           className="text-base font-semibold leading-7 text-indigo-600 dark:text-indigo-400"
