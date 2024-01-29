@@ -169,20 +169,20 @@ export default function Home() {
         </div>
         <div className="sm:col-span-2 lg:order-first lg:row-span-2">
           <div className="grid-row-1 flex grid-flow-row">
-            <h1 className="mb-2 text-3xl font-bold leading-relaxed tracking-tight text-gray-800 dark:text-gray-100 sm:pr-12 sm:text-5xl">
+            <h1 className="text-3xl font-bold leading-normal tracking-tight text-gray-800 dark:text-gray-100 sm:mb-2 sm:pr-12 sm:text-5xl">
               Software engineer and frontend enthusiast{" "}
             </h1>
             {/* <div className="transition-transform rotate-90">
               <ChevronDoubleLeft />
             </div> */}
           </div>
-          <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-50 sm:max-w-xl">
+          <p className="mt-6 text-lg leading-normal text-gray-600 dark:text-gray-50 sm:max-w-xl">
             I'm Kevin, a web and mobile app developer with start up experience
             who is passionate about implementing practical solutions with
             beautiful ui that delights the user experience.{" "}
           </p>
 
-          <div className="mt-10 flex items-center gap-x-6">
+          <div className="mt-6 flex items-center gap-x-6 sm:mt-10">
             <div className="flex justify-center space-x-6 md:order-2">
               {" "}
               {iconsObj.map((item) => (
@@ -202,6 +202,8 @@ export default function Home() {
                 </a>
               ))}
             </div>
+            {/* <Link href="/projects" className="ml-8 md:order-last" >View Projects
+            </Link> */}
           </div>
         </div>
       </div>
