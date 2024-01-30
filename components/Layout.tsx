@@ -9,7 +9,7 @@ type Props = {
 function SquareBlocks() {
   return (
     <svg
-      className="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-slate-200/90 [mask-image:radial-gradient(28rem_28rem_at_center,white,transparent)] dark:stroke-zinc-800"
+      className="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-slate-200/60 [mask-image:radial-gradient(28rem_28rem_at_center,white,transparent)] dark:stroke-zinc-800"
       aria-hidden="true"
     >
       <defs>
@@ -27,7 +27,7 @@ function SquareBlocks() {
       <svg
         x="50%"
         y={-1}
-        className="overflow-visible fill-slate-300/70 dark:fill-zinc-700/50"
+        className="overflow-visible fill-slate-200/60 dark:fill-zinc-700/50"
       >
         <path
           d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z"
@@ -43,23 +43,6 @@ function SquareBlocks() {
     </svg>
   );
 }
-
-// function Blotch() {
-//   return (
-//     <div
-//       className="relative left-1/3 right-0 top-0 -z-10 -ml-24 transform-gpu overflow-hidden blur-3xl lg:ml-24 xl:ml-48"
-//       aria-hidden="true"
-//     >
-//       <div
-//         className="aspect-[801/1036] w-[50.0625rem] bg-gradient-to-tr from-[#1d4ed8] to-[#9089fc] opacity-40"
-//         style={{
-//           clipPath:
-//             "polygon(63.1% 29.5%, 100% 17.1%, 76.6% 3%, 48.4% 0%, 44.6% 4.7%, 54.5% 25.3%, 59.8% 49%, 55.2% 57.8%, 44.4% 57.2%, 27.8% 47.9%, 35.1% 81.5%, 0% 97.7%, 39.2% 100%, 35.2% 81.4%, 97.2% 52.8%, 63.1% 29.5%)",
-//         }}
-//       />
-//     </div>
-//   );
-// }
 
 const Layout: React.FC<Props> = ({ children }) => {
   return (

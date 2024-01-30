@@ -58,62 +58,147 @@ const iconsObj = [
   },
 ];
 
+const skillsList = [
+  {
+    name: "JavaScript",
+    icon: (props: any) => (
+      <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
+        <path
+          fillRule="evenodd"
+          d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.417-4.814a2.507 2.507 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z"
+          clipRule="evenodd"
+        />
+      </svg>
+    ),
+  },
+  {
+    name: "React",
+    icon: (props: any) => (
+      <svg fill="currentColor" viewBox="0 0 25 24" {...props}>
+        <path
+          fillRule="evenodd"
+          d="M177.381 169.733c9.447-.978 16.614-9.122 16.288-18.896-.325-9.773-8.47-17.592-18.243-17.592h-.651c-10.1.326-17.918 8.796-17.592 18.895.326 4.887 2.28 9.122 5.212 12.054-11.076 21.828-28.016 37.791-53.426 51.148-17.266 9.122-35.183 12.38-53.1 10.1-14.66-1.955-26.062-8.47-33.23-19.222-10.424-15.963-11.401-33.23-2.605-50.496 6.19-12.38 15.962-21.502 22.152-26.063-1.303-4.235-3.258-11.402-4.235-16.614-47.237 34.207-42.35 80.468-28.016 102.295 10.75 16.29 32.577 26.389 56.684 26.389 6.515 0 13.03-.652 19.546-2.28 41.699-8.145 73.299-32.905 91.216-69.718zm57.336-40.397c-24.759-28.995-61.245-44.958-102.944-44.958h-5.212c-2.932-5.864-9.122-9.774-15.963-9.774h-.652C99.848 74.93 92.03 83.4 92.355 93.5c.326 9.773 8.47 17.592 18.243 17.592h.651c7.167-.326 13.357-4.887 15.963-11.077h5.864c24.759 0 48.214 7.167 69.39 21.176 16.288 10.751 28.016 24.76 34.531 41.7 5.538 13.683 5.212 27.04-.652 38.443-9.121 17.266-24.432 26.714-44.63 26.714-13.031 0-25.41-3.91-31.926-6.842-3.583 3.258-10.099 8.47-14.66 11.729 14.009 6.515 28.343 10.099 42.025 10.099 31.274 0 54.404-17.267 63.2-34.533 9.447-18.896 8.795-51.474-15.637-79.165zM69.225 175.27c.326 9.774 8.47 17.592 18.243 17.592h.652c10.099-.325 17.917-8.796 17.591-18.895-.325-9.774-8.47-17.592-18.243-17.592h-.651c-.652 0-1.63 0-2.28.325-13.357-22.153-18.895-46.26-16.94-72.323 1.302-19.547 7.818-36.488 19.22-50.497 9.447-12.054 27.69-17.918 40.07-18.243 34.531-.652 49.19 42.351 50.168 59.618 4.235.977 11.402 3.258 16.289 4.887C189.434 27.366 156.857 0 125.584 0c-29.32 0-56.359 21.176-67.11 52.451-14.985 41.7-5.212 81.771 13.031 113.372-1.628 2.28-2.606 5.864-2.28 9.448z"
+          clipRule="evenodd"
+        />
+      </svg>
+    ),
+  },
+  {
+    name: "React Native",
+    icon: (props: any) => (
+      <svg fill="currentColor" viewBox="0 0 25 24" {...props}>
+        <path
+          fillRule="evenodd"
+          d="M177.381 169.733c9.447-.978 16.614-9.122 16.288-18.896-.325-9.773-8.47-17.592-18.243-17.592h-.651c-10.1.326-17.918 8.796-17.592 18.895.326 4.887 2.28 9.122 5.212 12.054-11.076 21.828-28.016 37.791-53.426 51.148-17.266 9.122-35.183 12.38-53.1 10.1-14.66-1.955-26.062-8.47-33.23-19.222-10.424-15.963-11.401-33.23-2.605-50.496 6.19-12.38 15.962-21.502 22.152-26.063-1.303-4.235-3.258-11.402-4.235-16.614-47.237 34.207-42.35 80.468-28.016 102.295 10.75 16.29 32.577 26.389 56.684 26.389 6.515 0 13.03-.652 19.546-2.28 41.699-8.145 73.299-32.905 91.216-69.718zm57.336-40.397c-24.759-28.995-61.245-44.958-102.944-44.958h-5.212c-2.932-5.864-9.122-9.774-15.963-9.774h-.652C99.848 74.93 92.03 83.4 92.355 93.5c.326 9.773 8.47 17.592 18.243 17.592h.651c7.167-.326 13.357-4.887 15.963-11.077h5.864c24.759 0 48.214 7.167 69.39 21.176 16.288 10.751 28.016 24.76 34.531 41.7 5.538 13.683 5.212 27.04-.652 38.443-9.121 17.266-24.432 26.714-44.63 26.714-13.031 0-25.41-3.91-31.926-6.842-3.583 3.258-10.099 8.47-14.66 11.729 14.009 6.515 28.343 10.099 42.025 10.099 31.274 0 54.404-17.267 63.2-34.533 9.447-18.896 8.795-51.474-15.637-79.165zM69.225 175.27c.326 9.774 8.47 17.592 18.243 17.592h.652c10.099-.325 17.917-8.796 17.591-18.895-.325-9.774-8.47-17.592-18.243-17.592h-.651c-.652 0-1.63 0-2.28.325-13.357-22.153-18.895-46.26-16.94-72.323 1.302-19.547 7.818-36.488 19.22-50.497 9.447-12.054 27.69-17.918 40.07-18.243 34.531-.652 49.19 42.351 50.168 59.618 4.235.977 11.402 3.258 16.289 4.887C189.434 27.366 156.857 0 125.584 0c-29.32 0-56.359 21.176-67.11 52.451-14.985 41.7-5.212 81.771 13.031 113.372-1.628 2.28-2.606 5.864-2.28 9.448z"
+          clipRule="evenodd"
+        />
+      </svg>
+    ),
+  },
+  {
+    name: "Next.js",
+    icon: (props: any) => (
+      <svg fill="currentColor" viewBox="0 0 25 24" {...props}>
+        <path
+          fillRule="evenodd"
+          d="M177.381 169.733c9.447-.978 16.614-9.122 16.288-18.896-.325-9.773-8.47-17.592-18.243-17.592h-.651c-10.1.326-17.918 8.796-17.592 18.895.326 4.887 2.28 9.122 5.212 12.054-11.076 21.828-28.016 37.791-53.426 51.148-17.266 9.122-35.183 12.38-53.1 10.1-14.66-1.955-26.062-8.47-33.23-19.222-10.424-15.963-11.401-33.23-2.605-50.496 6.19-12.38 15.962-21.502 22.152-26.063-1.303-4.235-3.258-11.402-4.235-16.614-47.237 34.207-42.35 80.468-28.016 102.295 10.75 16.29 32.577 26.389 56.684 26.389 6.515 0 13.03-.652 19.546-2.28 41.699-8.145 73.299-32.905 91.216-69.718zm57.336-40.397c-24.759-28.995-61.245-44.958-102.944-44.958h-5.212c-2.932-5.864-9.122-9.774-15.963-9.774h-.652C99.848 74.93 92.03 83.4 92.355 93.5c.326 9.773 8.47 17.592 18.243 17.592h.651c7.167-.326 13.357-4.887 15.963-11.077h5.864c24.759 0 48.214 7.167 69.39 21.176 16.288 10.751 28.016 24.76 34.531 41.7 5.538 13.683 5.212 27.04-.652 38.443-9.121 17.266-24.432 26.714-44.63 26.714-13.031 0-25.41-3.91-31.926-6.842-3.583 3.258-10.099 8.47-14.66 11.729 14.009 6.515 28.343 10.099 42.025 10.099 31.274 0 54.404-17.267 63.2-34.533 9.447-18.896 8.795-51.474-15.637-79.165zM69.225 175.27c.326 9.774 8.47 17.592 18.243 17.592h.652c10.099-.325 17.917-8.796 17.591-18.895-.325-9.774-8.47-17.592-18.243-17.592h-.651c-.652 0-1.63 0-2.28.325-13.357-22.153-18.895-46.26-16.94-72.323 1.302-19.547 7.818-36.488 19.22-50.497 9.447-12.054 27.69-17.918 40.07-18.243 34.531-.652 49.19 42.351 50.168 59.618 4.235.977 11.402 3.258 16.289 4.887C189.434 27.366 156.857 0 125.584 0c-29.32 0-56.359 21.176-67.11 52.451-14.985 41.7-5.212 81.771 13.031 113.372-1.628 2.28-2.606 5.864-2.28 9.448z"
+          clipRule="evenodd"
+        />
+      </svg>
+    ),
+  },
+  {
+    name: "Redux",
+    icon: (props: any) => (
+      <svg fill="currentColor" viewBox="0 0 25 24" {...props}>
+        <path
+          fillRule="evenodd"
+          d="M177.381 169.733c9.447-.978 16.614-9.122 16.288-18.896-.325-9.773-8.47-17.592-18.243-17.592h-.651c-10.1.326-17.918 8.796-17.592 18.895.326 4.887 2.28 9.122 5.212 12.054-11.076 21.828-28.016 37.791-53.426 51.148-17.266 9.122-35.183 12.38-53.1 10.1-14.66-1.955-26.062-8.47-33.23-19.222-10.424-15.963-11.401-33.23-2.605-50.496 6.19-12.38 15.962-21.502 22.152-26.063-1.303-4.235-3.258-11.402-4.235-16.614-47.237 34.207-42.35 80.468-28.016 102.295 10.75 16.29 32.577 26.389 56.684 26.389 6.515 0 13.03-.652 19.546-2.28 41.699-8.145 73.299-32.905 91.216-69.718zm57.336-40.397c-24.759-28.995-61.245-44.958-102.944-44.958h-5.212c-2.932-5.864-9.122-9.774-15.963-9.774h-.652C99.848 74.93 92.03 83.4 92.355 93.5c.326 9.773 8.47 17.592 18.243 17.592h.651c7.167-.326 13.357-4.887 15.963-11.077h5.864c24.759 0 48.214 7.167 69.39 21.176 16.288 10.751 28.016 24.76 34.531 41.7 5.538 13.683 5.212 27.04-.652 38.443-9.121 17.266-24.432 26.714-44.63 26.714-13.031 0-25.41-3.91-31.926-6.842-3.583 3.258-10.099 8.47-14.66 11.729 14.009 6.515 28.343 10.099 42.025 10.099 31.274 0 54.404-17.267 63.2-34.533 9.447-18.896 8.795-51.474-15.637-79.165zM69.225 175.27c.326 9.774 8.47 17.592 18.243 17.592h.652c10.099-.325 17.917-8.796 17.591-18.895-.325-9.774-8.47-17.592-18.243-17.592h-.651c-.652 0-1.63 0-2.28.325-13.357-22.153-18.895-46.26-16.94-72.323 1.302-19.547 7.818-36.488 19.22-50.497 9.447-12.054 27.69-17.918 40.07-18.243 34.531-.652 49.19 42.351 50.168 59.618 4.235.977 11.402 3.258 16.289 4.887C189.434 27.366 156.857 0 125.584 0c-29.32 0-56.359 21.176-67.11 52.451-14.985 41.7-5.212 81.771 13.031 113.372-1.628 2.28-2.606 5.864-2.28 9.448z"
+          clipRule="evenodd"
+        />
+      </svg>
+    ),
+  },
+  {
+    name: "Tailwindcss",
+    icon: (props: any) => (
+      <svg fill="currentColor" viewBox="0 0 25 24" {...props}>
+        <path
+          fillRule="evenodd"
+          d="M177.381 169.733c9.447-.978 16.614-9.122 16.288-18.896-.325-9.773-8.47-17.592-18.243-17.592h-.651c-10.1.326-17.918 8.796-17.592 18.895.326 4.887 2.28 9.122 5.212 12.054-11.076 21.828-28.016 37.791-53.426 51.148-17.266 9.122-35.183 12.38-53.1 10.1-14.66-1.955-26.062-8.47-33.23-19.222-10.424-15.963-11.401-33.23-2.605-50.496 6.19-12.38 15.962-21.502 22.152-26.063-1.303-4.235-3.258-11.402-4.235-16.614-47.237 34.207-42.35 80.468-28.016 102.295 10.75 16.29 32.577 26.389 56.684 26.389 6.515 0 13.03-.652 19.546-2.28 41.699-8.145 73.299-32.905 91.216-69.718zm57.336-40.397c-24.759-28.995-61.245-44.958-102.944-44.958h-5.212c-2.932-5.864-9.122-9.774-15.963-9.774h-.652C99.848 74.93 92.03 83.4 92.355 93.5c.326 9.773 8.47 17.592 18.243 17.592h.651c7.167-.326 13.357-4.887 15.963-11.077h5.864c24.759 0 48.214 7.167 69.39 21.176 16.288 10.751 28.016 24.76 34.531 41.7 5.538 13.683 5.212 27.04-.652 38.443-9.121 17.266-24.432 26.714-44.63 26.714-13.031 0-25.41-3.91-31.926-6.842-3.583 3.258-10.099 8.47-14.66 11.729 14.009 6.515 28.343 10.099 42.025 10.099 31.274 0 54.404-17.267 63.2-34.533 9.447-18.896 8.795-51.474-15.637-79.165zM69.225 175.27c.326 9.774 8.47 17.592 18.243 17.592h.652c10.099-.325 17.917-8.796 17.591-18.895-.325-9.774-8.47-17.592-18.243-17.592h-.651c-.652 0-1.63 0-2.28.325-13.357-22.153-18.895-46.26-16.94-72.323 1.302-19.547 7.818-36.488 19.22-50.497 9.447-12.054 27.69-17.918 40.07-18.243 34.531-.652 49.19 42.351 50.168 59.618 4.235.977 11.402 3.258 16.289 4.887C189.434 27.366 156.857 0 125.584 0c-29.32 0-56.359 21.176-67.11 52.451-14.985 41.7-5.212 81.771 13.031 113.372-1.628 2.28-2.606 5.864-2.28 9.448z"
+          clipRule="evenodd"
+        />
+      </svg>
+    ),
+  },
+];
+
 function Skills() {
   return (
     <div className="relative isolate -z-10 mt-12 sm:mt-20">
-      <div className="bg-slate-900/5 py-16 ring-1 ring-white/10 dark:bg-gray-50/5 dark:ring-slate-900/10 sm:rounded-3xl sm:py-32">
+      <div className="bg-slate-900/5 py-16 ring-1 ring-white/10 dark:bg-slate-50/5 dark:ring-slate-900/10 sm:rounded-3xl sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid grid-cols-1 items-center gap-x-8 gap-y-16 lg:grid-cols-2">
             <div className="mx-auto w-full max-w-xl lg:mx-0">
               <h2 className="text-2xl font-bold tracking-tight text-indigo-500 dark:text-indigo-400 sm:text-3xl">
-                Technologies I love coding with
+                Some of my favorite technologies to work with
               </h2>
-              <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
+              <p className="mt-6 text-lg leading-8 text-slate-600 dark:text-zinc-300">
                 These are my bread and butter languages, frameworks, and
                 libraries. To see all of my skills, go to my
               </p>
             </div>
             <div className="mx-auto grid w-full max-w-xl grid-cols-2 items-center gap-y-12 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:pl-8">
+              {/* {skillsList.map((item) => (
+                <div
+                  key={item.name}
+                  className="origin-bottom text-slate-500/90 delay-75 duration-500 hover:text-indigo-500 dark:text-zinc-400 dark:hover:text-indigo-400"
+                >
+                  <item.icon className="h-6 w-6" aria-hidden="true" />
+                  <h1 className="flex "> {item.name}</h1>
+                </div>
+              ))} */}
+
               <img
                 className="max-h-12 w-full object-contain object-left"
-                src="https://tailwindui.com/img/logos/tuple-logo-gray-900.svg"
-                alt="Tuple"
-                width={105}
-                height={48}
-              />
-              <img
-                className="max-h-12 w-full object-contain object-left"
-                src="https://tailwindui.com/img/logos/reform-logo-gray-900.svg"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/600px-JavaScript-logo.png"
                 alt="Reform"
                 width={104}
                 height={48}
               />
               <img
-                className="max-h-12 w-full object-contain object-left"
-                src="https://tailwindui.com/img/logos/savvycal-logo-gray-900.svg"
+                className="max-h-16 w-full object-contain object-left"
+                src="https://www.vectorlogo.zone/logos/reactjs/reactjs-ar21.svg"
                 alt="SavvyCal"
                 width={140}
                 height={48}
               />
               <img
                 className="max-h-12 w-full object-contain object-left"
-                src="https://tailwindui.com/img/logos/laravel-logo-gray-900.svg"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Typescript.svg/1024px-Typescript.svg.png"
                 alt="Laravel"
                 width={136}
                 height={48}
               />
               <img
                 className="max-h-12 w-full object-contain object-left"
-                src="https://tailwindui.com/img/logos/transistor-logo-gray-900.svg"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Ruby_On_Rails_Logo.svg/411px-Ruby_On_Rails_Logo.svg.png"
                 alt="Transistor"
                 width={158}
                 height={48}
               />
               <img
                 className="max-h-12 w-full object-contain object-left"
-                src="https://tailwindui.com/img/logos/statamic-logo-gray-900.svg"
+                src="https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png"
                 alt="Statamic"
                 width={147}
+                height={48}
+              />
+              <img
+                className="max-h-12 w-full object-contain object-left"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Redux_Logo.png/800px-Redux_Logo.png"
+                alt="Redux"
+                width={105}
                 height={48}
               />
             </div>
@@ -136,61 +221,38 @@ function Skills() {
   );
 }
 
-function ChevronDoubleLeft() {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth={1.5}
-      stroke="currentColor"
-      className="h-14 w-14"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="m18.75 4.5-7.5 7.5 7.5 7.5m-6-15L5.25 12l7.5 7.5"
-      />
-    </svg>
-  );
-}
-
 export default function Home() {
   return (
     <Container>
-      <div className="grid max-w-5xl grid-cols-1 gap-y-12 px-5 py-8 sm:px-0 md:grid-rows-[auto_1fr] md:py-24 lg:grid-cols-3 lg:py-72">
-        <div className="mx-auto max-w-xs sm:px-0 lg:max-w-none lg:px-8">
+      <div className="grid max-w-5xl grid-cols-1 gap-y-8 px-5 py-8 sm:gap-y-12 sm:px-0 md:grid-rows-[auto_1fr] md:py-32 lg:grid-cols-3 lg:py-72">
+        <div className="mx-auto max-w-xs sm:px-0 lg:max-w-none lg:px-8 ">
           <Image
             src={headShot}
             alt="Headshot of Kevin"
-            width={250}
-            className="rounded-full bg-gradient-to-r from-slate-300 via-indigo-400 to-slate-400/70 shadow-sm shadow-slate-500 ring-1 ring-slate-300 delay-75 duration-300 hover:shadow-md dark:bg-gradient-to-r dark:from-zinc-600 dark:via-indigo-400 dark:to-zinc-700  dark:shadow-zinc-700 dark:ring-zinc-700"
+            className="w-52 rounded-full bg-gradient-to-r from-slate-300 via-indigo-400 to-slate-400/70 shadow-lg shadow-slate-500 ring-1 ring-slate-300/20 delay-75 duration-300 dark:bg-gradient-to-r  dark:from-zinc-600 dark:via-indigo-400 dark:to-zinc-700 dark:shadow-zinc-600  dark:ring-zinc-700 sm:w-64"
           />
         </div>
         <div className="sm:col-span-2 lg:order-first lg:row-span-2">
           <div className="grid-row-1 flex grid-flow-row">
-            <h1 className="text-3xl font-bold leading-normal tracking-tight text-gray-800 dark:text-gray-100 sm:mb-2 sm:pr-12 sm:text-5xl">
+            <h1 className="text-3xl font-bold leading-normal tracking-tight text-slate-800 dark:text-zinc-100 sm:mb-2 sm:pr-12 sm:text-5xl">
               Software engineer and frontend enthusiast{" "}
             </h1>
-            {/* <div className="transition-transform rotate-90">
-              <ChevronDoubleLeft />
-            </div> */}
           </div>
-          <p className="mt-6 text-lg leading-normal text-gray-600 dark:text-gray-50 sm:max-w-xl">
-            I'm Kevin, a web and mobile app developer with start up experience
-            who is passionate about implementing practical solutions with
-            beautiful ui that delights the user experience.{" "}
+          <p className="mt-4 text-lg leading-normal text-slate-600 dark:text-zinc-300 sm:mt-6 sm:max-w-lg">
+            I'm Kevin, a full-stack developer with startup experience that
+            leverages modern framework technologies to build and design web and
+            mobile applications.
           </p>
 
-          <div className="mt-6 flex items-center gap-x-6 sm:mt-10">
-            <div className="flex justify-center space-x-6 md:order-2">
-              {" "}
+          {/* Social Icons Container with View Projects button */}
+          <div className="mt-8 grid max-w-xl gap-y-8 sm:mt-10 sm:grid-cols-2">
+            <div className="flex justify-start space-x-6 md:order-2">
               {iconsObj.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
                   target="_blank"
-                  className={`origin-bottom text-gray-500/90 delay-75 duration-500 hover:text-indigo-500 dark:text-gray-300 dark:hover:text-indigo-400
+                  className={`origin-bottom text-slate-500/90 delay-75 duration-500 hover:scale-110 hover:text-indigo-500 dark:text-zinc-400 dark:hover:text-indigo-400
                     ${
                       item.tilt === "back"
                         ? "hover:-rotate-6"
@@ -202,12 +264,18 @@ export default function Home() {
                 </a>
               ))}
             </div>
-            {/* <Link href="/projects" className="ml-8 md:order-last" >View Projects
-            </Link> */}
+            <div className="sm:justify-end md:order-last">
+              <Link
+                href="/projects"
+                className="hover-underline-animation font-bold text-slate-500 duration-300 hover:text-indigo-500 dark:text-zinc-400 hover:dark:text-indigo-400"
+              >
+                View Projects
+              </Link>
+            </div>
           </div>
         </div>
       </div>
-      <Skills />
+      {/* <Skills /> */}
     </Container>
   );
 }
