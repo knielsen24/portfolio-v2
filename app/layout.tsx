@@ -7,9 +7,9 @@ import Layout from "@/components/Layout";
 export const metadata: Metadata = {
   title: {
     template: "%s - Kevin Nielsen",
-    default: "Kevin Nielsen - Developer and amateur golfer",
+    default: "Kevin Nielsen frontend enthusiast",
   },
-  description: "Software engineer with an eye for design",
+  description: "Software engineer, web and mobile developer",
   // alternates: {
   //   types: {
   //     'application/rss+xml': `${process.env.NEXT_PUBLIC_SITE_URL}/feed.xml`,

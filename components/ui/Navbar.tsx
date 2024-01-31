@@ -5,8 +5,8 @@ import clsx from "clsx";
 import { Fragment } from "react";
 import { usePathname } from "next/navigation";
 import { Popover, Transition } from "@headlessui/react";
-import { Container } from "./Container";
-import ThemeToggle from "./ThemeToggle";
+import { Container } from "../Container";
+import ThemeToggle from "../ThemeToggle";
 // import avatarImage from "@/images/avatar_nobg.png";
 
 const navigation = [

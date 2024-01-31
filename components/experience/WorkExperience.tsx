@@ -3,7 +3,6 @@ import logoAirbnb from "@/public/logos/airbnb.svg";
 import logoFacebook from "@/public/logos/facebook.svg";
 import logoPlanetaria from "@/public/logos/planetaria.svg";
 import logoStarbucks from "@/public/logos/starbucks.svg";
-import { Button } from "@/components/Button";
 
 function BriefcaseIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   return (
@@ -132,10 +131,6 @@ export default function WorkExperience() {
           <Role key={roleIndex} role={role} />
         ))}
       </ol>
-      <Button variant="secondary" size="auto">
-        Download CV
-        <ArrowDownIcon className="h-4 w-4 stroke-slate-400 transition group-active:stroke-slate-600 dark:stroke-slate-200 dark:group-hover:stroke-slate-50 dark:group-active:stroke-slate-50" />
-      </Button>
     </div>
   );
 }
