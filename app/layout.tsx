@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { inter } from "@/components/ui/fonts";
 import { Providers } from "@/app/providers";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import Layout from "@/components/Layout";
 
 export const metadata: Metadata = {
@@ -32,6 +33,7 @@ export default function RootLayout({
           <div className="flex w-full">
             <Layout>{children}</Layout>
             <Analytics />
+            <SpeedInsights />
           </div>
         </Providers>
       </body>

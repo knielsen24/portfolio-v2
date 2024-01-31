@@ -61,7 +61,7 @@ function MailIcon(props: React.ComponentPropsWithoutRef<"svg">) {
 
 function AboutImage() {
   return (
-    <div className="relative overflow-hidden border border-slate-900/20 px-5 pb-8 pt-20 shadow-2xl dark:border-zinc-100/20 sm:rounded-3xl sm:px-8 sm:pt-32 lg:max-w-lg">
+    <div className="relative overflow-hidden rounded-xl border border-slate-900/20 px-5 pb-6 pt-20 shadow-2xl dark:border-zinc-100/20 sm:rounded-3xl sm:px-8 sm:pb-8 sm:pt-32 lg:max-w-lg">
       <Image
         src={baliBeach}
         alt="Kevin looking over bali coast"
@@ -95,10 +95,10 @@ function AboutImage() {
           />
           <use href="#0ef284b8-28c2-426e-9442-8655d393522e" x={86} />
         </svg>
-        <blockquote className="mt-6 text-xl font-semibold leading-8 text-slate-50 sm:mt-20">
+        <blockquote className="text-md mt-8 font-semibold text-slate-50 sm:mt-20 sm:text-xl sm:leading-8">
           <p>{imageQuote.quote}</p>
         </blockquote>
-        <figcaption className="mt-6 text-sm leading-6 text-zinc-300">
+        <figcaption className="mt-4 text-xs leading-6 text-zinc-300 sm:text-sm">
           <strong className="font-semibold text-white">
             {imageQuote.name}
           </strong>{" "}
@@ -180,10 +180,10 @@ export default function About() {
   return (
     <SimpleLayout title={pageHeader.title} intro={pageHeader.intro}>
       <div className="grid max-w-2xl grid-cols-1 items-start justify-items-center gap-x-8 gap-y-12 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-        <div className="order-1 sm:order-2 lg:pl-6">
+        <div className="order-1 mx-5 sm:order-2">
           <AboutImage />
         </div>
-        <div className="order-2 px-5 pb-12 sm:px-0 sm:pb-24 lg:order-1">
+        <div className="order-2 px-5 sm:px-0 lg:order-1">
           <div className="text-base leading-7 text-slate-700 dark:text-zinc-400 lg:max-w-lg">
             <h1 className=" text-xl font-semibold leading-7 text-indigo-600 dark:text-indigo-400">
               {loveCoding.header}
@@ -194,8 +194,8 @@ export default function About() {
         </div>
         {/* social links section */}
       </div>
-      <div className="order-3 mx-5 border-y border-zinc-700/70 py-16 sm:mx-0">
-        <dl className=" grid grid-cols-2 gap-x-8 gap-y-12  sm:gap-y-16 lg:grid-cols-4">
+      <div className="order-3 mx-5 border-t border-slate-300/70 py-12 dark:border-zinc-700/70 sm:mx-0 mt-20 sm:my-32 sm:border-y">
+        <dl className=" grid grid-cols-2 gap-x-8 gap-y-12 sm:gap-y-16 lg:grid-cols-4">
           {stats.map((stat, statIdx) => (
             <div key={statIdx} className="gap-y-6">
               <dt className="text-sm font-semibold leading-6 text-slate-600 dark:text-zinc-500">
@@ -208,7 +208,7 @@ export default function About() {
           ))}
         </dl>
       </div>
-      <div className="overflow w/screen relative mt-16 bg-indigo-100 px-5 py-10 dark:bg-zinc-800 sm:mt-24 sm:rounded-3xl sm:px-8">
+      <div className="overflow w/screen relative mt-16 bg-indigo-100 px-5 py-10 ring-1 ring-slate-900/10 dark:bg-zinc-800 dark:ring-zinc-300/10 sm:mt-24 sm:rounded-3xl sm:px-8">
         <Timeline />
       </div>
       {/* <div className="mt-12 flex px-5 sm:mt-20 sm:px-0">

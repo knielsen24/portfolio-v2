@@ -1,5 +1,5 @@
 export const pageHeader = {
-  title: "Professional coach, to self taught coder, to software enthusiast",
+  title: "Professional coach, to self taught coder, to software enthusiast.",
   intro:
     "Before coding, I was dedicated to full-time coaching in non-profit club swimming organizations, aiming to positively impact the youth. Now, I'm committed to make an meaningful impact through software.",
 };

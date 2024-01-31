@@ -10,8 +10,8 @@ import { iconsObj } from "@/constants/Icons";
 
 function Skills() {
   return (
-    <div className="relative -z-10 mt-12 sm:mt-20">
-      <div className="dark:ring-zince-900/10 bg-indigo-900/15 py-16 ring-1 ring-slate-900/20 dark:bg-white/5 sm:rounded-3xl sm:py-20">
+    <div className="relative -z-10 mx-5 mt-16 sm:mx-0 sm:mt-20">
+      <div className="rounded-xl bg-indigo-100 py-16 ring-1 ring-slate-900/10 dark:bg-white/5 dark:ring-zinc-300/10 sm:rounded-3xl sm:py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid grid-cols-1 items-center gap-x-8 gap-y-16 lg:grid-cols-2">
             <div className="mx-auto w-full max-w-xl lg:mx-0">
@@ -25,7 +25,7 @@ function Skills() {
                 skills tailored to individual projects.
               </p>
             </div>
-            <div className="mx-auto grid w-full max-w-xl grid-cols-2 items-center gap-y-16 sm:grid-cols-3 sm:gap-y-20 sm:pl-16 lg:mx-0 lg:max-w-none ">
+            <div className="mx-auto grid w-full max-w-xl grid-cols-3 items-center gap-y-16 sm:grid-cols-3 sm:gap-y-20 sm:pl-16 lg:mx-0 lg:max-w-none ">
               <img
                 className="max-h-12 w-full object-contain sm:object-left"
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/600px-JavaScript-logo.png"
@@ -104,7 +104,7 @@ function Skills() {
                 height={48}
               />
               <img
-                className="col-span-2 max-h-12 w-full object-contain sm:col-span-1 sm:object-left"
+                className="max-h-12 w-full object-contain sm:object-left"
                 src="https://www.postgresql.org/media/img/about/press/elephant.png"
                 alt="Redux"
                 width={105}
@@ -176,7 +176,7 @@ export default function Home() {
             <div className="sm:justify-end md:order-last">
               <Link
                 href="/projects"
-                className="hover-underline-animation font-bold text-slate-500 duration-300 hover:text-indigo-500 dark:text-zinc-400 hover:dark:text-indigo-400"
+                className="hover-underline-animation font-bold text-slate-600 duration-300 hover:text-indigo-500 dark:text-zinc-500 hover:dark:text-indigo-400"
               >
                 View Projects
               </Link>
