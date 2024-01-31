@@ -19,10 +19,19 @@ function Skills() {
                 My favorite tech stacks
               </h2>
               <p className="mt-6 text-lg leading-8 text-slate-600 dark:text-zinc-300">
-                These are languages, frameworks, and libraries in which I excel.
-                Although these are my favorites, I am always open to learning
-                new technologies. Visit my projects page to explore specific
-                skills tailored to individual projects.
+                These are languages, frameworks, and libraries in which I{" "}
+                <span className=" font-semibold text-indigo-500 dark:text-indigo-400">
+                  excel
+                </span>
+                . Although these are my favorites, I am always open to{" "}
+                <span className=" font-semibold text-indigo-500 dark:text-indigo-400">
+                  learning{" "}
+                </span>
+                new technologies. Visit my projects page to explore specific{" "}
+                <span className=" font-semibold text-indigo-500 dark:text-indigo-400">
+                  skills{" "}
+                </span>
+                tailored to individual projects.
               </p>
             </div>
             <div className="mx-auto grid w-full max-w-xl grid-cols-3 items-center gap-y-16 sm:grid-cols-3 sm:gap-y-20 sm:pl-16 lg:mx-0 lg:max-w-none ">
