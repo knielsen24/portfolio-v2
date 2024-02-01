@@ -5,8 +5,9 @@ import clsx from "clsx";
 import { Fragment } from "react";
 import { usePathname } from "next/navigation";
 import { Popover, Transition } from "@headlessui/react";
-import { Container } from "../Container";
-import ThemeToggle from "../ThemeToggle";
+import { Container } from "./Container";
+import ThemeToggle from "./ThemeToggle";
+import GradientBar from "./ui/GradientBar";
 // import avatarImage from "@/images/avatar_nobg.png";
 
 const navigation = [
@@ -47,7 +48,7 @@ function CloseIcon(props: React.ComponentPropsWithoutRef<"svg">) {
 function Logo() {
   return (
     <Link href="/" aria-label="Home" className="">
-      <h1 className="inline-block bg-gradient-to-r from-slate-700/90 to-slate-700 bg-clip-text text-xl sm:text-2xl font-semibold text-transparent dark:from-zinc-400/90 dark:to-zinc-400 ">
+      <h1 className="inline-block bg-gradient-to-r from-slate-700/90 to-slate-700 bg-clip-text text-xl font-semibold text-transparent dark:from-zinc-400/90 dark:to-zinc-400 sm:text-2xl ">
         {"[ kn ]"}
       </h1>
       <span className="sr-only">Kevin Nielsen</span>
@@ -78,7 +79,7 @@ function MobileNavigation(
     <Popover {...props}>
       <Popover.Button className="group flex items-center rounded-full bg-white px-4 py-2 text-sm font-medium text-slate-800 shadow-lg shadow-slate-800/5 ring-1 ring-slate-900/5 backdrop-blur dark:bg-zinc-800 dark:text-zinc-200 dark:ring-white/10 dark:hover:ring-white/20">
         Menu
-        <ChevronDownIcon className="ml-3 h-auto w-2 stroke-slate-500 dark:stroke-zinc-400 group-hover:stroke-zinc-700 dark:group-hover:stroke-zinc-300" />
+        <ChevronDownIcon className="ml-3 h-auto w-2 stroke-slate-500 group-hover:stroke-zinc-700 dark:stroke-zinc-400 dark:group-hover:stroke-zinc-300" />
       </Popover.Button>
       <Transition.Root>
         <Transition.Child
@@ -101,10 +102,7 @@ function MobileNavigation(
           leaveFrom="opacity-100 scale-100"
           leaveTo="opacity-0 scale-95"
         >
-          <Popover.Panel
-            focus
-            className="fixed inset-x-4 top-8 z-50 origin-top rounded-3xl bg-slate-50 p-8 ring-1 ring-slate-900/5 dark:bg-zinc-800 dark:ring-zinc-700"
-          >
+          <Popover.Panel className="fixed inset-x-4 top-8 z-50 origin-top rounded-3xl bg-slate-50 p-8 ring-1 ring-slate-900/5 dark:bg-zinc-800 dark:ring-zinc-700">
             <div className="flex flex-row-reverse items-center justify-between">
               <Popover.Button aria-label="Close menu" className="-m-1 p-1">
                 <CloseIcon className="h-6 w-6 text-slate-500 dark:text-zinc-400" />
@@ -117,7 +115,7 @@ function MobileNavigation(
               <ul className="-my-2 divide-y divide-slate-200/70 text-base text-slate-800 dark:divide-zinc-100/5 dark:text-zinc-300">
                 <MobileNavItem href="/">Home</MobileNavItem>
                 <MobileNavItem href="/about">About</MobileNavItem>
-                <MobileNavItem href="/experience">Experience</MobileNavItem>
+                {/* <MobileNavItem href="/experience">Experience</MobileNavItem> */}
                 <MobileNavItem href="/projects">Projects</MobileNavItem>
               </ul>
             </nav>
@@ -167,9 +165,9 @@ function DesktopNavigation(props: React.ComponentPropsWithoutRef<"nav">) {
         <NavItem href="/about" ariaLabel="about">
           About
         </NavItem>
-        <NavItem href="/experience" ariaLabel="experience">
+        {/* <NavItem href="/experience" ariaLabel="experience">
           Experience
-        </NavItem>
+        </NavItem> */}
         <NavItem href="/projects" ariaLabel="projects">
           Projects
         </NavItem>
@@ -178,59 +176,12 @@ function DesktopNavigation(props: React.ComponentPropsWithoutRef<"nav">) {
   );
 }
 
-// function AvatarContainer({
-//   className,
-//   ...props
-// }: React.ComponentPropsWithoutRef<"div">) {
-//   return (
-//     <div
-//       className={clsx(
-//         className,
-//         "h-10 w-10 rounded-full bg-white/90 p-0.5 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10",
-//       )}
-//       {...props}
-//     />
-//   );
-// }
-
-// function Avatar({
-//   large = false,
-//   className,
-//   ...props
-// }: Omit<React.ComponentPropsWithoutRef<typeof Link>, "href"> & {
-//   large?: boolean;
-// }) {
-//   return (
-//     <Link
-//       href="/"
-//       aria-label="Home"
-//       className={clsx(className, "pointer-events-auto")}
-//       {...props}
-//     >
-//       <Image
-//         src={avatarImage}
-//         alt=""
-//         sizes={large ? "4rem" : "2.25rem"}
-//         className={clsx(
-//           "rounded-full bg-indigo-400 object-cover dark:bg-zinc-800",
-//           large ? "h-16 w-16" : "h-9 w-9",
-//         )}
-//         priority
-//       />
-//     </Link>
-//   );
-// }
-
 export default function Navbar() {
   return (
-    <header className="pointer-events-none relative px-5 sm:px-0 z-50 flex flex-none flex-col">
-      <Container className="top-0 z-10 h-16 w-full pt-6">
+    <header className="pointer-events-none z-50 flex-none ">
+      <GradientBar className="top-0" />
+      <Container className="top-0 z-10 h-16 w-full px-5 pt-6 sm:pt-10">
         <div className="flex gap-4">
-          {/* <div className="flex flex-1">
-            <AvatarContainer>
-              <Avatar />
-            </AvatarContainer>
-          </div> */}
           <div className="pointer-events-auto flex flex-1 items-center">
             <Logo />
           </div>

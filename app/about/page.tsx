@@ -17,11 +17,11 @@ import {
   loveCoding,
   timelineHeader,
 } from "@/constants/about";
-import baliBeach from "@/images/photos/bali-beach.jpg";
+import baliBeach from "@/public/photos/bali-beach.jpg";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "Kevin Nielsen, professional coach to coder.",
+  description: pageHeader.title,
 };
 
 function SocialLink({
@@ -194,7 +194,7 @@ export default function About() {
         </div>
         {/* social links section */}
       </div>
-      <div className="order-3 mx-5 border-t border-slate-300/70 py-12 dark:border-zinc-700/70 sm:mx-0 mt-20 sm:my-32 sm:border-y">
+      <div className="order-3 mx-5 mt-20 border-t border-slate-300/70 py-12 dark:border-zinc-700/70 sm:mx-0 sm:my-32 sm:border-y">
         <dl className=" grid grid-cols-2 gap-x-8 gap-y-12 sm:gap-y-16 lg:grid-cols-4">
           {stats.map((stat, statIdx) => (
             <div key={statIdx} className="gap-y-6">

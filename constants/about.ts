@@ -24,9 +24,9 @@ export const loveCoding = {
 
 export const stats = [
   { label: "Coding Inception", value: "2022" },
-  { label: "Coaching Experience", value: "12y" },
+  { label: "Coaching Experience", value: "12 yrs" },
   { label: "Legos Compiled", value: "10k+" },
-  { label: "Golfing Handicap", value: "9.0" },
+  { label: "Golfing Handicap", value: "8.1" },
 ];
 
 export const timelineHeader = {

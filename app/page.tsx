@@ -5,53 +5,53 @@ import nextDarkIcon from "@/images/logos/nextjs-icon-dark-bg.png";
 import nextLightIcon from "@/images/logos/nextjs-icon-light-bg.png";
 import expoLightIcon from "@/images/logos/expo-light-bg.png";
 import expoDarkIcon from "@/images/logos/expo-dark-bg.png";
-import headShot from "@/images/avatar.png";
+import headShot from "@/public/avatar.png";
 import { iconsObj } from "@/constants/Icons";
+import { heroCopy, skillsCopy } from "@/constants/home";
 
 function Skills() {
   return (
-    <div className="relative -z-10 mx-5 mt-16 sm:mx-0 sm:mt-20">
+    <div className="relative mx-5 mt-16 sm:mx-0 sm:mt-20">
       <div className="rounded-xl bg-indigo-100 py-16 ring-1 ring-slate-900/10 dark:bg-white/5 dark:ring-zinc-300/10 sm:rounded-3xl sm:py-20">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-6 lg:px-12">
           <div className="grid grid-cols-1 items-center gap-x-8 gap-y-16 lg:grid-cols-2">
             <div className="mx-auto w-full max-w-xl lg:mx-0">
               <h2 className="text-2xl font-bold tracking-tight text-slate-700 dark:text-zinc-100 sm:text-3xl">
-                My favorite tech stacks
+                {skillsCopy.header}
               </h2>
               <p className="mt-6 text-lg leading-8 text-slate-600 dark:text-zinc-300">
-                These are languages, frameworks, and libraries in which I{" "}
-                <span className=" font-semibold text-indigo-500 dark:text-indigo-400">
-                  excel
+                {skillsCopy.firstPart}{" "}
+                <span className="font-semibold text-indigo-500 ease-out hover:animate-pulse dark:text-indigo-400">
+                  {skillsCopy.firstHighlight}
                 </span>
-                . Although these are my favorites, I am always open to{" "}
-                <span className=" font-semibold text-indigo-500 dark:text-indigo-400">
-                  learning{" "}
+                {skillsCopy.secondPart}{" "}
+                <span className="font-semibold text-indigo-500 dark:text-indigo-400">
+                  {skillsCopy.secondHighlight}{" "}
                 </span>
-                new technologies. Visit my projects page to explore specific{" "}
-                <span className=" font-semibold text-indigo-500 dark:text-indigo-400">
-                  skills{" "}
+                {skillsCopy.thirdPart}{" "}
+                <span className="font-semibold text-indigo-500 dark:text-indigo-400">
+                  {skillsCopy.thirdHighlight}{" "}
                 </span>
-                tailored to individual projects.
+                {skillsCopy.fourthPart}
               </p>
             </div>
-            <div className="mx-auto grid w-full max-w-xl grid-cols-3 items-center gap-y-16 sm:grid-cols-3 sm:gap-y-20 sm:pl-16 lg:mx-0 lg:max-w-none ">
+            <div className="mx-auto grid w-full max-w-xl grid-cols-3 items-center gap-y-16 sm:grid-cols-3 sm:gap-y-20 sm:pl-8 lg:mx-0 lg:max-w-none ">
               <img
-                className="max-h-12 w-full object-contain sm:object-left"
+                className="max-h-12 w-full object-contain duration-300 ease-in  sm:hover:scale-110"
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/600px-JavaScript-logo.png"
                 alt="Reform"
                 width={104}
                 height={48}
               />
-
               <img
-                className="max-h-12 w-full object-contain sm:object-left"
+                className="max-h-12 w-full object-contain duration-300 ease-in  sm:hover:scale-110"
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Typescript.svg/1024px-Typescript.svg.png"
                 alt="Laravel"
                 width={136}
                 height={48}
               />
               <img
-                className="max-h-14 w-full object-contain sm:object-left"
+                className="max-h-14 w-full object-contain duration-300 ease-in  sm:hover:scale-110"
                 src="https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png"
                 alt="Statamic"
                 width={147}
@@ -60,14 +60,14 @@ function Skills() {
 
               <div>
                 <Image
-                  className="hidden max-h-12 w-full object-contain dark:block sm:object-left "
+                  className="hidden max-h-12 w-full object-contain duration-300 ease-in dark:block  sm:hover:scale-110 "
                   src={nextDarkIcon}
                   alt="dark-mode-image"
                   width={140}
                   height={48}
                 />
                 <Image
-                  className="block max-h-12 w-full object-contain dark:hidden sm:object-left "
+                  className="block max-h-12 w-full object-contain duration-300 ease-in dark:hidden  sm:hover:scale-110 "
                   src={nextLightIcon}
                   alt="light-mode-image"
                   width={140}
@@ -75,7 +75,7 @@ function Skills() {
                 />
               </div>
               <img
-                className="max-h-12 w-full object-contain sm:object-left "
+                className="max-h-12 w-full object-contain duration-300 ease-in  sm:hover:scale-110 "
                 src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
                 alt="SavvyCal"
                 width={140}
@@ -84,14 +84,14 @@ function Skills() {
 
               <div>
                 <Image
-                  className="hidden max-h-10 w-full object-contain dark:block sm:object-left "
+                  className="hidden max-h-10 w-full object-contain duration-300 ease-in dark:block  sm:hover:scale-110 "
                   src={expoDarkIcon}
                   alt="dark-mode-image"
                   width={140}
                   height={48}
                 />
                 <Image
-                  className="block max-h-10 w-full object-contain dark:hidden sm:object-left "
+                  className="block max-h-10 w-full object-contain duration-300 ease-in dark:hidden  sm:hover:scale-110 "
                   src={expoLightIcon}
                   alt="light-mode-image"
                   width={140}
@@ -99,42 +99,30 @@ function Skills() {
                 />
               </div>
               <img
-                className="max-h-12 w-full object-contain sm:object-left "
+                className="max-h-12 w-full object-contain duration-300 ease-in  sm:hover:scale-110 "
                 src="https://raw.githubusercontent.com/reduxjs/redux/master/logo/logo.png"
                 alt="Redux"
-                width={105}
+                width={110}
                 height={48}
               />
               <img
-                className="max-h-9 w-full object-contain sm:object-left"
+                className="max-h-9 w-full object-contain duration-300 ease-in  sm:hover:scale-110"
                 src="https://tailwindcss.com/_next/static/media/tailwindcss-mark.3c5441fc7a190fb1800d4a5c7f07ba4b1345a9c8.svg"
                 alt="Transistor"
                 width={158}
                 height={48}
               />
               <img
-                className="max-h-12 w-full object-contain sm:object-left"
+                className="max-h-12 w-full object-contain duration-300 ease-in  sm:hover:scale-110"
                 src="https://www.postgresql.org/media/img/about/press/elephant.png"
                 alt="Redux"
-                width={105}
+                width={110}
                 height={48}
               />
             </div>
           </div>
         </div>
       </div>
-      {/* <div
-        className="absolute inset-x-0 -top-16 -z-10 flex transform-gpu justify-center overflow-hidden blur-3xl"
-        aria-hidden="true"
-      >
-        <div
-          className="aspect-[1318/752] w-[82.375rem] flex-none bg-gradient-to-r from-[#a5b4fc] to-[#818cf8] opacity-30 dark:opacity-30"
-          style={{
-            clipPath:
-              "polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)",
-          }}
-        />
-      </div> */}
     </div>
   );
 }
@@ -153,13 +141,11 @@ export default function Home() {
         <div className="sm:col-span-2 lg:order-first lg:row-span-2">
           <div className="grid-row-1 flex grid-flow-row">
             <h1 className="text-3xl font-bold leading-normal tracking-tight text-slate-800 dark:text-zinc-100 sm:mb-2 sm:pr-12 sm:text-5xl">
-              Software engineer and frontend enthusiast{" "}
+              {heroCopy.header} <span className="">{heroCopy.highlight}</span>
             </h1>
           </div>
           <p className="mt-4 text-lg leading-normal text-slate-600 dark:text-zinc-300 sm:mt-6 sm:max-w-lg">
-            I'm Kevin, a full-stack developer with startup experience that
-            leverages modern framework technologies to build and design web and
-            mobile applications.
+            {heroCopy.description}
           </p>
 
           {/* Social Icons Container with View Projects button */}

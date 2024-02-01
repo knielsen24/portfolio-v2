@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { ContainerInner, ContainerOuter } from "@/components/Container";
+import GradientBar from "./ui/GradientBar";
 
 function NavLink({
   href,
@@ -85,7 +86,7 @@ export default function Footer() {
               <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm font-medium text-slate-800 dark:text-zinc-300">
                 <NavLink href="/">Home</NavLink>
                 <NavLink href="/about">About</NavLink>
-                <NavLink href="/experience">Experience</NavLink>
+                {/* <NavLink href="/experience">Experience</NavLink> */}
                 <NavLink href="/projects">Projects</NavLink>
               </div>
               <p className="text-sm text-slate-500 dark:text-zinc-500">
@@ -96,6 +97,7 @@ export default function Footer() {
           </ContainerInner>
         </div>
       </ContainerOuter>
+      <GradientBar className="bottom 0" />
     </footer>
   );
 }

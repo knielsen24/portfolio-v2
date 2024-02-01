@@ -9,7 +9,7 @@ import Layout from "@/components/Layout";
 export const metadata: Metadata = {
   title: {
     template: "%s - Kevin Nielsen",
-    default: "Kevin Nielsen frontend enthusiast",
+    default: "Kevin Nielsen - Frontend enthusiast",
   },
   description: "Software engineer, web and mobile developer",
   // alternates: {
