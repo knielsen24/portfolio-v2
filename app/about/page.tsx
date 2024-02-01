@@ -14,10 +14,9 @@ import {
 import baliBeach from "@/public/photos/bali-beach.jpg";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: pageHeader.page,
   description: pageHeader.title,
 };
-
 
 function AboutImage() {
   return (
@@ -25,7 +24,7 @@ function AboutImage() {
       <Image
         src={baliBeach}
         alt="Kevin looking over bali coast"
-        priority={true}
+        priority
         className="saturate-75 absolute inset-0 aspect-square h-full w-full object-cover brightness-125 "
       />
 
@@ -47,7 +46,7 @@ function AboutImage() {
           viewBox="0 0 162 128"
           fill="none"
           aria-hidden="true"
-          className="absolute -left-2 -top-4 -z-10 h-32 stroke-white/20"
+          className="absolute -left-2 -top-12 -z-10 h-20 stroke-white/20 sm:-top-20 sm:h-28"
         >
           <path
             id="0ef284b8-28c2-426e-9442-8655d393522e"
@@ -55,7 +54,7 @@ function AboutImage() {
           />
           <use href="#0ef284b8-28c2-426e-9442-8655d393522e" x={86} />
         </svg>
-        <blockquote className="text-md mt-8 font-semibold text-slate-50 sm:mt-20 sm:text-xl sm:leading-8">
+        <blockquote className="text-md mt-8 font-semibold text-white dark:text-zinc-50 sm:mt-20 sm:text-lg sm:leading-8">
           <p>{imageQuote.quote}</p>
         </blockquote>
         <figcaption className="mt-4 text-xs leading-6 text-zinc-300 sm:text-sm">
@@ -68,7 +67,6 @@ function AboutImage() {
     </div>
   );
 }
-
 
 function Timeline() {
   return (
@@ -112,7 +110,7 @@ function Timeline() {
 export default function About() {
   return (
     <SimpleLayout title={pageHeader.title} intro={pageHeader.intro}>
-      <div className="grid max-w-2xl grid-cols-1 items-start justify-items-center gap-x-8 gap-y-12 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+      <div className="grid max-w-2xl grid-cols-1 items-start justify-items-center gap-x-8 gap-y-8 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
         <div className="order-1 mx-5 sm:order-2">
           <AboutImage />
         </div>
@@ -126,7 +124,7 @@ export default function About() {
           </div>
         </div>
       </div>
-      <div className="order-3 mx-5 mt-20 border-t border-slate-300/70 py-12 dark:border-zinc-700/70 sm:mx-0 sm:my-32 sm:border-y">
+      <div className="order-3 mx-5 mt-20 border-t border-slate-300/70 py-12 dark:border-zinc-700/70 sm:mx-0 sm:my-24 sm:border-y">
         <dl className=" grid grid-cols-2 gap-x-8 gap-y-12 sm:gap-y-16 lg:grid-cols-4">
           {stats.map((stat, statIdx) => (
             <div key={statIdx} className="gap-y-6">
@@ -143,14 +141,6 @@ export default function About() {
       <div className="overflow w/screen relative mt-16 bg-indigo-100 px-5 py-10 ring-1 ring-slate-900/10 dark:bg-zinc-800 dark:ring-zinc-300/10 sm:mt-24 sm:rounded-3xl sm:px-8">
         <Timeline />
       </div>
-      {/* <div className="mt-12 flex px-5 sm:mt-20 sm:px-0">
-        <Link
-          href="/experience"
-          className="text-base font-semibold leading-7 text-indigo-600 dark:text-indigo-400"
-        >
-          Check out my experience <span aria-hidden="true">&rarr;</span>
-        </Link>
-      </div> */}
     </SimpleLayout>
   );
 }

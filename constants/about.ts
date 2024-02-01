@@ -1,4 +1,5 @@
 export const pageHeader = {
+  page: "About",
   title: "Professional coach, to self taught coder, to software enthusiast.",
   intro:
     "Before coding, I was dedicated to full-time coaching in non-profit club swimming organizations, aiming to positively impact the youth. Now, I'm committed to make an meaningful impact through software.",
@@ -30,8 +31,8 @@ export const stats = [
 ];
 
 export const timelineHeader = {
-    name: "My transition into software"
-}
+  name: "My transition into software",
+};
 
 export const timeline = [
   {

@@ -1,5 +1,5 @@
 "use client";
-import { Fragment } from "react";
+import { Fragment, useState, useEffect } from "react";
 import { Container } from "@/components/Container";
 import { projects, tabs } from "@/constants/projects";
 import { Tab } from "@headlessui/react";
@@ -118,13 +118,13 @@ export default function ProjectDetails({
 }: {
   params: { projectId: number };
 }) {
-  const project = params?.projectId
-    ? projects.find((proj) => proj.id === params.projectId)
-    : null;
-  console.log(project);
+  const [project, setProject] = useState(null);
+  const [isLoading, setLoading] = useState(true);
+
+  console.log("project", params.projectId);
   return (
-    <Container className="py-12 sm:py-32">
-      <div className="grid grid-cols-1  items-center gap-x-16 gap-y-10 px-5 sm:px-0 lg:grid-cols-2">
+    <Container className="py-12 sm:py-20">
+      <div className="grid grid-cols-1 gap-x-16 gap-y-10 px-5 sm:px-0 lg:grid-cols-2">
         <div className="">
           <h2 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-zinc-100 sm:text-5xl">
             We built our business on great customer service {params.projectId}
@@ -137,12 +137,13 @@ export default function ProjectDetails({
             actually read it.
           </p>
         </div>
-        <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg bg-slate-100">
+        <div className="aspect-h-2 aspect-w-3 relative overflow-hidden rounded-xl bg-slate-100">
           <img
             src="https://tailwindui.com/img/ecommerce-images/incentives-07-hero.jpg"
             alt=""
             className="object-cover object-center"
           />
+          <div className="absolute inset-0 ring-1 rounded-xl ring-inset ring-slate-900/10 dark:ring-slate-100/15" />
         </div>
       </div>
       <div>

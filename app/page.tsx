@@ -37,7 +37,7 @@ function Skills() {
             </div>
             <div className="mx-auto grid w-full max-w-xl grid-cols-3 items-center gap-y-16 sm:grid-cols-3 sm:gap-y-20 sm:pl-8 lg:mx-0 lg:max-w-none ">
               <img
-                className="max-h-12 w-full object-contain duration-300 ease-in  sm:hover:scale-110"
+                className="max-h-12 w-full object-contain duration-300 ease-in sm:hover:scale-110"
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/600px-JavaScript-logo.png"
                 alt="Reform"
                 width={104}

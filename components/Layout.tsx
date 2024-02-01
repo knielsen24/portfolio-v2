@@ -27,7 +27,7 @@ function SquareBlocks() {
       <svg
         x="50%"
         y={-1}
-        className="overflow-visible fill-slate-200/60 dark:fill-zinc-800/80"
+        className="overflow-visible fill-slate-200/40 dark:fill-zinc-800/80"
       >
         <path
           d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z"
