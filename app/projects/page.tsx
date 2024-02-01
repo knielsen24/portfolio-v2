@@ -1,22 +1,11 @@
 import Link from "next/link";
-
-import { Container } from "@/components/Container";
 import { SimpleLayout } from "@/components/SimpleLayout";
-import { projects } from "@/constants/projects";
-
-export const pageHeader = {
-  title: "These are projects that demonstrate my skills",
-  intro:
-    "I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved.",
-};
+import { pageHeader, projects } from "@/constants/projects";
 
 export default function Projects() {
   return (
-    <SimpleLayout
-      title="These are projects that demonstrate my skills"
-      intro="I’ve worked on toons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved."
-    >
-      <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-16 gap-y-20 px-5 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+    <SimpleLayout title={pageHeader.title} intro={pageHeader.intro}>
+      <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-16 gap-y-20 px-5 sm:px-0 lg:mx-0 lg:max-w-none lg:grid-cols-3">
         {projects.map((project) => (
           <article
             key={project.id}

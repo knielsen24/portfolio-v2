@@ -180,7 +180,7 @@ export default function Navbar() {
   return (
     <header className="pointer-events-none z-50 flex-none ">
       <GradientBar className="top-0" />
-      <Container className="top-0 z-10 h-16 w-full px-5 pt-6 sm:pt-10">
+      <Container className="top-0 z-10 h-16 w-full px-5 mt-6 sm:mt-10">
         <div className="flex gap-4">
           <div className="pointer-events-auto flex flex-1 items-center">
             <Logo />

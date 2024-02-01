@@ -35,12 +35,39 @@ function classNames(...classes: any) {
   return classes.filter(Boolean).join(" ");
 }
 
+function HighLights() {
+  return (
+    <div className="mt-16 bg-indigo-100  px-0 ring-1 ring-slate-900/10 dark:bg-zinc-800 dark:ring-zinc-300/10 sm:mt-28 sm:rounded-3xl">
+      <h2 className="sr-only">Our perks</h2>
+      <div className="mx-auto max-w-7xl lg:flex lg:justify-center lg:py-12">
+        {perks.map((perk, perkIdx) => (
+          <div key={perkIdx} className="py-8 lg:w-1/3 lg:flex-none lg:py-0">
+            <div className="mx-auto flex max-w-xs items-center px-4 lg:max-w-none lg:px-8">
+              <perk.icon
+                className="h-8 w-8 flex-shrink-0 text-indigo-500 dark:text-indigo-400"
+                aria-hidden="true"
+              />
+              <div className="ml-4 flex flex-auto flex-col-reverse">
+                <h3 className="font-medium text-slate-900  dark:text-zinc-100">
+                  {perk.name}
+                </h3>
+                <p className="text-sm text-slate-500 dark:text-zinc-400">
+                  {perk.description}
+                </p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 function TabDetails() {
   return (
-    <Tab.Group as="div" className="mt-12">
+    <Tab.Group as="div" className="mt-12 sm:mt-28">
       <div className="-mx-4 flex overflow-x-auto sm:mx-0">
-        <div className="flex-auto border-b border-slate-200 dark:border-zinc-700 px-4 sm:px-0">
+        <div className="flex-auto border-b border-slate-200 dark:border-zinc-700 sm:px-0">
           <Tab.List className="-mb-px flex justify-center space-x-10 sm:justify-start sm:space-x-16">
             {tabs.map((tab) => (
               <Tab
@@ -49,7 +76,7 @@ function TabDetails() {
                   classNames(
                     selected
                       ? "border-indigo-500 text-indigo-500 dark:border-indigo-400 dark:text-indigo-400"
-                      : "border-transparent text-slate-500 dark:text-zinc-400 hover:border-slate-300 hover:text-slate-700 dark:hover:border-zinc-700 dark:hover:text-zinc-200",
+                      : "border-transparent text-slate-500 hover:border-slate-300 hover:text-slate-700 dark:text-zinc-400 dark:hover:border-zinc-700 dark:hover:text-zinc-200",
                     "whitespace-nowrap border-b-2 py-6 text-sm font-medium",
                   )
                 }
@@ -96,34 +123,33 @@ export default function ProjectDetails({
     : null;
   console.log(project);
   return (
-    <Container className="bg-slate-50 dark:bg-transparent">
-      <div className="mx-auto py-24 sm:py-32">
-          <div className="grid grid-cols-1 items-center gap-x-16 gap-y-10 lg:grid-cols-2">
-            <div>
-              <h2 className="text-4xl font-bold tracking-tight text-slate-900 dark:text-zinc-100">
-                We built our business on great customer service{" "}
-                {params.projectId}
-              </h2>
-              <p className="mt-4 text-slate-500 dark:text-zinc-300">
-                At the beginning at least, but then we realized we could make a
-                lot more money if we kinda stopped caring about that. Our new
-                strategy is to write a bunch of things that look really good in
-                the headlines, then clarify in the small print but hope people
-                don't actually read it.
-              </p>
-            </div>
-            <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg bg-slate-100">
-              <img
-                src="https://tailwindui.com/img/ecommerce-images/incentives-07-hero.jpg"
-                alt=""
-                className="object-cover object-center"
-              />
-            </div>
-          </div>
-          {/* <HighLights /> */}
-          <TabDetails />
-        <div className="mx-auto max-w-2xl lg:max-w-none">
+    <Container className="py-12 sm:py-32">
+      <div className="grid grid-cols-1  items-center gap-x-16 gap-y-10 px-5 sm:px-0 lg:grid-cols-2">
+        <div className="">
+          <h2 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-zinc-100 sm:text-5xl">
+            We built our business on great customer service {params.projectId}
+          </h2>
+          <p className="mt-4 text-slate-500 dark:text-zinc-300">
+            At the beginning at least, but then we realized we could make a lot
+            more money if we kinda stopped caring about that. Our new strategy
+            is to write a bunch of things that look really good in the
+            headlines, then clarify in the small print but hope people don't
+            actually read it.
+          </p>
         </div>
+        <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg bg-slate-100">
+          <img
+            src="https://tailwindui.com/img/ecommerce-images/incentives-07-hero.jpg"
+            alt=""
+            className="object-cover object-center"
+          />
+        </div>
+      </div>
+      <div>
+        <HighLights />
+      </div>
+      <div className="px-5 sm:px-0 ">
+        <TabDetails />
       </div>
     </Container>
   );
