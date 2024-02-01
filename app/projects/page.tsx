@@ -23,6 +23,7 @@ export default function Projects() {
               <Image
                 src={project.imageUrl}
                 alt={project.title}
+                priority
                 width={500}
                 height={500}
                 className="aspect-[16/9] w-full rounded-xl bg-slate-100 object-contain sm:aspect-[2/1] lg:aspect-[3/2] "
