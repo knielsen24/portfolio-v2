@@ -157,15 +157,15 @@ export default function ProjectDetails({
   });
   const [isLoading, setLoading] = useState(false);
 
-  useEffect(() => {
-    setLoading(true);
-    if (params.projectId) {
-      const foundProject = projects?.find((proj) => proj.id === params.projectId);
-      console.log("project", foundProject)
-      setProject(foundProject);
-    }
-    setLoading(false);
-  }, [project]);
+  // useEffect(() => {
+  //   setLoading(true);
+  //   if (params.projectId) {
+  //     const foundProject = projects?.find((proj) => proj.id === params.projectId);
+  //     console.log("project", foundProject)
+  //     setProject(foundProject);
+  //   }
+  //   setLoading(false);
+  // }, [project]);
 
   console.log("project:", project)
   return (
