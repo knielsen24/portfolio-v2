@@ -1,11 +1,13 @@
+import { createContext } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { type Metadata } from "next";
+import { cn } from "@/lib/utils";
 import { SimpleLayout } from "@/components/SimpleLayout";
 import { pageHeader, projects } from "@/constants/projects";
 
 export const metadata: Metadata = {
-  title: "Projects",
+  title: pageHeader.page,
   description: pageHeader.title,
 };
 
@@ -13,26 +15,31 @@ export default function Projects() {
   return (
     <SimpleLayout title={pageHeader.title} intro={pageHeader.intro}>
       <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-16 gap-y-12 px-5 sm:grid-cols-2 sm:px-0 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-        {projects.map((project) => (
+        {projects?.map((project) => (
           <article
             key={project.id}
             className="group relative mt-6 flex flex-col items-start justify-between rounded-xl 
             "
           >
-            <div className="relative w-full ">
+            <div className="relative w-full overflow-hidden rounded-xl border border-slate-900/10 dark:border-zinc-100/10">
               <Image
                 src={project.imageUrl}
                 alt={project.title}
-                priority
+                className={cn(
+                  "aspect-[16/9] w-full bg-slate-200/80   transition duration-500 dark:bg-zinc-700/60 sm:aspect-[2/1] lg:aspect-[3/2]",
+                  project.bgSize,
+                  // project.bgColor && `bg-${project.bgColor}`,
+                  // the bg-color is not working
+                )}
+                priority={true}
                 width={500}
                 height={500}
-                className="aspect-[16/9] w-full rounded-xl bg-slate-100 object-contain sm:aspect-[2/1] lg:aspect-[3/2] "
               />
-              <div className="absolute inset-0 rounded-xl ring-1 ring-inset ring-slate-900/10 dark:ring-slate-100/15" />
+              <div className="absolute inset-0 rounded-xl " />
             </div>
             <div className="max-w-xl">
               <div className="mt-8 flex items-center gap-x-4 text-xs">
-                <div className="text-indigo-500 dark:text-indigo-400">
+                <div className="text-indigo-500 group-hover:text-slate-500 dark:text-indigo-400 dark:group-hover:text-zinc-500">
                   {project.industry}
                 </div>
               </div>
@@ -52,7 +59,7 @@ export default function Projects() {
                   </Link>
                 </h3>
                 <p className="mt-5 line-clamp-3 text-sm leading-6 text-slate-600 dark:text-zinc-400">
-                  {project.description}
+                  {project.intro}
                 </p>
               </div>
             </div>

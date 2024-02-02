@@ -113,15 +113,61 @@ function TabDetails() {
   );
 }
 
+type project = {
+  id: number;
+  title: string;
+  href: string;
+  githubHref: string;
+  iosHref: string;
+  androidHref: string;
+  demoHref: string;
+  intro: string;
+  description: string;
+  bgSize: string;
+  imageUrl: string;
+  bgColor: string;
+  industry: string;
+  category: string;
+  date: string;
+  datetime: string;
+};
+
 export default function ProjectDetails({
   params,
 }: {
   params: { projectId: number };
 }) {
-  const [project, setProject] = useState(null);
-  const [isLoading, setLoading] = useState(true);
+  const [project, setProject] = useState<project | undefined>({
+    id: 0,
+    title: "",
+    href: "",
+    githubHref: "",
+    iosHref: "",
+    androidHref: "",
+    demoHref: "",
+    intro: "",
+    description: "",
+    bgSize: "",
+    imageUrl: "",
+    bgColor: "",
+    industry: "",
+    category: "",
+    date: "",
+    datetime: "",
+  });
+  const [isLoading, setLoading] = useState(false);
 
-  console.log("project", params.projectId);
+  useEffect(() => {
+    setLoading(true);
+    if (params.projectId) {
+      const foundProject = projects?.find((proj) => proj.id === params.projectId);
+      console.log("project", foundProject)
+      setProject(foundProject);
+    }
+    setLoading(false);
+  }, [project]);
+
+  console.log("project:", project)
   return (
     <Container className="py-12 sm:py-20">
       <div className="grid grid-cols-1 gap-x-16 gap-y-10 px-5 sm:px-0 lg:grid-cols-2">
@@ -143,7 +189,7 @@ export default function ProjectDetails({
             alt=""
             className="object-cover object-center"
           />
-          <div className="absolute inset-0 ring-1 rounded-xl ring-inset ring-slate-900/10 dark:ring-slate-100/15" />
+          <div className="absolute inset-0 rounded-xl ring-1 ring-inset ring-slate-900/10 dark:ring-slate-100/15" />
         </div>
       </div>
       <div>

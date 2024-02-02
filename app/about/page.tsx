@@ -24,7 +24,7 @@ function AboutImage() {
       <Image
         src={baliBeach}
         alt="Kevin looking over bali coast"
-        priority
+        priority={true}
         className="saturate-75 absolute inset-0 aspect-square h-full w-full object-cover brightness-125 "
       />
 

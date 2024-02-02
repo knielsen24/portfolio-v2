@@ -1,10 +1,10 @@
 import Link from "next/link";
 import Image, { type ImageProps } from "next/image";
 import { Container } from "@/components/Container";
-import nextDarkIcon from "@/images/logos/nextjs-icon-dark-bg.png";
-import nextLightIcon from "@/images/logos/nextjs-icon-light-bg.png";
-import expoLightIcon from "@/images/logos/expo-light-bg.png";
-import expoDarkIcon from "@/images/logos/expo-dark-bg.png";
+import nextDarkIcon from "@/public/logos/nextjs-icon-dark-bg.png";
+import nextLightIcon from "@/public/logos/nextjs-icon-light-bg.png";
+import expoLightIcon from "@/public/logos/expo-light-bg.png";
+import expoDarkIcon from "@/public/logos/expo-dark-bg.png";
 import headShot from "@/public/avatar.png";
 import { iconsObj } from "@/constants/Icons";
 import { heroCopy, skillsCopy } from "@/constants/home";
@@ -37,85 +37,85 @@ function Skills() {
             </div>
             <div className="mx-auto grid w-full max-w-xl grid-cols-3 items-center gap-y-16 sm:grid-cols-3 sm:gap-y-20 sm:pl-8 lg:mx-0 lg:max-w-none ">
               <img
-                className="max-h-12 w-full object-contain duration-300 ease-in sm:hover:scale-110"
+                className="ease-in sm:hover:scale-110 max-h-12 w-full object-contain duration-300"
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/600px-JavaScript-logo.png"
-                alt="Reform"
+                alt="JavaScript"
                 width={104}
                 height={48}
               />
               <img
-                className="max-h-12 w-full object-contain duration-300 ease-in  sm:hover:scale-110"
+                className="max-h-12 w-full object-contain duration-300 ease-in sm:hover:scale-110"
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Typescript.svg/1024px-Typescript.svg.png"
-                alt="Laravel"
+                alt="TypeScript"
                 width={136}
                 height={48}
               />
               <img
-                className="max-h-14 w-full object-contain duration-300 ease-in  sm:hover:scale-110"
+                className="max-h-14 w-full object-contain duration-300 ease-in sm:hover:scale-110"
                 src="https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png"
-                alt="Statamic"
+                alt="Node.js"
                 width={147}
                 height={48}
               />
 
               <div>
                 <Image
-                  className="hidden max-h-12 w-full object-contain duration-300 ease-in dark:block  sm:hover:scale-110 "
+                  className="hidden max-h-12 w-full object-contain duration-300 ease-in dark:block sm:hover:scale-110 "
                   src={nextDarkIcon}
-                  alt="dark-mode-image"
+                  alt="Next.js"
                   width={140}
                   height={48}
                 />
                 <Image
-                  className="block max-h-12 w-full object-contain duration-300 ease-in dark:hidden  sm:hover:scale-110 "
+                  className="block max-h-12 w-full object-contain duration-300 ease-in dark:hidden sm:hover:scale-110 "
                   src={nextLightIcon}
-                  alt="light-mode-image"
+                  alt="Next.js"
                   width={140}
                   height={48}
                 />
               </div>
               <img
-                className="max-h-12 w-full object-contain duration-300 ease-in  sm:hover:scale-110 "
+                className="max-h-12 w-full object-contain duration-300 ease-in sm:hover:scale-110 "
                 src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
-                alt="SavvyCal"
+                alt="React.js"
                 width={140}
                 height={48}
               />
 
               <div>
                 <Image
-                  className="hidden max-h-10 w-full object-contain duration-300 ease-in dark:block  sm:hover:scale-110 "
+                  className="hidden max-h-10 w-full object-contain duration-300 ease-in dark:block sm:hover:scale-110 "
                   src={expoDarkIcon}
-                  alt="dark-mode-image"
+                  alt="Expo React Native"
                   width={140}
                   height={48}
                 />
                 <Image
-                  className="block max-h-10 w-full object-contain duration-300 ease-in dark:hidden  sm:hover:scale-110 "
+                  className="block max-h-10 w-full object-contain duration-300 ease-in dark:hidden sm:hover:scale-110 "
                   src={expoLightIcon}
-                  alt="light-mode-image"
+                  alt="Expo Go React Native"
                   width={140}
                   height={48}
                 />
               </div>
               <img
-                className="max-h-12 w-full object-contain duration-300 ease-in  sm:hover:scale-110 "
+                className="max-h-12 w-full object-contain duration-300 ease-in sm:hover:scale-110 "
                 src="https://raw.githubusercontent.com/reduxjs/redux/master/logo/logo.png"
                 alt="Redux"
                 width={110}
                 height={48}
               />
               <img
-                className="max-h-9 w-full object-contain duration-300 ease-in  sm:hover:scale-110"
+                className="max-h-9 w-full object-contain duration-300 ease-in sm:hover:scale-110"
                 src="https://tailwindcss.com/_next/static/media/tailwindcss-mark.3c5441fc7a190fb1800d4a5c7f07ba4b1345a9c8.svg"
-                alt="Transistor"
+                alt="TailwindCSS"
                 width={158}
                 height={48}
               />
               <img
-                className="max-h-12 w-full object-contain duration-300 ease-in  sm:hover:scale-110"
+                className="max-h-12 w-full object-contain duration-300 ease-in sm:hover:scale-110"
                 src="https://www.postgresql.org/media/img/about/press/elephant.png"
-                alt="Redux"
+                alt="PostegeSQL"
                 width={110}
                 height={48}
               />
@@ -135,7 +135,8 @@ export default function Home() {
           <Image
             src={headShot}
             alt="Headshot of Kevin"
-            className="w-52 rounded-full bg-gradient-to-r from-slate-300 via-indigo-400 to-slate-400/70 shadow-lg shadow-slate-500 ring-1 ring-slate-300/20 delay-75 duration-300 dark:bg-gradient-to-r  dark:from-zinc-600 dark:via-indigo-400 dark:to-zinc-700 dark:shadow-zinc-600  dark:ring-zinc-700 sm:w-64"
+            priority={true}
+            className="w-52 rounded-full bg-gradient-to-r from-slate-300 via-indigo-500 to-slate-400/70 shadow-lg shadow-slate-500 ring-1 ring-slate-300/20 delay-75 duration-300 dark:bg-gradient-to-r  dark:from-zinc-400/80 dark:via-indigo-500 dark:to-zinc-400/80 dark:shadow-zinc-600  dark:ring-zinc-700 sm:w-64"
           />
         </div>
         <div className="sm:col-span-2 lg:order-first lg:row-span-2">

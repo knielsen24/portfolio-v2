@@ -3,7 +3,7 @@ import {
   LockClosedIcon,
   ServerIcon,
 } from "@heroicons/react/20/solid";
-import WorkExperience from "@/components/experience/WorkExperience";
+// import WorkExperience from "@/components/experience/WorkExperience";
 import { SimpleLayout } from "@/components/SimpleLayout";
 import UnderConstruction from "@/components/UnderConstruction";
 
@@ -71,7 +71,7 @@ export default function Experience() {
                   aria-hidden="true"
                 />
                 <div className="mx-auto max-w-2xl sm:mx-0 sm:max-w-none">
-                  <WorkExperience />
+                  {/* <WorkExperience /> */}
                 </div>
                 <div
                   className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-black/10 sm:rounded-3xl"
