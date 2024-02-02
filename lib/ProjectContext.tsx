@@ -44,17 +44,17 @@ export function useProject() {
   return useContext(ProjectContext);
 }
 
-type Props = {
-  children: ReactNode;
-};
+// type Props = {
+//   children: ReactNode;
+// };
 
-export function ProjectProvider({ children }: Props) {
-  const value = {};
-  return (
-    <>
-      <ProjectContext.Provider value={value}>
-        {children}
-      </ProjectContext.Provider>
-    </>
-  );
-}
+// export function ProjectProvider({ children }: Props) {
+//   const value = {};
+//   return (
+//     <>
+//       <ProjectContext.Provider value={value}>
+//         {children}
+//       </ProjectContext.Provider>
+//     </>
+//   );
+// }
