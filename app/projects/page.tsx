@@ -13,21 +13,15 @@ export const metadata: Metadata = {
 };
 
 async function getProjects() {
-  try {
-    const res = await fetch(`${API_URL}/api/projects`);
+  const res = await fetch(`${API_URL}/api/projects`, {
+    next: { revalidate: 0 },
+  });
 
-    if (!res.ok) {
-      // Log the status and response text for debugging
-      console.error(`Error: ${res.status} - ${res.statusText}`);
-      throw new Error("Failed to fetch data");
-    }
-
-    return res.json();
-  } catch (error) {
-    // Log any other errors that might occur during the fetch
-    console.error("Error fetching data:", error);
-    throw error;
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
   }
+
+  return res.json();
 }
 
 export default async function Projects() {
