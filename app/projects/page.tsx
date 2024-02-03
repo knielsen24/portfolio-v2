@@ -1,25 +1,47 @@
-import { createContext } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { type Metadata } from "next";
 import { cn } from "@/lib/utils";
 import { SimpleLayout } from "@/components/SimpleLayout";
-import { pageHeader, projects } from "@/constants/projects";
+import { pageHeader } from "@/constants/projects";
+import { Project } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: pageHeader.page,
   description: pageHeader.title,
 };
 
-export default function Projects() {
+async function getData() {
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+
+  try {
+    const res = await fetch(`${apiUrl}/api/projects`);
+
+    if (!res.ok) {
+      // Log the status and response text for debugging
+      console.error(`Error: ${res.status} - ${res.statusText}`);
+      throw new Error("Failed to fetch data");
+    }
+
+    return res.json();
+  } catch (error) {
+    // Log any other errors that might occur during the fetch
+    console.error("Error fetching data:", error);
+    throw error;
+  }
+}
+
+export default async function Projects() {
+  const data = await getData();
+  const projects = data.projects;
+
   return (
     <SimpleLayout title={pageHeader.title} intro={pageHeader.intro}>
       <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-16 gap-y-12 px-5 sm:grid-cols-2 sm:px-0 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-        {projects?.map((project) => (
+        {projects?.map((project: Project) => (
           <article
             key={project.id}
-            className="group relative mt-6 flex flex-col items-start justify-between rounded-xl 
-            "
+            className="group relative mt-6 flex flex-col items-start justify-between rounded-xl"
           >
             <div className="relative w-full overflow-hidden rounded-xl border border-slate-900/10 dark:border-zinc-100/10">
               <Image
@@ -44,7 +66,6 @@ export default function Projects() {
                 </div>
               </div>
               <div className="relative">
-                {/* hover animation does not work with the group-hover */}
                 <h3 className="mt-3 text-lg font-semibold leading-6 text-slate-900 group-hover:text-indigo-500 dark:text-zinc-100 dark:group-hover:text-indigo-400">
                   <Link
                     href={
