@@ -5,17 +5,16 @@ import { cn } from "@/lib/utils";
 import { SimpleLayout } from "@/components/SimpleLayout";
 import { pageHeader } from "@/constants/projects";
 import { Project } from "@/lib/data";
+import { API_URL } from "@/lib/api";
 
 export const metadata: Metadata = {
   title: pageHeader.page,
   description: pageHeader.title,
 };
 
-async function getData() {
-  const apiUrl = process.env.NEXT_PUBLIC_API_URL;
-
+async function getProjects() {
   try {
-    const res = await fetch(`${apiUrl}/api/projects`);
+    const res = await fetch(`${API_URL}/api/projects`);
 
     if (!res.ok) {
       // Log the status and response text for debugging
@@ -32,7 +31,11 @@ async function getData() {
 }
 
 export default async function Projects() {
-  const data = await getData();
+  if (!API_URL) {
+    return null;
+  }
+
+  const data = await getProjects();
   const projects = data.projects;
 
   return (
