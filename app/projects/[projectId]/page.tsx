@@ -160,7 +160,7 @@ export default function ProjectDetails({
                 ? project.imageUrl
                 : (project?.imageUrl as StaticImageData)
             }
-            alt={project?.title}
+            alt={project?.title || "default image"}
             className={cn(
               "aspect-[16/9] w-full bg-slate-200/80 transition duration-500 dark:bg-zinc-700/60 sm:aspect-[3/2]",
               project?.bgSize,
