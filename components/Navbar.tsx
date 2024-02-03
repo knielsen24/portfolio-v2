@@ -6,7 +6,7 @@ import { Fragment } from "react";
 import { usePathname } from "next/navigation";
 import { Popover, Transition } from "@headlessui/react";
 import { Container } from "./Container";
-import ThemeToggle from "./ThemeToggle";
+import ThemeToggle from "./ui/ThemeToggle";
 import GradientBar from "./ui/GradientBar";
 // import avatarImage from "@/images/avatar_nobg.png";
 

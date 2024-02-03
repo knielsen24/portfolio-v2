@@ -1,7 +1,7 @@
 "use client";
 import { Fragment, useState, useEffect } from "react";
 import { Container } from "@/components/Container";
-import { projects, tabs } from "@/constants/projects";
+import { tabs } from "@/constants/projects";
 import { Tab } from "@headlessui/react";
 import {
   ArrowPathIcon,
