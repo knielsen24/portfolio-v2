@@ -45,7 +45,7 @@ export default async function Projects() {
                 src={project.imageUrl}
                 alt={project.title}
                 className={cn(
-                  "aspect-[16/9] w-full bg-slate-200/80   transition duration-500 dark:bg-zinc-700/60 sm:aspect-[2/1] lg:aspect-[3/2]",
+                  "aspect-[16/9] w-full bg-slate-200/80   transition duration-500 dark:bg-zinc-700/60 sm:aspect-[3/2]",
                   project.bgSize,
                   // project.bgColor && `bg-${project.bgColor}`,
                   // the bg-color is not working
