@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { type Metadata } from "next";
-
+import baliBeach from "@/public/bali-beach.jpg";
 import { SimpleLayout } from "@/components/SimpleLayout";
 import {
   stats,
@@ -11,7 +11,6 @@ import {
   loveCoding,
   timelineHeader,
 } from "@/constants/about";
-import baliBeach from "@/public/photos/bali-beach.jpg";
 
 export const metadata: Metadata = {
   title: pageHeader.page,

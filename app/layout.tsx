@@ -28,6 +28,7 @@ export default function RootLayout({
     <html lang="en" className="h-full antialiased" suppressHydrationWarning>
       <body
         className={`${inter.className} flex h-full bg-slate-50 antialiased dark:bg-zinc-800/60`}
+        suppressHydrationWarning
       >
         <Providers>
           <div className="flex w-full">

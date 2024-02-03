@@ -1,17 +1,16 @@
 "use client";
-import { Fragment, useState, useEffect } from "react";
+import Image, { StaticImageData } from "next/image";
+import { Fragment, useState, useEffect, useMemo } from "react";
 import { Container } from "@/components/Container";
+import { cn } from "@/lib/utils";
 import { tabs } from "@/constants/projects";
 import { Tab } from "@headlessui/react";
+import { Project, projects, initialProjectData } from "@/lib/projectData";
 import {
   ArrowPathIcon,
   CalendarIcon,
   TruckIcon,
 } from "@heroicons/react/24/outline";
-
-type tab = {
-  name: string;
-};
 
 const perks = [
   {
@@ -113,83 +112,66 @@ function TabDetails() {
   );
 }
 
-type project = {
-  id: number;
-  title: string;
-  href: string;
-  githubHref: string;
-  iosHref: string;
-  androidHref: string;
-  demoHref: string;
-  intro: string;
-  description: string;
-  bgSize: string;
-  imageUrl: string;
-  bgColor: string;
-  industry: string;
-  category: string;
-  date: string;
-  datetime: string;
-};
-
 export default function ProjectDetails({
   params,
 }: {
   params: { projectId: number };
 }) {
-  const [project, setProject] = useState<project | undefined>({
-    id: 0,
-    title: "",
-    href: "",
-    githubHref: "",
-    iosHref: "",
-    androidHref: "",
-    demoHref: "",
-    intro: "",
-    description: "",
-    bgSize: "",
-    imageUrl: "",
-    bgColor: "",
-    industry: "",
-    category: "",
-    date: "",
-    datetime: "",
-  });
   const [isLoading, setLoading] = useState(false);
+  const [project, setProject] = useState<Project | undefined>(
+    initialProjectData,
+  );
 
-  // useEffect(() => {
-  //   setLoading(true);
-  //   if (params.projectId) {
-  //     const foundProject = projects?.find((proj) => proj.id === params.projectId);
-  //     console.log("project", foundProject)
-  //     setProject(foundProject);
-  //   }
-  //   setLoading(false);
-  // }, [project]);
+  const getById = useMemo(
+    () => (id: number) => {
+      return projects.find((proj) => proj.id === Number(id));
+    },
+    [params.projectId],
+  );
 
-  console.log("project:", project)
+  useEffect(() => {
+    const projectId = params.projectId;
+    setLoading(true);
+
+    if (projectId) {
+      const project = getById(projectId);
+      setProject(project);
+    } else {
+      setProject(initialProjectData);
+    }
+    setLoading(false);
+  }, [params.projectId]);
+
   return (
     <Container className="py-12 sm:py-20">
       <div className="grid grid-cols-1 gap-x-16 gap-y-10 px-5 sm:px-0 lg:grid-cols-2">
         <div className="">
           <h2 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-zinc-100 sm:text-5xl">
-            We built our business on great customer service {params.projectId}
+            {project?.title}
           </h2>
           <p className="mt-4 text-slate-500 dark:text-zinc-300">
-            At the beginning at least, but then we realized we could make a lot
-            more money if we kinda stopped caring about that. Our new strategy
-            is to write a bunch of things that look really good in the
-            headlines, then clarify in the small print but hope people don't
-            actually read it.
+            {project?.intro}
           </p>
         </div>
-        <div className="aspect-h-2 aspect-w-3 relative overflow-hidden rounded-xl bg-slate-100">
-          <img
-            src="https://tailwindui.com/img/ecommerce-images/incentives-07-hero.jpg"
-            alt=""
-            className="object-cover object-center"
+        <div className="relative w-full overflow-hidden rounded-xl border border-slate-900/10 dark:border-zinc-100/10">
+          <Image
+            src={
+              typeof project?.imageUrl === "string"
+                ? project.imageUrl
+                : (project?.imageUrl as StaticImageData)
+            }
+            alt={project?.title}
+            className={cn(
+              "aspect-[16/9] w-full bg-slate-200/80 transition duration-500 dark:bg-zinc-700/60 sm:aspect-[3/2]",
+              project?.bgSize,
+              // project.bgColor && `bg-${project.bgColor}`,
+              // the bg-color is not working
+            )}
+            priority={true}
+            width={500}
+            height={500}
           />
-          <div className="absolute inset-0 rounded-xl ring-1 ring-inset ring-slate-900/10 dark:ring-slate-100/15" />
+          <div className="absolute inset-0 rounded-xl " />
         </div>
       </div>
       <div>

@@ -1,7 +1,3 @@
-import { projects } from "@/lib/data";
+import { projects } from "@/lib/projectData";
 
 export const getAllProjects = () => projects;
-
-export const getById = (id: number) => {
-  return projects.find((proj) => proj.id === id);
-};

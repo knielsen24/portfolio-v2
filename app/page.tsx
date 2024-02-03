@@ -1,10 +1,17 @@
 import Link from "next/link";
 import Image, { type ImageProps } from "next/image";
 import { Container } from "@/components/Container";
+import jsIcon from "@/public/logos/js-icon.png";
+import tsIcon from "@/public/logos/ts-icon.svg.png";
+import nodeIcon from "@/public/logos/nodejs-icon.png";
 import nextDarkIcon from "@/public/logos/nextjs-icon-dark-bg.png";
 import nextLightIcon from "@/public/logos/nextjs-icon-light-bg.png";
+import reactIcon from "@/public/logos/React-icon.svg";
 import expoLightIcon from "@/public/logos/expo-light-bg.png";
 import expoDarkIcon from "@/public/logos/expo-dark-bg.png";
+import reduxIcon from "@/public/logos/redux-icon.png";
+import twIcon from "@/public/logos/tw-icon.svg";
+import pgIcon from "@/public/logos/postgresql-icon.png";
 import headShot from "@/public/avatar.png";
 import { iconsObj } from "@/constants/Icons";
 import { heroCopy, skillsCopy } from "@/constants/home";
@@ -36,23 +43,23 @@ function Skills() {
               </p>
             </div>
             <div className="mx-auto grid w-full max-w-xl grid-cols-3 items-center gap-y-16 sm:grid-cols-3 sm:gap-y-20 sm:pl-8 lg:mx-0 lg:max-w-none ">
-              <img
-                className="ease-in sm:hover:scale-110 max-h-12 w-full object-contain duration-300"
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/600px-JavaScript-logo.png"
+              <Image
+                className="max-h-12 w-full object-contain duration-300 ease-in sm:hover:scale-110"
+                src={jsIcon}
                 alt="JavaScript"
                 width={104}
                 height={48}
               />
-              <img
+              <Image
                 className="max-h-12 w-full object-contain duration-300 ease-in sm:hover:scale-110"
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Typescript.svg/1024px-Typescript.svg.png"
+                src={tsIcon}
                 alt="TypeScript"
                 width={136}
                 height={48}
               />
-              <img
+              <Image
                 className="max-h-14 w-full object-contain duration-300 ease-in sm:hover:scale-110"
-                src="https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png"
+                src={nodeIcon}
                 alt="Node.js"
                 width={147}
                 height={48}
@@ -74,9 +81,9 @@ function Skills() {
                   height={48}
                 />
               </div>
-              <img
+              <Image
                 className="max-h-12 w-full object-contain duration-300 ease-in sm:hover:scale-110 "
-                src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
+                src={reactIcon}
                 alt="React.js"
                 width={140}
                 height={48}
@@ -98,23 +105,23 @@ function Skills() {
                   height={48}
                 />
               </div>
-              <img
+              <Image
                 className="max-h-12 w-full object-contain duration-300 ease-in sm:hover:scale-110 "
-                src="https://raw.githubusercontent.com/reduxjs/redux/master/logo/logo.png"
+                src={reduxIcon}
                 alt="Redux"
                 width={110}
                 height={48}
               />
-              <img
+              <Image
                 className="max-h-9 w-full object-contain duration-300 ease-in sm:hover:scale-110"
-                src="https://tailwindcss.com/_next/static/media/tailwindcss-mark.3c5441fc7a190fb1800d4a5c7f07ba4b1345a9c8.svg"
+                src={twIcon}
                 alt="TailwindCSS"
                 width={158}
                 height={48}
               />
-              <img
+              <Image
                 className="max-h-12 w-full object-contain duration-300 ease-in sm:hover:scale-110"
-                src="https://www.postgresql.org/media/img/about/press/elephant.png"
+                src={pgIcon}
                 alt="PostegeSQL"
                 width={110}
                 height={48}

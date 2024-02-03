@@ -1,51 +1,35 @@
 import Link from "next/link";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { type Metadata } from "next";
 import { cn } from "@/lib/utils";
 import { SimpleLayout } from "@/components/SimpleLayout";
 import { pageHeader } from "@/constants/projects";
-import { Project } from "@/lib/data";
-import { API_URL } from "@/lib/api";
+import { projects } from "@/lib/projectData";
 
 export const metadata: Metadata = {
   title: pageHeader.page,
   description: pageHeader.title,
 };
 
-async function getProjects() {
-  const res = await fetch(`${API_URL}/api/projects`, {
-    next: { revalidate: 0 },
-  });
-
-  if (!res.ok) {
-    throw new Error("Failed to fetch data");
-  }
-
-  return res.json();
-}
-
 export default async function Projects() {
-  if (!API_URL) {
-    return null;
-  }
-
-  const data = await getProjects();
-  const projects = data.projects;
-
   return (
     <SimpleLayout title={pageHeader.title} intro={pageHeader.intro}>
       <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-16 gap-y-12 px-5 sm:grid-cols-2 sm:px-0 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-        {projects?.map((project: Project) => (
+        {projects?.map((project) => (
           <article
             key={project.id}
             className="group relative mt-6 flex flex-col items-start justify-between rounded-xl"
           >
             <div className="relative w-full overflow-hidden rounded-xl border border-slate-900/10 dark:border-zinc-100/10">
               <Image
-                src={project.imageUrl}
+                src={
+                  typeof project.imageUrl === "string"
+                    ? project.imageUrl
+                    : (project.imageUrl as StaticImageData)
+                }
                 alt={project.title}
                 className={cn(
-                  "aspect-[16/9] w-full bg-slate-200/80   transition duration-500 dark:bg-zinc-700/60 sm:aspect-[3/2]",
+                  "aspect-[16/9] w-full bg-slate-200/80 transition duration-500 dark:bg-zinc-700/60 sm:aspect-[3/2]",
                   project.bgSize,
                   // project.bgColor && `bg-${project.bgColor}`,
                   // the bg-color is not working
