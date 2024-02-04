@@ -1,12 +1,4 @@
-import portfolioV2Image from "@/public/projects/portfoliov2.png";
-import xaltAppImage from "@/public/projects/xalt-challenge-home.png";
-import linkTreeImage from "@/public/projects/linktree.png";
-import southWellsImage from "@/public/projects/300south-wells.png";
-import wheresWizardImage from "@/public/projects/wheresWizard.png";
-import webflowImage from "@/public/projects/webflow.png";
-import tripleStampDashImage from "@/public/projects/triplestamp-dashboard.jpg";
-import pixabayImage from "@/public/projects/pixabay-clone.webp";
-import centerForAntsImage from  "@/public/projects/center-for-kids.webp"
+import centerForAntsImage from "@/public/projects/center-for-kids.webp";
 import { StaticImageData } from "next/image";
 
 export type Project = {
@@ -27,6 +19,7 @@ export type Project = {
   date?: string;
   datetime?: string;
 };
+
 export const initialProjectData: Project = {
   id: "",
   title: "",

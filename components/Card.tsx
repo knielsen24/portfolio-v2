@@ -1,23 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { StaticImageData } from "next/image";
-import { type Metadata } from "next";
 import { cn } from "@/lib/utils";
-import { SimpleLayout } from "@/components/SimpleLayout";
-import { Project, easterEgg } from "@/constants/projects";
-import { getAllProjects } from "@/lib/getProjectsApi";
-
-const pageHeader = {
-  page: "Projects",
-  title: "Checkout the web and mobile apps I've made, building enthusiast.",
-  intro:
-    "I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved.",
-};
-
-export const metadata: Metadata = {
-  title: pageHeader.page,
-  description: pageHeader.title,
-};
 
 function Card({
   id,
@@ -85,44 +69,5 @@ function Card({
       </div>
       <div className="absolute -inset-x-5 -inset-y-5 -z-10 scale-95 bg-slate-100 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800 sm:-inset-x-8 sm:-inset-y-8 sm:rounded-2xl" />
     </article>
-  );
-}
-
-export default async function Projects() {
-  const projectData: Promise<Project[]> = getAllProjects();
-  const projects = await projectData;
-
-  return (
-    <SimpleLayout title={pageHeader.title} intro={pageHeader.intro}>
-      <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-16 gap-y-12 px-5 sm:grid-cols-2 sm:px-0 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-        {projects?.map((project: Project) => (
-          <Card
-            key={project.id}
-            id={project.id}
-            imageUrl={project.imageUrl}
-            title={project.title}
-            bgSize={project.bgSize}
-            industry={project.industry}
-            href={project.href}
-            intro={project.intro}
-          />
-        ))}
-        {/* 
-          create child client component that includes
-            Show more button - useState
-            The show more button renders the easter egg card
-        */}
-        <Card
-          key={easterEgg.id}
-          id={easterEgg.id}
-          imageUrl={easterEgg.imageUrl}
-          title={easterEgg.title}
-          bgSize={easterEgg.bgSize}
-          industry={easterEgg.industry}
-          href={easterEgg.href}
-          intro={easterEgg.intro}
-        />
-      </div>
-    </SimpleLayout>
   );
 }

@@ -1,15 +1,22 @@
 import Image from "next/image";
-import { promises as fs } from "fs";
 import type { StaticImageData } from "next/image";
-import { Container } from "@/components/Container";
+import { notFound } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { Project, initialProjectData } from "@/constants/projects";
+import { getAllProjects, getProject } from "@/lib/getProjectsApi";
+import { Project } from "@/constants/projects";
 import {
   CodeBracketIcon,
   LinkIcon,
   TruckIcon,
 } from "@heroicons/react/24/outline";
+import { Container } from "@/components/Container";
 import Tabs from "@/components/project/Tabs";
+
+type Params = {
+  params: {
+    projectId: string;
+  };
+};
 
 const perks = [
   {
@@ -58,45 +65,37 @@ function HighLights() {
 }
 
 export default async function ProjectDetails({
-  params,
-}: {
-  params: { projectId: string };
-}) {
-  
-  async function getProject(id: string) {
-    const file = await fs.readFile(process.cwd() + "/app/data.json", "utf8");
-    const projects: Project[] = JSON.parse(file).projects;
+  params: { projectId },
+}: Params) {
+  const projectData: Promise<Project> = getProject(projectId);
+  const project = await projectData;
 
-    const project = projects.find((proj) => proj.id === id);
-    return project;
+  if (!project) {
+    notFound();
   }
-  
-  const project = await getProject(params.projectId);
-
-  // console.log(project);
 
   return (
-    <Container className="py-12 sm:py-20">
+    <>
       <div className="grid grid-cols-1 gap-x-16 gap-y-10 px-5 sm:px-0 lg:grid-cols-2">
         <div className="">
           <h2 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-zinc-100 sm:text-5xl">
-            {project?.title}
+            {project.title}
           </h2>
           <p className="mt-4 text-slate-500 dark:text-zinc-300">
-            {project?.intro}
+            {project.intro}
           </p>
           <p className="mt-4 text-slate-500 dark:text-zinc-300">
-            {project?.description}
+            {project.description}
           </p>
         </div>
         <div className="relative w-full overflow-hidden rounded-xl border border-slate-900/10 dark:border-zinc-100/10">
           <Image
-            src={project?.imageUrl as StaticImageData}
-            alt={project?.title || "default image"}
+            src={project.imageUrl as StaticImageData}
+            alt={project.title || "default image"}
             className={cn(
               "aspect-[16/9] w-full bg-slate-200/80 transition duration-500 dark:bg-zinc-700/60 sm:aspect-[3/2]",
-              project?.bgSize,
-              // project.bgColor && `bg-${project.bgColor}`,
+              project.bgSize,
+              // slug.bgColor && `bg-${slug.bgColor}`,
               // the bg-color is not working
             )}
             width={500}
@@ -112,6 +111,15 @@ export default async function ProjectDetails({
       <div className="px-5 sm:px-0 ">
         <Tabs />
       </div>
-    </Container>
+    </>
   );
+}
+
+export async function generateStaticParams() {
+  const projectData: Promise<Project[]> = getAllProjects();
+  const projects = await projectData;
+
+  return projects.map((project) => ({
+    id: project.id.toString(),
+  }));
 }
