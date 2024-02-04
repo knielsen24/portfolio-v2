@@ -4,10 +4,13 @@ import linkTreeImage from "@/public/projects/linkree.png";
 import southWellsImage from "@/public/projects/300south-wells.png";
 import wheresWizardImage from "@/public/projects/wheresWizard.png";
 import webflowImage from "@/public/projects/webflow.png";
+import tripleStampDashImage from "@/public/projects/triplestamp-dashboard.jpg";
+import pixabayImage from "@/public/projects/pixabay-clone.webp";
+import centerForAntsImage from  "@/public/projects/center-for-kids.webp"
 import { StaticImageData } from "next/image";
 
 export type Project = {
-  id: number | undefined;
+  id: string;
   title: string;
   href: string;
   githubHref?: string;
@@ -17,7 +20,7 @@ export type Project = {
   intro: string;
   description?: string;
   bgSize: string;
-  imageUrl?: string | StaticImageData;
+  imageUrl: string | StaticImageData;
   bgColor?: string;
   industry?: string;
   category?: string;
@@ -25,7 +28,7 @@ export type Project = {
   datetime?: string;
 };
 export const initialProjectData: Project = {
-  id: undefined,
+  id: "",
   title: "",
   href: "",
   githubHref: "",
@@ -45,7 +48,7 @@ export const initialProjectData: Project = {
 
 export const projects: Project[] = [
   {
-    id: 8,
+    id: "8",
     title: "Portfolio v2",
     href: "https://kevinnielsen.dev",
     githubHref: "https://github.com/knielsen24/portfolio-v2",
@@ -64,7 +67,7 @@ export const projects: Project[] = [
     datetime: "2020-03-16",
   },
   {
-    id: 7,
+    id: "7",
     title: "Xalt Challenge App",
     href: "https://www.xalt.fit/",
     githubHref: "",
@@ -79,7 +82,6 @@ export const projects: Project[] = [
     bgSize: "object-contain",
     bgColor: "pink-200",
     imageUrl: xaltAppImage,
-
     industry: "Health & Fitness",
     category: "Professional",
     date: "Mar 16, 2020",
@@ -87,7 +89,7 @@ export const projects: Project[] = [
   },
 
   {
-    id: 6,
+    id: "6",
     title: "TripleStamp",
     href: "",
     githubHref: "https://github.com/knielsen24/triple-stamp",
@@ -99,15 +101,14 @@ export const projects: Project[] = [
     description: "",
     bgSize: "object-cover",
     bgColor: "",
-    imageUrl:
-      "https://github.com/knielsen24/triple-stamp/blob/main/client/src/assets/ts-landing-page.jpg?raw=true",
+    imageUrl: tripleStampDashImage,
     industry: "Real Estate",
     category: "Capstone",
     date: "Mar 16, 2020",
     datetime: "2020-03-16",
   },
   {
-    id: 5,
+    id: "5",
     title: "Pixabay Clone with Autocorrect",
     href: "",
     githubHref: "https://github.com/knielsen24/rn-dev-proto",
@@ -118,7 +119,7 @@ export const projects: Project[] = [
       "Simple stock photography image search mobile application with a spellchecker feature connected to the Pixabay API.",
     description: "",
     bgSize: "object-contain",
-    imageUrl: "https://i.ytimg.com/vi_webp/IFq71H03zI8/oar2.webp",
+    imageUrl: pixabayImage,
     bgColor: "bg-pink-200",
     industry: "Media",
     category: "Fun",
@@ -127,7 +128,7 @@ export const projects: Project[] = [
   },
 
   {
-    id: 4,
+    id: "4",
     title: "LinkTree Clone",
     href: "https://kevinnielsen-treeelink-clone.vercel.app/",
     githubHref: "https://github.com/knielsen24/linktree-clone",
@@ -145,7 +146,7 @@ export const projects: Project[] = [
     datetime: "2020-03-16",
   },
   {
-    id: 3,
+    id: "3",
     title: "300 South Wells",
     href: "https://3swtest.netlify.app/",
     githubHref: "https://github.com/knielsen24/sw-test",
@@ -158,14 +159,13 @@ export const projects: Project[] = [
     bgSize: "object-cover",
     imageUrl: southWellsImage,
     bgColor: "",
-
     industry: "Commercial Real Estate",
     category: "Pro Bono",
     date: "Mar 16, 2020",
     datetime: "2020-03-16",
   },
   {
-    id: 2,
+    id: "2",
     title: "Portfolio v1",
     href: "https://kevin-nielsen.webflow.io/",
     githubHref: "",
@@ -179,14 +179,13 @@ export const projects: Project[] = [
     bgSize: "object-cover",
     imageUrl: webflowImage,
     bgColor: "",
-
     industry: "Technology",
     category: "Portfolio",
     date: "Mar 16, 2020",
     datetime: "2020-03-16",
   },
   {
-    id: 1,
+    id: "1",
     title: "Where's Wizard",
     href: "#",
     githubHref: "",
@@ -199,29 +198,20 @@ export const projects: Project[] = [
     bgSize: "object-cover",
     imageUrl: wheresWizardImage,
     bgColor: "",
-    industry: "Beauty",
+    industry: "Software",
     category: "Creative",
     date: "Mar 16, 2020",
     datetime: "2020-03-16",
   },
-  {
-    id: 777,
-    title: "Magnum",
-    href: "https://youtu.be/NQ-8IuUkJJc?si=v2BDfnHxnyUmctdZ",
-    githubHref: "",
-    iosHref: "",
-    androidHref: "",
-    demoHref: "",
-    intro:
-      "I wasn't like every other kid, you know, who dreams about being an astronaut, I was always more interested in what bark was made out of on a tree. Richard Gere's a real hero of mine. Sting. Sting would be another person who's a hero. The music he's created over the years, I don't really listen to it, but the fact that he's making it, I respect that.",
-    description: "",
-    bgSize: "object-cover",
-    imageUrl:
-      "https://preview.redd.it/sykkxuqfypra1.png?width=3840&format=png&auto=webp&s=be2282f1033427cace6d987a357840cf454d1e22",
-    bgColor: "",
-    industry: "Beauty",
-    category: "Fashion",
-    date: "Mar 16, 2020",
-    datetime: "2020-03-16",
-  },
 ];
+
+export const easterEgg = {
+  id: "777",
+  title: "Magnum",
+  href: "https://youtu.be/NQ-8IuUkJJc?si=v2BDfnHxnyUmctdZ",
+  intro:
+    "I wasn't like every other kid, you know, who dreams about being an astronaut, I was always more interested in what bark was made out of on a tree. Richard Gere's a real hero of mine. Sting. Sting would be another person who's a hero. The music he's created over the years, I don't really listen to it, but the fact that he's making it, I respect that.",
+  bgSize: "object-cover",
+  imageUrl: centerForAntsImage,
+  industry: "Fashion & Beauty",
+};

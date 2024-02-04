@@ -47,46 +47,33 @@ function Skills() {
                 className="max-h-12 w-full object-contain duration-300 ease-in sm:hover:scale-110"
                 src={jsIcon}
                 alt="JavaScript"
-                width={104}
-                height={48}
               />
               <Image
                 className="max-h-12 w-full object-contain duration-300 ease-in sm:hover:scale-110"
                 src={tsIcon}
                 alt="TypeScript"
-                width={136}
-                height={48}
               />
               <Image
                 className="max-h-14 w-full object-contain duration-300 ease-in sm:hover:scale-110"
                 src={nodeIcon}
                 alt="Node.js"
-                width={147}
-                height={48}
               />
-
               <div>
                 <Image
                   className="hidden max-h-12 w-full object-contain duration-300 ease-in dark:block sm:hover:scale-110 "
                   src={nextDarkIcon}
                   alt="Next.js"
-                  width={140}
-                  height={48}
                 />
                 <Image
                   className="block max-h-12 w-full object-contain duration-300 ease-in dark:hidden sm:hover:scale-110 "
                   src={nextLightIcon}
                   alt="Next.js"
-                  width={140}
-                  height={48}
                 />
               </div>
               <Image
                 className="max-h-12 w-full object-contain duration-300 ease-in sm:hover:scale-110 "
                 src={reactIcon}
                 alt="React.js"
-                width={140}
-                height={48}
               />
 
               <div>
@@ -94,37 +81,27 @@ function Skills() {
                   className="hidden max-h-10 w-full object-contain duration-300 ease-in dark:block sm:hover:scale-110 "
                   src={expoDarkIcon}
                   alt="Expo React Native"
-                  width={140}
-                  height={48}
                 />
                 <Image
                   className="block max-h-10 w-full object-contain duration-300 ease-in dark:hidden sm:hover:scale-110 "
                   src={expoLightIcon}
                   alt="Expo Go React Native"
-                  width={140}
-                  height={48}
                 />
               </div>
               <Image
                 className="max-h-12 w-full object-contain duration-300 ease-in sm:hover:scale-110 "
                 src={reduxIcon}
                 alt="Redux"
-                width={110}
-                height={48}
               />
               <Image
                 className="max-h-9 w-full object-contain duration-300 ease-in sm:hover:scale-110"
                 src={twIcon}
                 alt="TailwindCSS"
-                width={158}
-                height={48}
               />
               <Image
                 className="max-h-12 w-full object-contain duration-300 ease-in sm:hover:scale-110"
                 src={pgIcon}
                 alt="PostegeSQL"
-                width={110}
-                height={48}
               />
             </div>
           </div>

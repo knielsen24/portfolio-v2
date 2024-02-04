@@ -1,27 +1,28 @@
 "use client";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
+import type { StaticImageData } from "next/image";
 import { Fragment, useState, useEffect, useMemo } from "react";
 import { Container } from "@/components/Container";
 import { cn } from "@/lib/utils";
-import { tabs } from "@/constants/projects";
 import { Tab } from "@headlessui/react";
 import { Project, projects, initialProjectData } from "@/lib/projectData";
 import {
-  ArrowPathIcon,
+  CodeBracketIcon,
+  LinkIcon,
   CalendarIcon,
   TruckIcon,
 } from "@heroicons/react/24/outline";
 
 const perks = [
   {
-    name: "10-year all-inclusive warranty",
-    description: "We’ll replace it with a new one",
-    icon: CalendarIcon,
+    name: "fullstack",
+    description: "Type of application",
+    icon: LinkIcon,
   },
   {
-    name: "Free shipping on returns",
-    description: "Send it back for free",
-    icon: ArrowPathIcon,
+    name: "Repo Link",
+    description: "Checkout the code on GitHub",
+    icon: CodeBracketIcon,
   },
   {
     name: "Free, contactless delivery",
@@ -61,6 +62,40 @@ function HighLights() {
     </div>
   );
 }
+
+const tabs = [
+  {
+    name: "Technology",
+    features: [
+      {
+        name: "Adaptive and modular",
+        intro:
+          "The Organize base set allows you to configure and evolve your setup as your items and habits change. The included trays and optional add-ons are easily rearranged to achieve that perfect setup.",
+      },
+    ],
+  },
+
+  {
+    name: "Description",
+    features: [
+      {
+        name: "Helpful around the home",
+        intro:
+          "Our customers use Organize throughout the house to bring efficiency to many daily routines. Enjoy Organize in your workspace, kitchen, living room, entry way, garage, and more. We can't wait to see how you'll use it!",
+      },
+    ],
+  },
+  {
+    name: "Challenges",
+    features: [
+      {
+        name: "Everything you'll need",
+        intro:
+          "The Organize base set includes the pen, phone, small, and large trays to help you group all your essential items. Expand your set with the drink coaster and headphone stand add-ons.",
+      },
+    ],
+  },
+];
 
 function TabDetails() {
   return (
@@ -115,7 +150,7 @@ function TabDetails() {
 export default function ProjectDetails({
   params,
 }: {
-  params: { projectId: number };
+  params: { projectId: string };
 }) {
   const [isLoading, setLoading] = useState(false);
   const [project, setProject] = useState<Project | undefined>(
@@ -123,8 +158,8 @@ export default function ProjectDetails({
   );
 
   const getById = useMemo(
-    () => (id: number) => {
-      return projects.find((proj) => proj.id === Number(id));
+    () => (id: string) => {
+      return projects.find((proj) => proj.id === id);
     },
     [params.projectId],
   );
@@ -152,14 +187,13 @@ export default function ProjectDetails({
           <p className="mt-4 text-slate-500 dark:text-zinc-300">
             {project?.intro}
           </p>
+          <p className="mt-4 text-slate-500 dark:text-zinc-300">
+            {project?.description}
+          </p>
         </div>
         <div className="relative w-full overflow-hidden rounded-xl border border-slate-900/10 dark:border-zinc-100/10">
           <Image
-            src={
-              typeof project?.imageUrl === "string"
-                ? project.imageUrl
-                : (project?.imageUrl as StaticImageData)
-            }
+            src={project?.imageUrl as StaticImageData}
             alt={project?.title || "default image"}
             className={cn(
               "aspect-[16/9] w-full bg-slate-200/80 transition duration-500 dark:bg-zinc-700/60 sm:aspect-[3/2]",
@@ -168,8 +202,6 @@ export default function ProjectDetails({
               // the bg-color is not working
             )}
             priority={true}
-            width={500}
-            height={500}
           />
           <div className="absolute inset-0 rounded-xl " />
         </div>

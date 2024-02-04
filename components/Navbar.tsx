@@ -11,9 +11,9 @@ import GradientBar from "./ui/GradientBar";
 // import avatarImage from "@/images/avatar_nobg.png";
 
 const navigation = [
-  { name: "About", href: "/about", prefetch: true },
-  { name: "Experience", href: "/experience", prefetch: true },
-  { name: "Projects", href: "/projects", prefetch: true },
+  { name: "About", href: "/about", ariaLabel: "about link", prefetch: true },
+  // { name: "Experience", href: "/experience", ariaLabel: "", prefetch: true },
+  { name: "Projects", href: "/projects", ariaLabel: "", prefetch: true },
 ];
 
 function ChevronDownIcon(props: React.ComponentPropsWithoutRef<"svg">) {
@@ -114,9 +114,11 @@ function MobileNavigation(
             <nav className="mt-6">
               <ul className="-my-2 divide-y divide-slate-200/70 text-base text-slate-800 dark:divide-zinc-100/5 dark:text-zinc-300">
                 <MobileNavItem href="/">Home</MobileNavItem>
-                <MobileNavItem href="/about">About</MobileNavItem>
-                {/* <MobileNavItem href="/experience">Experience</MobileNavItem> */}
-                <MobileNavItem href="/projects">Projects</MobileNavItem>
+                {navigation.map((item) => (
+                  <MobileNavItem key={item.name} href={item.href}>
+                    {item.name}
+                  </MobileNavItem>
+                ))}
               </ul>
             </nav>
           </Popover.Panel>
@@ -129,10 +131,12 @@ function MobileNavigation(
 function NavItem({
   href,
   ariaLabel,
+  prefetch,
   children,
 }: {
   href: string;
   ariaLabel: string;
+  prefetch: boolean;
   children: React.ReactNode;
 }) {
   let isActive = usePathname() === href;
@@ -141,7 +145,8 @@ function NavItem({
     <li>
       <Link
         href={href}
-        prefetch={true}
+        aria-label={ariaLabel}
+        prefetch={prefetch}
         className={clsx(
           "relative block px-3 py-2 transition",
           isActive
@@ -162,15 +167,23 @@ function DesktopNavigation(props: React.ComponentPropsWithoutRef<"nav">) {
   return (
     <nav {...props}>
       <ul className="flex rounded-full bg-white px-3 text-sm font-medium text-slate-800 shadow-lg shadow-slate-800/5 ring-1 ring-slate-900/5 backdrop-blur dark:bg-zinc-800 dark:text-zinc-200 dark:ring-white/10 dark:hover:ring-white/20">
-        <NavItem href="/about" ariaLabel="about">
+        {navigation.map((item) => (
+          <NavItem
+            key={item.name}
+            href={item.href}
+            ariaLabel={item.ariaLabel}
+            prefetch={item.prefetch}
+          >
+            {item.name}{" "}
+          </NavItem>
+        ))}
+
+        {/* <NavItem href="/about" ariaLabel="about">
           About
-        </NavItem>
+        </NavItem> */}
         {/* <NavItem href="/experience" ariaLabel="experience">
           Experience
         </NavItem> */}
-        <NavItem href="/projects" ariaLabel="projects">
-          Projects
-        </NavItem>
       </ul>
     </nav>
   );
