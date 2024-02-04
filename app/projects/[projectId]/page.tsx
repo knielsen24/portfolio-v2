@@ -57,22 +57,23 @@ function HighLights() {
   );
 }
 
-async function getProject(id: string) {
-  const file = await fs.readFile(process.cwd() + "/app/data.json", "utf8");
-  const projects: Project[] = JSON.parse(file).projects;
-
-  const project = projects.find((proj) => proj.id === id);
-  return project;
-}
-
 export default async function ProjectDetails({
   params,
 }: {
   params: { projectId: string };
 }) {
+  
+  async function getProject(id: string) {
+    const file = await fs.readFile(process.cwd() + "/app/data.json", "utf8");
+    const projects: Project[] = JSON.parse(file).projects;
+
+    const project = projects.find((proj) => proj.id === id);
+    return project;
+  }
+  
   const project = await getProject(params.projectId);
 
-  console.log(project);
+  // console.log(project);
 
   return (
     <Container className="py-12 sm:py-20">
