@@ -12,11 +12,6 @@ export const metadata: Metadata = {
     default: "Kevin Nielsen - Frontend Software Engineer enthusiast",
   },
   description: "Software engineer, web and mobile developer",
-  // alternates: {
-  //   types: {
-  //     'application/rss+xml': `${process.env.NEXT_PUBLIC_SITE_URL}/feed.xml`,
-  //   },
-  // },
 };
 
 export default function RootLayout({

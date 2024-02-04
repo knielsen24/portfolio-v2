@@ -12,7 +12,6 @@ type Params = {
 export async function generateMetadata({
   params: { projectId },
 }: Params): Promise<Metadata> {
-  
   const projectData: Promise<Project> = getProject(projectId);
   const project: Project = await projectData;
 
@@ -24,8 +23,10 @@ export async function generateMetadata({
   }
 
   return {
-    title: project.title,
-    description: project.intro,
+    title: {
+      absolute: `${project.title} - Projects`,
+      default: project.title,
+    },
   };
 }
 
@@ -34,5 +35,9 @@ type LayoutProps = {
 };
 
 export default function ProjectDetails({ children }: LayoutProps) {
-  return <Container className="py-12 sm:py-20">{children}</Container>;
+  return (
+    <>
+      <Container className="py-12 sm:py-20">{children}</Container>;
+    </>
+  );
 }

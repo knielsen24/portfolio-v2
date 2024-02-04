@@ -9,7 +9,6 @@ import {
   LinkIcon,
   TruckIcon,
 } from "@heroicons/react/24/outline";
-import { Container } from "@/components/Container";
 import Tabs from "@/components/project/Tabs";
 
 type Params = {
