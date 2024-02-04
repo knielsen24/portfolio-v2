@@ -1,17 +1,15 @@
-"use client";
 import Image from "next/image";
+import { promises as fs } from "fs";
 import type { StaticImageData } from "next/image";
-import { Fragment, useState, useEffect, useMemo } from "react";
 import { Container } from "@/components/Container";
 import { cn } from "@/lib/utils";
-import { Tab } from "@headlessui/react";
-import { Project, projects, initialProjectData } from "@/lib/projectData";
+import { Project, initialProjectData } from "@/constants/projects";
 import {
   CodeBracketIcon,
   LinkIcon,
-  CalendarIcon,
   TruckIcon,
 } from "@heroicons/react/24/outline";
+import Tabs from "@/components/project/Tabs";
 
 const perks = [
   {
@@ -30,10 +28,6 @@ const perks = [
     icon: TruckIcon,
   },
 ];
-
-function classNames(...classes: any) {
-  return classes.filter(Boolean).join(" ");
-}
 
 function HighLights() {
   return (
@@ -63,119 +57,22 @@ function HighLights() {
   );
 }
 
-const tabs = [
-  {
-    name: "Technology",
-    features: [
-      {
-        name: "Adaptive and modular",
-        intro:
-          "The Organize base set allows you to configure and evolve your setup as your items and habits change. The included trays and optional add-ons are easily rearranged to achieve that perfect setup.",
-      },
-    ],
-  },
+async function getProject(id: string) {
+  const file = await fs.readFile(process.cwd() + "/app/data.json", "utf8");
+  const projects: Project[] = JSON.parse(file).projects;
 
-  {
-    name: "Description",
-    features: [
-      {
-        name: "Helpful around the home",
-        intro:
-          "Our customers use Organize throughout the house to bring efficiency to many daily routines. Enjoy Organize in your workspace, kitchen, living room, entry way, garage, and more. We can't wait to see how you'll use it!",
-      },
-    ],
-  },
-  {
-    name: "Challenges",
-    features: [
-      {
-        name: "Everything you'll need",
-        intro:
-          "The Organize base set includes the pen, phone, small, and large trays to help you group all your essential items. Expand your set with the drink coaster and headphone stand add-ons.",
-      },
-    ],
-  },
-];
-
-function TabDetails() {
-  return (
-    <Tab.Group as="div" className="mt-12 sm:mt-28">
-      <div className="-mx-4 flex overflow-x-auto sm:mx-0">
-        <div className="flex-auto border-b border-slate-200 dark:border-zinc-700 sm:px-0">
-          <Tab.List className="-mb-px flex justify-center space-x-10 sm:justify-start sm:space-x-16">
-            {tabs.map((tab) => (
-              <Tab
-                key={tab.name}
-                className={({ selected }) =>
-                  classNames(
-                    selected
-                      ? "border-indigo-500 text-indigo-500 dark:border-indigo-400 dark:text-indigo-400"
-                      : "border-transparent text-slate-500 hover:border-slate-300 hover:text-slate-700 dark:text-zinc-400 dark:hover:border-zinc-700 dark:hover:text-zinc-200",
-                    "whitespace-nowrap border-b-2 py-6 text-sm font-medium",
-                  )
-                }
-              >
-                {tab.name}
-              </Tab>
-            ))}
-          </Tab.List>
-        </div>
-      </div>
-
-      <Tab.Panels as={Fragment}>
-        {tabs.map((tab: any) => (
-          <Tab.Panel key={tab.name} className="space-y-16 pt-10 lg:pt-16">
-            {tab.features.map((feature: any) => (
-              <div
-                key={feature.name}
-                className="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:gap-x-8"
-              >
-                <div className="mt-6 lg:col-span-6 lg:mt-0">
-                  <h3 className="text-lg font-medium text-slate-900 dark:text-zinc-200">
-                    {feature.name}
-                  </h3>
-                  <p className="mt-2 text-sm text-slate-500 dark:text-zinc-400">
-                    {feature.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </Tab.Panel>
-        ))}
-      </Tab.Panels>
-    </Tab.Group>
-  );
+  const project = projects.find((proj) => proj.id === id);
+  return project;
 }
 
-export default function ProjectDetails({
+export default async function ProjectDetails({
   params,
 }: {
   params: { projectId: string };
 }) {
-  const [isLoading, setLoading] = useState(false);
-  const [project, setProject] = useState<Project | undefined>(
-    initialProjectData,
-  );
+  const project = await getProject(params.projectId);
 
-  const getById = useMemo(
-    () => (id: string) => {
-      return projects.find((proj) => proj.id === id);
-    },
-    [params.projectId],
-  );
-
-  useEffect(() => {
-    const projectId = params.projectId;
-    setLoading(true);
-
-    if (projectId) {
-      const project = getById(projectId);
-      setProject(project);
-    } else {
-      setProject(initialProjectData);
-    }
-    setLoading(false);
-  }, [params.projectId]);
+  console.log(project);
 
   return (
     <Container className="py-12 sm:py-20">
@@ -201,6 +98,8 @@ export default function ProjectDetails({
               // project.bgColor && `bg-${project.bgColor}`,
               // the bg-color is not working
             )}
+            width={500}
+            height={500}
             priority={true}
           />
           <div className="absolute inset-0 rounded-xl " />
@@ -210,7 +109,7 @@ export default function ProjectDetails({
         <HighLights />
       </div>
       <div className="px-5 sm:px-0 ">
-        <TabDetails />
+        <Tabs />
       </div>
     </Container>
   );

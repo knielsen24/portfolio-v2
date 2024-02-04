@@ -1,14 +1,16 @@
+import { promises as fs } from "fs";
 import Link from "next/link";
 import Image from "next/image";
 import type { StaticImageData } from "next/image";
 import { type Metadata } from "next";
 import { cn } from "@/lib/utils";
 import { SimpleLayout } from "@/components/SimpleLayout";
-import { projects, easterEgg } from "@/lib/projectData";
+import { Project, easterEgg } from "@/constants/projects";
 
 const pageHeader = {
   page: "Projects",
-  title: "Checkout the web and mobile apps I've made. I'm a building enthusiast",
+  title:
+    "Checkout the web and mobile apps I've made. I'm a building enthusiast",
   intro:
     "I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved.",
 };
@@ -71,6 +73,7 @@ function Card({
             <Link
               href={id === "777" ? href : `/projects/${id}`}
               target={id === "777" ? "_blank" : ""}
+              prefetch
             >
               <span className="absolute -inset-x-5 -inset-y-5 z-20 sm:-inset-y-6" />
               {title}
@@ -86,11 +89,14 @@ function Card({
   );
 }
 
-export default function Projects() {
+export default async function Projects() {
+  const file = await fs.readFile(process.cwd() + "/app/data.json", "utf8");
+  const projects: Project[] = JSON.parse(file).projects;
+
   return (
     <SimpleLayout title={pageHeader.title} intro={pageHeader.intro}>
       <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-16 gap-y-12 px-5 sm:grid-cols-2 sm:px-0 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-        {projects?.map((project) => (
+        {projects?.map((project: Project) => (
           <Card
             key={project.id}
             id={project.id}
@@ -103,15 +109,15 @@ export default function Projects() {
           />
         ))}
         <Card
-            key={easterEgg.id}
-            id={easterEgg.id}
-            imageUrl={easterEgg.imageUrl}
-            title={easterEgg.title}
-            bgSize={easterEgg.bgSize}
-            industry={easterEgg.industry}
-            href={easterEgg.href}
-            intro={easterEgg.intro}
-          />
+          key={easterEgg.id}
+          id={easterEgg.id}
+          imageUrl={easterEgg.imageUrl}
+          title={easterEgg.title}
+          bgSize={easterEgg.bgSize}
+          industry={easterEgg.industry}
+          href={easterEgg.href}
+          intro={easterEgg.intro}
+        />
       </div>
     </SimpleLayout>
   );
