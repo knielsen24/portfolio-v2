@@ -13,7 +13,7 @@ import reduxIcon from "@/public/logos/redux-icon.png";
 import twIcon from "@/public/logos/tw-icon.svg";
 import pgIcon from "@/public/logos/postgresql-icon.png";
 import headShot from "@/public/avatar.png";
-import { iconsObj } from "@/constants/Icons";
+import { iconsObj } from "@/components/Icons";
 import { heroCopy, skillsCopy } from "@/constants/home";
 import BtnScrollSpy from "@/components/ui/BtnScrollSpy";
 
@@ -132,13 +132,13 @@ function Skills() {
 export default function Home() {
   return (
     <Container className="h-auto snap-y snap-mandatory overflow-auto sm:mt-4">
-      <div className="relative grid h-screen max-w-5xl snap-start grid-cols-1 content-center gap-y-8 px-5 sm:gap-y-12 sm:px-0 lg:grid-cols-3">
+      <div className="relative grid h-screen max-w-5xl snap-start grid-cols-1 content-center gap-y-8 px-5 sm:gap-y-12 sm:px-0 lg:grid-cols-3 -mb-4 sm:-mb-6">
         <div className="mx-auto max-w-xs sm:px-0 lg:max-w-none lg:px-8 ">
           <Image
             src={headShot}
             alt="Headshot of Kevin"
             priority={true}
-            className="w-52 rounded-full bg-gradient-to-r from-slate-300 via-indigo-500 to-slate-400/70 shadow-lg shadow-slate-500 ring-1 ring-slate-300/20 delay-75 duration-300 dark:bg-gradient-to-r  dark:from-zinc-400/80 dark:via-indigo-500 dark:to-zinc-400/80 dark:shadow-zinc-600  dark:ring-zinc-700 sm:w-64"
+            className="w-52 rounded-full bg-gradient-to-r from-indigo-200 via-indigo-500 to-teal-400/70 shadow-lg shadow-slate-500 ring-1 ring-slate-300/20 delay-75 duration-300 dark:bg-gradient-to-r  dark:from-indigo-300 dark:via-indigo-500 dark:to-teal-300 dark:shadow-zinc-600  dark:ring-zinc-700 sm:w-64"
           />
         </div>
         <div className="sm:col-span-2 lg:order-first lg:row-span-2">

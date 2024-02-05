@@ -27,13 +27,13 @@ function AboutImage() {
         className="saturate-75 absolute inset-0 aspect-square h-full w-full object-cover brightness-125 "
       />
 
-      <div className="absolute inset-0 bg-slate-400/80 mix-blend-multiply dark:bg-zinc-500/70 " />
+      <div className="absolute inset-0 bg-slate-400/80 mix-blend-multiply dark:bg-zinc-500/50 " />
       <div
         className="absolute left-1/2 top-1/2 -ml-16 -translate-x-1/2 -translate-y-1/2 transform-gpu blur-3xl"
         aria-hidden="true"
       >
         <div
-          className="aspect-[1097/845] w-[78.5625rem] bg-gradient-to-tr from-indigo-800 to-indigo-300 opacity-90 dark:opacity-90"
+          className="aspect-[1097/845] w-[78.5625rem] bg-gradient-to-tr from-indigo-600 to-indigo-400 opacity-90 dark:opacity-90"
           style={{
             clipPath:
               "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
@@ -109,11 +109,11 @@ function Timeline() {
 export default function About() {
   return (
     <SimpleLayout title={pageHeader.title} intro={pageHeader.intro}>
-      <div className="grid max-w-2xl grid-cols-1 items-start justify-items-center gap-x-8 gap-y-8 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+      <div className="sm:min-h-content grid max-w-2xl grid-cols-1 items-start justify-items-center gap-x-8 gap-y-8 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
         <div className="order-1 mx-4 sm:order-2">
           <AboutImage />
         </div>
-        <div className="order-2 mx-4 sm:px-0 lg:order-1">
+        <div className="order-2 mx-4 sm:mx-0 lg:order-1">
           <div className="text-base leading-7 text-slate-700 dark:text-zinc-400 lg:max-w-lg">
             <h1 className=" text-xl font-semibold leading-7 text-indigo-600 dark:text-indigo-400">
               {loveCoding.header}

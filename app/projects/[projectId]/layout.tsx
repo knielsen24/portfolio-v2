@@ -37,7 +37,7 @@ type LayoutProps = {
 export default function ProjectDetails({ children }: LayoutProps) {
   return (
     <>
-      <Container className="py-12 sm:py-20">{children}</Container>;
+      <Container className="py-12 sm:py-20">{children}</Container>
     </>
   );
 }

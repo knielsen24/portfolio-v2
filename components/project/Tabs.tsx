@@ -28,16 +28,16 @@ const tabs = [
       },
     ],
   },
-  {
-    name: "Challenges",
-    features: [
-      {
-        name: "Everything you'll need",
-        intro:
-          "The Organize base set includes the pen, phone, small, and large trays to help you group all your essential items. Expand your set with the drink coaster and headphone stand add-ons.",
-      },
-    ],
-  },
+  // {
+  //   name: "Challenges",
+  //   features: [
+  //     {
+  //       name: "Everything you'll need",
+  //       intro:
+  //         "The Organize base set includes the pen, phone, small, and large trays to help you group all your essential items. Expand your set with the drink coaster and headphone stand add-ons.",
+  //     },
+  //   ],
+  // },
 ];
 
 export default function Tabs() {

@@ -1,40 +1,57 @@
 import centerForAntsImage from "@/public/projects/center-for-kids.webp";
 import { StaticImageData } from "next/image";
 
+export const pageHeader = {
+  page: "Projects",
+  title: "Checkout the web and mobile apps I've made, building enthusiast.",
+  intro: "Welcome to my collection of projects.",
+};
+
+export type Links = {
+  name: string;
+  href: string;
+};
+
 export type Project = {
   id: string;
   title: string;
+  intro: string;
+  industry?: string;
+  category?: string;
+  links?: Links[];
+  description?: string;
+  technologies?: string[];
+  // challenges?: string[];
+  imageUrl: string | StaticImageData;
+  bgSize: string;
+  bgColor?: string;
+  date?: string;
+  datetime?: string;
   href: string;
   githubHref?: string;
   iosHref?: string;
   androidHref?: string;
   demoHref?: string;
-  intro: string;
-  description?: string;
-  bgSize: string;
-  imageUrl: string | StaticImageData;
-  bgColor?: string;
-  industry?: string;
-  category?: string;
-  date?: string;
-  datetime?: string;
 };
 
 export const initialProjectData: Project = {
   id: "",
   title: "",
-  href: "",
-  githubHref: "",
-  iosHref: "",
-  androidHref: "",
-  demoHref: "",
   intro: "",
+  industry: "",
+  category: "",
+  links: [
+    {
+      name: "",
+      href: "",
+    },
+  ],
+  href: "",
   description: "",
+  technologies: [],
   bgSize: "",
   imageUrl: "",
   bgColor: "",
-  industry: "",
-  category: "",
   date: "",
   datetime: "",
 };

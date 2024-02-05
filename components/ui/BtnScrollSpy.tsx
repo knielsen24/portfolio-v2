@@ -24,7 +24,7 @@ function ChevronDoubleDownIcon(props: React.ComponentPropsWithoutRef<"svg">) {
 
 export default function BtnScrollSpy() {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
-  const [isShowing, setIsShowing] = useState(true);
+  const [isShowing, setIsShowing] = useState(false);
 
   const handleScroll = () => {
     const currentScrollPos = window.scrollY;
@@ -39,13 +39,17 @@ export default function BtnScrollSpy() {
   };
 
   useEffect(() => {
+    setTimeout(() => {
+      setIsShowing(true);
+    }, 2000);
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  });
+  }, []);
 
   return (
     <>
-      <div className="absolute inset-x-0 bottom-6 flex justify-center">
+      <div className="absolute inset-x-0 bottom-8 sm:bottom-16 flex justify-center">
         <Transition
           show={isShowing}
           enter="transition-opacity duration-500"
@@ -55,7 +59,7 @@ export default function BtnScrollSpy() {
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <div className="rounded-full bg-slate-200 p-1 opacity-90 animate-pulse dark:bg-zinc-800">
+          <div className="animate-bounce rounded-full bg-slate-200 p-1 opacity-90 dark:bg-zinc-800">
             <Link href="/#skills" onClick={() => setIsShowing(false)}>
               <ChevronDoubleDownIcon className="h-6 w-6 text-indigo-300 dark:text-indigo-600" />
             </Link>
@@ -65,21 +69,3 @@ export default function BtnScrollSpy() {
     </>
   );
 }
-
-// return (
-//     <>
-//       {isShowing ? (
-//         <div className="absolute inset-x-0 bottom-10 flex justify-center">
-
-//           <Link
-//             href="/#skills"
-//             className="rounded-full bg-slate-200 p-1 opacity-90 hover:scale-110 hover:animate-none hover:duration-500 dark:bg-zinc-800"
-//             onClick={() => setIsShowing(false)}
-//           >
-//             <ChevronDoubleDownIcon className="h-6 w-6 text-indigo-300 dark:text-indigo-600" />
-//           </Link>
-//         </div>
-//       ) : null}
-//     </>
-//   );
-// }
