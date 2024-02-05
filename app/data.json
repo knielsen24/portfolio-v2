@@ -16,7 +16,7 @@
       "androidHref": "",
       "demoHref": "",
       "intro":
-      "Take a deep dive into the development process of this portfolio website built with Next.js, TypeScript, and TailwindCSS. ",
+      "Take a deep dive into the development process of this portfolio website built with Next.js, TypeScript, TailwindCSS, and Headless UI. ",
       "description": "",
       "bgSize": "object-cover",
       "imageUrl": "/projects/portfoliov2.png",
