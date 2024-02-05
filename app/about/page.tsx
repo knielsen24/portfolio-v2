@@ -110,10 +110,10 @@ export default function About() {
   return (
     <SimpleLayout title={pageHeader.title} intro={pageHeader.intro}>
       <div className="grid max-w-2xl grid-cols-1 items-start justify-items-center gap-x-8 gap-y-8 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-        <div className="order-1 mx-5 sm:order-2">
+        <div className="order-1 mx-4 sm:order-2">
           <AboutImage />
         </div>
-        <div className="order-2 px-5 sm:px-0 lg:order-1">
+        <div className="order-2 mx-4 sm:px-0 lg:order-1">
           <div className="text-base leading-7 text-slate-700 dark:text-zinc-400 lg:max-w-lg">
             <h1 className=" text-xl font-semibold leading-7 text-indigo-600 dark:text-indigo-400">
               {loveCoding.header}
@@ -123,7 +123,7 @@ export default function About() {
           </div>
         </div>
       </div>
-      <div className="order-3 mx-5 mt-20 border-t border-slate-300/70 py-12 dark:border-zinc-700/70 sm:mx-0 sm:my-24 sm:border-y">
+      <div className="order-3 mx-4 mt-20 border-t border-slate-300/70 py-12 dark:border-zinc-700/70 sm:mx-0 sm:my-24 sm:border-y">
         <dl className=" grid grid-cols-2 gap-x-8 gap-y-12 sm:gap-y-16 lg:grid-cols-4">
           {stats.map((stat, statIdx) => (
             <div key={statIdx} className="gap-y-6">

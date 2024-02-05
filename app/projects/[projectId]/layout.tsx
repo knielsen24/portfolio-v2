@@ -12,8 +12,8 @@ type Params = {
 export async function generateMetadata({
   params: { projectId },
 }: Params): Promise<Metadata> {
-  const projectData: Promise<Project> = getProject(projectId);
-  const project: Project = await projectData;
+  const projectData: Promise<Project | undefined> = getProject(projectId);
+  const project: Project | undefined = await projectData;
 
   if (!project) {
     return {

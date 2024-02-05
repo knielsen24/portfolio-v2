@@ -191,7 +191,7 @@ function DesktopNavigation(props: React.ComponentPropsWithoutRef<"nav">) {
 
 export default function Navbar() {
   return (
-    <header className="pointer-events-none z-50 flex-none ">
+    <header className="absolute top-0 w-full pointer-events-none z-50">
       <GradientBar className="top-0" />
       <Container className="top-0 z-10 mt-6 h-16 w-full px-5 sm:mt-8">
         <div className="flex gap-4">

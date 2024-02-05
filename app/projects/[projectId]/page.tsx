@@ -10,6 +10,7 @@ import {
   TruckIcon,
 } from "@heroicons/react/24/outline";
 import Tabs from "@/components/project/Tabs";
+import { Container } from "@/components/Container";
 
 type Params = {
   params: {
@@ -66,7 +67,7 @@ function HighLights() {
 export default async function ProjectDetails({
   params: { projectId },
 }: Params) {
-  const projectData: Promise<Project> = getProject(projectId);
+  const projectData: Promise<Project | undefined> = getProject(projectId);
   const project = await projectData;
 
   if (!project) {
@@ -74,8 +75,8 @@ export default async function ProjectDetails({
   }
 
   return (
-    <>
-      <div className="grid grid-cols-1 gap-x-16 gap-y-10 px-5 sm:px-0 lg:grid-cols-2">
+    <div className="mt-28 sm:mt-44">
+      <div className="mx-auto grid grid-cols-1 gap-x-16 gap-y-10 px-4 sm:px-0 lg:grid-cols-2">
         <div className="">
           <h2 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-zinc-100 sm:text-5xl">
             {project.title}
@@ -107,10 +108,10 @@ export default async function ProjectDetails({
       <div>
         <HighLights />
       </div>
-      <div className="px-5 sm:px-0 ">
+      <div className="mx-4 sm:px-0 ">
         <Tabs />
       </div>
-    </>
+    </div>
   );
 }
 

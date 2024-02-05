@@ -17,7 +17,7 @@ export async function getProject(projectId: string) {
   const projects = await projectsData;
 
   const project = projects.find((proj) => proj.id === projectId);
-  if (!project) throw new Error("Failed to fetch data");
+  if (!project) return
 
   return project;
 }

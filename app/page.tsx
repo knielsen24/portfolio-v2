@@ -15,95 +15,113 @@ import pgIcon from "@/public/logos/postgresql-icon.png";
 import headShot from "@/public/avatar.png";
 import { iconsObj } from "@/constants/Icons";
 import { heroCopy, skillsCopy } from "@/constants/home";
+import BtnScrollSpy from "@/components/ui/BtnScrollSpy";
+
+function ChevronDoubleDownIcon(props: React.ComponentPropsWithoutRef<"svg">) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      {...props}
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5"
+      />
+    </svg>
+  );
+}
 
 function Skills() {
   return (
-    <div className="relative mx-5 mt-16 sm:mx-0 sm:mt-20">
-      <div className="rounded-xl bg-indigo-100 py-16 ring-1 ring-slate-900/10 dark:bg-white/5 dark:ring-zinc-300/10 sm:rounded-3xl sm:py-20">
-        <div className="mx-auto max-w-7xl px-6 lg:px-12">
-          <div className="grid grid-cols-1 items-center gap-x-8 gap-y-16 lg:grid-cols-2">
-            <div className="mx-auto w-full max-w-xl lg:mx-0">
-              <h2 className="text-2xl font-bold tracking-tight text-slate-700 dark:text-zinc-100 sm:text-3xl">
-                {skillsCopy.header}
-              </h2>
-              <p className="mt-6 text-lg leading-8 text-slate-600 dark:text-zinc-300">
-                {skillsCopy.firstPart}{" "}
-                <span className="font-semibold text-indigo-500 ease-out hover:animate-pulse dark:text-indigo-400">
-                  {skillsCopy.firstHighlight}
-                </span>
-                {skillsCopy.secondPart}{" "}
-                <span className="font-semibold text-indigo-500 dark:text-indigo-400">
-                  {skillsCopy.secondHighlight}{" "}
-                </span>
-                {skillsCopy.thirdPart}{" "}
-                <span className="font-semibold text-indigo-500 dark:text-indigo-400">
-                  {skillsCopy.thirdHighlight}{" "}
-                </span>
-                {skillsCopy.fourthPart}
-              </p>
+    <div className="relative mx-5 sm:mx-0">
+      <div className="mx-auto max-w-7xl rounded-xl bg-indigo-100 px-6 py-12 ring-1 ring-slate-900/10 dark:bg-white/5 dark:ring-zinc-300/10 sm:rounded-3xl sm:py-16 lg:px-12">
+        <div className="grid grid-cols-1 items-center gap-x-8 gap-y-12 lg:grid-cols-2">
+          <div className="mx-auto w-full max-w-xl lg:mx-0">
+            <h2 className="text-2xl font-bold tracking-tight text-slate-700 dark:text-zinc-100 sm:text-3xl">
+              {skillsCopy.header}
+            </h2>
+            <p className="mt-6 text-lg leading-8 text-slate-600 dark:text-zinc-300">
+              {skillsCopy.firstPart}{" "}
+              <span className="font-semibold text-indigo-500 ease-out hover:animate-pulse dark:text-indigo-400">
+                {skillsCopy.firstHighlight}
+              </span>
+              {skillsCopy.secondPart}{" "}
+              <span className="font-semibold text-indigo-500 dark:text-indigo-400">
+                {skillsCopy.secondHighlight}{" "}
+              </span>
+              {skillsCopy.thirdPart}{" "}
+              <span className="font-semibold text-indigo-500 dark:text-indigo-400">
+                {skillsCopy.thirdHighlight}{" "}
+              </span>
+              {skillsCopy.fourthPart}
+            </p>
+          </div>
+          <div className="mx-auto grid w-full max-w-xl grid-cols-3 items-center gap-y-12 sm:grid-cols-3 sm:gap-y-14 sm:pl-8 lg:mx-0 lg:max-w-none ">
+            <Image
+              className="max-h-12 w-full object-contain duration-300 ease-in sm:hover:scale-110"
+              src={jsIcon}
+              alt="JavaScript"
+            />
+            <Image
+              className="max-h-12 w-full object-contain duration-300 ease-in sm:hover:scale-110"
+              src={tsIcon}
+              alt="TypeScript"
+            />
+            <Image
+              className="max-h-14 w-full object-contain duration-300 ease-in sm:hover:scale-110"
+              src={nodeIcon}
+              alt="Node.js"
+            />
+            <div>
+              <Image
+                className="hidden max-h-12 w-full object-contain duration-300 ease-in dark:block sm:hover:scale-110 "
+                src={nextDarkIcon}
+                alt="Next.js"
+              />
+              <Image
+                className="block max-h-12 w-full object-contain duration-300 ease-in dark:hidden sm:hover:scale-110 "
+                src={nextLightIcon}
+                alt="Next.js"
+              />
             </div>
-            <div className="mx-auto grid w-full max-w-xl grid-cols-3 items-center gap-y-16 sm:grid-cols-3 sm:gap-y-20 sm:pl-8 lg:mx-0 lg:max-w-none ">
-              <Image
-                className="max-h-12 w-full object-contain duration-300 ease-in sm:hover:scale-110"
-                src={jsIcon}
-                alt="JavaScript"
-              />
-              <Image
-                className="max-h-12 w-full object-contain duration-300 ease-in sm:hover:scale-110"
-                src={tsIcon}
-                alt="TypeScript"
-              />
-              <Image
-                className="max-h-14 w-full object-contain duration-300 ease-in sm:hover:scale-110"
-                src={nodeIcon}
-                alt="Node.js"
-              />
-              <div>
-                <Image
-                  className="hidden max-h-12 w-full object-contain duration-300 ease-in dark:block sm:hover:scale-110 "
-                  src={nextDarkIcon}
-                  alt="Next.js"
-                />
-                <Image
-                  className="block max-h-12 w-full object-contain duration-300 ease-in dark:hidden sm:hover:scale-110 "
-                  src={nextLightIcon}
-                  alt="Next.js"
-                />
-              </div>
-              <Image
-                className="max-h-12 w-full object-contain duration-300 ease-in sm:hover:scale-110 "
-                src={reactIcon}
-                alt="React.js"
-              />
+            <Image
+              className="max-h-12 w-full object-contain duration-300 ease-in sm:hover:scale-110 "
+              src={reactIcon}
+              alt="React.js"
+            />
 
-              <div>
-                <Image
-                  className="hidden max-h-10 w-full object-contain duration-300 ease-in dark:block sm:hover:scale-110 "
-                  src={expoDarkIcon}
-                  alt="Expo React Native"
-                />
-                <Image
-                  className="block max-h-10 w-full object-contain duration-300 ease-in dark:hidden sm:hover:scale-110 "
-                  src={expoLightIcon}
-                  alt="Expo Go React Native"
-                />
-              </div>
+            <div>
               <Image
-                className="max-h-12 w-full object-contain duration-300 ease-in sm:hover:scale-110 "
-                src={reduxIcon}
-                alt="Redux"
+                className="hidden max-h-10 w-full object-contain duration-300 ease-in dark:block sm:hover:scale-110 "
+                src={expoDarkIcon}
+                alt="Expo React Native"
               />
               <Image
-                className="max-h-9 w-full object-contain duration-300 ease-in sm:hover:scale-110"
-                src={twIcon}
-                alt="TailwindCSS"
-              />
-              <Image
-                className="max-h-12 w-full object-contain duration-300 ease-in sm:hover:scale-110"
-                src={pgIcon}
-                alt="PostegeSQL"
+                className="block max-h-10 w-full object-contain duration-300 ease-in dark:hidden sm:hover:scale-110 "
+                src={expoLightIcon}
+                alt="Expo Go React Native"
               />
             </div>
+            <Image
+              className="max-h-12 w-full object-contain duration-300 ease-in sm:hover:scale-110 "
+              src={reduxIcon}
+              alt="Redux"
+            />
+            <Image
+              className="max-h-9 w-full object-contain duration-300 ease-in sm:hover:scale-110"
+              src={twIcon}
+              alt="TailwindCSS"
+            />
+            <Image
+              className="max-h-12 w-full object-contain duration-300 ease-in sm:hover:scale-110"
+              src={pgIcon}
+              alt="PostegeSQL"
+            />
           </div>
         </div>
       </div>
@@ -113,8 +131,8 @@ function Skills() {
 
 export default function Home() {
   return (
-    <Container>
-      <div className="grid max-w-5xl grid-cols-1 gap-y-8 px-5 py-8 sm:gap-y-12 sm:px-0 md:grid-rows-[auto_1fr] md:py-32 lg:grid-cols-3 lg:py-60 2xl:py-72">
+    <Container className="h-auto snap-y snap-mandatory overflow-auto sm:mt-4">
+      <div className="relative grid h-screen max-w-5xl snap-start grid-cols-1 content-center gap-y-8 px-5 sm:gap-y-12 sm:px-0 lg:grid-cols-3">
         <div className="mx-auto max-w-xs sm:px-0 lg:max-w-none lg:px-8 ">
           <Image
             src={headShot}
@@ -134,10 +152,10 @@ export default function Home() {
           </p>
 
           {/* Social Icons Container with View Projects button */}
-          <div className="mt-8 grid max-w-xl gap-y-8 sm:mt-10 sm:grid-cols-2">
+          <div className="mt-8 grid max-w-lg gap-y-8 sm:mt-10 sm:grid-cols-2">
             <div className="flex justify-start space-x-6 md:order-2">
               {iconsObj.map((item) => (
-                <a
+                <Link
                   key={item.name}
                   href={item.href}
                   target="_blank"
@@ -150,7 +168,7 @@ export default function Home() {
                 >
                   <span className="sr-only">{item.name}</span>
                   <item.icon className="h-6 w-6" aria-hidden="true" />
-                </a>
+                </Link>
               ))}
             </div>
             <div className="sm:justify-end md:order-last">
@@ -163,8 +181,19 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <div>
+          <BtnScrollSpy />
+          {/* <Link
+            href="/#skills"
+            className="animate-pulse rounded-full bg-slate-200 p-1 opacity-90 hover:scale-110 hover:animate-none hover:duration-500 dark:bg-zinc-800"
+          >
+            <ChevronDoubleDownIcon className="h-6 w-6 text-indigo-300 dark:text-indigo-600" />
+          </Link> */}
+        </div>
       </div>
-      <Skills />
+      <div className="snap-start" id="skills">
+        <Skills />
+      </div>
     </Container>
   );
 }

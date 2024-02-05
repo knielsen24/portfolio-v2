@@ -74,7 +74,7 @@ function Card({
               target={id === "777" ? "_blank" : ""}
               prefetch
             >
-              <span className="absolute -inset-x-5 -inset-y-5 z-20 sm:-inset-y-6" />
+              <span className="absolute -inset-x-8 -inset-y-5 z-20 sm:-inset-y-6" />
               {title}
             </Link>
           </h3>
@@ -83,7 +83,7 @@ function Card({
           </p>
         </div>
       </div>
-      <div className="absolute -inset-x-5 -inset-y-5 -z-10 scale-95 bg-slate-100 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800 sm:-inset-x-8 sm:-inset-y-8 sm:rounded-2xl" />
+      <div className="absolute -inset-x-8 -inset-y-8 -z-10 scale-95 bg-slate-100 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800 sm:-inset-x-8 sm:-inset-y-8 sm:rounded-2xl" />
     </article>
   );
 }
@@ -94,7 +94,7 @@ export default async function Projects() {
 
   return (
     <SimpleLayout title={pageHeader.title} intro={pageHeader.intro}>
-      <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-16 gap-y-12 px-5 sm:grid-cols-2 sm:px-0 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+      <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-16 gap-y-12 px-4 sm:grid-cols-2 sm:px-0 lg:mx-0 lg:max-w-none lg:grid-cols-3">
         {projects?.map((project: Project) => (
           <Card
             key={project.id}
