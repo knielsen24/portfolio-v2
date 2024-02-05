@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Container } from "@/components/Container";
 import { getProject } from "@/lib/getProjectsApi";
 import { Project } from "@/constants/projects";
 
@@ -35,9 +34,5 @@ type LayoutProps = {
 };
 
 export default function ProjectDetails({ children }: LayoutProps) {
-  return (
-    <>
-      <Container className="py-12 sm:py-20">{children}</Container>
-    </>
-  );
+  return <div className="mt-28 sm:mt-44 mb-16">{children}</div>;
 }

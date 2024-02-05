@@ -80,7 +80,7 @@ export default function Footer() {
   return (
     <footer className="mt-20 flex-none">
       <ContainerOuter>
-        <div className="border-t border-slate-200 pb-12 pt-10 dark:border-gray-700/40">
+        <div className="border-t border-slate-200 pb-12 pt-10 dark:border-zinc-700/50">
           <ContainerInner>
             <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
               <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm font-medium text-slate-800 dark:text-zinc-300">

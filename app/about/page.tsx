@@ -19,12 +19,12 @@ export const metadata: Metadata = {
 
 function AboutImage() {
   return (
-    <div className="relative overflow-hidden rounded-xl border border-slate-900/20 px-5 pb-6 pt-20 shadow-2xl dark:border-zinc-100/20 sm:rounded-3xl sm:px-8 sm:pb-8 sm:pt-32 lg:max-w-lg">
+    <div className="relative -z-10 overflow-hidden rounded-xl border border-slate-900/20 px-5 pb-6 pt-20 shadow-2xl dark:border-zinc-100/20 sm:rounded-3xl sm:px-8 sm:pb-8 sm:pt-20 lg:max-w-lg">
       <Image
         src={baliBeach}
         alt="Kevin looking over bali coast"
         priority={true}
-        className="saturate-75 absolute inset-0 aspect-square h-full w-full object-cover brightness-125 "
+        className="saturate-75 sm-[4/3] absolute inset-0 aspect-[16/9] h-full w-full object-cover brightness-125 "
       />
 
       <div className="absolute inset-0 bg-slate-400/80 mix-blend-multiply dark:bg-zinc-500/50 " />
@@ -109,7 +109,7 @@ function Timeline() {
 export default function About() {
   return (
     <SimpleLayout title={pageHeader.title} intro={pageHeader.intro}>
-      <div className="sm:min-h-content grid max-w-2xl grid-cols-1 items-start justify-items-center gap-x-8 gap-y-8 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+      <div className="sm:min-h-content grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-8 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
         <div className="order-1 mx-4 sm:order-2">
           <AboutImage />
         </div>

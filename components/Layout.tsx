@@ -47,11 +47,11 @@ function SquareBlocks() {
 const Layout: React.FC<Props> = ({ children }) => {
   return (
     <>
-      <div className="absolute inset-0 flex justify-center overflow-hidden">
+      {/* <div className="absolute inset-0 flex justify-center overflow-hidden">
         <div className="flex w-full max-w-6xl lg:px-8">
           <SquareBlocks />
         </div>
-      </div>
+      </div> */}
       <div className="relative flex w-full flex-col">
         <Navbar />
         <main className="flex-auto">{children}</main>

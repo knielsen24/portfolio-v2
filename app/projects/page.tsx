@@ -50,7 +50,7 @@ function Card({
   return (
     <article
       key={id}
-      className="group relative flex flex-col items-start justify-between rounded-xl"
+      className="group relative flex flex-col items-start justify-between border-t border-slate-200/80 pt-10 dark:border-zinc-700/60 sm:rounded-xl sm:border-none sm:pt-0"
     >
       <Link
         href={id === "777" ? href : `/projects/${id}`}
@@ -66,7 +66,7 @@ function Card({
             }
             alt={title}
             className={cn(
-              "aspect-[16/9] w-full bg-slate-200/80 transition duration-500 dark:bg-zinc-800 sm:aspect-[3/2]",
+              "aspect-[16/9] w-full bg-slate-100 dark:bg-zinc-800 sm:aspect-[3/2]",
               bgSize,
               // bgColor && `bg-${bgColor}`,
               // the bg-color is not working
@@ -104,7 +104,7 @@ export default async function Projects() {
 
   return (
     <SimpleLayout title={pageHeader.title} intro={pageHeader.intro}>
-      <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-16 gap-y-16 px-4 pt-4 sm:grid-cols-2 sm:px-0 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+      <div className="3xl:grid-cols-3 mx-auto grid max-w-2xl grid-cols-1 gap-x-16 gap-y-8 px-4  pt-4 sm:grid-cols-2 sm:gap-y-20 sm:px-0 lg:mx-0 lg:max-w-none">
         {projects?.map((project: Project) => (
           <Card
             key={project.id}

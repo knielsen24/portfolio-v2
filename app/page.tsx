@@ -132,7 +132,7 @@ function Skills() {
 export default function Home() {
   return (
     <Container className="h-auto snap-y snap-mandatory overflow-auto sm:mt-4">
-      <div className="relative grid h-screen max-w-5xl snap-start grid-cols-1 content-center gap-y-8 px-5 sm:gap-y-12 sm:px-0 lg:grid-cols-3 -mb-4 sm:-mb-6">
+      <div className="relative mx-auto -mb-4 grid h-screen max-w-5xl snap-start grid-cols-1 content-center gap-y-8 px-5 sm:-mb-6 sm:gap-y-12 sm:px-0 lg:grid-cols-3">
         <div className="mx-auto max-w-xs sm:px-0 lg:max-w-none lg:px-8 ">
           <Image
             src={headShot}

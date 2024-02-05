@@ -42,7 +42,7 @@ const tabs = [
 
 export default function Tabs() {
   return (
-    <Tab.Group as="div" className="mt-12 sm:mt-28">
+    <Tab.Group as="div" className="mt-12 sm:mt-20">
       <div className="-mx-4 flex overflow-x-auto sm:mx-0">
         <div className="flex-auto border-b border-slate-200 dark:border-zinc-700 sm:px-0">
           <Tab.List className="-mb-px flex justify-center space-x-10 sm:justify-start sm:space-x-16">
@@ -69,17 +69,30 @@ export default function Tabs() {
         {tabs.map((tab: any) => (
           <Tab.Panel key={tab.name} className="space-y-16 pt-10 lg:pt-16">
             {tab.features.map((feature: any) => (
-              <div
-                key={feature.name}
-                className="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:gap-x-8"
-              >
-                <div className="mt-6 lg:col-span-6 lg:mt-0">
-                  <h3 className="text-lg font-medium text-slate-900 dark:text-zinc-200">
-                    {feature.name}
-                  </h3>
-                  <p className="mt-2 text-sm text-slate-500 dark:text-zinc-400">
-                    {feature.description}
-                  </p>
+              <div className="grid grid-cols-1 grid-rows-7 items-center gap-y-4 text-base sm:text-lg">
+                <div className="flex flex-row">
+                  <h1 className="mr-4 font-semibold">Languages:</h1>{" "}
+                  <p>JavaScript</p>
+                </div>
+                <div className="flex flex-row">
+                  <h1 className="mr-4 font-semibold">Frameworks:</h1>{" "}
+                  <p>React Native, Expo</p>
+                </div>
+                <div className="flex flex-row">
+                  <h1 className="mr-4 font-semibold">State Management:</h1>{" "}
+                  <p>Redux Toolkit</p>
+                </div>
+                <div className="flex flex-row">
+                  <h1 className="mr-4 font-semibold">
+                    Data Fetching & Caching:
+                  </h1>{" "}
+                  <p>Redux RTK Query</p>
+                </div>
+                <div className="flex flex-row">
+                  <h1 className="mr-4 font-semibold">
+                    Data Fetching & Caching:
+                  </h1>{" "}
+                  <p>Redux RTK Query</p>
                 </div>
               </div>
             ))}
@@ -89,3 +102,24 @@ export default function Tabs() {
     </Tab.Group>
   );
 }
+
+//               <Tab.Panels as={Fragment}>
+//     {tabs.map((tab: any) => (
+//       <Tab.Panel key={tab.name} className="space-y-16 pt-10 lg:pt-16">
+//         {tab.features.map((feature: any) => (
+//           <div
+//             key={feature.name}
+//             className="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:gap-x-8"
+//           >
+//             <div className="mt-6 lg:col-span-6 lg:mt-0">
+//               <h3 className="text-lg font-medium text-slate-900 dark:text-zinc-200">
+//                 {feature.name}
+//               </h3>
+
+//             </div>
+//           </div>
+//         ))}
+//       </Tab.Panel>
+//     ))}
+//   </Tab.Panels>
+// </Tab.Group>
