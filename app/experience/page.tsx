@@ -1,25 +1,82 @@
 import { SimpleLayout } from "@/components/SimpleLayout";
 import UnderConstruction from "@/components/UnderConstruction";
 
+function ComputerIcon(props: React.ComponentPropsWithoutRef<"svg">) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      {...props}
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25"
+      />
+    </svg>
+  );
+}
+
+function EditorIcon(props: React.ComponentPropsWithoutRef<"svg">) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      {...props}
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z"
+      />
+    </svg>
+  );
+}
+
+function CubeIcon(props: React.ComponentPropsWithoutRef<"svg">) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      {...props}
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="m21 7.5-9-5.25L3 7.5m18 0-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9"
+      />
+    </svg>
+  );
+}
+
 const isUnderConstruction = false;
 
 const features = [
   {
     name: "Lead",
     description: "leader... message, intentions, and actions are the same.",
-    // icon: CloudArrowUpIcon,
+    icon: ComputerIcon,
   },
   {
     name: "Support",
     description:
       "Looking out for what is best for the individual, and giving them positive reinforcement or constructive criticism",
-    // icon: LockClosedIcon,
+    icon: ComputerIcon,
   },
   {
     name: "Empower",
     description:
       "The most important aspect is to teach transferrable skills. Having a great mindset, and appreciating the process will consistently produce high results.",
-    // icon: ServerIcon,
+    icon: CubeIcon,
   },
 ];
 
