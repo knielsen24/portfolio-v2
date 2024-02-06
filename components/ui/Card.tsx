@@ -42,7 +42,7 @@ export default function Card({
   return (
     <article
       key={id}
-      className="group relative flex snap-start snap-always flex-col items-start justify-between border-t border-slate-200/80 py-8 dark:border-zinc-700/60 sm:rounded-xl sm:border-none sm:py-0 "
+      className="group relative flex flex-col items-start justify-between border-t border-slate-200/80 py-8 dark:border-zinc-700/60 mx-2 sm:rounded-xl sm:border-none sm:py-0 "
     >
       <Link
         href={id === "777" ? href : `/projects/${id}`}

@@ -3,8 +3,8 @@ import { StaticImageData } from "next/image";
 
 export const pageHeader = {
   page: "Projects",
-  title: "Checkout the web and mobile apps I've made, building enthusiast.",
-  intro: "Welcome to my collection of projects.",
+  title: "Checkout the applications I've made from scratch, building enthusiast.",
+  intro: "These projects are a testimony of my creativity with technology.",
 };
 
 export type Links = {

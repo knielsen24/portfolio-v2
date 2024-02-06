@@ -61,7 +61,7 @@ export default function BtnScrollSpy() {
         >
           <div className="animate-bounce rounded-full bg-slate-200 p-1 opacity-90 dark:bg-zinc-800">
             <Link href="/#skills" onClick={() => setIsShowing(false)}>
-              <ChevronDoubleDownIcon className="h-6 w-6 text-indigo-300 dark:text-indigo-600" />
+              <ChevronDoubleDownIcon className="h-6 w-6 text-indigo-400 dark:text-indigo-600" />
             </Link>
           </div>
         </Transition>

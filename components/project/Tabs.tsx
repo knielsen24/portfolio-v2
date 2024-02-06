@@ -42,7 +42,7 @@ const tabs = [
 
 export default function Tabs() {
   return (
-    <Tab.Group as="div" className="mt-12 sm:mt-20">
+    <Tab.Group as="div" className="mt-6 sm:mt-12">
       <div className="-mx-4 flex overflow-x-auto sm:mx-0">
         <div className="flex-auto border-b border-slate-200 dark:border-zinc-700 sm:px-0">
           <Tab.List className="-mb-px flex justify-center space-x-10 sm:justify-start sm:space-x-16">
@@ -67,7 +67,7 @@ export default function Tabs() {
 
       <Tab.Panels as={Fragment}>
         {tabs.map((tab: any) => (
-          <Tab.Panel key={tab.name} className="space-y-16 pt-10 lg:pt-16">
+          <Tab.Panel key={tab.name} className="space-y-16 mt-8">
             {tab.features.map((feature: any) => (
               <div className="grid grid-cols-1 grid-rows-7 items-center gap-y-4 text-base sm:text-lg">
                 <div className="flex flex-row">

@@ -4,11 +4,6 @@ import { notFound } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { getAllProjects, getProject } from "@/lib/getProjectsApi";
 import { Project } from "@/constants/projects";
-import {
-  CodeBracketIcon,
-  LinkIcon,
-  TruckIcon,
-} from "@heroicons/react/24/outline";
 import Tabs from "@/components/project/Tabs";
 import { SimpleLayout } from "@/components/SimpleLayout";
 
@@ -18,29 +13,86 @@ type Params = {
   };
 };
 
+function ComputerIcon(props: React.ComponentPropsWithoutRef<"svg">) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      {...props}
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25"
+      />
+    </svg>
+  );
+}
+
+function EditorIcon(props: React.ComponentPropsWithoutRef<"svg">) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      {...props}
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z"
+      />
+    </svg>
+  );
+}
+
+function CubeIcon(props: React.ComponentPropsWithoutRef<"svg">) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      {...props}
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="m21 7.5-9-5.25L3 7.5m18 0-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9"
+      />
+    </svg>
+  );
+}
+
 const perks = [
   {
-    name: "Fullstack",
-    description: "Type of application",
-    icon: LinkIcon,
+    name: "Web Desktop & Mobile",
+    description: "Platforms",
+    icon: ComputerIcon,
+  },
+  {
+    name: "Portfolio",
+    description: "Category",
+    icon: CubeIcon,
   },
   {
     name: "Repo Link",
-    description: "Checkout the code on GitHub",
-    icon: CodeBracketIcon,
-  },
-  {
-    name: "Free, contactless delivery",
-    description: "The shipping is on us",
-    icon: TruckIcon,
+    description: "Github Repo",
+    icon: EditorIcon,
   },
 ];
 
 function HighLights() {
   return (
-    <div className="mt-6 bg-indigo-100 px-0 ring-1 ring-slate-900/10 dark:bg-zinc-800  dark:ring-zinc-300/10 sm:mt-12 sm:rounded-3xl">
+    <div className="mt-6 bg-indigo-100 ring-1 ring-slate-900/10 dark:bg-zinc-800 dark:ring-zinc-300/10  sm:mt-16 sm:rounded-3xl sm:px-4">
       <h2 className="sr-only">Our perks</h2>
-      <div className="mx-auto max-w-7xl lg:flex lg:justify-center lg:py-6">
+      <div className="mx-auto max-w-7xl lg:flex sm:justify-center sm:justify-items-center lg:py-6">
         {perks.map((perk, perkIdx) => (
           <div key={perkIdx} className="py-8 lg:w-1/3 lg:flex-none lg:py-0">
             <div className="mx-auto flex max-w-xs items-center px-4 lg:max-w-none lg:px-8">
@@ -76,9 +128,6 @@ export default async function ProjectDetails({
 
   return (
     <SimpleLayout title={project.title} intro={project.intro}>
-      {/* <div>
-        <HighLights />
-      </div> */}
       <div className="mt-12 grid grid-cols-1 gap-x-16 gap-y-10 px-4 sm:px-0 lg:grid-cols-2">
         <div className="aspect-[16/9]  overflow-hidden rounded-xl border border-slate-900/10 dark:border-zinc-100/10 sm:aspect-[3/2]">
           <Image
@@ -100,27 +149,36 @@ export default async function ProjectDetails({
           <h1 className="text-lg font-semibold text-indigo-600 dark:text-indigo-400 sm:text-xl">
             Features
           </h1>
-
-          <div className="mt-4 grid grid-cols-1 grid-rows-4 gap-y-8 text-base ">
-            <div className="flex flex-col border-b border-slate-200/80 pb-8 dark:border-zinc-700/80">
-              <h1 className="mr-4 font-semibold">
+          <div className="mt-4 grid grid-cols-1 grid-rows-4 gap-y-4 text-base ">
+            <div className="flex flex-col">
+              <h1 className="mr-4 font-semibold text-slate-800 dark:text-zinc-200">
                 Account creation & Authentication
               </h1>{" "}
-              <p>
+              <p className="text-slate-600 dark:text-zinc-400">
                 Users can create an account and verify their email by email.
               </p>
             </div>
             <div className="flex flex-col">
-              <h1 className="mr-4 font-semibold">Full Crud Application</h1>{" "}
-              <p>User can create and update</p>
+              <h1 className="mr-4 font-semibold text-slate-800 dark:text-zinc-200">
+                Full Crud Application
+              </h1>{" "}
+              <p className="text-slate-600 dark:text-zinc-400">
+                User can create and update
+              </p>
             </div>
             <div className="flex flex-col">
-              <h1 className="mr-4 font-semibold">State Management:</h1>{" "}
-              <p>Redux Toolkit</p>
+              <h1 className="mr-4 font-semibold text-slate-800 dark:text-zinc-200">
+                State Management:
+              </h1>{" "}
+              <p className="text-slate-600 dark:text-zinc-400">Redux Toolkit</p>
             </div>
             <div className="flex flex-col">
-              <h1 className="mr-4 font-semibold">Data Fetching & Caching:</h1>{" "}
-              <p>Redux RTK Query</p>
+              <h1 className="mr-4 font-semibold text-slate-800 dark:text-zinc-200">
+                Data Fetching & Caching:
+              </h1>{" "}
+              <p className="text-slate-600 dark:text-zinc-400">
+                Redux RTK Query
+              </p>
             </div>
           </div>
         </div>

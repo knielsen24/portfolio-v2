@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 
 function AboutImage() {
   return (
-    <div className="relative -z-10 overflow-hidden rounded-xl border border-slate-900/20 px-5 pb-6 pt-20 shadow-2xl dark:border-zinc-100/20 sm:rounded-3xl sm:px-8 sm:pb-8 sm:pt-20 lg:max-w-lg">
+    <div className="relative -z-10 overflow-hidden rounded-xl border border-slate-900/20 px-5 pb-6 pt-20 shadow-2xl dark:border-zinc-100/20 sm:rounded-3xl xl:px-8 sm:pb-8 sm:pt-32 lg:max-w-lg">
       <Image
         src={baliBeach}
         alt="Kevin looking over bali coast"
