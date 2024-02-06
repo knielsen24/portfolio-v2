@@ -1,9 +1,3 @@
-import {
-  CloudArrowUpIcon,
-  LockClosedIcon,
-  ServerIcon,
-} from "@heroicons/react/20/solid";
-// import WorkExperience from "@/components/experience/WorkExperience";
 import { SimpleLayout } from "@/components/SimpleLayout";
 import UnderConstruction from "@/components/UnderConstruction";
 
@@ -13,19 +7,19 @@ const features = [
   {
     name: "Lead",
     description: "leader... message, intentions, and actions are the same.",
-    icon: CloudArrowUpIcon,
+    // icon: CloudArrowUpIcon,
   },
   {
     name: "Support",
     description:
       "Looking out for what is best for the individual, and giving them positive reinforcement or constructive criticism",
-    icon: LockClosedIcon,
+    // icon: LockClosedIcon,
   },
   {
     name: "Empower",
     description:
       "The most important aspect is to teach transferrable skills. Having a great mindset, and appreciating the process will consistently produce high results.",
-    icon: ServerIcon,
+    // icon: ServerIcon,
   },
 ];
 
