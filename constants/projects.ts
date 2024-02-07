@@ -3,35 +3,41 @@ import { StaticImageData } from "next/image";
 
 export const pageHeader = {
   page: "Projects",
-  title: "Checkout the applications I've made from scratch, building enthusiast.",
+  title:
+    "Checkout the applications I've made from scratch, building enthusiast.",
   intro: "These projects are a testimony of my creativity with technology.",
 };
 
 export type Links = {
-  name: string;
+  label: string;
   href: string;
+};
+
+export type Labels = {
+  label: string;
+  desc: string;
 };
 
 export type Project = {
   id: string;
   title: string;
   intro: string;
-  industry?: string;
-  category?: string;
-  links?: Links[];
+  industry: string;
+  category: string;
+  features?: Labels[];
+  technologies?: Labels[];
   description?: string;
-  technologies?: string[];
   // challenges?: string[];
   imageUrl: string | StaticImageData;
   bgSize: string;
   bgColor?: string;
-  date?: string;
-  datetime?: string;
   href: string;
   githubHref?: string;
+  demoHref?: string;
   iosHref?: string;
   androidHref?: string;
-  demoHref?: string;
+  date?: string;
+  datetime?: string;
 };
 
 export const initialProjectData: Project = {
@@ -40,18 +46,17 @@ export const initialProjectData: Project = {
   intro: "",
   industry: "",
   category: "",
-  links: [
-    {
-      name: "",
-      href: "",
-    },
-  ],
-  href: "",
+  features: [{ label: "", desc: "" }],
+  technologies: [{ label: "", desc: "" }],
   description: "",
-  technologies: [],
-  bgSize: "",
   imageUrl: "",
+  bgSize: "",
   bgColor: "",
+  href: "",
+  githubHref: "",
+  demoHref: "",
+  iosHref: "",
+  androidHref: "",
   date: "",
   datetime: "",
 };

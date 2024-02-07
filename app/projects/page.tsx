@@ -16,7 +16,7 @@ export default async function Projects() {
 
   return (
     <SimpleLayout title={pageHeader.title} intro={pageHeader.intro}>
-      <div className="grid max-w-2xl snap-y snap-mandatory grid-cols-1 gap-x-20 gap-y-6 px-4 pt-4 sm:grid-cols-2 sm:gap-y-20 sm:px-0 lg:mx-0 lg:max-w-none">
+      <div className="grid max-w-2xl snap-y snap-mandatory grid-cols-1 gap-x-20  px-4 pt-2 sm:grid-cols-2 sm:gap-y-20 sm:px-0 lg:mx-0 lg:max-w-none">
         {projects?.map((project: Project) => (
           <Card
             key={project.id}

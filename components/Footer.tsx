@@ -78,7 +78,7 @@ const navigation = [
 
 export default function Footer() {
   return (
-    <footer className="mt-20 flex-none">
+    <footer className=" sm:mt-20 flex-none">
       <ContainerOuter>
         <div className="border-t border-slate-200 pb-12 pt-10 dark:border-zinc-700/50">
           <ContainerInner>

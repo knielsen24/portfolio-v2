@@ -6,6 +6,11 @@ function classNames(...classes: any) {
   return classes.filter(Boolean).join(" ");
 }
 
+type Feature = {
+  name: string;
+  intro: string;
+};
+
 const tabs = [
   {
     name: "Technology",
@@ -42,8 +47,8 @@ const tabs = [
 
 export default function Tabs() {
   return (
-    <Tab.Group as="div" className="mt-6 sm:mt-12">
-      <div className="-mx-4 flex overflow-x-auto sm:mx-0">
+    <Tab.Group as="div">
+      <div className="mx-4 flex overflow-x-auto sm:mx-0">
         <div className="flex-auto border-b border-slate-200 dark:border-zinc-700 sm:px-0">
           <Tab.List className="-mb-px flex justify-center space-x-10 sm:justify-start sm:space-x-16">
             {tabs.map((tab) => (
@@ -67,32 +72,12 @@ export default function Tabs() {
 
       <Tab.Panels as={Fragment}>
         {tabs.map((tab: any) => (
-          <Tab.Panel key={tab.name} className="space-y-16 mt-8">
-            {tab.features.map((feature: any) => (
-              <div className="grid grid-cols-1 grid-rows-7 items-center gap-y-4 text-base sm:text-lg">
+          <Tab.Panel key={tab.name} className="mt-8 space-y-16">
+            {tab.features.map((feature: Feature) => (
+              <div key={feature.name} className="grid grid-cols-1 items-center gap-y-4 text-base sm:text-lg">
                 <div className="flex flex-row">
                   <h1 className="mr-4 font-semibold">Languages:</h1>{" "}
                   <p>JavaScript</p>
-                </div>
-                <div className="flex flex-row">
-                  <h1 className="mr-4 font-semibold">Frameworks:</h1>{" "}
-                  <p>React Native, Expo</p>
-                </div>
-                <div className="flex flex-row">
-                  <h1 className="mr-4 font-semibold">State Management:</h1>{" "}
-                  <p>Redux Toolkit</p>
-                </div>
-                <div className="flex flex-row">
-                  <h1 className="mr-4 font-semibold">
-                    Data Fetching & Caching:
-                  </h1>{" "}
-                  <p>Redux RTK Query</p>
-                </div>
-                <div className="flex flex-row">
-                  <h1 className="mr-4 font-semibold">
-                    Data Fetching & Caching:
-                  </h1>{" "}
-                  <p>Redux RTK Query</p>
                 </div>
               </div>
             ))}

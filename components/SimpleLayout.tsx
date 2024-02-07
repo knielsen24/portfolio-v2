@@ -19,7 +19,7 @@ export function SimpleLayout({
           {intro}
         </p>
       </header>
-      {children && <div className="mt-6 sm:mt-8">{children}</div>}
+      {children && <div className="mt-6 sm:mt-8 z-0">{children}</div>}
     </Container>
   );
 }

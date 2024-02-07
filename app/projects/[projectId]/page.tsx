@@ -6,6 +6,7 @@ import { getAllProjects, getProject } from "@/lib/getProjectsApi";
 import { Project } from "@/constants/projects";
 import Tabs from "@/components/project/Tabs";
 import { SimpleLayout } from "@/components/SimpleLayout";
+import Features from "@/components/project/Features";
 
 type Params = {
   params: {
@@ -90,14 +91,14 @@ const perks = [
 
 function HighLights() {
   return (
-    <div className="mt-6 bg-indigo-100 ring-1 ring-slate-900/10 dark:bg-zinc-800 dark:ring-zinc-300/10  sm:mt-16 sm:rounded-3xl sm:px-4">
+    <>
       <h2 className="sr-only">Our perks</h2>
-      <div className="mx-auto max-w-7xl lg:flex sm:justify-center sm:justify-items-center lg:py-6">
+      <div className="grid-row-3 grid grid-cols-1 justify-start gap-y-6 py-6">
         {perks.map((perk, perkIdx) => (
-          <div key={perkIdx} className="py-8 lg:w-1/3 lg:flex-none lg:py-0">
-            <div className="mx-auto flex max-w-xs items-center px-4 lg:max-w-none lg:px-8">
+          <div key={perkIdx} className="flex">
+            <div className="flex max-w-xs content-start px-4 lg:max-w-none">
               <perk.icon
-                className="h-8 w-8 flex-shrink-0 text-indigo-500 dark:text-indigo-400"
+                className="h-6 w-6 flex-shrink-0 self-center text-indigo-500 dark:text-indigo-400 "
                 aria-hidden="true"
               />
               <div className="ml-4 flex flex-auto flex-col-reverse">
@@ -112,7 +113,7 @@ function HighLights() {
           </div>
         ))}
       </div>
-    </div>
+    </>
   );
 }
 
@@ -128,65 +129,57 @@ export default async function ProjectDetails({
 
   return (
     <SimpleLayout title={project.title} intro={project.intro}>
-      <div className="mt-12 grid grid-cols-1 gap-x-16 gap-y-10 px-4 sm:px-0 lg:grid-cols-2">
-        <div className="aspect-[16/9]  overflow-hidden rounded-xl border border-slate-900/10 dark:border-zinc-100/10 sm:aspect-[3/2]">
-          <Image
-            src={project.imageUrl as StaticImageData}
-            alt={project.title || "default image"}
-            className={cn(
-              "aspect-[16/9] h-full w-full bg-slate-100 dark:bg-zinc-800 sm:aspect-[3/2]",
-              project.bgSize,
-              // slug.bgColor && `bg-${slug.bgColor}`,
-              // the bg-color is not working
-            )}
-            width={500}
-            height={500}
-            priority={true}
-          />
-          <div className="absolute inset-0 -z-10 rounded-xl" />
+      <div className="grid grid-cols-1 gap-x-8  gap-y-6 px-4 sm:mt-12 sm:gap-y-12 sm:px-0 lg:grid-cols-7">
+        <div className="order-1 lg:col-span-4 ">
+          <div className="aspect-[16/9] overflow-hidden rounded-xl border border-slate-900/10 dark:border-zinc-100/10 sm:aspect-[3/2] ">
+            <Image
+              src={project.imageUrl as StaticImageData}
+              alt={project.title}
+              className={cn(
+                "aspect-[16/9] h-full w-full bg-slate-100 dark:bg-zinc-800 sm:aspect-[3/2]",
+                project.bgSize,
+              )}
+              width={500}
+              height={500}
+              priority={true}
+            />
+            <div className="absolute inset-0 -z-10 rounded-xl" />
+          </div>
+          <div className="order-3 lg:col-span-4 flex flex-row mt-6 sm:mt-10 justify-around">
+            <div className="">icon</div>
+            <div className="">icon</div>
+            <div className="">icon</div>
+          </div>
+          
         </div>
-        <div>
+        <div className="order-2 lg:col-span-3">
           <h1 className="text-lg font-semibold text-indigo-600 dark:text-indigo-400 sm:text-xl">
             Features
           </h1>
-          <div className="mt-4 grid grid-cols-1 grid-rows-4 gap-y-4 text-base ">
-            <div className="flex flex-col">
-              <h1 className="mr-4 font-semibold text-slate-800 dark:text-zinc-200">
-                Account creation & Authentication
-              </h1>{" "}
-              <p className="text-slate-600 dark:text-zinc-400">
-                Users can create an account and verify their email by email.
-              </p>
-            </div>
-            <div className="flex flex-col">
-              <h1 className="mr-4 font-semibold text-slate-800 dark:text-zinc-200">
-                Full Crud Application
-              </h1>{" "}
-              <p className="text-slate-600 dark:text-zinc-400">
-                User can create and update
-              </p>
-            </div>
-            <div className="flex flex-col">
-              <h1 className="mr-4 font-semibold text-slate-800 dark:text-zinc-200">
-                State Management:
-              </h1>{" "}
-              <p className="text-slate-600 dark:text-zinc-400">Redux Toolkit</p>
-            </div>
-            <div className="flex flex-col">
-              <h1 className="mr-4 font-semibold text-slate-800 dark:text-zinc-200">
-                Data Fetching & Caching:
-              </h1>{" "}
-              <p className="text-slate-600 dark:text-zinc-400">
-                Redux RTK Query
-              </p>
-            </div>
+          <ul
+            role="list"
+            className="mt-2 grid list-inside list-disc grid-cols-1 gap-y-3 text-base sm:mt-2 sm:gap-y-4"
+          >
+            {project?.features?.map((feature) => (
+              <li className="ml-4 text-slate-600 dark:text-zinc-400">
+                {feature.label}
+              </li>
+              // <ul key={feature.label} className="flex flex-col">
+              //   <Features label={feature.label} desc={feature.desc}/>
+              //   <p className="text-slate-600 dark:text-zinc-400 sm:mt-1">
+              //     {feature.desc}
+              //   </p>
+              // </ul>
+            ))}
+          </ul>
+          <div className="mt-6 border-t dark:border-zinc-700/70 ">
+            <HighLights />
           </div>
         </div>
       </div>
-      <div>
-        <HighLights />
-      </div>
-      <div className="mx-4 sm:px-0 ">
+      {/* <div className="mt-6 bg-indigo-100 ring-1 ring-slate-900/10 dark:bg-zinc-800 dark:ring-zinc-300/10 sm:mt-8 sm:rounded-3xl sm:px-4 lg:mt-16">
+      </div> */}
+      <div className="mt-4 sm:px-0 order-last">
         <Tabs />
       </div>
     </SimpleLayout>

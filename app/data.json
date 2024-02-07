@@ -3,26 +3,45 @@
     {
       "id": "8",
       "title": "Portfolio v2",
-      "links":{
-        "href": "https://kevinnielsen.dev",
-        "githubHref": "https://github.com/knielsen24/portfolio-v2",
-        "iosHref": "",
-        "androidHref": "",
-        "demoHref": ""
-      },
       "href": "https://kevinnielsen.dev",
-      "githubHref": "https://github.com/knielsen24/portfolio-v2",
-      "iosHref": "",
-      "androidHref": "",
-      "demoHref": "",
       "intro":
-      "Take a deep dive into the development process of this portfolio website built with Next.js, TypeScript, TailwindCSS, and Headless UI. ",
-      "description": "",
-      "bgSize": "object-cover",
-      "imageUrl": "/projects/portfoliov2.png",
-      "bgColor": "",
+      "Take a deep dive into the features of this portfolio website including Web Analytics and Speed Insights. Built with Next.js, TypeScript, TailwindCSS, and Headless UI. ",
       "industry": "Technology",
       "category": "Portfolio",
+      "description": "",
+      "platforms": "Web - Deskptop & Mobile",
+      "features": [
+        { 
+          "label": "Metadata & Search Engine Optimization",
+          "desc": "Using the Next.js Metadata API,static and dynamic MetaData is generated for each page, & each project." 
+        },
+        { 
+          "label": "Dark Mode Theme Toggler",
+          "desc": "Using TailwindCSS and the Next Themes npm package, the user can toggle their preferred theme." 
+        },
+        { 
+          "label": "Responsive layout",
+          "desc": "Every component has been meticously configured to handle desktop and mobile platforms with a phenomonal user experience." 
+        },
+        { 
+          "label": "Dynamic Page Server Components",
+          "desc": "Html files are being create on the server before being sent to the client allowing for extremely fast load times." 
+        },
+        { 
+          "label": "Web Analytics - Granular Visitor Data",
+          "desc": "Tracks page views, top pages, top sources and visitors, including their country location, operating system, and browser." 
+        },
+        { 
+          "label": "Speed Insights - Real Experience Score",
+          "desc": "Provides detailed insights of the website's performance metrics to analyze optimization decisions with FCP, LCP, FID, and TFB." 
+        }
+      ],
+      "imageUrl": "/projects/portfoliov2.png",
+      "githubHref": "https://github.com/knielsen24/portfolio-v2",
+      "demoHref": "",
+      "iosHref": "",
+      "androidHref": "",
+      "bgSize": "object-cover",
       "date": "Mar 16, 2020",
       "datetime": "2020-03-16"
     },
@@ -30,20 +49,33 @@
       "id": "7",
       "title": "Xalt Challenge Mobile App",
       "href": "https://www.xalt.fit/",
-      "githubHref": "",
-      "demoHref": "",
-      "iosHref":
-      "https://apps.apple.com/us/app/xalt-challenge/id6451156212?platform=iphone",
-      "androidHref":
-      "https://play.google.com/store/apps/details?id=com.challenges.xalt",
       "intro":
       "Mobile application available on iOS and Android. Create and join challenges to help improve fitness, nutrition, sleep, stress, sense of community, and behavioral habits",
-      "description": "",
-      "bgSize": "object-contain",
-      "bgColor": "pink-200",
-      "imageUrl": "/projects/xalt-challenge-home.png",
       "industry": "Health & Fitness",
       "category": "Professional",
+      "description": "",
+      "platforms": "App - iOS & Android",
+      "features": [
+        { 
+          "label": "Metadata & Search Engine Optimization",
+          "desc": "Using the Next.js Metadata API,static and dynamic MetaData is generated for each page, & each project." 
+        },
+        { 
+          "label": "Dark Mode Theme Toggler",
+          "desc": "Using TailwindCSS and the Next Themes npm package, the user can toggle their preferred theme." 
+        },
+        { 
+          "label": "Highly responsive with customized Headless UI components",
+          "desc": "Every component has been meticously configured to handle desktop and mobile platforms with a phenomonal user experience." 
+        }
+      ],
+      "imageUrl": "/projects/xalt-challenge-home.png",
+      "githubHref": "",
+      "demoHref": "",
+      "iosHref": "https://apps.apple.com/us/app/xalt-challenge/id6451156212?platform=iphone",
+      "androidHref":
+      "https://play.google.com/store/apps/details?id=com.challenges.xalt",
+      "bgSize": "object-contain",
       "date": "Mar 16, 2020",
       "datetime": "2020-03-16"
     },
@@ -52,18 +84,32 @@
       "id": "6",
       "title": "TripleStamp",
       "href": "",
+      "intro":
+      "Full stack web application designed to facilitate property management for managers, landlords and owners.",
+      "industry": "Real Estate",
+      "category": "Capstone",
+      "description": "",
+      "platforms": "Web - Deskptop",
+      "features": [
+        { 
+          "label": "Metadata & Search Engine Optimization",
+          "desc": "Using the Next.js Metadata API,static and dynamic MetaData is generated for each page, & each project." 
+        },
+        { 
+          "label": "Dark Mode Theme Toggler",
+          "desc": "Using TailwindCSS and the Next Themes npm package, the user can toggle their preferred theme." 
+        },
+        { 
+          "label": "Highly responsive with customized Headless UI components",
+          "desc": "Every component has been meticously configured to handle desktop and mobile platforms with a phenomonal user experience." 
+        }
+      ],
+      "imageUrl": "/projects/triplestamp-dashboard.jpg",
       "githubHref": "https://github.com/knielsen24/triple-stamp",
       "demoHref": "",
       "iosHref": "",
       "androidHref": "",
-      "intro":
-      "Full stack web application designed to facilitate property management for managers, landlords and owners.",
-      "description": "",
       "bgSize": "object-cover",
-      "bgColor": "",
-      "imageUrl": "/projects/triplestamp-dashboard.jpg",
-      "industry": "Real Estate",
-      "category": "Capstone",
       "date": "Mar 16, 2020",
       "datetime": "2020-03-16"
     },
@@ -71,18 +117,32 @@
       "id": "5",
       "title": "Pixabay Clone with Autocorrect",
       "href": "",
+      "intro":
+      "Simple stock photography image search mobile application with a spellchecker feature connected to the Pixabay API.",
+      "industry": "Media",
+      "category": "Fun",
+      "description": "",
+      "platforms": "Web - Deskptop",
+      "features": [
+        { 
+          "label": "Metadata & Search Engine Optimization",
+          "desc": "Using the Next.js Metadata API,static and dynamic MetaData is generated for each page, & each project." 
+        },
+        { 
+          "label": "Dark Mode Theme Toggler",
+          "desc": "Using TailwindCSS and the Next Themes npm package, the user can toggle their preferred theme." 
+        },
+        { 
+          "label": "Highly responsive with customized Headless UI components",
+          "desc": "Every component has been meticously configured to handle desktop and mobile platforms with a phenomonal user experience." 
+        }
+      ],
+      "imageUrl": "/projects/pixabay-clone.webp",
       "githubHref": "https://github.com/knielsen24/rn-dev-proto",
       "iosHref": "",
       "androidHref": "",
       "demoHref": "",
-      "intro":
-      "Simple stock photography image search mobile application with a spellchecker feature connected to the Pixabay API.",
-      "description": "",
       "bgSize": "object-contain",
-      "imageUrl": "/projects/pixabay-clone.webp",
-      "bgColor": "bg-pink-200",
-      "industry": "Media",
-      "category": "Fun",
       "date": "Mar 16, 2020",
       "datetime": "2020-03-16"
     },
@@ -91,17 +151,32 @@
       "id": "4",
       "title": "LinkTree Clone",
       "href": "https://kevinnielsen-treeelink-clone.vercel.app/",
-      "githubHref": "https://github.com/knielsen24/linktree-clone",
-      "iosHref": "",
-      "androidHref": "",
-      "demoHref": "",
       "intro":
       "Created a LinkTree clone to learn the fundamentals of Next.js and TailwindCSS. Includes links to my projects and socials.",
-      "imageUrl": "/projects/linktree.png",
-      "bgColor": "",
-      "bgSize": "",
       "industry": "Social",
       "category": "Fun",
+      "description": "",
+      "platforms": "Web - Deskptop",
+      "features": [
+        { 
+          "label": "Metadata & Search Engine Optimization",
+          "desc": "Using the Next.js Metadata API,static and dynamic MetaData is generated for each page, & each project." 
+        },
+        { 
+          "label": "Dark Mode Theme Toggler",
+          "desc": "Using TailwindCSS and the Next Themes npm package, the user can toggle their preferred theme." 
+        },
+        { 
+          "label": "Highly responsive with customized Headless UI components",
+          "desc": "Every component has been meticously configured to handle desktop and mobile platforms with a phenomonal user experience." 
+        }
+      ],
+      "imageUrl": "/projects/linktree.png",
+      "githubHref": "https://github.com/knielsen24/linktree-clone",
+      "demoHref": "",
+      "iosHref": "",
+      "androidHref": "",
+      "bgSize": "",
       "date": "Mar 16, 2020",
       "datetime": "2020-03-16"
     },
@@ -109,18 +184,32 @@
       "id": "3",
       "title": "300 South Wells",
       "href": "https://3swtest.netlify.app/",
-      "githubHref": "https://github.com/knielsen24/sw-test",
-      "iosHref": "",
-      "androidHref": "",
-      "demoHref": "",
       "intro":
       "Website for a commercial real estate property to market tenant businesses. Built with JavaScript, React, and Bootstrap.",
-      "description": "",
-      "bgSize": "object-cover",
-      "imageUrl": "/projects/300south-wells.png",
-      "bgColor": "",
       "industry": "Commercial Real Estate",
       "category": "Pro Bono",
+      "description": "",
+      "platforms": "Web - Deskptop",
+      "features": [
+        { 
+          "label": "Metadata & Search Engine Optimization",
+          "desc": "Using the Next.js Metadata API,static and dynamic MetaData is generated for each page, & each project." 
+        },
+        { 
+          "label": "Dark Mode Theme Toggler",
+          "desc": "Using TailwindCSS and the Next Themes npm package, the user can toggle their preferred theme." 
+        },
+        { 
+          "label": "Highly responsive with customized Headless UI components",
+          "desc": "Every component has been meticously configured to handle desktop and mobile platforms with a phenomonal user experience." 
+        }
+      ],
+      "imageUrl": "/projects/300south-wells.png",
+      "githubHref": "https://github.com/knielsen24/sw-test",
+      "demoHref": "",
+      "iosHref": "",
+      "androidHref": "",
+      "bgSize": "object-cover",
       "date": "Mar 16, 2020",
       "datetime": "2020-03-16"
     },
@@ -128,19 +217,32 @@
       "id": "2",
       "title": "Portfolio v1",
       "href": "https://kevin-nielsen.webflow.io/",
+      "intro":
+      "My first edition of the portfolio website built with speed and no code using a powerful visual canvas platform, Webflow.",
+      "industry": "Technology",
+      "category": "Portfolio",
+      "description": "",
+      "platforms": "Web - Deskptop",
+      "features": [
+        { 
+          "label": "Metadata & Search Engine Optimization",
+          "desc": "Using the Next.js Metadata API,static and dynamic MetaData is generated for each page, & each project." 
+        },
+        { 
+          "label": "Dark Mode Theme Toggler",
+          "desc": "Using TailwindCSS and the Next Themes npm package, the user can toggle their preferred theme." 
+        },
+        { 
+          "label": "Highly responsive with customized Headless UI components",
+          "desc": "Every component has been meticously configured to handle desktop and mobile platforms with a phenomonal user experience." 
+        }
+      ],
+      "imageUrl": "/projects/webflow.png",
       "githubHref": "",
       "iosHref": "",
       "androidHref": "",
       "demoHref": "",
-      "intro":
-      "My first edition of the portfolio website built with speed and no code using a powerful visual canvas platform, Webflow.",
-      "description":
-      "Portfolio within a portfolio...Dreams feel real while we're in them. It's only when we wake up that we realize something was actually strange.",
       "bgSize": "object-cover",
-      "imageUrl": "/projects/webflow.png",
-      "bgColor": "",
-      "industry": "Technology",
-      "category": "Portfolio",
       "date": "Mar 16, 2020",
       "datetime": "2020-03-16"
     },
@@ -148,18 +250,32 @@
       "id": "1",
       "title": "Where's Wizard",
       "href": "#",
+      "intro":
+      "The OG of my technical projects. This is a Where's Waldo rendition game application built with Scratch, a visual block coding IDE.",
+      "industry": "Software",
+      "category": "Creative",
+      "description": "",
+      "platforms": "Web - Deskptop",
+      "features": [
+        { 
+          "label": "Metadata & Search Engine Optimization",
+          "desc": "Using the Next.js Metadata API,static and dynamic MetaData is generated for each page, & each project." 
+        },
+        { 
+          "label": "Dark Mode Theme Toggler",
+          "desc": "Using TailwindCSS and the Next Themes npm package, the user can toggle their preferred theme." 
+        },
+        { 
+          "label": "Highly responsive with customized Headless UI components",
+          "desc": "Every component has been meticously configured to handle desktop and mobile platforms with a phenomonal user experience." 
+        }
+      ],
+      "imageUrl": "/projects/wheresWizard.png",
       "githubHref": "",
       "iosHref": "",
       "androidHref": "",
       "demoHref": "",
-      "intro":
-      "The OG of my technical projects. This is a Where's Waldo rendition game application built with Scratch, a visual block coding IDE.",
-      "description": "",
       "bgSize": "object-cover",
-      "imageUrl": "/projects/wheresWizard.png",
-      "bgColor": "",
-      "industry": "Software",
-      "category": "Creative",
       "date": "Mar 16, 2020",
       "datetime": "2020-03-16"
     }

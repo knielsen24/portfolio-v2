@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import Image from "next/image";
 import clsx from "clsx";
 import { Fragment } from "react";
 import { usePathname } from "next/navigation";
@@ -8,7 +7,6 @@ import { Popover, Transition } from "@headlessui/react";
 import { Container } from "./Container";
 import ThemeToggle from "./ui/ThemeToggle";
 import GradientBar from "./ui/GradientBar";
-// import avatarImage from "@/images/avatar_nobg.png";
 
 const navigation = [
   { name: "About", href: "/about", ariaLabel: "about link", prefetch: true },
@@ -47,7 +45,7 @@ function CloseIcon(props: React.ComponentPropsWithoutRef<"svg">) {
 
 function Logo() {
   return (
-    <Link href="/" aria-label="Home" className="">
+    <Link href="/" aria-label="Home">
       <h1 className="inline-block bg-gradient-to-r from-slate-700/90 to-slate-700 bg-clip-text text-xl font-semibold text-transparent dark:from-zinc-400/90 dark:to-zinc-400 sm:text-2xl ">
         {"[ kn ]"}
       </h1>
@@ -191,7 +189,7 @@ function DesktopNavigation(props: React.ComponentPropsWithoutRef<"nav">) {
 
 export default function Navbar() {
   return (
-    <header className="absolute top-0 w-full pointer-events-none z-50">
+    <header className="pointer-events-none absolute top-0 z-50 w-full">
       <GradientBar className="top-0" />
       <Container className="top-0 z-10 mt-6 h-16 w-full px-5 sm:mt-8">
         <div className="flex gap-4">
