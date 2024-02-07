@@ -16,7 +16,7 @@ export default async function Projects() {
 
   return (
     <SimpleLayout title={pageHeader.title} intro={pageHeader.intro}>
-      <div className="grid max-w-2xl snap-y snap-mandatory grid-cols-1 gap-x-20  px-4 pt-2 sm:grid-cols-2 sm:gap-y-20 sm:px-0 lg:mx-0 lg:max-w-none">
+      <div className="grid max-w-2xl snap-y snap-mandatory grid-cols-1 gap-x-20 mx-4 pt-2 sm:grid-cols-2 sm:gap-y-20 sm:mx-0 lg:mx-0 lg:max-w-none">
         {projects?.map((project: Project) => (
           <Card
             key={project.id}
@@ -31,7 +31,7 @@ export default async function Projects() {
         ))}
         {/* 
           create child client component that includes
-            Show more button - useState
+            Show more button - useState≈
             The show more button renders the easter egg card
         */}
         <Card

@@ -36,6 +36,16 @@
           "desc": "Provides detailed insights of the website's performance metrics to analyze optimization decisions with FCP, LCP, FID, and TFB." 
         }
       ],
+      "technologies":[
+        {
+          "label": "Languages",
+          "desc": [ "JavaScript", "TypeScript"]
+        },
+        {
+          "label": "Languages",
+          "desc": [ "JavaScript", "TypeScript"]
+        }
+      ],
       "imageUrl": "/projects/portfoliov2.png",
       "githubHref": "https://github.com/knielsen24/portfolio-v2",
       "demoHref": "",

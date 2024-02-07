@@ -7,6 +7,7 @@ import { Project } from "@/constants/projects";
 import Tabs from "@/components/project/Tabs";
 import { SimpleLayout } from "@/components/SimpleLayout";
 import Features from "@/components/project/Features";
+import Link from "next/link";
 
 type Params = {
   params: {
@@ -71,44 +72,73 @@ function CubeIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   );
 }
 
-const perks = [
-  {
-    name: "Web Desktop & Mobile",
-    description: "Platforms",
-    icon: ComputerIcon,
-  },
-  {
-    name: "Portfolio",
-    description: "Category",
-    icon: CubeIcon,
-  },
-  {
-    name: "Repo Link",
-    description: "Github Repo",
-    icon: EditorIcon,
-  },
-];
+function LinkIcon(props: React.ComponentPropsWithoutRef<"svg">) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      {...props}
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244"
+      />
+    </svg>
+  );
+}
 
-function HighLights() {
+function HighLights({ href }: { href: string }) {
+  const perks = [
+    {
+      name: href,
+      description: "Website",
+      icon: LinkIcon,
+    },
+
+    {
+      name: "Portfolio",
+      description: "Category",
+      icon: CubeIcon,
+    },
+    {
+      name: "Web Desktop & Mobile",
+      description: "Platforms",
+      icon: ComputerIcon,
+    },
+    {
+      name: "Repo Link",
+      description: "GitHub Repo",
+      icon: EditorIcon,
+    },
+  ];
   return (
     <>
-      <h2 className="sr-only">Our perks</h2>
-      <div className="grid-row-3 grid grid-cols-1 justify-start gap-y-6 py-6">
+      <div className="mx-4 flex max-w-7xl flex-col divide-y divide-slate-300/80 dark:divide-zinc-700/80 sm:mx-0 ">
         {perks.map((perk, perkIdx) => (
-          <div key={perkIdx} className="flex">
-            <div className="flex max-w-xs content-start px-4 lg:max-w-none">
+          <div key={perkIdx} className="py-6">
+            <div className="flex max-w-xs items-center sm:flex-row lg:max-w-none">
               <perk.icon
-                className="h-6 w-6 flex-shrink-0 self-center text-indigo-500 dark:text-indigo-400 "
+                className="h-6 w-6 flex-shrink-0 text-indigo-500 dark:text-indigo-400"
                 aria-hidden="true"
               />
-              <div className="ml-4 flex flex-auto flex-col-reverse">
+              <p className="ml-4 mr-3 text-slate-500 dark:text-zinc-400">
+                {perk.description}
+              </p>
+              {perk.description === "Website" ? (
+                <Link href={href} target="_blank">
+                  <h3 className="font-medium text-slate-900  dark:text-zinc-100">
+                    {perk.name}
+                  </h3>
+                </Link>
+              ) : (
                 <h3 className="font-medium text-slate-900  dark:text-zinc-100">
                   {perk.name}
                 </h3>
-                <p className="text-sm text-slate-500 dark:text-zinc-400">
-                  {perk.description}
-                </p>
-              </div>
+              )}
             </div>
           </div>
         ))}
@@ -129,57 +159,51 @@ export default async function ProjectDetails({
 
   return (
     <SimpleLayout title={project.title} intro={project.intro}>
-      <div className="grid grid-cols-1 gap-x-8  gap-y-6 px-4 sm:mt-12 sm:gap-y-12 sm:px-0 lg:grid-cols-7">
-        <div className="order-1 lg:col-span-4 ">
-          <div className="aspect-[16/9] overflow-hidden rounded-xl border border-slate-900/10 dark:border-zinc-100/10 sm:aspect-[3/2] ">
-            <Image
-              src={project.imageUrl as StaticImageData}
-              alt={project.title}
-              className={cn(
-                "aspect-[16/9] h-full w-full bg-slate-100 dark:bg-zinc-800 sm:aspect-[3/2]",
-                project.bgSize,
-              )}
-              width={500}
-              height={500}
-              priority={true}
-            />
-            <div className="absolute inset-0 -z-10 rounded-xl" />
-          </div>
-          <div className="order-3 lg:col-span-4 flex flex-row mt-6 sm:mt-10 justify-around">
-            <div className="">icon</div>
-            <div className="">icon</div>
-            <div className="">icon</div>
-          </div>
-          
+      <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:mt-12 sm:gap-y-12 lg:grid-cols-8">
+        <div className="order-1 mx-4 aspect-[16/9] overflow-hidden rounded-xl border border-slate-900/10 dark:border-zinc-100/10 sm:mx-0 sm:aspect-[3/2] lg:col-span-5">
+          <Image
+            src={project.imageUrl as StaticImageData}
+            alt={project.title}
+            className={cn(
+              "] aspect-[16/9] h-full w-full bg-slate-100 dark:bg-zinc-800",
+              project.bgSize,
+            )}
+            width={500}
+            height={500}
+            priority={true}
+          />
+          <div className="absolute inset-0 -z-10 rounded-xl" />
         </div>
-        <div className="order-2 lg:col-span-3">
-          <h1 className="text-lg font-semibold text-indigo-600 dark:text-indigo-400 sm:text-xl">
-            Features
-          </h1>
-          <ul
-            role="list"
-            className="mt-2 grid list-inside list-disc grid-cols-1 gap-y-3 text-base sm:mt-2 sm:gap-y-4"
-          >
-            {project?.features?.map((feature) => (
-              <li className="ml-4 text-slate-600 dark:text-zinc-400">
+        <div className="order-2 mt-2 sm:mt-0 sm:rounded-xl sm:px-4 sm:ring-0 lg:col-span-3">
+          <h2 className="sr-only">Our perks</h2>
+          <HighLights href={project.href} />
+        </div>
+      </div>
+      <div className="mt-6 bg-indigo-100 p-4 ring-1 ring-slate-900/10 dark:bg-zinc-800 dark:ring-zinc-300/10 sm:mx-0 sm:mt-16 sm:rounded-2xl sm:p-8  lg:grid-cols-7">
+        <h1 className="text-lg font-semibold text-indigo-600 dark:text-indigo-400 sm:text-xl">
+          Features
+        </h1>
+        <ul
+          // role="list"
+          className="mt-2 grid list-inside list-disc grid-cols-1 gap-y-3 text-base sm:mt-2 sm:gap-y-4"
+        >
+          {project?.features?.map((feature) => (
+            //   <Features label={feature.label} desc={feature.desc}/>
+            <ul key={feature.label} className="flex flex-col">
+              <li className="font-medium text-slate-800 dark:text-zinc-200">
                 {feature.label}
               </li>
-              // <ul key={feature.label} className="flex flex-col">
-              //   <Features label={feature.label} desc={feature.desc}/>
-              //   <p className="text-slate-600 dark:text-zinc-400 sm:mt-1">
-              //     {feature.desc}
-              //   </p>
-              // </ul>
-            ))}
-          </ul>
-          <div className="mt-6 border-t dark:border-zinc-700/70 ">
-            <HighLights />
-          </div>
-        </div>
+              <p className="mt-1 text-slate-600 dark:text-zinc-400">
+                {feature.desc}
+              </p>
+            </ul>
+          ))}
+        </ul>
+        {/* <div className="mt-6 border-t dark:border-zinc-700/70" /> */}
       </div>
       {/* <div className="mt-6 bg-indigo-100 ring-1 ring-slate-900/10 dark:bg-zinc-800 dark:ring-zinc-300/10 sm:mt-8 sm:rounded-3xl sm:px-4 lg:mt-16">
       </div> */}
-      <div className="mt-4 sm:px-0 order-last">
+      <div className="order-last mt-6 sm:px-0">
         <Tabs />
       </div>
     </SimpleLayout>

@@ -42,7 +42,7 @@ export default function Card({
   return (
     <article
       key={id}
-      className="group relative flex flex-col items-start justify-between border-t border-slate-200/80 py-6 dark:border-zinc-700/60 mx-2 sm:rounded-xl sm:border-none sm:py-0 "
+      className="group relative flex flex-col items-start justify-between border-t border-slate-200/80 py-6 dark:border-zinc-700/60 sm:rounded-xl sm:border-none sm:py-0 "
     >
       <Link
         href={id === "777" ? href : `/projects/${id}`}
@@ -60,8 +60,6 @@ export default function Card({
             className={cn(
               "aspect-[16/9] w-full bg-slate-100 dark:bg-zinc-800 sm:aspect-[3/2]",
               bgSize,
-              // bgColor && `bg-${bgColor}`,
-              // the bg-color is not working
             )}
             priority={true}
             width={500}
