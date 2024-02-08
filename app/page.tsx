@@ -11,12 +11,12 @@ export default function Home() {
   return (
     <Container className="mt-2 sm:mt-4">
       <div className="relative mx-auto -mb-2 grid h-svh max-w-5xl grid-cols-1 content-center gap-y-6 px-4 sm:-mb-6 sm:px-0 lg:grid-cols-3 lg:gap-y-0">
-        <div className="mx-auto px-16 pt-12 sm:px-0 sm:pt-0">
+        <div className="mx-auto px-16 pt-10 sm:px-0 sm:pt-2">
           <Image
             src={headShot}
             alt="Headshot of Kevin"
             priority={true}
-            className="flex w-full rounded-full bg-gradient-to-r from-indigo-200 via-indigo-500 to-teal-400/70 shadow-lg shadow-slate-500 ring-1 ring-slate-300/20 delay-75 duration-300 dark:bg-gradient-to-r dark:from-indigo-300 dark:via-indigo-500 dark:to-teal-300 dark:shadow-zinc-500 dark:ring-zinc-700"
+            className="w-44 rounded-full bg-gradient-to-r from-indigo-200 via-indigo-500 to-teal-400/70 shadow-lg shadow-slate-500 ring-1 ring-slate-300/20 delay-75 duration-300 dark:bg-gradient-to-r dark:from-indigo-300 dark:via-indigo-500 dark:to-teal-300 dark:shadow-zinc-500 dark:ring-zinc-700 sm:w-56 lg:w-64"
           />
         </div>
         <div className="sm:col-span-2 lg:order-first">
