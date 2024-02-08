@@ -19,12 +19,12 @@ export const metadata: Metadata = {
 
 function AboutImage() {
   return (
-    <div className="relative -z-10 overflow-hidden rounded-xl border border-slate-900/20 px-5 pb-6 pt-20 shadow-2xl dark:border-zinc-100/20 sm:rounded-3xl xl:px-8 sm:pb-8 sm:pt-32 lg:max-w-lg">
+    <div className="relative -z-10 overflow-hidden rounded-xl border border-slate-900/20 px-5 pb-6 pt-20 shadow-2xl dark:border-zinc-100/20 sm:rounded-3xl sm:pb-8 sm:pt-32 xl:pt-32 sm:px-8">
       <Image
         src={baliBeach}
         alt="Kevin looking over bali coast"
         priority={true}
-        className="saturate-75 sm-[4/3] absolute inset-0 aspect-[16/9] h-full w-full object-cover brightness-125 "
+        className="saturate-75 absolute inset-0 aspect-[16/9] h-full w-full object-cover brightness-125 sm:aspect-[4/3] "
       />
 
       <div className="absolute inset-0 bg-slate-400/80 mix-blend-multiply dark:bg-zinc-500/50 " />
@@ -109,12 +109,12 @@ function Timeline() {
 export default function About() {
   return (
     <SimpleLayout title={pageHeader.title} intro={pageHeader.intro}>
-      <div className="sm:min-h-content grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-8 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-        <div className="order-1 mx-4 sm:order-2">
+      <div className="sm:min-h-content grid grid-cols-1 gap-x-6 xl:gap-x-12 gap-y-8 sm:gap-y-12 lg:max-w-none lg:grid-cols-2">
+        <div className="order-1 mx-4 sm:order-2 sm:mx-0 lg:ml-6">
           <AboutImage />
         </div>
         <div className="order-2 mx-4 sm:mx-0 lg:order-1">
-          <div className="text-base leading-7 text-slate-700 dark:text-zinc-400 lg:max-w-lg">
+          <div className="text-base leading-7 text-slate-700 dark:text-zinc-400">
             <h1 className=" text-xl font-semibold leading-7 text-indigo-600 dark:text-indigo-400">
               {loveCoding.header}
             </h1>

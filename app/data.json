@@ -3,13 +3,33 @@
     {
       "id": "8",
       "title": "Portfolio v2",
-      "href": "https://kevinnielsen.dev",
       "intro":
       "Take a deep dive into the features of this portfolio website including Web Analytics and Speed Insights. Built with Next.js, TypeScript, TailwindCSS, and Headless UI. ",
-      "industry": "Technology",
-      "category": "Portfolio",
-      "description": "",
-      "platforms": "Web - Deskptop & Mobile",
+      "industry": "technology",
+      "links": [
+        {
+          "name": "website",
+          "href": "https://kevinnielsen.dev"
+        },
+        {
+          "name": "github",
+          "href": "https://github.com/knielsen24/portfolio-v2"
+        }
+      ],
+      "highlights": [
+        {
+          "label" : "industry",
+          "desc" : "technology"
+        },
+        {
+          "label" : "category",
+          "desc" : "portfolio"
+        },
+        {
+          "label" : "platforms",
+          "desc" : "web & mobile"
+        }
+      ],      
       "features": [
         { 
           "label": "Metadata & Search Engine Optimization",
@@ -47,24 +67,44 @@
         }
       ],
       "imageUrl": "/projects/portfoliov2.png",
-      "githubHref": "https://github.com/knielsen24/portfolio-v2",
-      "demoHref": "",
-      "iosHref": "",
-      "androidHref": "",
       "bgSize": "object-cover",
       "date": "Mar 16, 2020",
       "datetime": "2020-03-16"
     },
+
+
+
     {
       "id": "7",
       "title": "Xalt Challenge Mobile App",
-      "href": "https://www.xalt.fit/",
       "intro":
       "Mobile application available on iOS and Android. Create and join challenges to help improve fitness, nutrition, sleep, stress, sense of community, and behavioral habits",
       "industry": "Health & Fitness",
-      "category": "Professional",
+      "links": [
+        {
+          "name": "youtube",
+          "href": "https://youtu.be/8r1YVmLS8B8?si=Ov1SWFckPzeM8BDP"
+        },
+        {
+          "name": "ios",
+          "href": "https://apps.apple.com/us/app/xalt-challenge/id6451156212?platform=iphone"
+        },
+        {
+          "name": "android",
+          "href": "https://play.google.com/store/apps/details?id=com.challenges.xalt"
+        }
+      ],
+      "highlights": [
+        {
+          "label" : "industry",
+          "desc" : "Health & Fitness"
+        },
+        {
+          "label" : "category",
+          "desc" : "Professional Work"
+        }
+      ],      
       "description": "",
-      "platforms": "App - iOS & Android",
       "features": [
         { 
           "label": "Metadata & Search Engine Optimization",
@@ -79,17 +119,14 @@
           "desc": "Every component has been meticously configured to handle desktop and mobile platforms with a phenomonal user experience." 
         }
       ],
-      "imageUrl": "/projects/xalt-challenge-home.png",
-      "githubHref": "",
-      "demoHref": "",
-      "iosHref": "https://apps.apple.com/us/app/xalt-challenge/id6451156212?platform=iphone",
-      "androidHref":
-      "https://play.google.com/store/apps/details?id=com.challenges.xalt",
+      "imageUrl": "/projects/xalt-challenge-home.png",     
       "bgSize": "object-contain",
       "date": "Mar 16, 2020",
       "datetime": "2020-03-16"
     },
     
+
+
     {
       "id": "6",
       "title": "TripleStamp",
@@ -97,9 +134,31 @@
       "intro":
       "Full stack web application designed to facilitate property management for managers, landlords and owners.",
       "industry": "Real Estate",
-      "category": "Capstone",
+      "links": [
+        {
+          "name": "youtube",
+          "href": "https://youtu.be/wgAOAGg9vw0?si=gtaEV_eD9C8rD0Kv"
+        },
+        {
+          "name": "github",
+          "href": "https://github.com/knielsen24/triple-stamp"
+        }
+      ],
+      "highlights": [
+        {
+          "label" : "industry",
+          "desc" : "Real Estate"
+        },
+        {
+          "label" : "category",
+          "desc" : "Capstone"
+        },
+        {
+          "label" : "platforms",
+          "desc" : "web - desktop"
+        }
+      ],      
       "description": "",
-      "platforms": "Web - Deskptop",
       "features": [
         { 
           "label": "Metadata & Search Engine Optimization",
@@ -115,24 +174,44 @@
         }
       ],
       "imageUrl": "/projects/triplestamp-dashboard.jpg",
-      "githubHref": "https://github.com/knielsen24/triple-stamp",
-      "demoHref": "",
-      "iosHref": "",
-      "androidHref": "",
       "bgSize": "object-cover",
       "date": "Mar 16, 2020",
       "datetime": "2020-03-16"
     },
+
+
+
     {
       "id": "5",
       "title": "Pixabay Clone with Autocorrect",
       "href": "",
       "intro":
       "Simple stock photography image search mobile application with a spellchecker feature connected to the Pixabay API.",
-      "industry": "Media",
-      "category": "Fun",
-      "description": "",
-      "platforms": "Web - Deskptop",
+      "industry": "Media & Photography",
+      "links": [
+        {
+          "name": "youtube",
+          "href": "https://youtube.com/shorts/IFq71H03zI8?si=8k9CpUtIpEB05BaD"
+        },
+        {
+          "name": "github",
+          "href": "https://github.com/knielsen24/rn-dev-proto"
+        }
+      ],
+      "highlights": [
+        {
+          "label" : "industry",
+          "desc" : "Media & Photography"
+        },
+        {
+          "label" : "category",
+          "desc" : "Take Home Project"
+        },
+        {
+          "label" : "platforms",
+          "desc" : "Mobile App"
+        }
+      ],      
       "features": [
         { 
           "label": "Metadata & Search Engine Optimization",
@@ -148,25 +227,43 @@
         }
       ],
       "imageUrl": "/projects/pixabay-clone.webp",
-      "githubHref": "https://github.com/knielsen24/rn-dev-proto",
-      "iosHref": "",
-      "androidHref": "",
-      "demoHref": "",
       "bgSize": "object-contain",
       "date": "Mar 16, 2020",
       "datetime": "2020-03-16"
     },
     
+
+
     {
       "id": "4",
       "title": "LinkTree Clone",
-      "href": "https://kevinnielsen-treeelink-clone.vercel.app/",
       "intro":
       "Created a LinkTree clone to learn the fundamentals of Next.js and TailwindCSS. Includes links to my projects and socials.",
-      "industry": "Social",
-      "category": "Fun",
-      "description": "",
-      "platforms": "Web - Deskptop",
+      "industry": "Social Media",
+      "links": [
+        {
+          "name": "website",
+          "href": "https://kn-treeelink-clone.vercel.app"
+        },
+        {
+          "name": "github",
+          "href": "https://github.com/knielsen24/linktree-clone"
+        }
+      ],
+      "highlights": [
+        {
+          "label" : "industry",
+          "desc" : "Social Media"
+        },
+        {
+          "label" : "category",
+          "desc" : "Learning Next.js"
+        },
+        {
+          "label" : "platforms",
+          "desc" : "web & mobile"
+        }
+      ],      
       "features": [
         { 
           "label": "Metadata & Search Engine Optimization",
@@ -182,24 +279,42 @@
         }
       ],
       "imageUrl": "/projects/linktree.png",
-      "githubHref": "https://github.com/knielsen24/linktree-clone",
-      "demoHref": "",
-      "iosHref": "",
-      "androidHref": "",
-      "bgSize": "",
+      "bgSize": "object-cover",
       "date": "Mar 16, 2020",
       "datetime": "2020-03-16"
     },
+
+
     {
       "id": "3",
       "title": "300 South Wells",
-      "href": "https://3swtest.netlify.app/",
       "intro":
       "Website for a commercial real estate property to market tenant businesses. Built with JavaScript, React, and Bootstrap.",
       "industry": "Commercial Real Estate",
-      "category": "Pro Bono",
-      "description": "",
-      "platforms": "Web - Deskptop",
+      "links": [
+        {
+          "name": "website",
+          "href": "https://300southwells.netlify.app"
+        },
+        {
+          "name": "github",
+          "href": "https://github.com/knielsen24/sw-test"
+        }
+      ],
+      "highlights": [
+        {
+          "label" : "industry",
+          "desc" : "Commercial Real Estate"
+        },
+        {
+          "label" : "category",
+          "desc" : "Client Project"
+        },
+        {
+          "label" : "platforms",
+          "desc" : "web & mobile"
+        }
+      ],      
       "features": [
         { 
           "label": "Metadata & Search Engine Optimization",
@@ -223,6 +338,8 @@
       "date": "Mar 16, 2020",
       "datetime": "2020-03-16"
     },
+
+
     {
       "id": "2",
       "title": "Portfolio v1",
@@ -230,9 +347,30 @@
       "intro":
       "My first edition of the portfolio website built with speed and no code using a powerful visual canvas platform, Webflow.",
       "industry": "Technology",
-      "category": "Portfolio",
-      "description": "",
-      "platforms": "Web - Deskptop",
+      "links": [
+        {
+          "name": "website",
+          "href": "https://kevin-nielsen.webflow.io"
+        },
+        {
+          "name": "linkedIn",
+          "href": "https://www.linkedin.com/in/kevin-nielsen-se/recent-activity/all"
+        }
+      ],
+      "highlights": [
+        {
+          "label" : "industry",
+          "desc" : "technology"
+        },
+        {
+          "label" : "category",
+          "desc" : "portfolio"
+        },
+        {
+          "label" : "platforms",
+          "desc" : "web & mobile"
+        }
+      ],      
       "features": [
         { 
           "label": "Metadata & Search Engine Optimization",
@@ -256,6 +394,8 @@
       "date": "Mar 16, 2020",
       "datetime": "2020-03-16"
     },
+
+
     {
       "id": "1",
       "title": "Where's Wizard",
@@ -263,9 +403,30 @@
       "intro":
       "The OG of my technical projects. This is a Where's Waldo rendition game application built with Scratch, a visual block coding IDE.",
       "industry": "Software",
-      "category": "Creative",
-      "description": "",
-      "platforms": "Web - Deskptop",
+      "links": [
+        {
+          "name": "website",
+          "href": "https://scratch.mit.edu/projects/644898508/"
+        },
+        {
+          "name": "blog",
+          "href": "https://medium.com/@kevin_nielsen/how-scratch-helped-me-learn-react-37de0378c137"
+        }
+      ],
+      "highlights": [
+        {
+          "label" : "industry",
+          "desc" : "Gaming"
+        },
+        {
+          "label" : "category",
+          "desc" : "block coding"
+        },
+        {
+          "label" : "platforms",
+          "desc" : "web - desktop"
+        }
+      ],
       "features": [
         { 
           "label": "Metadata & Search Engine Optimization",

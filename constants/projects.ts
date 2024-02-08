@@ -8,22 +8,23 @@ export const pageHeader = {
   intro: "These projects are a testimony of my creativity with technology.",
 };
 
-export type Links = {
-  label: string;
-  href: string;
-};
-
 export type Labels = {
   label: string;
   desc: string;
+};
+
+export type Links = {
+  name: string;
+  href: string;
 };
 
 export type Project = {
   id: string;
   title: string;
   intro: string;
+  links: Links[];
+  highlights: Labels[];
   industry: string;
-  category: string;
   features?: Labels[];
   technologies?: Labels[];
   description?: string;
@@ -31,11 +32,6 @@ export type Project = {
   imageUrl: string | StaticImageData;
   bgSize: string;
   bgColor?: string;
-  href: string;
-  githubHref?: string;
-  demoHref?: string;
-  iosHref?: string;
-  androidHref?: string;
   date?: string;
   datetime?: string;
 };
@@ -44,19 +40,15 @@ export const initialProjectData: Project = {
   id: "",
   title: "",
   intro: "",
+  links: [{ name: "", href: "" }],
+  highlights: [{ label: "", desc: "" }],
   industry: "",
-  category: "",
   features: [{ label: "", desc: "" }],
   technologies: [{ label: "", desc: "" }],
   description: "",
   imageUrl: "",
   bgSize: "",
   bgColor: "",
-  href: "",
-  githubHref: "",
-  demoHref: "",
-  iosHref: "",
-  androidHref: "",
   date: "",
   datetime: "",
 };
