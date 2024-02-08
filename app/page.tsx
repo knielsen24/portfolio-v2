@@ -11,21 +11,21 @@ export default function Home() {
   return (
     <Container className="h-auto snap-y snap-mandatory overflow-auto sm:mt-4">
       <div className="relative mx-auto -mb-4 grid h-svh max-w-5xl grid-cols-1 content-center gap-y-8 lg:gap-y-0 px-5 sm:-mb-6 sm:px-0 lg:grid-cols-3">
-        <div className="mx-auto mt-6 max-w-xs sm:mt-0 sm:px-0 lg:max-w-none">
+        <div className="mx-auto mt-12 max-w-xs sm:mt-0 sm:px-0 lg:max-w-none">
           <Image
             src={headShot}
             alt="Headshot of Kevin"
             priority={true}
-            className="w-52 rounded-full bg-gradient-to-r from-indigo-200 via-indigo-500 to-teal-400/70 shadow-lg shadow-slate-500 ring-1 ring-slate-300/20 delay-75 duration-300 dark:bg-gradient-to-r  dark:from-indigo-300 dark:via-indigo-500 dark:to-teal-300 dark:shadow-zinc-600  dark:ring-zinc-700 sm:w-64"
+            className="w-44 rounded-full bg-gradient-to-r from-indigo-200 via-indigo-500 to-teal-400/70 shadow-lg shadow-slate-500 ring-1 ring-slate-300/20 delay-75 duration-300 dark:bg-gradient-to-r  dark:from-indigo-300 dark:via-indigo-500 dark:to-teal-300 dark:shadow-zinc-500 dark:ring-zinc-700 sm:w-64"
           />
         </div>
         <div className="sm:col-span-2 lg:order-first">
           <div className="grid-row-1 flex grid-flow-row">
-            <h1 className="text-3xl font-bold leading-normal tracking-tight text-slate-800 dark:text-zinc-100 sm:mb-2 sm:pr-12 sm:text-5xl">
+            <h1 className="text-2xl font-bold leading-normal tracking-tight text-slate-800 dark:text-zinc-100 sm:mb-2 sm:pr-12 sm:text-5xl">
               {heroCopy.header} <span className="">{heroCopy.highlight}</span>
             </h1>
           </div>
-          <p className="mt-4 text-lg leading-normal text-slate-600 dark:text-zinc-300 sm:mt-6 sm:max-w-lg">
+          <p className="mt-4 text-sm sm:text-lg leading-normal text-slate-600 dark:text-zinc-300 sm:mt-6 sm:max-w-lg">
             {heroCopy.description}
           </p>
 
@@ -52,7 +52,7 @@ export default function Home() {
             <div className="md:order-last">
               <Link
                 href="/projects"
-                className="hover-underline-animation font-bold text-slate-600 duration-300 hover:text-indigo-500 dark:text-zinc-500 hover:dark:text-indigo-400"
+                className="hover-underline-animation font-bold text-slate-600 duration-300 hover:text-indigo-500 dark:text-zinc-500 hover:dark:text-indigo-400  sm:text-lg"
               >
                 View Projects
               </Link>
