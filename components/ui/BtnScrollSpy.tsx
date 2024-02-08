@@ -49,7 +49,7 @@ export default function BtnScrollSpy() {
 
   return (
     <>
-      <div className="absolute inset-x-0 bottom-8 sm:bottom-16 flex justify-center">
+      <div className="absolute inset-x-0 bottom-6 sm:bottom-12 flex justify-center">
         <Transition
           show={isShowing}
           enter="transition-opacity duration-500"

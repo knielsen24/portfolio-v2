@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 
 function AboutImage() {
   return (
-    <div className="relative -z-10 overflow-hidden rounded-xl border border-slate-900/20 px-5 pb-6 pt-20 shadow-2xl dark:border-zinc-100/20 sm:rounded-3xl sm:pb-8 sm:pt-32 xl:pt-32 sm:px-8">
+    <div className="relative -z-10 overflow-hidden rounded-xl border border-slate-900/20 px-4 pb-6 pt-20 shadow-2xl dark:border-zinc-100/20 sm:rounded-3xl sm:px-8 sm:pb-8 sm:pt-32 xl:pt-32">
       <Image
         src={baliBeach}
         alt="Kevin looking over bali coast"
@@ -78,11 +78,11 @@ function Timeline() {
           <div key={item.name}>
             <time
               dateTime={item.dateTime}
-              className="flex items-center text-sm font-semibold leading-6 text-indigo-600 dark:text-indigo-400"
+              className="flex items-center pl-3 text-sm font-semibold leading-6 text-indigo-600 dark:text-indigo-400 sm:pl-0"
             >
               <svg
                 viewBox="0 0 4 4"
-                className="mr-4 h-1 w-1 flex-none"
+                className="mr-3 h-1 w-1 flex-none sm:mr-4"
                 aria-hidden="true"
               >
                 <circle cx={2} cy={2} r={2} fill="currentColor" />
@@ -109,11 +109,11 @@ function Timeline() {
 export default function About() {
   return (
     <SimpleLayout title={pageHeader.title} intro={pageHeader.intro}>
-      <div className="sm:min-h-content grid grid-cols-1 gap-x-6 xl:gap-x-12 gap-y-8 sm:gap-y-12 lg:max-w-none lg:grid-cols-2">
-        <div className="order-1 mx-4 sm:order-2 sm:mx-0 lg:ml-6">
+      <div className="sm:min-h-content mx-4 grid grid-cols-1 gap-x-6 gap-y-8 sm:mx-0 sm:gap-y-12 lg:max-w-none lg:grid-cols-2 xl:gap-x-12">
+        <div className="order-1 sm:order-2 lg:ml-6">
           <AboutImage />
         </div>
-        <div className="order-2 mx-4 sm:mx-0 lg:order-1">
+        <div className="order-2 sm:mx-0 lg:order-1">
           <div className="text-base leading-7 text-slate-700 dark:text-zinc-400">
             <h1 className=" text-xl font-semibold leading-7 text-indigo-600 dark:text-indigo-400">
               {loveCoding.header}
@@ -124,7 +124,7 @@ export default function About() {
         </div>
       </div>
       <div className="order-3 mx-4 mt-20 border-t border-slate-300/70 py-12 dark:border-zinc-700/70 sm:mx-0 sm:my-24 sm:border-y">
-        <dl className=" grid grid-cols-2 gap-x-8 gap-y-12 sm:gap-y-16 lg:grid-cols-4">
+        <dl className="grid grid-cols-2 gap-x-8 gap-y-12 sm:gap-y-16 lg:grid-cols-4">
           {stats.map((stat, statIdx) => (
             <div key={statIdx} className="gap-y-6">
               <dt className="text-sm font-semibold leading-6 text-slate-600 dark:text-zinc-500">
@@ -137,7 +137,7 @@ export default function About() {
           ))}
         </dl>
       </div>
-      <div className="overflow w/screen relative mt-16 bg-indigo-100 px-5 py-10 ring-1 ring-slate-900/10 dark:bg-zinc-800 dark:ring-zinc-300/10 sm:mt-24 sm:rounded-3xl sm:px-8">
+      <div className="overflow w/screen relative mt-16 bg-indigo-100 px-4 py-10 ring-1 ring-slate-900/10 dark:bg-zinc-800 dark:ring-zinc-300/10 sm:mt-24 sm:rounded-3xl sm:px-8">
         <Timeline />
       </div>
     </SimpleLayout>

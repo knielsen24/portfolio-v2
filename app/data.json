@@ -76,7 +76,7 @@
 
     {
       "id": "7",
-      "title": "Xalt Challenge Mobile App",
+      "title": "Xalt Challenge App",
       "intro":
       "Mobile application available on iOS and Android. Create and join challenges to help improve fitness, nutrition, sleep, stress, sense of community, and behavioral habits",
       "industry": "Health & Fitness",
@@ -183,7 +183,7 @@
 
     {
       "id": "5",
-      "title": "Pixabay Clone with Autocorrect",
+      "title": "Pixabay Clone",
       "href": "",
       "intro":
       "Simple stock photography image search mobile application with a spellchecker feature connected to the Pixabay API.",
@@ -243,7 +243,7 @@
       "links": [
         {
           "name": "website",
-          "href": "https://kn-treeelink-clone.vercel.app"
+          "href": "https://kn-treelinkclone.vercel.app"
         },
         {
           "name": "github",
@@ -402,7 +402,7 @@
       "href": "#",
       "intro":
       "The OG of my technical projects. This is a Where's Waldo rendition game application built with Scratch, a visual block coding IDE.",
-      "industry": "Software",
+      "industry": "Gaming",
       "links": [
         {
           "name": "website",

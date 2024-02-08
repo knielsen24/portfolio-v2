@@ -15,10 +15,10 @@ import { skillsCopy } from "@/constants/home";
 export default function Skills() {
   return (
     <div className="group relative sm:mx-0">
-      <div className="mx-auto max-w-7xl bg-indigo-100 px-6 py-12 ring-1 ring-slate-900/10 dark:bg-white/5 dark:ring-zinc-300/10 sm:rounded-3xl sm:py-16 lg:px-12">
+      <div className="mx-auto max-w-7xl bg-indigo-100 py-12 ring-1 ring-slate-900/10 dark:bg-white/5 dark:ring-zinc-300/10 sm:rounded-3xl sm:px-6 sm:py-16 lg:px-12">
         <div className="grid grid-cols-1 items-center gap-x-8 gap-y-12 lg:grid-cols-2">
-          <div className="mx-auto w-full max-w-xl lg:mx-0">
-            <h2 className="text-2xl font-bold tracking-tight text-slate-700 dark:text-zinc-100 sm:text-3xl">
+          <div className="px-5 w-full max-w-xl lg:mx-0">
+            <h2 className="text-2xl font-bold tracking-tight text-slate-800 dark:text-zinc-100 sm:text-3xl">
               {skillsCopy.header}
             </h2>
             <p className="mt-6 text-lg leading-8 text-slate-600 dark:text-zinc-300">
