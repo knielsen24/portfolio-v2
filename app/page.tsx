@@ -9,14 +9,14 @@ import Skills from "@/components/home/Skills";
 
 export default function Home() {
   return (
-    <Container className="sm:mt-4">
-      <div className="relative mx-auto -mb-2 grid h-svh max-w-5xl grid-cols-1 content-center gap-y-8 px-4 sm:-mb-6 sm:px-0 lg:grid-cols-3 lg:gap-y-0">
+    <Container className="mt-2 sm:mt-4">
+      <div className="relative mx-auto -mb-2 grid h-svh max-w-5xl grid-cols-1 content-center gap-y-6 px-4 sm:-mb-6 sm:px-0 lg:grid-cols-3 lg:gap-y-0">
         <div className="mx-auto px-16 pt-12 sm:px-0 sm:pt-0">
           <Image
             src={headShot}
             alt="Headshot of Kevin"
             priority={true}
-            className="flex w-full rounded-full bg-gradient-to-r from-indigo-200 via-indigo-500 to-teal-400/70 shadow-lg shadow-slate-500 ring-1 ring-slate-300/20 delay-75 duration-300 dark:bg-gradient-to-r dark:from-indigo-300 dark:via-indigo-500 dark:to-teal-300 dark:shadow-zinc-500 dark:ring-zinc-700 sm:h-full sm:w-full"
+            className="flex w-full rounded-full bg-gradient-to-r from-indigo-200 via-indigo-500 to-teal-400/70 shadow-lg shadow-slate-500 ring-1 ring-slate-300/20 delay-75 duration-300 dark:bg-gradient-to-r dark:from-indigo-300 dark:via-indigo-500 dark:to-teal-300 dark:shadow-zinc-500 dark:ring-zinc-700"
           />
         </div>
         <div className="sm:col-span-2 lg:order-first">
@@ -37,7 +37,7 @@ export default function Home() {
                   key={item.name}
                   href={item.href}
                   target="_blank"
-                  className={`origin-bottom text-slate-500/90 delay-50 duration-500 hover:scale-110 hover:text-indigo-500 dark:text-zinc-500 dark:hover:text-indigo-400
+                  className={`delay-50 origin-bottom text-slate-500/90 duration-500 hover:scale-110 hover:text-indigo-500 dark:text-zinc-500 dark:hover:text-indigo-400
                     ${
                       item.tilt === "back"
                         ? "hover:-rotate-6"
