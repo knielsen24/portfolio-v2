@@ -14,6 +14,8 @@ import {
   TagIcon,
   MobileIcon,
   DocumentIcon,
+  AppleIcon,
+  AndroidIcon,
 } from "@/components/icons/Project";
 import { GitHubIcon, YouTubeIcon, LinkIcon } from "@/components/icons/Project";
 import { ArrowTopRightOnSquare } from "@/components/icons/Project";
@@ -26,14 +28,9 @@ type Params = {
   };
 };
 
-function HeaderHL({ title, className }: { title: string; className: string }) {
+function HeaderHL({ title }: { title: string }) {
   return (
-    <h1
-      className={cn(
-        "mb-2 border-b border-slate-300/80 pb-3 text-zinc-500 dark:border-zinc-700/80",
-        className,
-      )}
-    >
+    <h1 className="mb-2 border-b border-slate-300/80 pb-3 text-zinc-500 dark:border-zinc-700/80">
       {title}
     </h1>
   );
@@ -49,28 +46,32 @@ function HighLights({ props }: { props: Project }) {
   };
 
   const handleLinkIcon = (name: string, desc?: string) => {
-    const handlePlatform = (name: string) => console.log("first");
-
-    // console.log(name === "platform" && desc?.includes('web'))
     const className =
       "h-5 w-5 flex-shrink-0 text-indigo-500 dark:text-indigo-400";
-    if (name === "github") {
-      return <GitHubIcon className={className} aria-hidden="true" />;
-    } else if (name === "youtube") {
-      return <YouTubeIcon className={className} aria-hidden="true" />;
-    } else if (name === "industry") {
-      return <CubeIcon className={className} aria-hidden="true" />;
-    } else if (name === "category") {
-      return <TagIcon className={className} aria-hidden="true" />;
-    } else if (name === "blog" || name === "linkedIn") {
-      return <DocumentIcon className={className} aria-hidden="true" />;
-    } else if (name === "platforms" && desc?.includes("web")) {
-      return <ComputerIcon className={className} aria-hidden="true" />;
-    } else if (name === "platforms" && desc?.toLowerCase().includes("mobile")) {
-      return <MobileIcon className={className} aria-hidden="true" />;
-    } else {
-      return <LinkIcon className={className} aria-hidden="true" />;
-    }
+
+    const iconMap: { [key: string]: JSX.Element } = {
+      github: <GitHubIcon className={className} aria-hidden="true" />,
+      youtube: <YouTubeIcon className={className} aria-hidden="true" />,
+      ios: <AppleIcon className={className} aria-hidden="true" />,
+      android: <AndroidIcon className={className} aria-hidden="true" />,
+      industry: <CubeIcon className={className} aria-hidden="true" />,
+      category: <TagIcon className={className} aria-hidden="true" />,
+      blog: <DocumentIcon className={className} aria-hidden="true" />,
+      linkedIn: <DocumentIcon className={className} aria-hidden="true" />,
+      platforms: desc?.includes("web") ? (
+        <ComputerIcon className={className} aria-hidden="true" />
+      ) : desc?.toLowerCase().includes("mobile") ? (
+        <MobileIcon className={className} aria-hidden="true" />
+      ) : (
+        <LinkIcon className={className} aria-hidden="true" />
+      ),
+    };
+
+    return (
+      iconMap[name.toLowerCase()] || (
+        <LinkIcon className={className} aria-hidden="true" />
+      )
+    );
   };
 
   const getLinkText = (link: { name: string; href: string }): string => {
@@ -94,35 +95,35 @@ function HighLights({ props }: { props: Project }) {
   };
 
   return (
-    <div className="mx-4 grid h-full grid-cols-1 content-between pb-8 text-sm sm:mx-0">
-      <div className="">
-        <HeaderHL title="Highlights" className="mt-6 lg:mt-0" />
+    <div className="mx-4 grid mt-6 lg:mt-0 h-full grid-cols-1 gap-y-2 sm:gap-y-0 content-around text-sm sm:mx-0 sm:text-base">
+      <div>
+        <HeaderHL title="Highlights" />
         {highlights.map((item, itemIdx) => (
           <div
             key={itemIdx}
-            className="flex flex-row items-center py-3 xl:py-4"
+            className="flex w-full flex-row items-center py-3 xl:py-4"
           >
             <div className="ml-1 sm:ml-2">
               {handleLinkIcon(item.label, item.desc)}
             </div>
-            <p className="ml-3 mr-1 w-1/5 flex-none capitalize text-slate-500 dark:text-zinc-400">
+            <p className="ml-3 mr-2 w-16 shrink-0 capitalize text-slate-500 dark:text-zinc-400 sm:w-24 lg:mr-1 lg:w-20">
               {item.label}
             </p>
-            <h3 className="font-medium capitalize text-slate-900 dark:text-zinc-100">
+            <h3 className="grow font-medium capitalize text-slate-900 dark:text-zinc-100">
               {item.desc}
             </h3>
           </div>
         ))}
       </div>
       <div>
-        <HeaderHL title="Links" className="mt-6 " />
+        <HeaderHL title="Links"/>
         {links.map((link, linkIdx) => (
           <div
             key={linkIdx}
             className="group flex flex-row items-center py-3 xl:py-4"
           >
             <div className="ml-1 sm:ml-2">{handleLinkIcon(link.name)}</div>
-            <p className="ml-3 mr-1 w-1/5 flex-none capitalize text-slate-500 dark:text-zinc-400">
+            <p className="ml-3 mr-2 w-16 shrink-0 capitalize text-slate-500 dark:text-zinc-400 sm:w-24 lg:mr-1 lg:w-20">
               {link.name}
             </p>
             <div className="flex w-full">
@@ -134,13 +135,31 @@ function HighLights({ props }: { props: Project }) {
                 <p className="font-medium text-slate-900 dark:text-zinc-100">
                   {getLinkText(link)}
                 </p>
-                <ArrowTopRightOnSquare className="tranisition h-4 w-4 flex-none self-center text-slate-400 duration-500 ease-out group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:scale-110 dark:text-zinc-500" />
+                <ArrowTopRightOnSquare className="tranisition h-5 w-5 flex-none self-center text-slate-400 duration-500 ease-out group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:scale-110 dark:text-zinc-500" />
               </Link>
             </div>
           </div>
         ))}
       </div>
     </div>
+  );
+}
+
+function ProjectImage({ props }: { props: Project }) {
+  const { imageUrl, title, bgSize } = props;
+
+  return (
+    <Image
+      src={imageUrl as StaticImageData}
+      alt={title}
+      className={cn(
+        "aspect-[16/9] h-full w-full bg-slate-100 dark:bg-zinc-800",
+        bgSize,
+      )}
+      width={500}
+      height={500}
+      priority={true}
+    />
   );
 }
 
@@ -158,17 +177,7 @@ export default async function ProjectDetails({
     <SimpleLayout title={project.title} intro={project.intro}>
       <div className="grid grid-cols-1 gap-x-10 sm:mt-12 lg:grid-cols-10 ">
         <div className="order-1 mx-4 aspect-[16/9] overflow-hidden rounded-xl border border-slate-900/10 dark:border-zinc-100/10 sm:mx-0 sm:aspect-[3/2] lg:col-span-6">
-          <Image
-            src={project.imageUrl as StaticImageData}
-            alt={project.title}
-            className={cn(
-              "aspect-[16/9] h-full w-full bg-slate-100 dark:bg-zinc-800",
-              project.bgSize,
-            )}
-            width={500}
-            height={500}
-            priority={true}
-          />
+          <ProjectImage props={project} />
           <div className="absolute inset-0 -z-10 rounded-xl" />
         </div>
         <div className="order-2 h-full lg:col-span-4">
@@ -176,11 +185,7 @@ export default async function ProjectDetails({
           <HighLights props={project} />
         </div>
       </div>
-      {underConstruction ? (
-        <div className="flex h-64 animate-pulse flex-col items-center justify-center text-xl text-indigo-400">
-          Features section coming soon
-        </div>
-      ) : (
+      {underConstruction ? null : (
         <div className="mt-6 bg-indigo-100 p-4 ring-1 ring-slate-900/10 dark:bg-zinc-800 dark:ring-zinc-300/10 sm:mx-0 sm:rounded-2xl sm:p-8 lg:mt-16 ">
           <h1 className="text-lg font-semibold text-indigo-600 dark:text-indigo-400 sm:text-xl">
             Features

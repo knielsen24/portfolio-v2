@@ -63,7 +63,7 @@ function Card({ props }: { props: Project }) {
               </h3>
               <ArrowTopRightOnSquare className="mr-3 hidden h-5 w-5 self-end text-slate-400 transition ease-out group-hover:inline-flex group-hover:scale-110 dark:text-zinc-500 sm:mb-1" />
             </div>
-            <p className="mt-4 line-clamp-3 text-xs leading-6 text-slate-600 dark:text-zinc-400 sm:text-sm">
+            <p className="mt-4 line-clamp-3 text-sm leading-6 text-slate-600 dark:text-zinc-400 sm:text-base">
               {intro}
             </p>
           </div>
