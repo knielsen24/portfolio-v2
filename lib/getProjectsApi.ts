@@ -1,9 +1,7 @@
 import { promises as fs } from "fs";
-import path from "path";
 import { Project } from "@/constants/projects";
 
 export async function getAllProjects() {
-  // const filePath = path.join(process.cwd(), "app", "data.json");
   const filePath = process.cwd() + "/app/data.json"
   const file = await fs.readFile(filePath, "utf8");
   const projects: Project[] = JSON.parse(file).projects;
