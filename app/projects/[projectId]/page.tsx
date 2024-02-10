@@ -205,9 +205,9 @@ export default async function ProjectDetails({
         </div>
       )}
       {/* <div className="mt-6 border-t dark:border-zinc-700/70" /> */}
-      {/* <div className="order-last mt-6 sm:px-0">
-        <Tabs />
-      </div> */}
+      <div className="order-last mt-6 sm:px-0">
+        <Tabs props={project}/>
+      </div>
     </SimpleLayout>
   );
 }

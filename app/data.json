@@ -57,14 +57,7 @@
         }
       ],
       "technologies":[
-        {
-          "label": "Languages",
-          "desc": [ "JavaScript", "TypeScript"]
-        },
-        {
-          "label": "Languages",
-          "desc": [ "JavaScript", "TypeScript"]
-        }
+        "JavaScript", "TypeScript", "React.js", "Next.js", "TailwindCSS", "HeadlessUI", "Vercel", "Next-Themes", "Vercel Web Analytics", "Vercel Speed Insights"
       ],
       "imageUrl": "/projects/portfoliov2.png",
       "bgSize": "object-cover",
@@ -78,7 +71,7 @@
       "id": "7",
       "title": "Xalt Challenge App",
       "intro":
-      "Mobile application available on iOS and Android. Create and join challenges to help improve fitness, nutrition, sleep, stress, sense of community, and behavioral habits",
+      "Mobile application available on iOS and Android. Create and join challenges to help improve fitness, nutrition, sleep, stress, sense of community, and behavioral habits.",
       "industry": "Health & Fitness",
       "links": [
         {
@@ -121,6 +114,9 @@
           "label": "Highly responsive with customized Headless UI components",
           "desc": "Every component has been meticously configured to handle desktop and mobile platforms with a phenomonal user experience." 
         }
+      ],
+      "technologies":[
+        "JavaScript", "React Native", "React Navigation", "Redux Toolkit", "RTK Query", "Expo", "Xcode", "TestFlight", "iOS", "Android", "Formik"
       ],
       "imageUrl": "/projects/xalt-challenge-home.png",     
       "bgSize": "object-contain",
@@ -174,6 +170,9 @@
           "desc": "Every component has been meticously configured to handle desktop and mobile platforms with a phenomonal user experience." 
         }
       ],
+      "technologies":[
+        "JavaScript", "React.js", "Redux Toolkit", "RTK Query", "React Router", "Bootstrap", "Ruby on Rails", "Active Record", "PostgreSQL", "Formik", "RESTful APIs"
+      ],
       "imageUrl": "/projects/triplestamp-dashboard.jpg",
       "bgSize": "object-cover",
       "date": "Mar 16, 2020",
@@ -225,6 +224,9 @@
           "label": "Highly responsive with customized Headless UI components",
           "desc": "Every component has been meticously configured to handle desktop and mobile platforms with a phenomonal user experience." 
         }
+      ],
+      "technologies":[
+        "JavaScript", "React Native", "React Navigation", "Expo Go", "Xcode", "Pixabay API"
       ],
       "imageUrl": "/projects/pixabay-clone.webp",
       "bgSize": "object-contain",
@@ -278,6 +280,9 @@
           "desc": "Every component has been meticously configured to handle desktop and mobile platforms with a phenomonal user experience." 
         }
       ],
+      "technologies":[
+        "JavaScript", "TypeScript", "React.js", "Next.js", "TailwindCSS", "Vercel"
+      ],
       "imageUrl": "/projects/linktree.png",
       "bgSize": "object-cover",
       "date": "Mar 16, 2020",
@@ -328,6 +333,9 @@
           "label": "Highly responsive with customized Headless UI components",
           "desc": "Every component has been meticously configured to handle desktop and mobile platforms with a phenomonal user experience." 
         }
+      ],
+      "technologies":[
+        "JavaScript", "React.js", "Next.js", "Bootstrap", "Netlify"
       ],
       "imageUrl": "/projects/300south-wells.png",
       "bgSize": "object-cover",
@@ -380,6 +388,9 @@
           "desc": "Every component has been meticously configured to handle desktop and mobile platforms with a phenomonal user experience." 
         }
       ],
+      "technologies":[
+        "Webflow", "Designer Dashboard", "Content Management System (CMS)", "HTML5", "CSS"
+      ],
       "imageUrl": "/projects/webflow.png",
       "bgSize": "object-cover",
       "date": "Mar 16, 2020",
@@ -430,6 +441,9 @@
           "label": "Highly responsive with customized Headless UI components",
           "desc": "Every component has been meticously configured to handle desktop and mobile platforms with a phenomonal user experience." 
         }
+      ],
+      "technologies":[
+        "Scratch Visual Interface", "Block Coding", "Gaming"
       ],
       "imageUrl": "/projects/wheresWizard.png",
       "bgSize": "object-cover",

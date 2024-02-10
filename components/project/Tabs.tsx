@@ -1,56 +1,41 @@
 "use client";
 import { Fragment } from "react";
 import { Tab } from "@headlessui/react";
+import { Project } from "@/constants/projects";
 
 function classNames(...classes: any) {
   return classes.filter(Boolean).join(" ");
 }
 
-type Feature = {
-  name: string;
-  intro: string;
-};
+type Feature = string[];
 
-const tabs = [
-  {
-    name: "Technology",
-    features: [
-      {
-        name: "Adaptive and modular",
-        intro:
-          "The Organize base set allows you to configure and evolve your setup as your items and habits change. The included trays and optional add-ons are easily rearranged to achieve that perfect setup.",
-      },
-    ],
-  },
+export default function Tabs({ props }: { props: Project }) {
+  const { technologies } = props;
+  console.log(technologies);
 
-  {
-    name: "Description",
-    features: [
-      {
-        name: "Helpful around the home",
-        intro:
-          "Our customers use Organize throughout the house to bring efficiency to many daily routines. Enjoy Organize in your workspace, kitchen, living room, entry way, garage, and more. We can't wait to see how you'll use it!",
-      },
-    ],
-  },
-  // {
-  //   name: "Challenges",
-  //   features: [
-  //     {
-  //       name: "Everything you'll need",
-  //       intro:
-  //         "The Organize base set includes the pen, phone, small, and large trays to help you group all your essential items. Expand your set with the drink coaster and headphone stand add-ons.",
-  //     },
-  //   ],
-  // },
-];
+  const tabs = [
+    {
+      name: "Technology",
+      features: technologies,
+    },
 
-export default function Tabs() {
+    // {
+    //   name: "Description",
+    //   features: [
+    //     {
+    //       name: "Helpful around the home",
+    //       intro:
+    //         "Our customers use Organize throughout the house to bring efficiency to many daily routines. Enjoy Organize in your workspace, kitchen, living room, entry way, garage, and more. We can't wait to see how you'll use it!",
+    //     },
+    //   ],
+    // },
+  ];
+
   return (
     <Tab.Group as="div">
       <div className="mx-4 flex overflow-x-auto sm:mx-0">
         <div className="flex-auto border-b border-slate-200 dark:border-zinc-700 sm:px-0">
-          <Tab.List className="-mb-px flex justify-center space-x-10 sm:justify-start sm:space-x-16">
+          <Tab.List className="-mb-px flex sm:ml-8 justify-start space-x-10 sm:space-x-16">
             {tabs.map((tab) => (
               <Tab
                 key={tab.name}
@@ -72,15 +57,20 @@ export default function Tabs() {
 
       <Tab.Panels as={Fragment}>
         {tabs.map((tab: any) => (
-          <Tab.Panel key={tab.name} className="mt-8 space-y-16">
-            {tab.features.map((feature: Feature) => (
-              <div key={feature.name} className="grid grid-cols-1 items-center gap-y-4 text-base sm:text-lg">
-                <div className="flex flex-row">
-                  <h1 className="mr-4 font-semibold">Languages:</h1>{" "}
-                  <p>JavaScript</p>
-                </div>
-              </div>
-            ))}
+          <Tab.Panel
+            key={tab.name}
+            className="mx-5 mt-8 grid grid-cols-1 space-y-16 sm:mx-0"
+          >
+            <ul className="list-inside list-disc text-base sm:text-lg">
+              {tab.features.map((feature: Feature, idx: number) => (
+                <li
+                  key={idx}
+                  className="py-1 text-slate-400/80 dark:text-zinc-600"
+                >
+                  <span className="text-slate-800 dark:text-zinc-200">{feature}</span>
+                </li>
+              ))}
+            </ul>
           </Tab.Panel>
         ))}
       </Tab.Panels>
