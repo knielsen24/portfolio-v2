@@ -11,7 +11,6 @@ type Feature = string[];
 
 export default function Tabs({ props }: { props: Project }) {
   const { technologies } = props;
-  console.log(technologies);
 
   const tabs = [
     {

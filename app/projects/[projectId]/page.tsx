@@ -5,20 +5,12 @@ import type { StaticImageData } from "next/image";
 import { notFound } from "next/navigation";
 import { Project } from "@/constants/projects";
 import { getAllProjects, getProject } from "@/lib/getProjectsApi";
-import { cn } from "@/lib/utils";
+import { cn, getLinkText } from "@/lib/utils";
 import Tabs from "@/components/project/Tabs";
 import { SimpleLayout } from "@/components/SimpleLayout";
-import {
-  ComputerIcon,
-  CubeIcon,
-  TagIcon,
-  MobileIcon,
-  DocumentIcon,
-  AppleIcon,
-  AndroidIcon,
-} from "@/components/icons/Project";
-import { GitHubIcon, YouTubeIcon, LinkIcon } from "@/components/icons/Project";
+import IconHandler from "@/components/project/IconHandler";
 import { ArrowTopRightOnSquare } from "@/components/icons/Project";
+import { Labels } from "@/constants/projects";
 
 const underConstruction = true;
 
@@ -39,63 +31,8 @@ function HeaderHL({ title }: { title: string }) {
 function HighLights({ props }: { props: Project }) {
   const { links, highlights } = props;
 
-  const handleRemoveRegex = (link: string): string => {
-    // Regex pattern to match either "https://" or "http://"
-    const regex = /^(https?:\/\/)/i;
-    return link.replace(regex, "");
-  };
-
-  const handleLinkIcon = (name: string, desc?: string) => {
-    const className =
-      "h-5 w-5 flex-shrink-0 text-indigo-500 dark:text-indigo-400";
-
-    const iconMap: { [key: string]: JSX.Element } = {
-      github: <GitHubIcon className={className} aria-hidden="true" />,
-      youtube: <YouTubeIcon className={className} aria-hidden="true" />,
-      ios: <AppleIcon className={className} aria-hidden="true" />,
-      android: <AndroidIcon className={className} aria-hidden="true" />,
-      industry: <CubeIcon className={className} aria-hidden="true" />,
-      category: <TagIcon className={className} aria-hidden="true" />,
-      blog: <DocumentIcon className={className} aria-hidden="true" />,
-      linkedIn: <DocumentIcon className={className} aria-hidden="true" />,
-      platforms: desc?.includes("web") ? (
-        <ComputerIcon className={className} aria-hidden="true" />
-      ) : desc?.toLowerCase().includes("mobile") ? (
-        <MobileIcon className={className} aria-hidden="true" />
-      ) : (
-        <LinkIcon className={className} aria-hidden="true" />
-      ),
-    };
-
-    return (
-      iconMap[name.toLowerCase()] || (
-        <LinkIcon className={className} aria-hidden="true" />
-      )
-    );
-  };
-
-  const getLinkText = (link: { name: string; href: string }): string => {
-    switch (link.name) {
-      case "github":
-        return "View Source Code";
-      case "youtube":
-        return "View Demo";
-      case "ios":
-        return "View in App Store";
-      case "android":
-        return "View in Play Store";
-      case "blog":
-      case "linkedIn":
-        return "View Post";
-      case "website":
-        return handleRemoveRegex(link.href);
-      default:
-        return "View Link";
-    }
-  };
-
   return (
-    <div className="mx-4 grid mt-6 lg:mt-0 h-full grid-cols-1 gap-y-2 sm:gap-y-0 content-around text-sm sm:mx-0 sm:text-base">
+    <div className="mx-4 mt-6 grid h-full grid-cols-1 content-around gap-y-2 text-sm sm:mx-0 sm:gap-y-0 sm:text-base lg:mt-0">
       <div>
         <HeaderHL title="Highlights" />
         {highlights.map((item, itemIdx) => (
@@ -104,7 +41,7 @@ function HighLights({ props }: { props: Project }) {
             className="flex w-full flex-row items-center py-3 xl:py-4"
           >
             <div className="ml-1 sm:ml-2">
-              {handleLinkIcon(item.label, item.desc)}
+              <IconHandler name={item.label} desc={item.desc} />
             </div>
             <p className="ml-3 mr-2 w-16 shrink-0 capitalize text-slate-500 dark:text-zinc-400 sm:w-24 lg:mr-1 lg:w-20">
               {item.label}
@@ -116,13 +53,15 @@ function HighLights({ props }: { props: Project }) {
         ))}
       </div>
       <div>
-        <HeaderHL title="Links"/>
+        <HeaderHL title="Links" />
         {links.map((link, linkIdx) => (
           <div
             key={linkIdx}
             className="group flex flex-row items-center py-3 xl:py-4"
           >
-            <div className="ml-1 sm:ml-2">{handleLinkIcon(link.name)}</div>
+            <div className="ml-1 sm:ml-2">
+              <IconHandler name={link.name} desc={link.href} />
+            </div>
             <p className="ml-3 mr-2 w-16 shrink-0 capitalize text-slate-500 dark:text-zinc-400 sm:w-24 lg:mr-1 lg:w-20">
               {link.name}
             </p>
@@ -206,7 +145,7 @@ export default async function ProjectDetails({
       )}
       {/* <div className="mt-6 border-t dark:border-zinc-700/70" /> */}
       <div className="order-last mt-6 sm:px-0">
-        <Tabs props={project}/>
+        <Tabs props={project} />
       </div>
     </SimpleLayout>
   );
