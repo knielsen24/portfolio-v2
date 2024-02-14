@@ -23,9 +23,18 @@ export const loveCoding = {
     "Now that I have graduated from Legos, I am passionate about using technology to build web and mobile applications. The way I look at software development is that there is always a problem to be solved, and the missing puzzle pieces are waiting to be discovered. With effort and persistence, one can always find a way to put the pieces together. It is a continuous learning process, but this is what makes software engineering so great.",
 };
 
+export const excitement = {
+  header: "Why I'm excited about technology",
+  firstP:
+    "What makes me excited about a career in tech is finding impactful solutions that help others at scale. One reason I loved coaching was the fulfillment of making a positive impact on the swimmers as athletes and as people. Now in the tech world, my goal is to make meaningful contributions to a software team that results in a positive impact on the users.",
+  secondP:
+    "Last but not least, for so long my identity was tied to swimming, and I am excited about discovering what unfolds with this path and transitioning with this new identity. There will be new challenges, and I can’t wait to face them.",
+
+}
+
 export const stats = [
   { label: "Coding Inception", value: "2022" },
-  { label: "Coaching Experience", value: "12 yrs" },
+  { label: "Coaching Experience", value: "12 years" },
   { label: "Legos Compiled", value: "10k+" },
   { label: "Golfing Handicap", value: "8.1" },
 ];

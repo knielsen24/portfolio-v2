@@ -3,6 +3,8 @@ import Image from "next/image";
 import { type Metadata } from "next";
 import baliBeach from "@/public/bali-beach.jpg";
 import { SimpleLayout } from "@/components/SimpleLayout";
+import { MailIcon } from "@/components/icons/About";
+import { iconsObj } from "@/components/icons/Home";
 import {
   stats,
   timeline,
@@ -10,16 +12,43 @@ import {
   imageQuote,
   loveCoding,
   timelineHeader,
+  excitement,
 } from "@/constants/about";
+import clsx from "clsx";
 
 export const metadata: Metadata = {
   title: pageHeader.page,
   description: pageHeader.title,
 };
 
+function SocialLink({
+  className,
+  href,
+  children,
+  icon: Icon,
+}: {
+  className?: string;
+  href: string;
+  icon: React.ComponentType<{ className?: string }>;
+  children: React.ReactNode;
+}) {
+  return (
+    <li className={clsx(className, "flex")}>
+      <Link
+        href={href}
+        target="_blank"
+        className="group flex items-center text-sm font-medium text-slate-500 transition hover:text-indigo-500 dark:text-zinc-400 dark:hover:text-indigo-500"
+      >
+        <Icon className="h-6 w-6 flex-none transition group-hover:text-indigo-500" />
+        <span className="ml-4">{children}</span>
+      </Link>
+    </li>
+  );
+}
+
 function AboutImage() {
   return (
-    <div className="relative -z-10 overflow-hidden rounded-xl border border-slate-900/20 px-4 pb-6 pt-20 shadow-2xl dark:border-zinc-100/20 sm:rounded-3xl sm:px-8 sm:pb-8 sm:pt-32 xl:pt-32">
+    <div className="relative -z-10 overflow-hidden rounded-xl px-4 pb-6 pt-24 shadow-2xl ring-1 ring-slate-900/20 dark:ring-zinc-500 sm:rounded-3xl sm:px-8 sm:pb-8 sm:pt-36 lg:pt-52">
       <Image
         src={baliBeach}
         alt="Kevin looking over bali coast"
@@ -67,6 +96,58 @@ function AboutImage() {
   );
 }
 
+function SocialLinks() {
+  return (
+    <ul role="list">
+      {iconsObj.map((icon) => (
+        <SocialLink
+          key={icon.name}
+          href={icon.href}
+          icon={icon.icon}
+          className="mt-4"
+        >
+          Follow on {icon.name}
+        </SocialLink>
+      ))}
+      <SocialLink
+        href="mailto:knielsen24@gmail.com"
+        icon={MailIcon}
+        className="mt-6 border-t border-slate-200/80 pt-6 dark:border-zinc-700/60 sm:mt-8 sm:pt-8"
+      >
+        knielsen24@gmail.com
+      </SocialLink>
+    </ul>
+  );
+}
+
+function FunStats() {
+  return (
+    <>
+      {/* <h1 className="text-lg font-semibold leading-7 text-indigo-600 dark:text-indigo-400">
+        Important Stats
+      </h1>
+      <p className="mt-6 text-slate-700 dark:text-zinc-400">
+        In case if you wanted to learn random facts about me
+      </p> */}
+      <dl className="grid gap-y-8 sm:gap-x-8 grid-cols-2 lg:grid-cols-4">
+        {stats.map((stat, statIdx) => (
+          <div
+            key={statIdx}
+            className="ml-4 border-l border-slate-200/80 pl-3 sm:pl-6 dark:border-zinc-700/60 sm:ml-0"
+          >
+            <dd className="text-2xl font-bold leading-10 tracking-tight text-slate-800 dark:text-zinc-200 sm:text-3xl">
+              {stat.value}
+            </dd>
+            <dt className="mt-3 text-xs font-semibold leading-6 text-slate-600 dark:text-zinc-500 sm:text-sm">
+              {stat.label}
+            </dt>
+          </div>
+        ))}
+      </dl>
+    </>
+  );
+}
+
 function Timeline() {
   return (
     <>
@@ -109,35 +190,33 @@ function Timeline() {
 export default function About() {
   return (
     <SimpleLayout title={pageHeader.title} intro={pageHeader.intro}>
-      <div className="sm:min-h-content mx-4 grid grid-cols-1 gap-x-6 gap-y-8 sm:mx-0 sm:gap-y-12 lg:max-w-none lg:grid-cols-2 xl:gap-x-12">
-        <div className="order-1 sm:order-2 lg:ml-6">
+      <div className="sm:min-h-content mx-4 grid grid-cols-1 gap-8 sm:mx-0 lg:max-w-none lg:grid-cols-2 lg:gap-y-0 xl:gap-x-12">
+        <div className="order-1 sm:order-2 lg:pl-8 xl:pl-16">
           <AboutImage />
         </div>
-        <div className="order-2 sm:mx-0 lg:order-1">
-          <div className="text-base leading-7 text-slate-700 dark:text-zinc-400">
-            <h1 className=" text-xl font-semibold leading-7 text-indigo-600 dark:text-indigo-400">
+        <div className="order-2 sm:mx-0 lg:order-1 lg:row-span-2">
+          <div className="text-base leading-7 text-slate-600 dark:text-zinc-400">
+            <h1 className=" text-lg font-semibold leading-7 text-indigo-600 dark:text-indigo-400">
               {loveCoding.header}
             </h1>
-            <p className="mt-6">{loveCoding.firstP}</p>
-            <p className="mt-6">{loveCoding.secondP}</p>
+            <p className="mt-4 sm:mt-6">{loveCoding.firstP}</p>
+            <p className="mt-4 sm:mt-6">{loveCoding.secondP}</p>
+            <h1 className="mt-4 font-semibold leading-7 text-indigo-600 dark:text-indigo-400 sm:mt-8 sm:text-lg">
+              {excitement.header}
+            </h1>
+            <p className="mt-4 sm:mt-6">{excitement.firstP}</p>
+            <p className="mt-4 sm:mt-6">{excitement.secondP}</p>
           </div>
         </div>
+
+        <div className="order-last text-slate-600 dark:text-zinc-400 lg:pl-10 xl:pl-20 border-t pt-2 sm:pt-0 sm:border-none">
+          <SocialLinks />
+        </div>
       </div>
-      <div className="order-3 mx-4 mt-20 border-t border-slate-300/70 py-12 dark:border-zinc-700/70 sm:mx-0 sm:my-24 sm:border-y">
-        <dl className="grid grid-cols-2 gap-x-8 gap-y-12 sm:gap-y-16 lg:grid-cols-4">
-          {stats.map((stat, statIdx) => (
-            <div key={statIdx} className="gap-y-6">
-              <dt className="text-sm font-semibold leading-6 text-slate-600 dark:text-zinc-500">
-                {stat.label}
-              </dt>
-              <dd className="mt-2 text-3xl font-bold leading-10 tracking-tight text-slate-900 dark:text-zinc-200">
-                {stat.value}
-              </dd>
-            </div>
-          ))}
-        </dl>
+      <div className="mx-0 mt-16 sm:order-3 sm:mt-28">
+        <FunStats />
       </div>
-      <div className="overflow w/screen relative mt-16 bg-indigo-100 px-4 py-10 ring-1 ring-slate-900/10 dark:bg-zinc-800 dark:ring-zinc-300/10 sm:mt-24 sm:rounded-3xl sm:px-8">
+      <div className="overflow w/screen relative mt-16 bg-indigo-100 px-4 py-10 ring-1 ring-slate-900/10 dark:bg-zinc-800 dark:ring-zinc-300/10 sm:mt-32 sm:rounded-3xl sm:px-8">
         <Timeline />
       </div>
     </SimpleLayout>

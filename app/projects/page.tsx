@@ -19,7 +19,7 @@ function Card({ props }: { props: Project }) {
   return (
     <article
       key={id}
-      className="group relative flex max-w-xl flex-col items-start justify-between border-t border-slate-200/80 py-6 dark:border-zinc-700/60 sm:rounded-xl sm:border-none sm:py-0 "
+      className="group relative flex max-w-xl flex-col items-start justify-between border-t border-slate-200/80 py-8 dark:border-zinc-700/60 sm:rounded-xl sm:border-none sm:py-0 "
     >
       <Link
         href={`/projects/${id}`}
@@ -80,7 +80,7 @@ export default async function Projects() {
 
   return (
     <SimpleLayout title={pageHeader.title} intro={pageHeader.intro}>
-      <div className="mx-4 grid grid-cols-1 border-slate-200/80 py-6 dark:border-zinc-700/60 sm:mx-0 sm:mt-10 sm:gap-y-20 sm:border-t sm:pt-12 lg:grid-cols-3 lg:gap-x-20">
+      <div className="mx-4 grid grid-cols-1 border-slate-200/80 py-6 dark:border-zinc-700/60 sm:mx-0 sm:mt-16 sm:gap-y-20 sm:border-t sm:pt-16 lg:grid-cols-3 lg:gap-x-20">
         {projects?.map((project: Project) => (
           <Card props={project} key={project.id} />
         ))}

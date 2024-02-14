@@ -23,15 +23,15 @@ export default function Skills() {
             </h2>
             <p className="mt-6 text-lg leading-8 text-slate-600 dark:text-zinc-300">
               {skillsCopy.firstPart}{" "}
-              <span className="font-semibold text-indigo-500 ease-out group-hover:animate-pulse dark:text-indigo-400">
+              <span className="font-semibold text-indigo-500 ease-out dark:text-indigo-400">
                 {skillsCopy.firstHighlight}
               </span>
               {skillsCopy.secondPart}{" "}
-              <span className="font-semibold text-indigo-500 group-hover:animate-pulse dark:text-indigo-400">
+              <span className="font-semibold text-indigo-500 dark:text-indigo-400">
                 {skillsCopy.secondHighlight}{" "}
               </span>
               {skillsCopy.thirdPart}{" "}
-              <span className="font-semibold text-indigo-500 group-hover:animate-pulse dark:text-indigo-400">
+              <span className="font-semibold text-indigo-500 dark:text-indigo-400">
                 {skillsCopy.thirdHighlight}{" "}
               </span>
               {skillsCopy.fourthPart}

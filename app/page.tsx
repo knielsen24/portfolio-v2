@@ -16,7 +16,7 @@ export default function Home() {
             src={headShot}
             alt="Headshot of Kevin"
             priority={true}
-            className="w-44 rounded-full bg-gradient-to-r from-indigo-200 via-indigo-500 to-teal-400/70 shadow-lg shadow-slate-500 ring-1 ring-slate-300/20 delay-75 duration-300 dark:bg-gradient-to-r dark:from-indigo-300 dark:via-indigo-500 dark:to-teal-300 dark:shadow-zinc-500 dark:ring-zinc-700 sm:w-56 lg:w-64"
+            className="w-44 rounded-full bg-gradient-to-r from-indigo-200 via-indigo-500 to-teal-400/70 shadow-lg shadow-slate-500 ring-1 ring-slate-300/70 delay-75 duration-300 dark:bg-gradient-to-r dark:from-indigo-300 dark:via-indigo-500 dark:to-teal-300 dark:shadow-zinc-500 dark:ring-zinc-500/80 sm:w-56 lg:w-64"
           />
         </div>
         <div className="sm:col-span-2 lg:order-first">
@@ -25,7 +25,7 @@ export default function Home() {
               {heroCopy.header} <span className="">{heroCopy.highlight}</span>
             </h1>
           </div>
-          <p className="mt-4 text-sm leading-normal text-slate-700 dark:text-zinc-400 sm:mt-6 sm:max-w-lg sm:text-lg">
+          <p className="mt-4 text-sm leading-normal text-slate-600 dark:text-zinc-400 sm:mt-6 sm:max-w-lg sm:text-lg">
             {heroCopy.description}
           </p>
 

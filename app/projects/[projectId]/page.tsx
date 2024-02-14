@@ -10,7 +10,6 @@ import Tabs from "@/components/project/Tabs";
 import { SimpleLayout } from "@/components/SimpleLayout";
 import IconHandler from "@/components/project/IconHandler";
 import { ArrowTopRightOnSquare } from "@/components/icons/Project";
-import { Labels } from "@/constants/projects";
 
 const underConstruction = true;
 
