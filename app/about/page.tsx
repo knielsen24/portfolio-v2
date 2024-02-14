@@ -33,13 +33,13 @@ function SocialLink({
   children: React.ReactNode;
 }) {
   return (
-    <li className={clsx(className, "flex group")}>
+    <li className={clsx(className, "flex")}>
       <Link
         href={href}
         target="_blank"
-        className=" flex items-center text-sm font-medium text-slate-500 transition group-hover:text-indigo-500 dark:text-zinc-400 dark:group-hover:text-indigo-500"
+        className="group flex items-center text-sm font-medium text-slate-500 transition hover:text-indigo-500 dark:text-zinc-400 dark:hover:text-indigo-400"
       >
-        <Icon className="h-6 w-6 flex-none transition group-hover:text-indigo-500" />
+        <Icon className="h-6 w-6 flex-none group-hover:text-indigo-500 dark:group-hover:text-indigo-400" />
         <span className="ml-4">{children}</span>
       </Link>
     </li>
