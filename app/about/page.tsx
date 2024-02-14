@@ -129,11 +129,11 @@ function FunStats() {
       <p className="mt-6 text-slate-700 dark:text-zinc-400">
         In case if you wanted to learn random facts about me
       </p> */}
-      <dl className="grid gap-y-8 sm:gap-x-8 grid-cols-2 lg:grid-cols-4">
+      <dl className="grid grid-cols-2 gap-y-8 sm:gap-x-8 lg:grid-cols-4">
         {stats.map((stat, statIdx) => (
           <div
             key={statIdx}
-            className="ml-4 border-l border-slate-200/80 pl-3 sm:pl-6 dark:border-zinc-700/60 sm:ml-0"
+            className="ml-4 border-l border-slate-200/80 pl-3 dark:border-zinc-700/60 sm:ml-0 sm:pl-6"
           >
             <dd className="text-2xl font-bold leading-10 tracking-tight text-slate-800 dark:text-zinc-200 sm:text-3xl">
               {stat.value}
@@ -209,7 +209,7 @@ export default function About() {
           </div>
         </div>
 
-        <div className="order-last text-slate-600 dark:text-zinc-400 lg:pl-10 xl:pl-20 border-t pt-2 sm:pt-0 sm:border-none">
+        <div className="order-last pt-2 text-slate-600 dark:text-zinc-400 sm:pt-0 lg:pl-10 xl:pl-20">
           <SocialLinks />
         </div>
       </div>
