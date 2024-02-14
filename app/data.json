@@ -57,7 +57,7 @@
         }
       ],
       "technologies":[
-        "JavaScript", "TypeScript", "React.js", "Next.js", "TailwindCSS", "HeadlessUI", "Vercel", "Next-Themes", "Vercel Web Analytics", "Vercel Speed Insights"
+        "TypeScript", "React.js", "Next.js", "TailwindCSS", "HeadlessUI", "Vercel", "Next-Themes", "Vercel Web Analytics", "Vercel Speed Insights"
       ],
       "imageUrl": "/projects/portfoliov2.png",
       "bgSize": "object-cover",

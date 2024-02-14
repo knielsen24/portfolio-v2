@@ -71,7 +71,7 @@ function HighLights({ props }: { props: Project }) {
                 target="_blank"
                 className="mr-2 flex w-full flex-row justify-between sm:mr-3"
               >
-                <p className="font-medium text-slate-900 dark:text-zinc-100">
+                <p className="font-medium text-slate-900 dark:text-zinc-100 line-clamp-1">
                   {getLinkText(link)}
                 </p>
                 <ArrowTopRightOnSquare className="tranisition h-5 w-5 flex-none self-center text-slate-400 duration-500 ease-out group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:scale-110 dark:text-zinc-500" />
