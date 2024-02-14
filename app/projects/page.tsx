@@ -38,11 +38,9 @@ function Card({ props }: { props: Project }) {
             src={imageUrl as StaticImageData}
             alt={title}
             className={cn(
-              "aspect-[16/9] w-full sm:aspect-[3/2]",
+              "aspect-[3/2] w-full",
               bgSize,
-              bgSize === "object-contain"
-                ? "rounded-3xl"
-                : "rounded-none",
+              bgSize === "object-contain" ? "rounded-3xl" : "rounded-none",
             )}
             priority={true}
             width={500}

@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import headShot from "@/public/avatar.png";
 import { Container } from "@/components/Container";
-import { iconsObj } from "@/components/icons/Home";
+import { iconsObj, emailObj } from "@/components/icons/Home";
 import { heroCopy } from "@/constants/home";
 import BtnScrollSpy from "@/components/ui/BtnScrollSpy";
 import Skills from "@/components/home/Skills";
@@ -48,6 +48,20 @@ export default function Home() {
                   <item.icon className="h-6 w-6" aria-hidden="true" />
                 </Link>
               ))}
+              <Link
+                  key={emailObj.name}
+                  href={emailObj.href}
+                  target="_blank"
+                  className={`delay-50 origin-bottom text-slate-500/90 duration-500 hover:scale-110 hover:text-indigo-500 dark:text-zinc-500 dark:hover:text-indigo-400
+                    ${
+                      emailObj.tilt === "back"
+                        ? "hover:-rotate-6"
+                        : "hover:rotate-6"
+                    }`}
+                >
+                  <span className="sr-only">{emailObj.name}</span>
+                  <emailObj.icon className="h-6 w-6" aria-hidden="true" />
+                </Link>
             </div>
             <div className="md:order-last">
               <Link

@@ -228,7 +228,7 @@
       "technologies":[
         "JavaScript", "React Native", "React Navigation", "Expo Go", "Xcode", "Pixabay API"
       ],
-      "imageUrl": "/projects/pixabay-clone.webp",
+      "imageUrl": "/projects/pixabay-clone.png",
       "bgSize": "object-contain",
       "date": "Mar 16, 2020",
       "datetime": "2020-03-16"
