@@ -10,8 +10,7 @@ import Tabs from "@/components/project/Tabs";
 import { SimpleLayout } from "@/components/SimpleLayout";
 import IconHandler from "@/components/project/IconHandler";
 import { ArrowTopRightOnSquare } from "@/components/icons/Project";
-
-const underConstruction = true;
+import { Fascinate } from "next/font/google";
 
 type Params = {
   params: {
@@ -70,7 +69,7 @@ function HighLights({ props }: { props: Project }) {
                 target="_blank"
                 className="mr-2 flex w-full flex-row justify-between sm:mr-3"
               >
-                <p className="font-medium text-slate-900 dark:text-zinc-100 line-clamp-1">
+                <p className="line-clamp-1 font-medium text-slate-900 dark:text-zinc-100">
                   {getLinkText(link)}
                 </p>
                 <ArrowTopRightOnSquare className="tranisition h-5 w-5 flex-none self-center text-slate-400 duration-500 ease-out group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:scale-110 dark:text-zinc-500" />
@@ -111,6 +110,11 @@ export default async function ProjectDetails({
     notFound();
   }
 
+  let hasFeatures = true;
+  if (project?.features?.length === 0) {
+    hasFeatures = false;
+  }
+
   return (
     <SimpleLayout title={project.title} intro={project.intro}>
       <div className="grid grid-cols-1 gap-x-10 sm:mt-12 lg:grid-cols-10 ">
@@ -123,14 +127,17 @@ export default async function ProjectDetails({
           <HighLights props={project} />
         </div>
       </div>
-      {underConstruction ? null : (
-        <div className="mt-6 bg-indigo-100 p-4 ring-1 ring-slate-900/10 dark:bg-zinc-800 dark:ring-zinc-300/10 sm:mx-0 sm:rounded-2xl sm:p-8 lg:mt-16 ">
+      {!hasFeatures ? null : (
+        <div className="mx-4 mt-14 sm:mx-0 sm:mt-20 sm:rounded-2xl lg:px-8">
           <h1 className="text-lg font-semibold text-indigo-600 dark:text-indigo-400 sm:text-xl">
             Features
           </h1>
-          <ul className="mt-2 grid grid-cols-1 gap-x-6 gap-y-4 text-base sm:mt-2 sm:gap-y-8 lg:grid-cols-2">
+          <ul className="mt-4 grid grid-cols-1 gap-x-12 gap-y-6 text-base sm:mt-6 sm:grid-cols-2 sm:gap-y-16 lg:grid-cols-3">
             {project?.features?.map((feature) => (
-              <ul key={feature.label} className="flex flex-col">
+              <ul
+                key={feature.label}
+                className="flex flex-col border-t border-slate-900/10 pt-6 dark:border-zinc-300/10"
+              >
                 <li className="min-w-md font-medium text-slate-800 dark:text-zinc-200">
                   {feature.label}
                 </li>
@@ -143,7 +150,7 @@ export default async function ProjectDetails({
         </div>
       )}
       {/* <div className="mt-6 border-t dark:border-zinc-700/70" /> */}
-      <div className="order-last mt-6 sm:px-0">
+      <div className="order-last mt-6 sm:mt-20 sm:px-0">
         <Tabs props={project} />
       </div>
     </SimpleLayout>

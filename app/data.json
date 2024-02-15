@@ -49,7 +49,7 @@
         },
         { 
           "label": "Web Analytics - Granular Visitor Data",
-          "desc": "Tracks page views, top pages, top sources and visitors, including their country location, operating system, and browser." 
+          "desc": "Safely tracks page views, top pages, top sources and visitors, including their country location, operating system, and browser." 
         },
         { 
           "label": "Speed Insights - Real Experience Score",
@@ -102,18 +102,7 @@
         }
       ],      
       "features": [
-        { 
-          "label": "Metadata & Search Engine Optimization",
-          "desc": "Using the Next.js Metadata API,static and dynamic MetaData is generated for each page, & each project." 
-        },
-        { 
-          "label": "Dark Mode Theme Toggler",
-          "desc": "Using TailwindCSS and the Next Themes npm package, the user can toggle their preferred theme." 
-        },
-        { 
-          "label": "Highly responsive with customized Headless UI components",
-          "desc": "Every component has been meticously configured to handle desktop and mobile platforms with a phenomonal user experience." 
-        }
+       
       ],
       "technologies":[
         "JavaScript", "React Native", "React Navigation", "Redux Toolkit", "RTK Query", "Expo", "Xcode", "TestFlight", "iOS", "Android", "Formik"
@@ -157,18 +146,7 @@
         }
       ],      
       "features": [
-        { 
-          "label": "Metadata & Search Engine Optimization",
-          "desc": "Using the Next.js Metadata API,static and dynamic MetaData is generated for each page, & each project." 
-        },
-        { 
-          "label": "Dark Mode Theme Toggler",
-          "desc": "Using TailwindCSS and the Next Themes npm package, the user can toggle their preferred theme." 
-        },
-        { 
-          "label": "Highly responsive with customized Headless UI components",
-          "desc": "Every component has been meticously configured to handle desktop and mobile platforms with a phenomonal user experience." 
-        }
+        
       ],
       "technologies":[
         "JavaScript", "React.js", "Redux Toolkit", "RTK Query", "React Router", "Bootstrap", "Ruby on Rails", "Active Record", "PostgreSQL", "Formik", "RESTful APIs"
@@ -212,18 +190,7 @@
         }
       ],      
       "features": [
-        { 
-          "label": "Metadata & Search Engine Optimization",
-          "desc": "Using the Next.js Metadata API,static and dynamic MetaData is generated for each page, & each project." 
-        },
-        { 
-          "label": "Dark Mode Theme Toggler",
-          "desc": "Using TailwindCSS and the Next Themes npm package, the user can toggle their preferred theme." 
-        },
-        { 
-          "label": "Highly responsive with customized Headless UI components",
-          "desc": "Every component has been meticously configured to handle desktop and mobile platforms with a phenomonal user experience." 
-        }
+        
       ],
       "technologies":[
         "JavaScript", "React Native", "React Navigation", "Expo Go", "Xcode", "Pixabay API"
@@ -267,18 +234,7 @@
         }
       ],      
       "features": [
-        { 
-          "label": "Metadata & Search Engine Optimization",
-          "desc": "Using the Next.js Metadata API,static and dynamic MetaData is generated for each page, & each project." 
-        },
-        { 
-          "label": "Dark Mode Theme Toggler",
-          "desc": "Using TailwindCSS and the Next Themes npm package, the user can toggle their preferred theme." 
-        },
-        { 
-          "label": "Highly responsive with customized Headless UI components",
-          "desc": "Every component has been meticously configured to handle desktop and mobile platforms with a phenomonal user experience." 
-        }
+        
       ],
       "technologies":[
         "JavaScript", "TypeScript", "React.js", "Next.js", "TailwindCSS", "Vercel"
@@ -321,18 +277,7 @@
         }
       ],      
       "features": [
-        { 
-          "label": "Metadata & Search Engine Optimization",
-          "desc": "Using the Next.js Metadata API,static and dynamic MetaData is generated for each page, & each project." 
-        },
-        { 
-          "label": "Dark Mode Theme Toggler",
-          "desc": "Using TailwindCSS and the Next Themes npm package, the user can toggle their preferred theme." 
-        },
-        { 
-          "label": "Highly responsive with customized Headless UI components",
-          "desc": "Every component has been meticously configured to handle desktop and mobile platforms with a phenomonal user experience." 
-        }
+        
       ],
       "technologies":[
         "JavaScript", "React.js", "Next.js", "Bootstrap", "Netlify"
@@ -375,18 +320,7 @@
         }
       ],      
       "features": [
-        { 
-          "label": "Metadata & Search Engine Optimization",
-          "desc": "Using the Next.js Metadata API,static and dynamic MetaData is generated for each page, & each project." 
-        },
-        { 
-          "label": "Dark Mode Theme Toggler",
-          "desc": "Using TailwindCSS and the Next Themes npm package, the user can toggle their preferred theme." 
-        },
-        { 
-          "label": "Highly responsive with customized Headless UI components",
-          "desc": "Every component has been meticously configured to handle desktop and mobile platforms with a phenomonal user experience." 
-        }
+        
       ],
       "technologies":[
         "Webflow", "Designer Dashboard", "Content Management System (CMS)", "HTML5", "CSS"
@@ -429,18 +363,7 @@
         }
       ],
       "features": [
-        { 
-          "label": "Metadata & Search Engine Optimization",
-          "desc": "Using the Next.js Metadata API,static and dynamic MetaData is generated for each page, & each project." 
-        },
-        { 
-          "label": "Dark Mode Theme Toggler",
-          "desc": "Using TailwindCSS and the Next Themes npm package, the user can toggle their preferred theme." 
-        },
-        { 
-          "label": "Highly responsive with customized Headless UI components",
-          "desc": "Every component has been meticously configured to handle desktop and mobile platforms with a phenomonal user experience." 
-        }
+        
       ],
       "technologies":[
         "Scratch Visual Interface", "Block Coding", "Gaming"
