@@ -21,17 +21,16 @@ export const metadata: Metadata = {
   description: pageHeader.title,
 };
 
-function SocialLink({
-  className,
-  href,
-  children,
-  icon: Icon,
-}: {
+type Props = {
   className?: string;
   href: string;
   icon: React.ComponentType<{ className?: string }>;
   children: React.ReactNode;
-}) {
+}
+
+function SocialLink(props: Props) {
+  const { className, href, children, icon: Icon, } = props
+
   return (
     <li className={clsx(className, "flex")}>
       <Link
@@ -123,12 +122,6 @@ function SocialLinks() {
 function FunStats() {
   return (
     <>
-      {/* <h1 className="text-lg font-semibold leading-7 text-indigo-600 dark:text-indigo-400">
-        Important Stats
-      </h1>
-      <p className="mt-6 text-slate-700 dark:text-zinc-400">
-        In case if you wanted to learn random facts about me
-      </p> */}
       <dl className="grid grid-cols-2 gap-y-8 sm:gap-x-8 lg:grid-cols-4">
         {stats.map((stat, statIdx) => (
           <div

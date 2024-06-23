@@ -2,7 +2,7 @@ import { type Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import type { StaticImageData } from "next/image";
-import { Project, easterEgg, pageHeader } from "@/constants/projects";
+import { Project, easterEgg, pageHeader, EasterEgg } from "@/constants/projects";
 import { getAllProjects } from "@/lib/getProjectsApi";
 import { cn } from "@/lib/utils";
 import { SimpleLayout } from "@/components/SimpleLayout";
@@ -13,8 +13,11 @@ export const metadata: Metadata = {
   description: pageHeader.title,
 };
 
-function Card({ props }: { props: Project }) {
-  const { id, imageUrl, title, bgSize, industry, intro } = props;
+type Props = { project: Project | EasterEgg }
+
+function Card(props: Props) {
+  const project = props.project
+  const { id, imageUrl, title, bgSize, industry, intro, href } = project;
 
   return (
     <article
@@ -22,7 +25,7 @@ function Card({ props }: { props: Project }) {
       className="group relative flex max-w-xl flex-col items-start justify-between border-t border-slate-200/80 py-8 dark:border-zinc-700/60 sm:rounded-xl sm:border-none sm:py-0 "
     >
       <Link
-        href={`/projects/${id}`}
+        href={id === "777" ? href : `/projects/${id}`}
         target={id === "777" ? "_blank" : ""}
         prefetch
       >
@@ -80,23 +83,14 @@ export default async function Projects() {
     <SimpleLayout title={pageHeader.title} intro={pageHeader.intro}>
       <div className="mx-4 grid grid-cols-1 border-slate-200/80 py-6 dark:border-zinc-700/60 sm:mx-0 sm:mt-16 sm:gap-y-20 sm:border-t sm:pt-16 lg:grid-cols-3 lg:gap-x-20">
         {projects?.map((project: Project) => (
-          <Card props={project} key={project.id} />
+          <Card project={project} />
         ))}
         {/* 
           create child client component that includes
             Show more button - useState≈
             The show more button renders the easter egg card
         */}
-        {/* <Card
-          key={easterEgg.id}
-          id={easterEgg.id}
-          imageUrl={easterEgg.imageUrl}
-          title={easterEgg.title}
-          bgSize={easterEgg.bgSize}
-          industry={easterEgg.industry}
-          href={easterEgg.href}
-          intro={easterEgg.intro}
-        /> */}
+        <Card project={easterEgg} />
       </div>
     </SimpleLayout>
   );

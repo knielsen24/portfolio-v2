@@ -3,8 +3,7 @@ import { StaticImageData } from "next/image";
 
 export const pageHeader = {
   page: "Projects",
-  title:
-    "Checkout the applications I've made from scratch, building enthusiast.",
+  title: "Checkout the applications I've made from scratch, building enthusiast.",
   intro: "These projects are a testimony of my creativity with technology.",
 };
 
@@ -24,6 +23,7 @@ export type Project = {
   intro: string;
   links: Links[];
   highlights: Labels[];
+  href?: string | undefined;
   industry: string;
   features?: Labels[];
   technologies?: Labels[];
@@ -53,7 +53,17 @@ export const initialProjectData: Project = {
   datetime: "",
 };
 
-export const easterEgg = {
+export type EasterEgg = {
+  id: string;
+  title: string;
+  intro: string;
+  industry: string;
+  href: string;
+  imageUrl: string | StaticImageData;
+  bgSize: string;
+};
+
+export const easterEgg: EasterEgg = {
   id: "777",
   title: "Magnum",
   href: "https://youtu.be/NQ-8IuUkJJc?si=v2BDfnHxnyUmctdZ",

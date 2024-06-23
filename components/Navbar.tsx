@@ -8,9 +8,9 @@ import { Container } from "./Container";
 import ThemeToggle from "./ui/ThemeToggle";
 import GradientBar from "./ui/GradientBar";
 
-const navigation = [
+export const navigation = [
   { name: "About", href: "/about", ariaLabel: "about link", prefetch: true },
-  // { name: "Experience", href: "/experience", ariaLabel: "", prefetch: true },
+  { name: "Experience", href: "/experience", ariaLabel: "", prefetch: true },
   { name: "Projects", href: "/projects", ariaLabel: "", prefetch: true },
 ];
 
@@ -54,13 +54,11 @@ function Logo() {
   );
 }
 
-function MobileNavItem({
-  href,
-  children,
-}: {
-  href: string;
-  children: React.ReactNode;
-}) {
+type MobileNavProps = { href: string; children: React.ReactNode; }
+
+function MobileNavItem(props: MobileNavProps) {
+  const { href, children } = props
+
   return (
     <li>
       <Popover.Button as={Link} href={href} className="block py-2">
@@ -70,9 +68,9 @@ function MobileNavItem({
   );
 }
 
-function MobileNavigation(
-  props: React.ComponentPropsWithoutRef<typeof Popover>,
-) {
+type Popover = React.ComponentPropsWithoutRef<typeof Popover>
+function MobileNavigation(props: Popover) {
+
   return (
     <Popover {...props}>
       <Popover.Button className="group flex items-center rounded-full bg-white px-4 py-2 text-sm font-medium text-slate-800 shadow-lg shadow-slate-800/5 ring-1 ring-slate-900/5 backdrop-blur dark:bg-zinc-800 dark:text-zinc-200 dark:ring-white/10 dark:hover:ring-white/20">
@@ -126,17 +124,16 @@ function MobileNavigation(
   );
 }
 
-function NavItem({
-  href,
-  ariaLabel,
-  prefetch,
-  children,
-}: {
+type NavItemProps = {
   href: string;
   ariaLabel: string;
   prefetch: boolean;
   children: React.ReactNode;
-}) {
+}
+
+function NavItem(props: NavItemProps) {
+  const { href, ariaLabel, prefetch, children } = props
+
   let isActive = usePathname() === href;
 
   return (
@@ -154,7 +151,7 @@ function NavItem({
       >
         {children}
         {isActive && (
-          <span className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-indigo-500/0 via-indigo-500/40 to-indigo-500/0 dark:from-indigo-400/0 dark:via-indigo-400/40 dark:to-indigo-400/0" />
+          <span className="absolute inset-x-1 -bottom-px h-[1.75px] bg-gradient-to-r from-indigo-500/5 via-indigo-500/40 to-indigo-500/5 dark:from-indigo-400/5 dark:via-indigo-400/40 dark:to-indigo-400/5" />
         )}
       </Link>
     </li>
@@ -175,13 +172,6 @@ function DesktopNavigation(props: React.ComponentPropsWithoutRef<"nav">) {
             {item.name}{" "}
           </NavItem>
         ))}
-
-        {/* <NavItem href="/about" ariaLabel="about">
-          About
-        </NavItem> */}
-        {/* <NavItem href="/experience" ariaLabel="experience">
-          Experience
-        </NavItem> */}
       </ul>
     </nav>
   );
