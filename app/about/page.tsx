@@ -121,23 +121,21 @@ function SocialLinks() {
 
 function FunStats() {
   return (
-    <>
-      <dl className="grid grid-cols-2 gap-y-8 sm:gap-x-8 lg:grid-cols-4">
-        {stats.map((stat, statIdx) => (
-          <div
-            key={statIdx}
-            className="ml-4 border-l border-slate-200/80 pl-3 dark:border-zinc-700/60 sm:ml-0 sm:pl-6"
-          >
-            <dd className="text-2xl font-bold leading-10 tracking-tight text-slate-800 dark:text-zinc-200 sm:text-3xl">
-              {stat.value}
-            </dd>
-            <dt className="mt-3 text-xs font-semibold leading-6 text-slate-600 dark:text-zinc-500 sm:text-sm">
-              {stat.label}
-            </dt>
-          </div>
-        ))}
-      </dl>
-    </>
+    <dl className="grid grid-cols-2 gap-y-8 sm:gap-x-8 lg:grid-cols-4">
+      {stats.map((stat, statIdx) => (
+        <div
+          key={statIdx}
+          className="ml-4 border-l border-slate-200/80 pl-3 dark:border-zinc-700/60 sm:ml-0 sm:pl-6"
+        >
+          <dd className="text-2xl font-bold leading-10 tracking-tight text-slate-800 dark:text-zinc-200 sm:text-3xl">
+            {stat.value}
+          </dd>
+          <dt className="mt-3 text-xs font-semibold leading-6 text-slate-600 dark:text-zinc-500 sm:text-sm">
+            {stat.label}
+          </dt>
+        </div>
+      ))}
+    </dl>
   );
 }
 

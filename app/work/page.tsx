@@ -1,7 +1,9 @@
 import { SimpleLayout } from "@/components/SimpleLayout";
 import WorkExperience from "@/components/experience/WorkExperience";
 
-function ComputerIcon(props: React.ComponentPropsWithoutRef<"svg">) {
+type SvgProps = React.ComponentPropsWithoutRef<"svg">
+
+function ComputerIcon(props: SvgProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -20,7 +22,7 @@ function ComputerIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   );
 }
 
-function EditorIcon(props: React.ComponentPropsWithoutRef<"svg">) {
+function EditorIcon(props: SvgProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +41,7 @@ function EditorIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   );
 }
 
-function CubeIcon(props: React.ComponentPropsWithoutRef<"svg">) {
+function CubeIcon(props: SvgProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

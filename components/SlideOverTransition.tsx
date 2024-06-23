@@ -2,16 +2,14 @@ import React, { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
+type Props = { children?: React.ReactNode }
+
 const squareVariants = {
   visible: { opacity: 1, scale: 4, transition: { duration: 1 } },
   hidden: { opacity: 0, scale: 0 },
 };
 
-export default function SlideOverTransition({
-  children,
-}: {
-  children?: React.ReactNode;
-}) {
+export default function SlideOverTransition({ children }: Props) {
   const controls = useAnimation();
   const [ref, inView] = useInView();
 

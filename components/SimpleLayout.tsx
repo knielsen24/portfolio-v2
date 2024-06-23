@@ -1,14 +1,14 @@
 import { Container } from "@/components/Container";
 
-export function SimpleLayout({
-  title,
-  intro,
-  children,
-}: {
+type Props = {
   title: string;
   intro: string;
   children?: React.ReactNode;
-}) {
+}
+
+export function SimpleLayout(props: Props) {
+  const { title, intro, children } = props;
+
   return (
     <Container className="mt-28 sm:mt-44">
       <header className="mx-4 max-w-2xl sm:mx-0">

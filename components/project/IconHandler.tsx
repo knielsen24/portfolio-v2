@@ -11,13 +11,10 @@ import {
   LinkIcon,
 } from "@/components/icons/Project";
 
-export default function IconHandler({
-  name,
-  desc,
-}: {
-  name: string;
-  desc: string;
-}) {
+type Props = { name: string; desc: string; }
+
+export default function IconHandler(props: Props) {
+  const { name, desc } = props;
 
   const className =
     "h-5 w-5 flex-shrink-0 text-indigo-500 dark:text-indigo-400";

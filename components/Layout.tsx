@@ -2,9 +2,7 @@ import React, { ReactNode } from "react";
 import Navbar from "./Navbar";
 import Footer from "@/components/Footer";
 
-type Props = {
-  children: ReactNode;
-};
+type Props = { children: ReactNode; };
 
 function SquareBlocks() {
   return (
