@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  env: {
+    ENABLE_EXPERIENCE: process.env.NEXT_PUBLIC_ENABLE_EXPERIENCE_PAGE,
+  },
   images: {
     remotePatterns: [
       {

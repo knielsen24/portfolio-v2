@@ -42,7 +42,7 @@ export default function Footer() {
             <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm font-medium text-slate-800 dark:text-zinc-300">
               <NavLink href="/" name="Home" />
               {navigation.map((item) => (
-                <NavLink href={item.href} name={item.name} />
+                <NavLink href={item.href} name={item.name} key={item.name} />
               ))}
             </div>
             <p className="text-sm text-slate-500 dark:text-zinc-500">

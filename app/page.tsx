@@ -7,6 +7,10 @@ import { heroCopy } from "@/constants/home";
 import BtnScrollSpy from "@/components/ui/BtnScrollSpy";
 import Skills from "@/components/home/Skills";
 
+// const TEST = process.env.
+
+// console.log("🔋ENV: ", TEST)
+
 export default function Home() {
   return (
     <Container className="mt-2 sm:mt-4">
@@ -38,10 +42,9 @@ export default function Home() {
                   href={item.href}
                   target="_blank"
                   className={`delay-50 origin-bottom text-slate-500/90 duration-500 hover:scale-110 hover:text-indigo-500 dark:text-zinc-500 dark:hover:text-indigo-400
-                    ${
-                      item.tilt === "back"
-                        ? "hover:-rotate-6"
-                        : "hover:rotate-6"
+                    ${item.tilt === "back"
+                      ? "hover:-rotate-6"
+                      : "hover:rotate-6"
                     }`}
                 >
                   <span className="sr-only">{item.name}</span>
@@ -49,19 +52,18 @@ export default function Home() {
                 </Link>
               ))}
               <Link
-                  key={emailObj.name}
-                  href={emailObj.href}
-                  target="_blank"
-                  className={`delay-50 origin-bottom text-slate-500/90 duration-500 hover:scale-110 hover:text-indigo-500 dark:text-zinc-500 dark:hover:text-indigo-400
-                    ${
-                      emailObj.tilt === "back"
-                        ? "hover:-rotate-6"
-                        : "hover:rotate-6"
-                    }`}
-                >
-                  <span className="sr-only">{emailObj.name}</span>
-                  <emailObj.icon className="h-6 w-6" aria-hidden="true" />
-                </Link>
+                key={emailObj.name}
+                href={emailObj.href}
+                target="_blank"
+                className={`delay-50 origin-bottom text-slate-500/90 duration-500 hover:scale-110 hover:text-indigo-500 dark:text-zinc-500 dark:hover:text-indigo-400
+                    ${emailObj.tilt === "back"
+                    ? "hover:-rotate-6"
+                    : "hover:rotate-6"
+                  }`}
+              >
+                <span className="sr-only">{emailObj.name}</span>
+                <emailObj.icon className="h-6 w-6" aria-hidden="true" />
+              </Link>
             </div>
             <div className="md:order-last">
               <Link

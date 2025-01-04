@@ -18,6 +18,9 @@ type Props = { project: Project | EasterEgg }
 function Card(props: Props) {
   const project = props.project
   const { id, imageUrl, title, bgSize, industry, intro, href } = project;
+  
+  const link = id === "777" ? href as string : `/projects/${id}`
+  const target = id === "777" ? "_blank" : "" as string
 
   return (
     <article
@@ -25,8 +28,8 @@ function Card(props: Props) {
       className="group relative flex max-w-xl flex-col items-start justify-between border-t border-slate-200/80 py-8 dark:border-zinc-700/60 sm:rounded-xl sm:border-none sm:py-0 "
     >
       <Link
-        href={id === "777" ? href : `/projects/${id}`}
-        target={id === "777" ? "_blank" : ""}
+        href={link}
+        target={target}
         prefetch
       >
         <div

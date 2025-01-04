@@ -1,8 +1,8 @@
 export const heroCopy = {
   header: "Software engineer. ",
-  highlight: "Frontend enthusiast",
+  highlight: "Fullstack enthusiast",
   description:
-    "I'm Kevin, a full-stack developer with startup experience that leverages modern framework technologies to build and design web and mobile applications.",
+    "I'm Kevin, a full-stack developer that leverages modern framework technologies to build and design web and mobile applications.",
 };
 
 export const skillsCopy = {
