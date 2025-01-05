@@ -3,16 +3,22 @@ import Link from "next/link";
 import clsx from "clsx";
 import { Fragment } from "react";
 import { usePathname } from "next/navigation";
-import { Popover, Transition } from "@headlessui/react";
+import { PopoverPanel, Popover, PopoverButton, Transition, TransitionChild, PopoverBackdrop } from "@headlessui/react";
 import { Container } from "./Container";
 import ThemeToggle from "./ui/ThemeToggle";
 import GradientBar from "./ui/GradientBar";
 
-export const navigation = [
+const ENABLE_FEATURE = process.env.NEXT_PUBLIC_ENABLE_EXPERIENCE_PAGE
+
+export const allRoutes = [
   { name: "About", href: "/about", ariaLabel: "about link", prefetch: true },
   { name: "Experience", href: "/experience", ariaLabel: "", prefetch: true },
   { name: "Projects", href: "/projects", ariaLabel: "", prefetch: true },
 ];
+
+export const filteredRoutes = allRoutes.filter((route) => route.name.toLowerCase() !== 'experience')
+
+const routes = ENABLE_FEATURE ? allRoutes : filteredRoutes
 
 function ChevronDownIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   return (
@@ -61,9 +67,9 @@ function MobileNavItem(props: MobileNavProps) {
 
   return (
     <li>
-      <Popover.Button as={Link} href={href} className="block py-2">
+      <PopoverButton as={Link} href={href} className="block py-2">
         {children}
-      </Popover.Button>
+      </PopoverButton>
     </li>
   );
 }
@@ -73,12 +79,12 @@ function MobileNavigation(props: Popover) {
 
   return (
     <Popover {...props}>
-      <Popover.Button className="group flex items-center rounded-full bg-white px-4 py-2 text-sm font-medium text-slate-800 shadow-lg shadow-slate-800/5 ring-1 ring-slate-900/5 backdrop-blur dark:bg-zinc-800 dark:text-zinc-200 dark:ring-white/10 dark:hover:ring-white/20">
+      <PopoverButton className="group flex items-center rounded-full bg-white px-4 py-2 text-sm font-medium text-slate-800 shadow-lg shadow-slate-800/5 ring-1 ring-slate-900/5 backdrop-blur dark:bg-zinc-800 dark:text-zinc-200 dark:ring-white/10 dark:hover:ring-white/20">
         Menu
         <ChevronDownIcon className="ml-3 h-auto w-2 stroke-slate-500 group-hover:stroke-zinc-700 dark:stroke-zinc-400 dark:group-hover:stroke-zinc-300" />
-      </Popover.Button>
-      <Transition.Root>
-        <Transition.Child
+      </PopoverButton>
+      <Transition>
+        <TransitionChild
           as={Fragment}
           enter="duration-150 ease-out"
           enterFrom="opacity-0"
@@ -87,9 +93,9 @@ function MobileNavigation(props: Popover) {
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <Popover.Overlay className="fixed inset-0 z-50 bg-slate-800/40 backdrop-blur-sm dark:bg-zinc-800/60" />
-        </Transition.Child>
-        <Transition.Child
+          <PopoverBackdrop className="fixed inset-0 z-50 bg-slate-800/40 backdrop-blur-sm dark:bg-zinc-800/60" />
+        </TransitionChild>
+        <TransitionChild
           as={Fragment}
           enter="duration-150 ease-out"
           enterFrom="opacity-0 scale-95"
@@ -98,11 +104,11 @@ function MobileNavigation(props: Popover) {
           leaveFrom="opacity-100 scale-100"
           leaveTo="opacity-0 scale-95"
         >
-          <Popover.Panel className="fixed inset-x-4 top-8 z-50 origin-top rounded-3xl bg-slate-50 p-8 ring-1 ring-slate-900/5 dark:bg-zinc-800 dark:ring-zinc-700">
+          <PopoverPanel className="fixed inset-x-4 top-8 z-50 origin-top rounded-3xl bg-slate-50 p-8 ring-1 ring-slate-900/5 dark:bg-zinc-800 dark:ring-zinc-700">
             <div className="flex flex-row-reverse items-center justify-between">
-              <Popover.Button aria-label="Close menu" className="-m-1 p-1">
+              <PopoverButton aria-label="Close menu" className="-m-1 p-1">
                 <CloseIcon className="h-6 w-6 text-slate-500 dark:text-zinc-400" />
-              </Popover.Button>
+              </PopoverButton>
               <h2 className="text-sm font-medium text-slate-600 dark:text-zinc-400">
                 Navigation
               </h2>
@@ -110,16 +116,16 @@ function MobileNavigation(props: Popover) {
             <nav className="mt-6">
               <ul className="-my-2 divide-y divide-slate-200/70 text-base text-slate-900 dark:divide-zinc-100/5 dark:text-zinc-100">
                 <MobileNavItem href="/">Home</MobileNavItem>
-                {navigation.map((item) => (
+                {routes.map((item) => (
                   <MobileNavItem key={item.name} href={item.href}>
                     {item.name}
                   </MobileNavItem>
                 ))}
               </ul>
             </nav>
-          </Popover.Panel>
-        </Transition.Child>
-      </Transition.Root>
+          </PopoverPanel>
+        </TransitionChild>
+      </Transition>
     </Popover>
   );
 }
@@ -162,7 +168,7 @@ function DesktopNavigation(props: React.ComponentPropsWithoutRef<"nav">) {
   return (
     <nav {...props}>
       <ul className="flex rounded-full bg-white px-3 text-sm font-medium text-slate-900 shadow-lg shadow-slate-800/5 ring-1 ring-slate-900/5 backdrop-blur dark:bg-zinc-800 dark:text-zinc-100 dark:ring-white/10 dark:hover:ring-white/20">
-        {navigation.map((item) => (
+        {routes.map((item) => (
           <NavItem
             key={item.name}
             href={item.href}

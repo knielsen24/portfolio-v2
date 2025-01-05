@@ -7,9 +7,6 @@ import { heroCopy } from "@/constants/home";
 import BtnScrollSpy from "@/components/ui/BtnScrollSpy";
 import Skills from "@/components/home/Skills";
 
-// const TEST = process.env.
-
-// console.log("🔋ENV: ", TEST)
 
 export default function Home() {
   return (

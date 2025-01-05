@@ -1,6 +1,6 @@
 export const heroCopy = {
-  header: "Software engineer. ",
-  highlight: "Fullstack enthusiast",
+  header: "Software engineer. \n",
+  highlight: "Frontend enthusiast.",
   description:
     "I'm Kevin, a full-stack developer that leverages modern framework technologies to build and design web and mobile applications.",
 };

@@ -1,7 +1,7 @@
 "use client"
 import Link from "next/link";
 // import { iconsObj } from "./icons/Home";
-import { navigation } from "./Navbar";
+import { allRoutes } from "./Navbar";
 import { ContainerInner, ContainerOuter } from "@/components/Container";
 import GradientBar from "./ui/GradientBar";
 
@@ -41,7 +41,7 @@ export default function Footer() {
             </div> */}
             <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm font-medium text-slate-800 dark:text-zinc-300">
               <NavLink href="/" name="Home" />
-              {navigation.map((item) => (
+              {allRoutes.map((item) => (
                 <NavLink href={item.href} name={item.name} key={item.name} />
               ))}
             </div>
