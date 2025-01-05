@@ -36,10 +36,9 @@ export const excitement = {
 const startDate = new Date('2021-12-15');
 const currentDate = new Date();
 const years = handleRounding(startDate, currentDate);
-console.log('🔋<>', years);
 
 export const stats = [
-  { label: 'Coding Inception', value: `${years} years` },
+  { label: 'Coding Experience', value: `${years} years` },
   { label: 'Coaching Experience', value: '12 years' },
   { label: 'Legos Compiled', value: '10k+' },
   { label: 'Golf Handicap', value: '2.8' },

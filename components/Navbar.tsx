@@ -29,6 +29,8 @@ export const filteredRoutes = allRoutes.filter(
 
 const routes = ENABLE_FEATURE ? allRoutes : filteredRoutes;
 
+console.log("🔋<routes>", routes)
+
 function ChevronDownIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg viewBox="0 0 8 6" aria-hidden="true" {...props}>
