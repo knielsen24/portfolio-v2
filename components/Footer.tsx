@@ -3,57 +3,8 @@ import Link from 'next/link';
 // import { iconsObj } from "./icons/Home";
 import { allRoutes } from './Navbar';
 import { ContainerInner, ContainerOuter } from '@/components/Container';
-import GradientBar from './ui/GradientBar';
+import { GradientBarHorizontal } from './ui/GradientBars';
 
-type Props = { href: string; name: string };
-
-function NavLink(props: Props) {
-  const { href, name } = props;
-
-  return (
-    <Link
-      href={href}
-      className="transition hover:text-indigo-500 dark:hover:text-indigo-400">
-      {name}
-    </Link>
-  );
-}
-
-export default function Footer() {
-  return (
-    <footer className=" flex-none sm:mt-28">
-      <ContainerOuter>
-        <ContainerInner>
-          <div className="flex flex-col items-center justify-between gap-6 border-t border-slate-200 pb-12 pt-10 dark:border-zinc-700/50 sm:flex-row">
-            {/* <div className="flex justify-start space-x-6">
-              {iconsObj.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  target="_blank"
-                  className="origin-bottom text-slate-500/90 delay-75 duration-500 hover:scale-110 hover:text-indigo-500 dark:text-zinc-400 dark:hover:text-indigo-400"
-                >
-                  <span className="sr-only">{item.name}</span>
-                  <item.icon className="h-6 w-6" aria-hidden="true" />
-                </Link>
-              ))}
-            </div> */}
-            <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm font-medium text-slate-800 dark:text-zinc-300">
-              <NavLink href="/" name="Home" />
-              {allRoutes.map((item) => (
-                <NavLink href={item.href} name={item.name} key={item.name} />
-              ))}
-            </div>
-            <p className="text-sm text-slate-500 dark:text-zinc-500">
-              &copy; {new Date().getFullYear()} Kevin Nielsen. All rights reserved.
-            </p>
-          </div>
-        </ContainerInner>
-      </ContainerOuter>
-      <GradientBar className="bottom 0" />
-    </footer>
-  );
-}
 
 // const navigation = [
 //   {
@@ -105,3 +56,55 @@ export default function Footer() {
 //     ),
 //   },
 // ];
+
+type Props = { href: string; name: string };
+
+function NavLink(props: Props) {
+  const { href, name } = props;
+
+  return (
+    <Link
+      href={href}
+      className="transition hover:text-indigo-500 dark:hover:text-indigo-400">
+      {name}
+    </Link>
+  );
+}
+
+export default function Footer() {
+  return (
+    <footer className="flex-none sm:mt-28">
+      <ContainerOuter>
+        <ContainerInner>
+          <div className="flex flex-col items-center justify-between gap-6 border-t border-slate-200 pb-12 pt-10 dark:border-zinc-700/50 sm:flex-row">
+            {/* <div className="flex justify-start space-x-6">
+              {iconsObj.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  target="_blank"
+                  className="origin-bottom text-slate-500/90 delay-75 duration-500 hover:scale-110 hover:text-indigo-500 dark:text-zinc-400 dark:hover:text-indigo-400"
+                >
+                  <span className="sr-only">{item.name}</span>
+                  <item.icon className="h-6 w-6" aria-hidden="true" />
+                </Link>
+              ))}
+            </div> */}
+            <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm font-medium text-slate-800 dark:text-zinc-300">
+              <NavLink href="/" name="Home" />
+              {allRoutes.map((item) => (
+                <NavLink href={item.href} name={item.name} key={item.name} />
+              ))}
+            </div>
+            <p className="text-sm text-slate-500 dark:text-zinc-500">
+              &copy; {new Date().getFullYear()} Kevin Nielsen. All rights reserved.
+            </p>
+          </div>
+        </ContainerInner>
+      </ContainerOuter>
+      <GradientBarHorizontal className="bottom 0" />
+    </footer>
+  );
+}
+
+

@@ -57,7 +57,7 @@ function CubeIcon(props: SvgProps) {
   );
 }
 
-const features = [
+const highlights = [
   {
     name: 'Lead',
     description: 'leader... message, intentions, and actions are the same.',
@@ -78,7 +78,7 @@ const features = [
 ];
 
 const header = {
-  title: 'Tech experience at multiple startup companies ',
+  title: 'Tech experience building mobile apps ',
   intro:
     "Coincidently, I have worked at two startups in the fitness and wellness industry. Having coached athletes at the Olympic level, and qualified for the Olympic Trials myself, I bring a competitive mindset to work. I'm proud of my non-traditional background.",
 };
@@ -96,7 +96,7 @@ export default function Experience() {
               Coaching taught me how to...
             </p>
             <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-slate-600 dark:text-slate-400 lg:max-w-none">
-              {features.map((feature) => (
+              {highlights.map((feature) => (
                 <div key={feature.name} className="relative pl-9">
                   <dt className="inline font-semibold text-slate-900 dark:text-slate-100">
                     <feature.icon
@@ -118,7 +118,7 @@ export default function Experience() {
               aria-hidden="true"
             />
             <div className="mx-auto max-w-2xl sm:mx-0 sm:max-w-none">
-              {/* <WorkExperience /> */}
+              <WorkExperience />
             </div>
             <div
               className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-black/10 sm:rounded-3xl"

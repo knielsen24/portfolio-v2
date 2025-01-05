@@ -13,7 +13,7 @@ import {
 } from '@headlessui/react';
 import { Container } from './Container';
 import ThemeToggle from './ui/ThemeToggle';
-import GradientBar from './ui/GradientBar';
+import { GradientBarHorizontal } from './ui/GradientBars';
 
 const ENABLE_FEATURE = process.env.NODE_ENV === 'development';
 
@@ -190,7 +190,7 @@ function DesktopNavigation(props: React.ComponentPropsWithoutRef<'nav'>) {
 export default function Navbar() {
   return (
     <header className="pointer-events-none absolute top-0 z-50 w-full">
-      <GradientBar className="top-0" />
+      <GradientBarHorizontal className="top-0" />
       <Container className="top-0 z-10 mt-6 h-16 w-full px-5 sm:mt-8">
         <div className="flex gap-4">
           <div className="pointer-events-auto flex flex-1 items-center">

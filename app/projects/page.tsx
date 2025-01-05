@@ -79,7 +79,7 @@ export default async function Projects() {
   return (
     <SimpleLayout title={pageHeader.title} intro={pageHeader.intro}>
       <div className="mx-4 grid grid-cols-1 border-slate-200/80 py-6 dark:border-zinc-700/60 sm:mx-0 sm:mt-16 sm:gap-y-20 sm:border-t sm:pt-16 lg:grid-cols-3 lg:gap-x-20">
-        {projects?.map((project: Project) => <Card project={project} />)}
+        {projects?.map((project: Project) => <Card key={project.id} project={project} />)}
         {/* 
           create child client component that includes
             Show more button - useState≈

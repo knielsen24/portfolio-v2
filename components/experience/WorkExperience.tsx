@@ -1,4 +1,5 @@
 import Image, { type ImageProps } from 'next/image';
+import expoDark from '@/public/logos/expo-dark-bg.png'
 import logoAirbnb from '@/public/logos/airbnb.svg';
 import logoFacebook from '@/public/logos/facebook.svg';
 import logoPlanetaria from '@/public/logos/planetaria.svg';
@@ -83,7 +84,7 @@ export default function WorkExperience() {
     {
       company: 'Xalt',
       title: 'React Native Developer',
-      logo: logoPlanetaria,
+      logo: expoDark,
       start: 'Mar 2023',
       end: {
         label: 'Oct 2023',
@@ -93,21 +94,21 @@ export default function WorkExperience() {
     {
       company: 'Canyons Aquatic Club',
       title: 'Head Coach, Team Director',
-      logo: logoAirbnb,
+      logo: expoDark,
       start: 'Oct 2015',
       end: 'Jan 2022',
     },
     {
       company: 'Class Aquatics',
       title: 'Associate Head Coach',
-      logo: logoFacebook,
+      logo: expoDark,
       start: 'Apr 2011',
       end: 'Oct 2015',
     },
     {
       company: 'Starbucks',
       title: 'Shift Supervisor',
-      logo: logoStarbucks,
+      logo: expoDark,
       start: '2008',
       end: '2011',
     },
