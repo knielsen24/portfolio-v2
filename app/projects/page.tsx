@@ -1,52 +1,46 @@
-import { type Metadata } from "next";
-import Link from "next/link";
-import Image from "next/image";
-import type { StaticImageData } from "next/image";
-import { Project, easterEgg, pageHeader, EasterEgg } from "@/constants/projects";
-import { getAllProjects } from "@/lib/getProjectsApi";
-import { cn } from "@/lib/utils";
-import { SimpleLayout } from "@/components/SimpleLayout";
-import { ArrowTopRightOnSquare } from "@/components/icons/Project";
+import { type Metadata } from 'next';
+import Link from 'next/link';
+import Image from 'next/image';
+import type { StaticImageData } from 'next/image';
+import { Project, easterEgg, pageHeader, EasterEgg } from '@/constants/projects';
+import { getAllProjects } from '@/lib/getProjectsApi';
+import { cn } from '@/lib/utils';
+import { SimpleLayout } from '@/components/SimpleLayout';
+import { ArrowTopRightOnSquare } from '@/components/icons/Project';
 
 export const metadata: Metadata = {
   title: pageHeader.page,
   description: pageHeader.title,
 };
 
-type Props = { project: Project | EasterEgg }
+type Props = { project: Project | EasterEgg };
 
 function Card(props: Props) {
-  const project = props.project
+  const project = props.project;
   const { id, imageUrl, title, bgSize, industry, intro, href } = project;
-  
-  const link = id === "777" ? href as string : `/projects/${id}`
-  const target = id === "777" ? "_blank" : "" as string
+
+  const link = id === '777' ? (href as string) : `/projects/${id}`;
+  const target = id === '777' ? '_blank' : ('' as string);
 
   return (
     <article
       key={id}
-      className="group relative flex max-w-xl flex-col items-start justify-between border-t border-slate-200/80 py-8 dark:border-zinc-700/60 sm:rounded-xl sm:border-none sm:py-0 "
-    >
-      <Link
-        href={link}
-        target={target}
-        prefetch
-      >
+      className="group relative flex max-w-xl flex-col items-start justify-between border-t border-slate-200/80 py-8 dark:border-zinc-700/60 sm:rounded-xl sm:border-none sm:py-0 ">
+      <Link href={link} target={target} prefetch>
         <div
           className={cn(
-            "relative z-10 w-full overflow-hidden rounded-xl ring-1 ring-slate-900/10 dark:ring-zinc-100/10",
-            bgSize === "object-cover"
-              ? "ring-1 ring-slate-900/10 dark:ring-zinc-100/10"
-              : "ring-0",
-          )}
-        >
+            'relative z-10 w-full overflow-hidden rounded-xl ring-1 ring-slate-900/10 dark:ring-zinc-100/10',
+            bgSize === 'object-cover'
+              ? 'ring-1 ring-slate-900/10 dark:ring-zinc-100/10'
+              : 'ring-0',
+          )}>
           <Image
             src={imageUrl as StaticImageData}
             alt={title}
             className={cn(
-              "aspect-[3/2] w-full",
+              'aspect-[3/2] w-full',
               bgSize,
-              bgSize === "object-contain" ? "rounded-3xl" : "rounded-none",
+              bgSize === 'object-contain' ? 'rounded-3xl' : 'rounded-none',
             )}
             priority={true}
             width={500}
@@ -85,9 +79,7 @@ export default async function Projects() {
   return (
     <SimpleLayout title={pageHeader.title} intro={pageHeader.intro}>
       <div className="mx-4 grid grid-cols-1 border-slate-200/80 py-6 dark:border-zinc-700/60 sm:mx-0 sm:mt-16 sm:gap-y-20 sm:border-t sm:pt-16 lg:grid-cols-3 lg:gap-x-20">
-        {projects?.map((project: Project) => (
-          <Card project={project} />
-        ))}
+        {projects?.map((project: Project) => <Card project={project} />)}
         {/* 
           create child client component that includes
             Show more button - useState≈

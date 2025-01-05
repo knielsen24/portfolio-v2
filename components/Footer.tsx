@@ -1,20 +1,19 @@
-"use client"
-import Link from "next/link";
+'use client';
+import Link from 'next/link';
 // import { iconsObj } from "./icons/Home";
-import { allRoutes } from "./Navbar";
-import { ContainerInner, ContainerOuter } from "@/components/Container";
-import GradientBar from "./ui/GradientBar";
+import { allRoutes } from './Navbar';
+import { ContainerInner, ContainerOuter } from '@/components/Container';
+import GradientBar from './ui/GradientBar';
 
-type Props = { href: string; name: string; }
+type Props = { href: string; name: string };
 
 function NavLink(props: Props) {
-  const { href, name } = props
+  const { href, name } = props;
 
   return (
     <Link
       href={href}
-      className="transition hover:text-indigo-500 dark:hover:text-indigo-400"
-    >
+      className="transition hover:text-indigo-500 dark:hover:text-indigo-400">
       {name}
     </Link>
   );
@@ -46,8 +45,7 @@ export default function Footer() {
               ))}
             </div>
             <p className="text-sm text-slate-500 dark:text-zinc-500">
-              &copy; {new Date().getFullYear()} Kevin Nielsen. All rights
-              reserved.
+              &copy; {new Date().getFullYear()} Kevin Nielsen. All rights reserved.
             </p>
           </div>
         </ContainerInner>
@@ -56,9 +54,6 @@ export default function Footer() {
     </footer>
   );
 }
-
-
-
 
 // const navigation = [
 //   {

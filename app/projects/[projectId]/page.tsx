@@ -1,16 +1,16 @@
-import React from "react";
-import Link from "next/link";
-import Image from "next/image";
-import type { StaticImageData } from "next/image";
-import { notFound } from "next/navigation";
-import { Project } from "@/constants/projects";
-import { getAllProjects, getProject } from "@/lib/getProjectsApi";
-import { cn, getLinkText } from "@/lib/utils";
-import Tabs from "@/components/project/Tabs";
-import { SimpleLayout } from "@/components/SimpleLayout";
-import IconHandler from "@/components/project/IconHandler";
-import { ArrowTopRightOnSquare } from "@/components/icons/Project";
-import { Fascinate } from "next/font/google";
+import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import type { StaticImageData } from 'next/image';
+import { notFound } from 'next/navigation';
+import { Project } from '@/constants/projects';
+import { getAllProjects, getProject } from '@/lib/getProjectsApi';
+import { cn, getLinkText } from '@/lib/utils';
+import Tabs from '@/components/project/Tabs';
+import { SimpleLayout } from '@/components/SimpleLayout';
+import IconHandler from '@/components/project/IconHandler';
+import { ArrowTopRightOnSquare } from '@/components/icons/Project';
+import { Fascinate } from 'next/font/google';
 
 type Params = {
   params: {
@@ -34,10 +34,7 @@ function HighLights({ props }: { props: Project }) {
       <div>
         <HeaderHL title="Highlights" />
         {highlights.map((item, itemIdx) => (
-          <div
-            key={itemIdx}
-            className="flex w-full flex-row items-center py-3 xl:py-4"
-          >
+          <div key={itemIdx} className="flex w-full flex-row items-center py-3 xl:py-4">
             <div className="ml-1 sm:ml-2">
               <IconHandler name={item.label} desc={item.desc} />
             </div>
@@ -53,10 +50,7 @@ function HighLights({ props }: { props: Project }) {
       <div>
         <HeaderHL title="Links" />
         {links.map((link, linkIdx) => (
-          <div
-            key={linkIdx}
-            className="group flex flex-row items-center py-3 xl:py-4"
-          >
+          <div key={linkIdx} className="group flex flex-row items-center py-3 xl:py-4">
             <div className="ml-1 sm:ml-2">
               <IconHandler name={link.name} desc={link.href} />
             </div>
@@ -67,8 +61,7 @@ function HighLights({ props }: { props: Project }) {
               <Link
                 href={link.href}
                 target="_blank"
-                className="mr-2 flex w-full flex-row justify-between sm:mr-3"
-              >
+                className="mr-2 flex w-full flex-row justify-between sm:mr-3">
                 <p className="line-clamp-1 font-medium text-slate-900 dark:text-zinc-100">
                   {getLinkText(link)}
                 </p>
@@ -89,10 +82,7 @@ function ProjectImage({ props }: { props: Project }) {
     <Image
       src={imageUrl as StaticImageData}
       alt={title}
-      className={cn(
-        "aspect-[16/9] h-full w-full bg-slate-100 dark:bg-zinc-800",
-        bgSize,
-      )}
+      className={cn('aspect-[16/9] h-full w-full bg-slate-100 dark:bg-zinc-800', bgSize)}
       width={500}
       height={500}
       priority={true}
@@ -100,9 +90,7 @@ function ProjectImage({ props }: { props: Project }) {
   );
 }
 
-export default async function ProjectDetails({
-  params: { projectId },
-}: Params) {
+export default async function ProjectDetails({ params: { projectId } }: Params) {
   const projectData: Promise<Project | undefined> = getProject(projectId);
   const project = await projectData;
 
@@ -136,14 +124,11 @@ export default async function ProjectDetails({
             {project?.features?.map((feature) => (
               <ul
                 key={feature.label}
-                className="flex flex-col border-t border-slate-900/10 pt-6 dark:border-zinc-300/10"
-              >
+                className="flex flex-col border-t border-slate-900/10 pt-6 dark:border-zinc-300/10">
                 <li className="min-w-md font-medium text-slate-800 dark:text-zinc-200">
                   {feature.label}
                 </li>
-                <p className="mt-3 text-slate-600 dark:text-zinc-400">
-                  {feature.desc}
-                </p>
+                <p className="mt-3 text-slate-600 dark:text-zinc-400">{feature.desc}</p>
               </ul>
             ))}
           </ul>

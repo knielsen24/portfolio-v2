@@ -1,4 +1,4 @@
-export function ComputerIcon(props: React.ComponentPropsWithoutRef<"svg">) {
+export function ComputerIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -6,8 +6,7 @@ export function ComputerIcon(props: React.ComponentPropsWithoutRef<"svg">) {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      {...props}
-    >
+      {...props}>
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -17,7 +16,7 @@ export function ComputerIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   );
 }
 
-export function TerminalIcon(props: React.ComponentPropsWithoutRef<"svg">) {
+export function TerminalIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -25,8 +24,7 @@ export function TerminalIcon(props: React.ComponentPropsWithoutRef<"svg">) {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      {...props}
-    >
+      {...props}>
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -36,7 +34,7 @@ export function TerminalIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   );
 }
 
-export function CubeIcon(props: React.ComponentPropsWithoutRef<"svg">) {
+export function CubeIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -44,8 +42,7 @@ export function CubeIcon(props: React.ComponentPropsWithoutRef<"svg">) {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      {...props}
-    >
+      {...props}>
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -55,7 +52,7 @@ export function CubeIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   );
 }
 
-export function LinkIcon(props: React.ComponentPropsWithoutRef<"svg">) {
+export function LinkIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -63,8 +60,7 @@ export function LinkIcon(props: React.ComponentPropsWithoutRef<"svg">) {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      {...props}
-    >
+      {...props}>
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -74,7 +70,7 @@ export function LinkIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   );
 }
 
-export function GitHubIcon(props: React.ComponentPropsWithoutRef<"svg">) {
+export function GitHubIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
       <path
@@ -86,7 +82,7 @@ export function GitHubIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   );
 }
 
-export function YouTubeIcon(props: React.ComponentPropsWithoutRef<"svg">) {
+export function YouTubeIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg stroke="currentColor" fill="none" viewBox="0 0 24 24" {...props}>
       <path
@@ -98,7 +94,7 @@ export function YouTubeIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   );
 }
 
-export function TagIcon(props: React.ComponentPropsWithoutRef<"svg">) {
+export function TagIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -106,23 +102,18 @@ export function TagIcon(props: React.ComponentPropsWithoutRef<"svg">) {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      {...props}
-    >
+      {...props}>
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
         d="M9.568 3H5.25A2.25 2.25 0 0 0 3 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 0 0 5.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 0 0 9.568 3Z"
       />
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M6 6h.008v.008H6V6Z"
-      />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M6 6h.008v.008H6V6Z" />
     </svg>
   );
 }
 
-export function MobileIcon(props: React.ComponentPropsWithoutRef<"svg">) {
+export function MobileIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -130,8 +121,7 @@ export function MobileIcon(props: React.ComponentPropsWithoutRef<"svg">) {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      {...props}
-    >
+      {...props}>
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -141,9 +131,7 @@ export function MobileIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   );
 }
 
-export function ArrowTopRightOnSquare(
-  props: React.ComponentPropsWithoutRef<"svg">,
-) {
+export function ArrowTopRightOnSquare(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -151,8 +139,7 @@ export function ArrowTopRightOnSquare(
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      {...props}
-    >
+      {...props}>
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -162,7 +149,7 @@ export function ArrowTopRightOnSquare(
   );
 }
 
-export function DocumentIcon(props: React.ComponentPropsWithoutRef<"svg">) {
+export function DocumentIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -170,8 +157,7 @@ export function DocumentIcon(props: React.ComponentPropsWithoutRef<"svg">) {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      {...props}
-    >
+      {...props}>
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -181,29 +167,27 @@ export function DocumentIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   );
 }
 
-export function AppleIcon(props: React.ComponentPropsWithoutRef<"svg">) {
+export function AppleIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       stroke="currentColor"
       fill="none"
       viewBox="0 0 16 16"
-      {...props}
-    >
+      {...props}>
       <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516s1.52.087 2.475-1.258.762-2.391.728-2.43m3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422s1.675-2.789 1.698-2.854-.597-.79-1.254-1.157a3.7 3.7 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56s.625 1.924 1.273 2.796c.576.984 1.34 1.667 1.659 1.899s1.219.386 1.843.067c.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758q.52-1.185.473-1.282" />
       <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516s1.52.087 2.475-1.258.762-2.391.728-2.43m3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422s1.675-2.789 1.698-2.854-.597-.79-1.254-1.157a3.7 3.7 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56s.625 1.924 1.273 2.796c.576.984 1.34 1.667 1.659 1.899s1.219.386 1.843.067c.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758q.52-1.185.473-1.282" />
     </svg>
   );
 }
 
-export function AndroidIcon(props: React.ComponentPropsWithoutRef<"svg">) {
+export function AndroidIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="currentColor"
       viewBox="0 0 16 16"
-      {...props}
-    >
+      {...props}>
       <path d="M2.76 3.061a.5.5 0 0 1 .679.2l1.283 2.352A8.9 8.9 0 0 1 8 5a8.9 8.9 0 0 1 3.278.613l1.283-2.352a.5.5 0 1 1 .878.478l-1.252 2.295C14.475 7.266 16 9.477 16 12H0c0-2.523 1.525-4.734 3.813-5.966L2.56 3.74a.5.5 0 0 1 .2-.678ZM5 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2m6 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
     </svg>
   );

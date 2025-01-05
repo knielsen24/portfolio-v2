@@ -1,10 +1,10 @@
-"use client";
-import { Fragment } from "react";
-import { Tab } from "@headlessui/react";
-import { Project } from "@/constants/projects";
+'use client';
+import { Fragment } from 'react';
+import { Tab } from '@headlessui/react';
+import { Project } from '@/constants/projects';
 
 function classNames(...classes: any) {
-  return classes.filter(Boolean).join(" ");
+  return classes.filter(Boolean).join(' ');
 }
 
 type Feature = string[];
@@ -14,7 +14,7 @@ export default function Tabs({ props }: { props: Project }) {
 
   const tabs = [
     {
-      name: "Technology",
+      name: 'Technology',
       features: technologies,
     },
 
@@ -34,19 +34,18 @@ export default function Tabs({ props }: { props: Project }) {
     <Tab.Group as="div">
       <div className="mx-4 flex overflow-x-auto sm:mx-0">
         <div className="flex-auto border-b border-slate-200 dark:border-zinc-700 sm:px-0">
-          <Tab.List className="-mb-px flex sm:ml-8 justify-start space-x-10 sm:space-x-16">
+          <Tab.List className="-mb-px flex justify-start space-x-10 sm:ml-8 sm:space-x-16">
             {tabs.map((tab) => (
               <Tab
                 key={tab.name}
                 className={({ selected }) =>
                   classNames(
                     selected
-                      ? "border-indigo-500 text-indigo-500 dark:border-indigo-400 dark:text-indigo-400"
-                      : "border-transparent text-slate-500 hover:border-slate-300 hover:text-slate-700 dark:text-zinc-400 dark:hover:border-zinc-700 dark:hover:text-zinc-200",
-                    "whitespace-nowrap border-b-2 py-6 text-sm font-medium",
+                      ? 'border-indigo-500 text-indigo-500 dark:border-indigo-400 dark:text-indigo-400'
+                      : 'border-transparent text-slate-500 hover:border-slate-300 hover:text-slate-700 dark:text-zinc-400 dark:hover:border-zinc-700 dark:hover:text-zinc-200',
+                    'whitespace-nowrap border-b-2 py-6 text-sm font-medium',
                   )
-                }
-              >
+                }>
                 {tab.name}
               </Tab>
             ))}
@@ -58,14 +57,10 @@ export default function Tabs({ props }: { props: Project }) {
         {tabs.map((tab: any) => (
           <Tab.Panel
             key={tab.name}
-            className="mx-5 mt-8 grid grid-cols-1 space-y-16 sm:mx-0"
-          >
+            className="mx-5 mt-8 grid grid-cols-1 space-y-16 sm:mx-0">
             <ul className="list-inside list-disc text-base sm:text-lg">
               {tab.features.map((feature: Feature, idx: number) => (
-                <li
-                  key={idx}
-                  className="py-1 text-slate-400/80 dark:text-zinc-600"
-                >
+                <li key={idx} className="py-1 text-slate-400/80 dark:text-zinc-600">
                   <span className="text-slate-800 dark:text-zinc-200">{feature}</span>
                 </li>
               ))}

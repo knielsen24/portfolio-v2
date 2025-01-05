@@ -1,7 +1,7 @@
-import { SimpleLayout } from "@/components/SimpleLayout";
-import WorkExperience from "@/components/experience/WorkExperience";
+import { SimpleLayout } from '@/components/SimpleLayout';
+import WorkExperience from '@/components/experience/WorkExperience';
 
-type SvgProps = React.ComponentPropsWithoutRef<"svg">
+type SvgProps = React.ComponentPropsWithoutRef<'svg'>;
 
 function ComputerIcon(props: SvgProps) {
   return (
@@ -11,8 +11,7 @@ function ComputerIcon(props: SvgProps) {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      {...props}
-    >
+      {...props}>
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -30,8 +29,7 @@ function EditorIcon(props: SvgProps) {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      {...props}
-    >
+      {...props}>
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -49,8 +47,7 @@ function CubeIcon(props: SvgProps) {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      {...props}
-    >
+      {...props}>
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -62,34 +59,33 @@ function CubeIcon(props: SvgProps) {
 
 const features = [
   {
-    name: "Lead",
-    description: "leader... message, intentions, and actions are the same.",
+    name: 'Lead',
+    description: 'leader... message, intentions, and actions are the same.',
     icon: ComputerIcon,
   },
   {
-    name: "Support",
+    name: 'Support',
     description:
-      "Looking out for what is best for the individual, and giving them positive reinforcement or constructive criticism",
+      'Looking out for what is best for the individual, and giving them positive reinforcement or constructive criticism',
     icon: ComputerIcon,
   },
   {
-    name: "Empower",
+    name: 'Empower',
     description:
-      "The most important aspect is to teach transferrable skills. Having a great mindset, and appreciating the process will consistently produce high results.",
+      'The most important aspect is to teach transferrable skills. Having a great mindset, and appreciating the process will consistently produce high results.',
     icon: CubeIcon,
   },
 ];
 
 const header = {
-  title: "Tech experience at multiple startup companies ",
-  intro: "Coincidently, I have worked at two startups in the fitness and wellness industry. Having coached athletes at the Olympic level, and qualified for the Olympic Trials myself, I bring a competitive mindset to work. I'm proud of my non-traditional background."
-}
+  title: 'Tech experience at multiple startup companies ',
+  intro:
+    "Coincidently, I have worked at two startups in the fitness and wellness industry. Having coached athletes at the Olympic level, and qualified for the Olympic Trials myself, I bring a competitive mindset to work. I'm proud of my non-traditional background.",
+};
 
 export default function Experience() {
   return (
-    <SimpleLayout
-      title={header.title}
-      intro={header.intro} >
+    <SimpleLayout title={header.title} intro={header.intro}>
       <div className="grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:grid-cols-2 lg:items-start">
         <div className="px-5 lg:px-0 lg:pr-4 lg:pt-4">
           <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
@@ -108,7 +104,7 @@ export default function Experience() {
                       aria-hidden="true"
                     />
                     {feature.name}
-                  </dt>{" "}
+                  </dt>{' '}
                   <dd className="inline">{feature.description}</dd>
                 </div>
               ))}

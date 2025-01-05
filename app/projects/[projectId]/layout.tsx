@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
-import { getProject } from "@/lib/getProjectsApi";
-import { Project } from "@/constants/projects";
+import type { Metadata } from 'next';
+import { getProject } from '@/lib/getProjectsApi';
+import { Project } from '@/constants/projects';
 
 type Params = {
   params: {
@@ -16,8 +16,8 @@ export async function generateMetadata({
 
   if (!project) {
     return {
-      title: "Project not found",
-      description: "project not found",
+      title: 'Project not found',
+      description: 'project not found',
     };
   }
 
@@ -34,5 +34,5 @@ type LayoutProps = {
 };
 
 export default function ProjectDetails({ children }: LayoutProps) {
-  return <div className="mt-28 sm:mt-44 mb-16">{children}</div>;
+  return <div className="mb-16 mt-28 sm:mt-44">{children}</div>;
 }

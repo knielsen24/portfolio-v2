@@ -6,8 +6,7 @@ function ChevronDoubleLeft() {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      className="h-14 w-14"
-    >
+      className="h-14 w-14">
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -25,8 +24,7 @@ function CodeBracket() {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      className="h-5 w-5"
-    >
+      className="h-5 w-5">
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -35,6 +33,5 @@ function CodeBracket() {
     </svg>
   );
 }
-
 
 export { CodeBracket, ChevronDoubleLeft };

@@ -1,12 +1,11 @@
-import Link from "next/link";
-import Image from "next/image";
-import headShot from "@/public/avatar.png";
-import { Container } from "@/components/Container";
-import { iconsObj, emailObj } from "@/components/icons/Home";
-import { heroCopy } from "@/constants/home";
-import BtnScrollSpy from "@/components/ui/BtnScrollSpy";
-import Skills from "@/components/home/Skills";
-
+import Link from 'next/link';
+import Image from 'next/image';
+import headShot from '@/public/avatar.png';
+import { Container } from '@/components/Container';
+import { iconsObj, emailObj } from '@/components/icons/Home';
+import { heroCopy } from '@/constants/home';
+import BtnScrollSpy from '@/components/ui/BtnScrollSpy';
+import Skills from '@/components/home/Skills';
 
 export default function Home() {
   return (
@@ -39,11 +38,7 @@ export default function Home() {
                   href={item.href}
                   target="_blank"
                   className={`delay-50 origin-bottom text-slate-500/90 duration-500 hover:scale-110 hover:text-indigo-500 dark:text-zinc-500 dark:hover:text-indigo-400
-                    ${item.tilt === "back"
-                      ? "hover:-rotate-6"
-                      : "hover:rotate-6"
-                    }`}
-                >
+                    ${item.tilt === 'back' ? 'hover:-rotate-6' : 'hover:rotate-6'}`}>
                   <span className="sr-only">{item.name}</span>
                   <item.icon className="h-6 w-6" aria-hidden="true" />
                 </Link>
@@ -53,11 +48,7 @@ export default function Home() {
                 href={emailObj.href}
                 target="_blank"
                 className={`delay-50 origin-bottom text-slate-500/90 duration-500 hover:scale-110 hover:text-indigo-500 dark:text-zinc-500 dark:hover:text-indigo-400
-                    ${emailObj.tilt === "back"
-                    ? "hover:-rotate-6"
-                    : "hover:rotate-6"
-                  }`}
-              >
+                    ${emailObj.tilt === 'back' ? 'hover:-rotate-6' : 'hover:rotate-6'}`}>
                 <span className="sr-only">{emailObj.name}</span>
                 <emailObj.icon className="h-6 w-6" aria-hidden="true" />
               </Link>
@@ -65,8 +56,7 @@ export default function Home() {
             <div className="md:order-last">
               <Link
                 href="/projects"
-                className="hover-underline-animation font-bold text-slate-500 duration-300 hover:text-indigo-500 dark:text-zinc-500 hover:dark:text-indigo-400  sm:text-lg"
-              >
+                className="hover-underline-animation font-bold text-slate-500 duration-300 hover:text-indigo-500 dark:text-zinc-500 hover:dark:text-indigo-400  sm:text-lg">
                 View Projects
               </Link>
             </div>

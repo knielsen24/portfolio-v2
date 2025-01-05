@@ -1,38 +1,38 @@
-import Image from "next/image";
-import jsIcon from "@/public/logos/js-icon.png";
-import tsIcon from "@/public/logos/ts-icon.svg.png";
-import nodeIcon from "@/public/logos/nodejs-icon.png";
-import nextDarkIcon from "@/public/logos/nextjs-icon-dark-bg.png";
-import nextLightIcon from "@/public/logos/nextjs-icon-light-bg.png";
-import reactIcon from "@/public/logos/React-icon.svg";
-import expoLightIcon from "@/public/logos/expo-light-bg.png";
-import expoDarkIcon from "@/public/logos/expo-dark-bg.png";
-import reduxIcon from "@/public/logos/redux-icon.png";
-import twIcon from "@/public/logos/tw-icon.svg";
-import pgIcon from "@/public/logos/postgresql-icon.png";
-import { skillsCopy } from "@/constants/home";
+import Image from 'next/image';
+import jsIcon from '@/public/logos/js-icon.png';
+import tsIcon from '@/public/logos/ts-icon.svg.png';
+import nodeIcon from '@/public/logos/nodejs-icon.png';
+import nextDarkIcon from '@/public/logos/nextjs-icon-dark-bg.png';
+import nextLightIcon from '@/public/logos/nextjs-icon-light-bg.png';
+import reactIcon from '@/public/logos/React-icon.svg';
+import expoLightIcon from '@/public/logos/expo-light-bg.png';
+import expoDarkIcon from '@/public/logos/expo-dark-bg.png';
+import reduxIcon from '@/public/logos/redux-icon.png';
+import twIcon from '@/public/logos/tw-icon.svg';
+import pgIcon from '@/public/logos/postgresql-icon.png';
+import { skillsCopy } from '@/constants/home';
 
 export default function Skills() {
   return (
     <div className="group relative sm:mx-0">
       <div className="mx-auto max-w-7xl bg-indigo-100 py-12 ring-1 ring-slate-900/10 dark:bg-white/5 dark:ring-zinc-300/10 sm:rounded-3xl sm:px-6 sm:py-16 lg:px-12">
         <div className="grid grid-cols-1 items-center gap-x-8 gap-y-12 lg:grid-cols-2">
-          <div className="px-5 w-full max-w-xl lg:mx-0">
+          <div className="w-full max-w-xl px-5 lg:mx-0">
             <h2 className="text-2xl font-bold tracking-tight text-slate-800 dark:text-zinc-100 sm:text-3xl">
               {skillsCopy.header}
             </h2>
             <p className="mt-6 text-lg leading-8 text-slate-600 dark:text-zinc-300">
-              {skillsCopy.firstPart}{" "}
+              {skillsCopy.firstPart}{' '}
               <span className="font-semibold text-indigo-500 ease-out dark:text-indigo-400">
                 {skillsCopy.firstHighlight}
               </span>
-              {skillsCopy.secondPart}{" "}
+              {skillsCopy.secondPart}{' '}
               <span className="font-semibold text-indigo-500 dark:text-indigo-400">
-                {skillsCopy.secondHighlight}{" "}
+                {skillsCopy.secondHighlight}{' '}
               </span>
-              {skillsCopy.thirdPart}{" "}
+              {skillsCopy.thirdPart}{' '}
               <span className="font-semibold text-indigo-500 dark:text-indigo-400">
-                {skillsCopy.thirdHighlight}{" "}
+                {skillsCopy.thirdHighlight}{' '}
               </span>
               {skillsCopy.fourthPart}
             </p>

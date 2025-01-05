@@ -1,10 +1,10 @@
-import Image, { type ImageProps } from "next/image";
-import logoAirbnb from "@/public/logos/airbnb.svg";
-import logoFacebook from "@/public/logos/facebook.svg";
-import logoPlanetaria from "@/public/logos/planetaria.svg";
-import logoStarbucks from "@/public/logos/starbucks.svg";
+import Image, { type ImageProps } from 'next/image';
+import logoAirbnb from '@/public/logos/airbnb.svg';
+import logoFacebook from '@/public/logos/facebook.svg';
+import logoPlanetaria from '@/public/logos/planetaria.svg';
+import logoStarbucks from '@/public/logos/starbucks.svg';
 
-function BriefcaseIcon(props: React.ComponentPropsWithoutRef<"svg">) {
+function BriefcaseIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -13,8 +13,7 @@ function BriefcaseIcon(props: React.ComponentPropsWithoutRef<"svg">) {
       strokeLinecap="round"
       strokeLinejoin="round"
       aria-hidden="true"
-      {...props}
-    >
+      {...props}>
       <path
         d="M2.75 9.75a3 3 0 0 1 3-3h12.5a3 3 0 0 1 3 3v8.5a3 3 0 0 1-3 3H5.75a3 3 0 0 1-3-3v-8.5Z"
         className="fill-slate-100 stroke-slate-400 dark:fill-slate-300 dark:stroke-slate-400"
@@ -27,7 +26,7 @@ function BriefcaseIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   );
 }
 
-function ArrowDownIcon(props: React.ComponentPropsWithoutRef<"svg">) {
+function ArrowDownIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" {...props}>
       <path
@@ -43,19 +42,17 @@ function ArrowDownIcon(props: React.ComponentPropsWithoutRef<"svg">) {
 interface Role {
   company: string;
   title: string;
-  logo: ImageProps["src"];
+  logo: ImageProps['src'];
   start: string | { label: string; dateTime: string };
   end: string | { label: string; dateTime: string };
 }
 
 function Role({ role }: { role: Role }) {
-  let startLabel =
-    typeof role.start === "string" ? role.start : role.start.label;
-  let startDate =
-    typeof role.start === "string" ? role.start : role.start.dateTime;
+  let startLabel = typeof role.start === 'string' ? role.start : role.start.label;
+  let startDate = typeof role.start === 'string' ? role.start : role.start.dateTime;
 
-  let endLabel = typeof role.end === "string" ? role.end : role.end.label;
-  let endDate = typeof role.end === "string" ? role.end : role.end.dateTime;
+  let endLabel = typeof role.end === 'string' ? role.end : role.end.label;
+  let endDate = typeof role.end === 'string' ? role.end : role.end.dateTime;
 
   return (
     <li className="flex gap-4">
@@ -68,16 +65,12 @@ function Role({ role }: { role: Role }) {
           {role.company}
         </dd>
         <dt className="sr-only">Role</dt>
-        <dd className="text-xs text-slate-500 dark:text-slate-400">
-          {role.title}
-        </dd>
+        <dd className="text-xs text-slate-500 dark:text-slate-400">{role.title}</dd>
         <dt className="sr-only">Date</dt>
         <dd
           className="ml-auto text-xs text-slate-400 dark:text-slate-400"
-          aria-label={`${startLabel} until ${endLabel}`}
-        >
-          <time dateTime={startDate}>{startLabel}</time>{" "}
-          <span aria-hidden="true">—</span>{" "}
+          aria-label={`${startLabel} until ${endLabel}`}>
+          <time dateTime={startDate}>{startLabel}</time> <span aria-hidden="true">—</span>{' '}
           <time dateTime={endDate}>{endLabel}</time>
         </dd>
       </dl>
@@ -88,35 +81,35 @@ function Role({ role }: { role: Role }) {
 export default function WorkExperience() {
   let resume: Array<Role> = [
     {
-      company: "Xalt",
-      title: "React Native Developer",
+      company: 'Xalt',
+      title: 'React Native Developer',
       logo: logoPlanetaria,
-      start: "Mar 2023",
+      start: 'Mar 2023',
       end: {
-        label: "Oct 2023",
+        label: 'Oct 2023',
         dateTime: new Date().getFullYear().toString(),
       },
     },
     {
-      company: "Canyons Aquatic Club",
-      title: "Head Coach, Team Director",
+      company: 'Canyons Aquatic Club',
+      title: 'Head Coach, Team Director',
       logo: logoAirbnb,
-      start: "Oct 2015",
-      end: "Jan 2022",
+      start: 'Oct 2015',
+      end: 'Jan 2022',
     },
     {
-      company: "Class Aquatics",
-      title: "Associate Head Coach",
+      company: 'Class Aquatics',
+      title: 'Associate Head Coach',
       logo: logoFacebook,
-      start: "Apr 2011",
-      end: "Oct 2015",
+      start: 'Apr 2011',
+      end: 'Oct 2015',
     },
     {
-      company: "Starbucks",
-      title: "Shift Supervisor",
+      company: 'Starbucks',
+      title: 'Shift Supervisor',
       logo: logoStarbucks,
-      start: "2008",
-      end: "2011",
+      start: '2008',
+      end: '2011',
     },
   ];
 

@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 export default function NotFound() {
   return (
@@ -16,8 +16,7 @@ export default function NotFound() {
         </p>
         <Link
           href="/"
-          className="mt-6 font-semibold text-slate-700 hover:text-indigo-500 dark:text-zinc-400 hover:dark:text-indigo-400"
-        >
+          className="mt-6 font-semibold text-slate-700 hover:text-indigo-500 dark:text-zinc-400 hover:dark:text-indigo-400">
           Go back home
         </Link>
       </div>

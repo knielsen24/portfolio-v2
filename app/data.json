@@ -1,10 +1,9 @@
 {
-  "projects":[
+  "projects": [
     {
       "id": "8",
       "title": "Portfolio v2",
-      "intro":
-      "Take a deep dive into the features of this portfolio website including Web Analytics and Speed Insights. Built with Next.js, TypeScript, TailwindCSS, and Headless UI. ",
+      "intro": "Take a deep dive into the features of this portfolio website including Web Analytics and Speed Insights. Built with Next.js, TypeScript, TailwindCSS, and Headless UI. ",
       "industry": "technology",
       "links": [
         {
@@ -18,46 +17,55 @@
       ],
       "highlights": [
         {
-          "label" : "industry",
-          "desc" : "technology"
+          "label": "industry",
+          "desc": "technology"
         },
         {
-          "label" : "category",
-          "desc" : "portfolio"
+          "label": "category",
+          "desc": "portfolio"
         },
         {
-          "label" : "platforms",
-          "desc" : "web & mobile"
-        }
-      ],      
-      "features": [
-        { 
-          "label": "Metadata & Search Engine Optimization",
-          "desc": "Using the Next.js Metadata API,static and dynamic MetaData is generated for each page, & each project." 
-        },
-        { 
-          "label": "Dark Mode Theme Toggler",
-          "desc": "Using TailwindCSS and the Next Themes npm package, the user can toggle their preferred theme." 
-        },
-        { 
-          "label": "Responsive layout",
-          "desc": "Every component has been meticously configured to handle desktop and mobile platforms with a phenomonal user experience." 
-        },
-        { 
-          "label": "Dynamic Page Server Components",
-          "desc": "Html files are being create on the server before being sent to the client allowing for extremely fast load times." 
-        },
-        { 
-          "label": "Web Analytics - Granular Visitor Data",
-          "desc": "Safely tracks page views, top pages, top sources and visitors, including their country location, operating system, and browser." 
-        },
-        { 
-          "label": "Speed Insights - Real Experience Score",
-          "desc": "Provides detailed insights of the website's performance metrics to analyze optimization decisions with FCP, LCP, FID, and TFB." 
+          "label": "platforms",
+          "desc": "web & mobile"
         }
       ],
-      "technologies":[
-        "TypeScript", "React.js", "Next.js", "TailwindCSS", "HeadlessUI", "Vercel", "Next-Themes", "Vercel Web Analytics", "Vercel Speed Insights"
+      "features": [
+        {
+          "label": "Metadata & Search Engine Optimization",
+          "desc": "Using the Next.js Metadata API,static and dynamic MetaData is generated for each page, & each project."
+        },
+        {
+          "label": "Dark Mode Theme Toggler",
+          "desc": "Using TailwindCSS and the Next Themes npm package, the user can toggle their preferred theme."
+        },
+        {
+          "label": "Responsive layout",
+          "desc": "Every component has been meticously configured to handle desktop and mobile platforms with a phenomonal user experience."
+        },
+        {
+          "label": "Dynamic Page Server Components",
+          "desc": "Html files are being create on the server before being sent to the client allowing for extremely fast load times."
+        },
+        {
+          "label": "Web Analytics - Granular Visitor Data",
+          "desc": "Safely tracks page views, top pages, top sources and visitors, including their country location, operating system, and browser."
+        },
+        {
+          "label": "Speed Insights - Real Experience Score",
+          "desc": "Provides detailed insights of the website's performance metrics to analyze optimization decisions with FCP, LCP, FID, and TFB."
+        }
+      ],
+      "technologies": [
+        "TypeScript",
+        "React.js",
+        "Next.js",
+        "Vitest",
+        "TailwindCSS",
+        "HeadlessUI",
+        "Vercel",
+        "Next-Themes",
+        "Vercel Web Analytics",
+        "Vercel Speed Insights"
       ],
       "imageUrl": "/projects/portfoliov2.png",
       "bgSize": "object-cover",
@@ -65,13 +73,10 @@
       "datetime": "2020-03-16"
     },
 
-
-
     {
       "id": "7",
       "title": "Xalt Challenge App",
-      "intro":
-      "Mobile application available on iOS and Android. Create and join challenges to help improve fitness, nutrition, sleep, stress, sense of community, and behavioral habits.",
+      "intro": "Mobile application available on iOS and Android. Create and join challenges to help improve fitness, nutrition, sleep, stress, sense of community, and behavioral habits.",
       "industry": "Health & Fitness",
       "links": [
         {
@@ -89,37 +94,42 @@
       ],
       "highlights": [
         {
-          "label" : "industry",
-          "desc" : "Health & Fitness"
+          "label": "industry",
+          "desc": "Health & Fitness"
         },
         {
-          "label" : "category",
-          "desc" : "Professional Work"
+          "label": "category",
+          "desc": "Professional Work"
         },
         {
-          "label" : "platforms",
-          "desc" : "mobile"
+          "label": "platforms",
+          "desc": "mobile"
         }
-      ],      
-      "features": [
-       
       ],
-      "technologies":[
-        "JavaScript", "React Native", "React Navigation", "Redux Toolkit", "RTK Query", "Expo", "Xcode", "TestFlight", "iOS", "Android", "Formik"
+      "features": [],
+      "technologies": [
+        "JavaScript",
+        "React Native",
+        "React Navigation",
+        "Redux Toolkit",
+        "RTK Query",
+        "Expo",
+        "Xcode",
+        "TestFlight",
+        "iOS",
+        "Android",
+        "Formik"
       ],
-      "imageUrl": "/projects/xalt-challenge-home.png",     
+      "imageUrl": "/projects/xalt-challenge-home.png",
       "bgSize": "object-contain",
       "date": "Mar 16, 2020",
       "datetime": "2020-03-16"
     },
-    
-
 
     {
       "id": "6",
       "title": "TripleStamp",
-      "intro":
-      "Full stack web application designed to facilitate property management for managers, landlords and owners.",
+      "intro": "Full stack web application designed to facilitate property management for managers, landlords and owners.",
       "industry": "Real Estate",
       "links": [
         {
@@ -133,23 +143,31 @@
       ],
       "highlights": [
         {
-          "label" : "industry",
-          "desc" : "Real Estate"
+          "label": "industry",
+          "desc": "Real Estate"
         },
         {
-          "label" : "category",
-          "desc" : "Capstone"
+          "label": "category",
+          "desc": "Capstone"
         },
         {
-          "label" : "platforms",
-          "desc" : "web - desktop"
+          "label": "platforms",
+          "desc": "web - desktop"
         }
-      ],      
-      "features": [
-        
       ],
-      "technologies":[
-        "JavaScript", "React.js", "Redux Toolkit", "RTK Query", "React Router", "Bootstrap", "Ruby on Rails", "Active Record", "PostgreSQL", "Formik", "RESTful APIs"
+      "features": [],
+      "technologies": [
+        "JavaScript",
+        "React.js",
+        "Redux Toolkit",
+        "RTK Query",
+        "React Router",
+        "Bootstrap",
+        "Ruby on Rails",
+        "Active Record",
+        "PostgreSQL",
+        "Formik",
+        "RESTful APIs"
       ],
       "imageUrl": "/projects/triplestamp-dashboard.jpg",
       "bgSize": "object-cover",
@@ -157,13 +175,10 @@
       "datetime": "2020-03-16"
     },
 
-
-
     {
       "id": "5",
       "title": "Pixabay Clone",
-      "intro":
-      "Simple stock photography image search mobile application with a spellchecker feature connected to the Pixabay API.",
+      "intro": "Simple stock photography image search mobile application with a spellchecker feature connected to the Pixabay API.",
       "industry": "Media & Photography",
       "links": [
         {
@@ -177,37 +192,37 @@
       ],
       "highlights": [
         {
-          "label" : "industry",
-          "desc" : "Media & Photography"
+          "label": "industry",
+          "desc": "Media & Photography"
         },
         {
-          "label" : "category",
-          "desc" : "Take Home Project"
+          "label": "category",
+          "desc": "Take Home Project"
         },
         {
-          "label" : "platforms",
-          "desc" : "Mobile App"
+          "label": "platforms",
+          "desc": "Mobile App"
         }
-      ],      
-      "features": [
-        
       ],
-      "technologies":[
-        "JavaScript", "React Native", "React Navigation", "Expo Go", "Xcode", "Pixabay API"
+      "features": [],
+      "technologies": [
+        "JavaScript",
+        "React Native",
+        "React Navigation",
+        "Expo Go",
+        "Xcode",
+        "Pixabay API"
       ],
       "imageUrl": "/projects/pixabay-clone.png",
       "bgSize": "object-contain",
       "date": "Mar 16, 2020",
       "datetime": "2020-03-16"
     },
-    
-
 
     {
       "id": "4",
       "title": "LinkTree Clone",
-      "intro":
-      "Created a LinkTree clone to learn the fundamentals of Next.js and TailwindCSS. Includes links to my projects and socials.",
+      "intro": "Created a LinkTree clone to learn the fundamentals of Next.js and TailwindCSS. Includes links to my projects and socials.",
       "industry": "Social Media",
       "links": [
         {
@@ -221,23 +236,26 @@
       ],
       "highlights": [
         {
-          "label" : "industry",
-          "desc" : "Social Media"
+          "label": "industry",
+          "desc": "Social Media"
         },
         {
-          "label" : "category",
-          "desc" : "Learning Next.js"
+          "label": "category",
+          "desc": "Learning Next.js"
         },
         {
-          "label" : "platforms",
-          "desc" : "web & mobile"
+          "label": "platforms",
+          "desc": "web & mobile"
         }
-      ],      
-      "features": [
-        
       ],
-      "technologies":[
-        "JavaScript", "TypeScript", "React.js", "Next.js", "TailwindCSS", "Vercel"
+      "features": [],
+      "technologies": [
+        "JavaScript",
+        "TypeScript",
+        "React.js",
+        "Next.js",
+        "TailwindCSS",
+        "Vercel"
       ],
       "imageUrl": "/projects/linktree.png",
       "bgSize": "object-cover",
@@ -245,12 +263,10 @@
       "datetime": "2020-03-16"
     },
 
-
     {
       "id": "3",
       "title": "300 South Wells",
-      "intro":
-      "Website for a commercial real estate property to market tenant businesses. Built with JavaScript, React, and Bootstrap.",
+      "intro": "Website for a commercial real estate property to market tenant businesses. Built with JavaScript, React, and Bootstrap.",
       "industry": "Commercial Real Estate",
       "links": [
         {
@@ -264,36 +280,30 @@
       ],
       "highlights": [
         {
-          "label" : "industry",
-          "desc" : "Commercial Real Estate"
+          "label": "industry",
+          "desc": "Commercial Real Estate"
         },
         {
-          "label" : "category",
-          "desc" : "Client Project"
+          "label": "category",
+          "desc": "Client Project"
         },
         {
-          "label" : "platforms",
-          "desc" : "web & mobile"
+          "label": "platforms",
+          "desc": "web & mobile"
         }
-      ],      
-      "features": [
-        
       ],
-      "technologies":[
-        "JavaScript", "React.js", "Next.js", "Bootstrap", "Netlify"
-      ],
+      "features": [],
+      "technologies": ["JavaScript", "React.js", "Next.js", "Bootstrap", "Netlify"],
       "imageUrl": "/projects/300south-wells.png",
       "bgSize": "object-cover",
       "date": "Mar 16, 2020",
       "datetime": "2020-03-16"
     },
 
-
     {
       "id": "2",
       "title": "Portfolio v1",
-      "intro":
-      "My first edition of the portfolio website built with speed and no code using a powerful visual canvas platform, Webflow.",
+      "intro": "My first edition of the portfolio website built with speed and no code using a powerful visual canvas platform, Webflow.",
       "industry": "Technology",
       "links": [
         {
@@ -307,23 +317,25 @@
       ],
       "highlights": [
         {
-          "label" : "industry",
-          "desc" : "technology"
+          "label": "industry",
+          "desc": "technology"
         },
         {
-          "label" : "category",
-          "desc" : "portfolio"
+          "label": "category",
+          "desc": "portfolio"
         },
         {
-          "label" : "platforms",
-          "desc" : "web & mobile"
+          "label": "platforms",
+          "desc": "web & mobile"
         }
-      ],      
-      "features": [
-        
       ],
-      "technologies":[
-        "Webflow", "Designer Dashboard", "Content Management System (CMS)", "HTML5", "CSS"
+      "features": [],
+      "technologies": [
+        "Webflow",
+        "Designer Dashboard",
+        "Content Management System (CMS)",
+        "HTML5",
+        "CSS"
       ],
       "imageUrl": "/projects/webflow.png",
       "bgSize": "object-cover",
@@ -331,12 +343,10 @@
       "datetime": "2020-03-16"
     },
 
-
     {
       "id": "1",
       "title": "Where's Wizard",
-      "intro":
-      "The OG of my technical projects. This is a Where's Waldo rendition game application built with Scratch, a visual block coding IDE.",
+      "intro": "The OG of my technical projects. This is a Where's Waldo rendition game application built with Scratch, a visual block coding IDE.",
       "industry": "Gaming",
       "links": [
         {
@@ -350,24 +360,20 @@
       ],
       "highlights": [
         {
-          "label" : "industry",
-          "desc" : "Gaming"
+          "label": "industry",
+          "desc": "Gaming"
         },
         {
-          "label" : "category",
-          "desc" : "block coding"
+          "label": "category",
+          "desc": "block coding"
         },
         {
-          "label" : "platforms",
-          "desc" : "web - desktop"
+          "label": "platforms",
+          "desc": "web - desktop"
         }
       ],
-      "features": [
-        
-      ],
-      "technologies":[
-        "Scratch Visual Interface", "Block Coding", "Gaming"
-      ],
+      "features": [],
+      "technologies": ["Scratch Visual Interface", "Block Coding", "Gaming"],
       "imageUrl": "/projects/wheresWizard.png",
       "bgSize": "object-cover",
       "date": "Mar 16, 2020",

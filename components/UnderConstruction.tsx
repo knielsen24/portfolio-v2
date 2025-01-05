@@ -1,6 +1,6 @@
-"use client";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+'use client';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export default function UnderConstruction() {
   const pathname = usePathname();
@@ -20,8 +20,7 @@ export default function UnderConstruction() {
         </p>
         <Link
           href="/"
-          className="mt-6 font-semibold hover:text-indigo-500 hover:dark:text-indigo-400"
-        >
+          className="mt-6 font-semibold hover:text-indigo-500 hover:dark:text-indigo-400">
           Go back home
         </Link>
       </div>
