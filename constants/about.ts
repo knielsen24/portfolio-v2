@@ -29,14 +29,29 @@ export const excitement = {
     "What makes me excited about a career in tech is finding impactful solutions that help others at scale. One reason I loved coaching was the fulfillment of making a positive impact on the swimmers as athletes and as people. Now in the tech world, my goal is to make meaningful contributions to a software team that results in a positive impact on the users.",
   secondP:
     "Last but not least, for so long my identity was tied to swimming, and I am excited about discovering what unfolds with this path and transitioning with this new identity. There will be new challenges, and I can’t wait to face them.",
+};
 
+const startDate = new Date("2021-12-15");
+const currentDate = new Date();
+
+const timeDiff = (currentDate.getTime() - startDate.getTime()) as number;
+
+const yearsDiff = (timeDiff / (1000 * 60 * 60 * 24 * 365.25)).toFixed(1);
+
+function handleRounding(str: string): number {
+  const num = Number(str)
+  const whole = Math.round(num);
+  // if (num)  whole;
+
+  return whole;
 }
+console.log("🔋YEARS: ", handleRounding(yearsDiff));
 
 export const stats = [
-  { label: "Coding Inception", value: "2022" },
+  { label: "Coding Inception", value: `${yearsDiff} years` },
   { label: "Coaching Experience", value: "12 years" },
   { label: "Legos Compiled", value: "10k+" },
-  { label: "Golf Handicap", value: "6.8" },
+  { label: "Golf Handicap", value: "2.8" },
 ];
 
 export const timelineHeader = {
