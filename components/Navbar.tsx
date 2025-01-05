@@ -15,7 +15,7 @@ import { Container } from './Container';
 import ThemeToggle from './ui/ThemeToggle';
 import GradientBar from './ui/GradientBar';
 
-const ENABLE_FEATURE = process.env.NEXT_PUBLIC_ENABLE_EXPERIENCE_PAGE;
+const ENABLE_FEATURE = process.env.NODE_ENV === 'development';
 
 export const allRoutes = [
   { name: 'About', href: '/about', ariaLabel: 'about link', prefetch: true },
@@ -28,8 +28,6 @@ export const filteredRoutes = allRoutes.filter(
 );
 
 const routes = ENABLE_FEATURE ? allRoutes : filteredRoutes;
-
-console.log("🔋<routes>", routes)
 
 function ChevronDownIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
