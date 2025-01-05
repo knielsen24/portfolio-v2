@@ -1,3 +1,5 @@
+import { handleRounding } from "@/lib/helpers";
+
 export const pageHeader = {
   page: "About",
   title: "Professional coach, to self taught coder, to software enthusiast.",
@@ -33,22 +35,11 @@ export const excitement = {
 
 const startDate = new Date("2021-12-15");
 const currentDate = new Date();
-
-const timeDiff = (currentDate.getTime() - startDate.getTime()) as number;
-
-const yearsDiff = (timeDiff / (1000 * 60 * 60 * 24 * 365.25)).toFixed(1);
-
-function handleRounding(str: string): number {
-  const num = Number(str)
-  const whole = Math.round(num);
-  // if (num)  whole;
-
-  return whole;
-}
-console.log("🔋YEARS: ", handleRounding(yearsDiff));
+const years = handleRounding(startDate, currentDate);
+console.log("🔋YEARS: ", years);
 
 export const stats = [
-  { label: "Coding Inception", value: `${yearsDiff} years` },
+  { label: "Coding Inception", value: `${years} years` },
   { label: "Coaching Experience", value: "12 years" },
   { label: "Legos Compiled", value: "10k+" },
   { label: "Golf Handicap", value: "2.8" },
