@@ -2,7 +2,8 @@ import Image, { type ImageProps } from 'next/image'
 import { Button } from '@/components/ui/Button';
 import nerdsLogo from '@/public/logos/work/nerds-logo.png'
 import { GradientBarHorizontal, GradientBarVertical } from '@/components/ui/GradientBars';
-import kardioLogo from '@/public/logos/work/kardio_icon_black.png';
+import kardioLogo from '@/public/logos/work/kardio-black.png';
+import xaltLogo from '@/public/logos/work/xalt-logo.png'
 // import { useTheme } from 'next-themes';
 // import { type UseThemeProps } from 'next-themes/dist/types';
 
@@ -61,10 +62,17 @@ function Role({ role }: { role: Role }) {
   let endLabel = typeof role.end === 'string' ? role.end : role.end.label
   let endDate = typeof role.end === 'string' ? role.end : role.end.dateTime
 
+  const isXalt = role.company === 'Xalt Fitness'
+
   return (
     <li className="flex gap-4">
       <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-        <Image src={role.logo} alt="dynasty nerds logo" className="h-7 w-7" unoptimized />
+        {isXalt && (
+          <div className='rounded-full overflow-hidden'>
+            <Image src={role.logo} alt={role.company} className="h-7 w-7" unoptimized />
+          </div>
+        )}
+        {!isXalt && <Image src={role.logo} alt={role.company} className="h-7 w-7" unoptimized />}
       </div>
       <dl className="flex flex-auto flex-wrap gap-x-2">
         <dt className="sr-only">Company</dt>
@@ -118,9 +126,9 @@ export default function ResumeCard() {
       background: 'bg-zinc-800'
     },
     {
-      company: 'Xalt',
+      company: 'Xalt Fitness',
       title: 'React Native Developer',
-      logo: nerdsLogo,
+      logo: xaltLogo,
       start: 'Mar 2023',
       end: {
         label: 'Oct 2023',
@@ -145,23 +153,24 @@ export default function ResumeCard() {
   ]
 
   return (
-    <div className="relative sm:rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40 flex overflow-hidden">
+    <div className="relative sm:rounded-2xl ring-1 ring-slate-900/10 p-3 pb-4 sm:p-6 dark:ring-zinc-300/10 overflow-hidden md:min-w-[400px]">
       <GradientBarVertical className='left-0 invisible sm:visible w-1' />
-      <GradientBarHorizontal className='bottom-0 visible sm:invisible h-1' />
+      {/* <GradientBarHorizontal className='bottom-0 visible sm:invisible h-1' /> */}
       <div>
         <h2 className="flex items-center text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-          <BriefcaseIcon className="h-6 w-6 flex-none" />
-          <span className="ml-3 pt-0.5">Work</span>
+          <BriefcaseIcon className="ml-1.5 h-6 w-6 flex-none" />
+          <span className="ml-3 pt-0.5">Work Experience</span>
         </h2>
-        <ol className="mt-6 space-y-4">
+        <ol className="mt-6 space-y-4 md:space-y-6">
           {resume.map((role, roleIndex) => (
             <Role key={roleIndex} role={role} />
           ))}
         </ol>
-        <Button href="#" variant="secondary" className="group mt-6 w-full">
+        {/* <Button href="#" variant="secondary" className="relative group mt-6 w-full overflow-hidden">
+          <GradientBarVertical className='left-0 visible sm:invisible w-1' />
           Download CV
           <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
-        </Button>
+        </Button> */}
       </div>
     </div>
   )

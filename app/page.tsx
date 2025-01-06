@@ -3,10 +3,16 @@ import Image from 'next/image'
 import headShot from '@/public/avatar.png';
 import { Container } from '@/components/Container';
 import { iconsObj, emailObj } from '@/components/icons/Home';
-import { heroCopy } from '@/constants/home';
 import BtnScrollSpy from '@/components/ui/BtnScrollSpy';
 import Skills from '@/components/home/Skills';
 import ResumeCard from '@/components/home/ResumeCard';
+
+export const heroCopy = {
+  header: 'Software engineer. \n',
+  highlight: 'Frontend enthusiast.',
+  description:
+    "I'm Kevin, a full-stack developer that leverages modern framework technologies to build and design web and mobile applications.",
+};
 
 function HeroContainer() {
   return (
@@ -71,14 +77,14 @@ export default function Home() {
   return (
     <Container className="mt-2 sm:mt-4">
       <HeroContainer />
-      <div className="snap-start my-20 pt-8 mx-auto grid max-w-xl grid-cols-1 lg:max-w-none lg:grid-cols-2" id="work">
+      <div className="snap-start border-t border-slate-200/80 dark:border-zinc-700/60 my-20 pt-20 mx-auto grid max-w-xl grid-cols-1 lg:max-w-none lg:grid-cols-2" id="work">
+        <div className="space-y-10 sm:pr-6 lg:pr-10">
+          <ResumeCard />
+        </div>
         <div className="flex flex-col gap-16">
           {/* {articles.map((article) => (
               <Article key={article.slug} article={article} />
             ))} */}
-        </div>
-        <div className="space-y-10 lg:pl-12 xl:pl-16 lg:min-w-[400px]">
-          <ResumeCard />
         </div>
       </div>
       <div className="snap-start" id="skills">

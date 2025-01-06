@@ -10,7 +10,17 @@ import expoDarkIcon from '@/public/logos/expo-dark-bg.png';
 import reduxIcon from '@/public/logos/redux-icon.png';
 import twIcon from '@/public/logos/tw-icon.svg';
 import pgIcon from '@/public/logos/postgresql-icon.png';
-import { skillsCopy } from '@/constants/home';
+
+export const skillsCopy = {
+  header: 'Skilled in modern technologies',
+  firstPart: 'These are languages, frameworks, and libraries in which I',
+  firstHighlight: 'excel',
+  secondPart: '. Although these are my favorites, I am always open to',
+  secondHighlight: 'learning',
+  thirdPart: 'new technologies. Visit my projects page to explore specific',
+  thirdHighlight: 'skills',
+  fourthPart: 'tailored to individual projects.',
+};
 
 export default function Skills() {
   return (
