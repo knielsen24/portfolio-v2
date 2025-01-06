@@ -1,21 +1,20 @@
-import Image, { type ImageProps } from 'next/image'
+import Image, { type ImageProps } from 'next/image';
 import { Button } from '@/components/ui/Button';
-import nerdsLogo from '@/public/logos/work/nerds-logo.png'
+import nerdsLogo from '@/public/logos/work/nerds-logo.png';
 import { GradientBarHorizontal, GradientBarVertical } from '@/components/ui/GradientBars';
 import kardioLogo from '@/public/logos/work/kardio-black.png';
-import xaltLogo from '@/public/logos/work/xalt-logo.png'
+import xaltLogo from '@/public/logos/work/xalt-logo.png';
 // import { useTheme } from 'next-themes';
 // import { type UseThemeProps } from 'next-themes/dist/types';
 
-
 type Role = {
-  company: string
-  title: string
-  logo: ImageProps['src']
-  start: string | { label: string; dateTime: string }
-  end: string | { label: string; dateTime: string }
-  background: string
-}
+  company: string;
+  title: string;
+  logo: ImageProps['src'];
+  start: string | { label: string; dateTime: string };
+  end: string | { label: string; dateTime: string };
+  background: string;
+};
 
 function BriefcaseIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -26,8 +25,7 @@ function BriefcaseIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
       strokeLinecap="round"
       strokeLinejoin="round"
       aria-hidden="true"
-      {...props}
-    >
+      {...props}>
       <path
         d="M2.75 9.75a3 3 0 0 1 3-3h12.5a3 3 0 0 1 3 3v8.5a3 3 0 0 1-3 3H5.75a3 3 0 0 1-3-3v-8.5Z"
         className="fill-zinc-100 stroke-zinc-400 dark:fill-zinc-100/10 dark:stroke-zinc-500"
@@ -37,7 +35,7 @@ function BriefcaseIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
         className="stroke-zinc-400 dark:stroke-zinc-500"
       />
     </svg>
-  )
+  );
 }
 
 function ArrowDownIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
@@ -50,29 +48,29 @@ function ArrowDownIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
         strokeLinejoin="round"
       />
     </svg>
-  )
+  );
 }
 
 function Role({ role }: { role: Role }) {
-  let startLabel =
-    typeof role.start === 'string' ? role.start : role.start.label
-  let startDate =
-    typeof role.start === 'string' ? role.start : role.start.dateTime
+  let startLabel = typeof role.start === 'string' ? role.start : role.start.label;
+  let startDate = typeof role.start === 'string' ? role.start : role.start.dateTime;
 
-  let endLabel = typeof role.end === 'string' ? role.end : role.end.label
-  let endDate = typeof role.end === 'string' ? role.end : role.end.dateTime
+  let endLabel = typeof role.end === 'string' ? role.end : role.end.label;
+  let endDate = typeof role.end === 'string' ? role.end : role.end.dateTime;
 
-  const isXalt = role.company === 'Xalt Fitness'
+  const isXalt = role.company === 'Xalt Fitness';
 
   return (
     <li className="flex gap-4">
       <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
         {isXalt && (
-          <div className='rounded-full overflow-hidden'>
+          <div className="overflow-hidden rounded-full">
             <Image src={role.logo} alt={role.company} className="h-7 w-7" unoptimized />
           </div>
         )}
-        {!isXalt && <Image src={role.logo} alt={role.company} className="h-7 w-7" unoptimized />}
+        {!isXalt && (
+          <Image src={role.logo} alt={role.company} className="h-7 w-7" unoptimized />
+        )}
       </div>
       <dl className="flex flex-auto flex-wrap gap-x-2">
         <dt className="sr-only">Company</dt>
@@ -80,21 +78,17 @@ function Role({ role }: { role: Role }) {
           {role.company}
         </dd>
         <dt className="sr-only">Role</dt>
-        <dd className="text-xs text-zinc-500 dark:text-zinc-400">
-          {role.title}
-        </dd>
+        <dd className="text-xs text-zinc-500 dark:text-zinc-400">{role.title}</dd>
         <dt className="sr-only">Date</dt>
         <dd
           className="ml-auto text-xs text-zinc-400 dark:text-zinc-500"
-          aria-label={`${startLabel} until ${endLabel}`}
-        >
-          <time dateTime={startDate}>{startLabel}</time>{' '}
-          <span aria-hidden="true">—</span>{' '}
+          aria-label={`${startLabel} until ${endLabel}`}>
+          <time dateTime={startDate}>{startLabel}</time> <span aria-hidden="true">—</span>{' '}
           <time dateTime={endDate}>{endLabel}</time>
         </dd>
       </dl>
     </li>
-  )
+  );
 }
 
 export default function ResumeCard() {
@@ -112,7 +106,7 @@ export default function ResumeCard() {
         label: 'Present',
         dateTime: new Date().getFullYear().toString(),
       },
-      background: 'bg-white'
+      background: 'bg-white',
     },
     {
       company: 'Kardio',
@@ -123,7 +117,7 @@ export default function ResumeCard() {
         label: 'Present',
         dateTime: new Date().getFullYear().toString(),
       },
-      background: 'bg-zinc-800'
+      background: 'bg-zinc-800',
     },
     {
       company: 'Xalt Fitness',
@@ -134,7 +128,7 @@ export default function ResumeCard() {
         label: 'Oct 2023',
         dateTime: new Date().getFullYear().toString(),
       },
-      background: 'bg-zinc-800'
+      background: 'bg-zinc-800',
     },
     // {
     //   company: 'Canyons Aquatic Club',
@@ -150,11 +144,11 @@ export default function ResumeCard() {
     //   start: 'Apr 2011',
     //   end: 'Oct 2015',
     // },
-  ]
+  ];
 
   return (
-    <div className="relative sm:rounded-2xl ring-1 ring-slate-900/10 p-3 pb-4 sm:p-6 dark:ring-zinc-300/10 overflow-hidden md:min-w-[400px]">
-      <GradientBarVertical className='left-0 invisible sm:visible w-1' />
+    <div className="relative overflow-hidden p-3 pb-4 ring-1 ring-slate-900/10 dark:ring-zinc-300/10 sm:rounded-2xl sm:p-6 md:min-w-[400px]">
+      <GradientBarVertical className="invisible left-0 w-1 sm:visible" />
       {/* <GradientBarHorizontal className='bottom-0 visible sm:invisible h-1' /> */}
       <div>
         <h2 className="flex items-center text-sm font-semibold text-zinc-900 dark:text-zinc-100">
@@ -173,5 +167,5 @@ export default function ResumeCard() {
         </Button> */}
       </div>
     </div>
-  )
+  );
 }

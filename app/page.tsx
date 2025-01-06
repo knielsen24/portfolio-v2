@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image'
+import Image from 'next/image';
 import headShot from '@/public/avatar.png';
 import { Container } from '@/components/Container';
 import { iconsObj, emailObj } from '@/components/icons/Home';
@@ -7,7 +7,7 @@ import BtnScrollSpy from '@/components/ui/BtnScrollSpy';
 import Skills from '@/components/home/Skills';
 import ResumeCard from '@/components/home/ResumeCard';
 
-export const heroCopy = {
+const heroCopy = {
   header: 'Software engineer. \n',
   highlight: 'Frontend enthusiast.',
   description:
@@ -70,21 +70,22 @@ function HeroContainer() {
       </div>
       <BtnScrollSpy />
     </div>
-  )
+  );
 }
 
 const resumeCtaCopy = {
   header: 'Professional experience',
   firstPart: 'I’ve ',
   firstHighlight: 'contributed ',
-  secondPart: 'to one of the leading dynasty football apps in fantasy sports industry and helped ',
+  secondPart:
+    'to one of the leading dynasty football apps in fantasy sports industry and helped ',
   secondHighlight: ' launch',
   thirdPart: 'MVP products for health and fitness startups.',
 };
 
 function ResumeCTA() {
   return (
-    <div className="flex flex-col gap-16 justify-center mx-4 sm:mx-auto sm:mr-20 mb-8 sm:mb-0">
+    <div className="mx-4 mb-8 flex flex-col justify-center gap-16 sm:mx-auto sm:mb-0 sm:mr-20">
       <div className="w-full max-w-xl lg:mx-0">
         <h2 className="text-2xl font-bold tracking-tight text-slate-800 dark:text-zinc-100 sm:text-3xl">
           {resumeCtaCopy.header}
@@ -102,14 +103,16 @@ function ResumeCTA() {
         </p>
       </div>
     </div>
-  )
+  );
 }
 
 export default function Home() {
   return (
     <Container className="mt-2 sm:mt-4">
       <HeroContainer />
-      <div className="snap-start dark:border-zinc-700/60 my-10 sm:my-20 sm:py-20 mx-auto grid max-w-xl grid-cols-1 lg:max-w-none lg:grid-cols-2 space-y-6 sm:space-y-16" id="work">
+      <div
+        className="mx-auto my-10 grid max-w-xl snap-start grid-cols-1 space-y-6 dark:border-zinc-700/60 sm:my-20 sm:space-y-16 sm:py-20 lg:max-w-none lg:grid-cols-2"
+        id="work">
         <ResumeCTA />
         <div className="lg:pl-6 xl:pl-10">
           <ResumeCard />

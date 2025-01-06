@@ -190,7 +190,7 @@ function DesktopNavigation(props: React.ComponentPropsWithoutRef<'nav'>) {
 export default function Navbar() {
   return (
     <header className="pointer-events-none absolute top-0 z-50 w-full">
-      <div className='relative'>
+      <div className="relative">
         <GradientBarHorizontal className="top-0 h-1.5" />
       </div>
       <Container className="top-0 z-10 mt-6 h-16 w-full px-5 sm:mt-8">

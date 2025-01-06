@@ -1,6 +1,6 @@
 import { cn, ClassValue } from '@/lib/utils';
 
-type Props = { className?: ClassValue; width?: string }
+type Props = { className?: ClassValue; width?: string };
 
 export function GradientBarHorizontal({ className }: Props) {
   return (

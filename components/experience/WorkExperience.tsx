@@ -1,5 +1,5 @@
 import Image, { type ImageProps } from 'next/image';
-import expoDark from '@/public/logos/expo-dark-bg.png'
+import expoDark from '@/public/logos/expo-dark-bg.png';
 import logoAirbnb from '@/public/logos/airbnb.svg';
 import logoFacebook from '@/public/logos/facebook.svg';
 import logoPlanetaria from '@/public/logos/planetaria.svg';
