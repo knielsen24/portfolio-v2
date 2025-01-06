@@ -1,25 +1,23 @@
-import { cn } from '@/lib/utils';
+import { cn, ClassValue } from '@/lib/utils';
 
-type CnProps = React.HTMLProps<HTMLElement>;
+type Props = { className?: ClassValue; width?: string }
 
-export function GradientBarHorizontal({ className }: CnProps) {
-  return (
-    <div className="relative">
-      <div
-        className={cn(
-          'absolute inset-x-0 bottom-0 h-1.5 bg-gradient-to-r from-indigo-200 via-indigo-500 to-teal-400',
-          className,
-        )}
-      />
-    </div>
-  );
-}
-
-export function GradientBarVertical({ className }: CnProps) {
+export function GradientBarHorizontal({ className }: Props) {
   return (
     <div
       className={cn(
-        'absolute inset-y-0 w-1.5 bg-gradient-to-b from-indigo-200 via-indigo-500 to-teal-400',
+        `absolute inset-x-0 bottom-0 bg-gradient-to-r from-indigo-200 via-indigo-500 to-teal-400`,
+        className,
+      )}
+    />
+  );
+}
+
+export function GradientBarVertical({ className }: Props) {
+  return (
+    <div
+      className={cn(
+        `absolute inset-y-0 bg-gradient-to-b from-indigo-200 via-indigo-500 to-teal-400`,
         className,
       )}
     />

@@ -73,7 +73,7 @@ function NavLink(props: Props) {
 
 export default function Footer() {
   return (
-    <footer className="flex-none sm:mt-28">
+    <footer className="flex-none sm:mt-28 relative">
       <ContainerOuter>
         <ContainerInner>
           <div className="flex flex-col items-center justify-between gap-6 border-t border-slate-200 pb-12 pt-10 dark:border-zinc-700/50 sm:flex-row">
@@ -102,7 +102,9 @@ export default function Footer() {
           </div>
         </ContainerInner>
       </ContainerOuter>
-      <GradientBarHorizontal className="bottom 0" />
+      <div className='relative'>
+        <GradientBarHorizontal className="bottom 0 h-1.5" />
+      </div>
     </footer>
   );
 }
