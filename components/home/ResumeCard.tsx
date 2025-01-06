@@ -159,7 +159,7 @@ export default function ResumeCard() {
       <div>
         <h2 className="flex items-center text-sm font-semibold text-zinc-900 dark:text-zinc-100">
           <BriefcaseIcon className="ml-1.5 h-6 w-6 flex-none" />
-          <span className="ml-3 pt-0.5">Work Experience</span>
+          <span className="ml-3 pt-0.5">Work</span>
         </h2>
         <ol className="mt-6 space-y-4 md:space-y-6">
           {resume.map((role, roleIndex) => (

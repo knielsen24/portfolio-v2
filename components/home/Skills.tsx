@@ -11,7 +11,7 @@ import reduxIcon from '@/public/logos/redux-icon.png';
 import twIcon from '@/public/logos/tw-icon.svg';
 import pgIcon from '@/public/logos/postgresql-icon.png';
 
-export const skillsCopy = {
+ const skillsCopy = {
   header: 'Skilled in modern technologies',
   firstPart: 'These are languages, frameworks, and libraries in which I',
   firstHighlight: 'excel',

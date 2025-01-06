@@ -73,21 +73,49 @@ function HeroContainer() {
   )
 }
 
+const resumeCtaCopy = {
+  header: 'Professional experience',
+  firstPart: 'I’ve ',
+  firstHighlight: 'contributed ',
+  secondPart: 'to one of the leading dynasty football apps in fantasy sports industry and helped ',
+  secondHighlight: ' launch',
+  thirdPart: 'MVP products for health and fitness startups.',
+};
+
+function ResumeCTA() {
+  return (
+    <div className="flex flex-col gap-16 justify-center mx-4 sm:mx-auto sm:mr-20 mb-8 sm:mb-0">
+      <div className="w-full max-w-xl lg:mx-0">
+        <h2 className="text-2xl font-bold tracking-tight text-slate-800 dark:text-zinc-100 sm:text-3xl">
+          {resumeCtaCopy.header}
+        </h2>
+        <p className="mt-6 text-lg leading-8 text-slate-600 dark:text-zinc-300">
+          {resumeCtaCopy.firstPart}{' '}
+          <span className="font-semibold text-indigo-500 ease-out dark:text-indigo-400">
+            {resumeCtaCopy.firstHighlight}
+          </span>
+          {resumeCtaCopy.secondPart}{' '}
+          <span className="font-semibold text-indigo-500 dark:text-indigo-400">
+            {resumeCtaCopy.secondHighlight}{' '}
+          </span>
+          {resumeCtaCopy.thirdPart}{' '}
+        </p>
+      </div>
+    </div>
+  )
+}
+
 export default function Home() {
   return (
     <Container className="mt-2 sm:mt-4">
       <HeroContainer />
-      <div className="snap-start border-t border-slate-200/80 dark:border-zinc-700/60 my-20 pt-20 mx-auto grid max-w-xl grid-cols-1 lg:max-w-none lg:grid-cols-2" id="work">
-        <div className="space-y-10 sm:pr-6 lg:pr-10">
+      <div className="snap-start dark:border-zinc-700/60 my-10 sm:my-20 sm:py-20 mx-auto grid max-w-xl grid-cols-1 lg:max-w-none lg:grid-cols-2 space-y-6 sm:space-y-16" id="work">
+        <ResumeCTA />
+        <div className="lg:pl-6 xl:pl-10">
           <ResumeCard />
         </div>
-        <div className="flex flex-col gap-16">
-          {/* {articles.map((article) => (
-              <Article key={article.slug} article={article} />
-            ))} */}
-        </div>
       </div>
-      <div className="snap-start" id="skills">
+      <div className="snap-start pt-20" id="skills">
         <Skills />
       </div>
     </Container>
